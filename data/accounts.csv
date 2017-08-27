@@ -1,0 +1,493 @@
+id,dfl12,dfl12bis,account_name,account_name_desc,ac_type,kinship,inheritance,notes
+dfl12_001,0,0,Balance_on_8_November,Balance on 8 November,Accounting,FALSE,,The account book
+dfl12_002,0,0,Cassa,Cassa,Accounting,FALSE,,Income and payments in the form of cash
+dfl12_003,1,1,Benedicto_Vermer_and_brothers_1,Benedicto Vermer and brothers_1,Balancing,FALSE,,"Written in Book n. 10 as of no worth, and so it is written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis"
+dfl12_004,2,2,Benedicto_Vermer_and_brothers_2,Benedicto Vermer and brothers_2,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_005,3,3,Benedicto_Vermer,Benedicto Vermer,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_006,4,4,Benedicto_Vermer_and_brothers_3,Benedicto Vermer and brothers_3,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_007,5,5,Louis_Bragadin_from_Venice,Louis Bragadin from Venice,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_008,6,6,Peeter_Vermer_Nicolaess,Peeter Vermer Nicolaess,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_009,7,7,Lodewyck_Helman,Lodewyck Helman,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_010,8,8,De_dekens_van_de_Goutsmits_camer_1,De dekens van de Goutsmits camer_1,Erffgoed,FALSE,,"This comes from their account in the section of the capital of the erffgoeden 191-192a. 12 Bis: It is written off on the account of the erffgoeden and will be treated there, nr 172, 128-129. This is seen in DFL 13-2, where Section 4 of DFL 12 is subtracted from Jan de Oude's capital."
+dfl12_011,9,9,Michiel_Dermoyen,Michiel Dermoyen,Balancing,FALSE,,Written off on the account Debiteuren ende crediteuren van diverse persoonen in 12 Bis
+dfl12_012,10,NA,Peeter_della_Faille_de_Oude,Peeter della Faille de Oude,Kin,TRUE,,Written off on oncosten van coopmansschappen as a lost debt because he does not have any capital (82b).
+dfl12_013,11,NA,Roelant_Paulet_1,Roelant Paulet_1,Balancing,FALSE,,Written off on oncosten van coopmansschappen.
+dfl12_014,12,11,Servaes_Baes,Servaes Baes,Balancing,FALSE,,Written off on the account Creditors of this Book n. 9 in 12 Bis
+dfl12_015,13,12,Julio_Bargarusio,Julio Bargarusio,Open,FALSE,,Has not been received and therefore remains open.
+dfl12_016,14,13,Heirs_of_Huysbrecht_Verstraeten,Heirs of Huysbrecht Verstraeten,Balancing,FALSE,,Written off on the account Creditors of this Book n. 9 in 12 Bis
+dfl12_017,15,NA,Frederico_Perenot_Heer_van_Champagny,Frederico Perenot Heer van Champagny,Loan,FALSE,,The loan created a profit of £23.11.7 written off on winninghe ende verlies nr 36.
+dfl12_018,16,NA,City_of_Antwerp,City of Antwerp,Political,FALSE,,Loan made to Antwerp that is not exopected to be paid off. This is written off as bad debt in nr 286 page 228b.
+dfl12_019,17,14,Wouter_Aertsen,Wouter Aertsen,Kin,TRUE,,Account carried over for the same amount on next rekening in both 12 and 12 Bis.
+dfl12_020,18,15,Philips_Hockaert_1,Philips Hockaert_1,Erffgoed,FALSE,,"This comes from their account in the section of the capital of the erffgoeden 191-192a. It concerns 26 gulden erffelyck for the house the Vliegenden Hert in the Oude Bourse. 12 Bis: It is placed under the capital of the erffgoeden nr 173, 129-130"
+dfl12_021,19,NA,Jan_de_Witthem_Heere_van_Beersele,Jan de Witthem Heere van Beersele,Political,FALSE,,Payment of ransom for Antwerp on 4 November 1576. Written off on Creditors of this Book n. 9.
+dfl12_022,20,NA,Jan_Peeterssen,Jan Peeterssen,Balancing,FALSE,,Written off on oncosten van coopmansschappen.
+dfl12_023,21,NA,Erffgoedere,Erffgoedere,Erffgoed,FALSE,,"This will be placed under the capital of the erffgoeden nr 223, 192a–195b."
+dfl12_024,22,18,Lucas_de_Hemele,Lucas de Hemele,Balancing,FALSE,,Paid to the cassa on 13 September 1594.
+dfl12_025,23,NA,Bocralen_Overhoop_1,Bocralen Overhoop_1,Goods,FALSE,,"The bocralen was brought over to the account of Carseyen overhoop (nr 114, 127b–131b)"
+dfl12_026,24,NA,Lynwaet_in_company_with_Gillis_del_Ponte_and_Hilaria_della_Faille,Lynwaet in company with Gillis del Ponte and Hilaria della Faille,Company,TRUE,,"Created a profit of £144.14.7 1/2 written off on winninghe ende verlies nr 36. The account is closed by transfering 47 stukken lynwaet to the rekening of Lynwaeten in company with Hilaria della Faille (nr 210, 182b–183a)."
+dfl12_027,25,21,Antoine_Malapert,Antoine Malapert,Kin,TRUE,,12 Bis: On 20 September 1594 it was written off on the account of Louis Malapert.
+dfl12_028,26,22,Jan_de_Vooght_1,Jan de Vooght_1,Balancing,FALSE,,"12 Bis: Taking the two accounts of Jan de Vooght from DFL 12 together de Vooght was debtor £78.3.0 1/2 and this is written off as 'quade schult', with the amount being written off on the account of each heir of Jan de Oude."
+dfl12_029,27,23,Loys_Hasebaert,Loys Hasebaert,Balancing,FALSE,,12 Bis: Concerns a trip to Venice and is written off as quade schuld on Creditors of this Book n. 9.
+dfl12_030,28,24,Mayken_Reyniers_weduwe_of_Jan_Ridderincx,Mayken Reyniers weduwe of Jan Ridderincx,Balancing,FALSE,,"12 Bis: Written off on the account of Catharina de Hane on 22 November 1584, because it derives from expenses of rent for a house for Catharina de Hane."
+dfl12_031,29,NA,Heer_Dierick_van_Liesvelt,Heer Dierick van Liesvelt,Loan,FALSE,,Placed on the account of Oncosten van't process tegens Daniel de Hane (nr 293)
+dfl12_032,30,NA,Gillis_van_den_Bogaerde_and_Marcus_Schoor_1,Gillis van den Bogaerde and Marcus Schoor_1,Trade,FALSE,,Cassa received £108.8.9. The remaining debt of £65 was written off on the account of Willem van den Mey (nr 78).
+dfl12_033,31,NA,Jacomo_Widhols,Jacomo Widhols,Trade,FALSE,,Written off on the account of his father Jan Widols (70a) and debit of carseyen (128a)
+dfl12_034,32,NA,Gillis_del_Ponte,Gillis del Ponte,Kin,TRUE,,"Written off in the account of Hilaria della Faille (nr 62, 36a–36b)"
+dfl12_035,33,NA,Weduwe_van_Henrick_Packmuts,Weduwe van Henrick Packmuts,Wissel,FALSE,,"Originally paid £100 by Marten and the Voyagie van London to pay to pay to the States of Brabant in Antwerp. However, this amount was not paid. Written off as quade schult in winninge ende verlies"
+dfl12_036,34,NA,Matthys_van_Bergen,Matthys van Bergen,Wissel,FALSE,,Merchant in Hamburg who pulled a wissel from London. Written off as quade schult in winninge ende verlies
+dfl12_037,35,25,Jaspar_Celosse,Jaspar Celosse,Wissel,TRUE,,Wissel from Emden and London
+dfl12_038,36,NA,Winninge_ende_verlies_1,Winninge ende verlies_1,Accounting,FALSE,,"The total profits after the losses are calculated are £14693.7.2 1/2. This is written off as credit of the Creditors of the book n. 9 nr 286, 227b–231b"
+dfl12_039,37,26,Joos_de_Voghele_1,Joos de Voghele_1,Balancing,TRUE,,12 Bis: Written off on winninghe ende verlies to even the account
+dfl12_040,38,279,Lynwaeten_for_the_rekening_of_Hilaria_della_Faille_and_Hester_van_Eeckeren,Lynwaeten for the rekening of Hilaria della Faille and Hester van Eeckeren,Company,TRUE,,"Created a profit of £64.12.6 written off on winninghe ende verlies nr 36. The lynwaeten was sold in London. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_041,39,27,Joos_de_Voghele_2,Joos de Voghele_2,Balancing,TRUE,,12 Bis: Written off on winninghe ende verlies to even the account
+dfl12_042,40,86,Fyn_rouwe_syde,Fyn rouwe syde,Goods,FALSE,,Purchase of silk in Verona and sent through Augsburg. The silk was sold in London. Created a profit of £782.17.1 written off on winninghe ende verlies nr 36. In 12bis it created a profit of £222.3.8. Also had a credit from the account of Ardasse syde ende cleyn foullie nieuw rekeninge (nr 87) for sale of silk that was mistakenly put in that account instead of in that of rouwe syde.
+dfl12_043,41,240,Peeter_della_Faille_de_Jonge,Peeter della Faille de Jonge,Giovane,TRUE,,The total debit of £129.12.5 is written off by a credit from the Branch of Venice for £135.3.10. This leaves a credit of £5.11.5. 12 Bis: Paid by Marten
+dfl12_044,42,225,Camelotten_overhoop,Camelotten overhoop,Goods,FALSE,,"£645.17.0 was sold in London, but they still estimated that the account would create a loss of £39.16.3, which is written off on Winninge ende verlies nr 36. A credit of £652.4.0 was brought over to the account Camelotten overhoop nieuw rekeninge (nr 212, 184a). 12 Bis: Written off on Oncosten van conduitten (nr 207, 144-147)"
+dfl12_045,43,28,Jan_van_Neste_1,Jan van Neste_1,Erffgoed,TRUE,,"12 Bis: Written off on capital van diverse renten. See also nr 180, 135-136"
+dfl12_046,44,NA,Jan_de_Hilte_van_Cortryck,Jan de Hilte van Cortryck,Balancing,FALSE,,Written off as oncosten van coopmansschappen
+dfl12_047,45,NA,Carseyen_in_company_of_Jan_de_Wale,Carseyen in company of Jan de Wale,Company,TRUE,,"Created a profit of £351.18.7 written off on winninghe ende verlies nr 36. The first entry in the debits talks about transfering money. The second entry speaks about the sending of the carseyen. These were also mixed with the camelotten in the company of Jan de Wale (nr 145, 144a–146). Credits of £361.14.4 and £152.6.4 were brought over in debt to that account. On the credits there is selling of the carseyen in Venice"
+dfl12_048,46,89,Lynwaet_in_the_company_of_Willem_van_den_Mey,Lynwaet in the company of Willem van den Mey,Company,FALSE,,"The lynwaet was sold in London, and Willem van den Mey received £324.1.5 for his half. Created a profit of £117.0.7 written off on winninghe ende verlies nr 36."
+dfl12_049,47,NA,Ghysbrecht_Tytgat,Ghysbrecht Tytgat,Balancing,FALSE,,"Written off on the account of Geleyen Tytgat (183b), which is then written off on account of Hilaria della Faille"
+dfl12_050,48,NA,Margriete_van_Hoogersteyn,Margriete van Hoogersteyn,Trade,FALSE,,This account shows Margriete van Hoogersteyn's involvement in trade of lynwaeten.
+dfl12_051,49,29,Rigo_Minauw,Rigo Minauw,Factor,FALSE,,"12 Bis: After adding to the debit to £127.13.10, the debit was written off through taking his credit from his other account (nr 203), through work in trade that he did, and finally through £21.19.2 being taken from his account on Winninge ende verlies in order to even his account."
+dfl12_052,50,NA,Capitoen_syde_ende_Hoffsaet,Capitoen syde ende Hoffsaet,Goods,FALSE,,Sold in London and the remaining brought over to the account of fyn rouwe syde.
+dfl12_053,51,NA,Carel_van_Malsem,Carel van Malsem,,FALSE,,Heere van Thielborch. Debit reached £30 through payments by the cassa and then written off through payments by Carel van Malsem to Dierick de Jagere (nr 298).
+dfl12_054,52,NA,Beelken_della_Faille_1,Beelken della Faille_1,Kin,TRUE,,Jan de Oude wrote this debt off and so it was written off under 'oncosten van coopmansschappen' on 4 June 1583
+dfl12_055,53,NA,Ambrosius_Goyvaerts_1,Ambrosius Goyvaerts_1,Lawyer,FALSE,,"Goyvaerts was the secretary of the Raad van Brabant. He was bequested 50 gulden per year by Jan de Oude in his testament, but he died and so the money went back to the heirs. The heirs received half of the original debt and the other half written off on oncosten van coopmansschappen."
+dfl12_056,54,30,Nicolaes_Antonio_van_Smillien,Nicolaes Antonio van Smillien,Open,FALSE,,Remains open
+dfl12_057,55,31,Pauwels_della_Faille_1,Pauwels della Faille_1,Kin,TRUE,,12 Bis: Received by the cassa
+dfl12_058,56,32,Peeter_Rutgeert,Peeter Rutgeert,Erffgoed,FALSE,,"12 Bis: Written off on Creditors of the book (nr 17, 15-21) on 20 September 1594 seemingly for salary for the administration of land in the Golderschen polder."
+dfl12_059,57,33,Hans_Noirot,Hans Noirot,Kin,TRUE,,Remains open.
+dfl12_060,58,NA,Henrick_van_Berge,Henrick van Berge,Preparation,FALSE,,Balanced through the ‘bereyden’ or preparation of 217 kerseys to the account Carseyen overhoop.
+dfl12_061,59,NA,States_of_Brabant,States of Brabant,Political,FALSE,,
+dfl12_062,60,NA,Andries_van_der_Meulen,Andries van der Meulen,,,,"Andries paid the cassa the amount of £333.6.8. It does not say anything more than this, so it is difficult to know what this is about. This was obviously done before the marriage of Daniel and Hester."
+dfl12_063,61,228,Simon_de_Deckere,Simon de Deckere,,FALSE,,Transactions involving the cassa and and dealing with Willem van den A.
+dfl12_064,62,276,Hilaria_della_Faille_1,Hilaria della Faille_1,Kin,TRUE,,Hilaria sent a kindergifte to Carlo's wife and so may have been a godmother. This shows the close interaction between the book of the heirs and their aunt. There are many interactions that involve Jacques de Wale. 12 Bis: Paid by cassa.
+dfl12_065,63,88,Lynwaeten,Lynwaeten,Goods,FALSE,,Created a profit of £2426.14.5 written off on winninghe ende verlies nr 36. The lynwaeten was sold in Venice and London. The vast majority was sold in London.
+dfl12_066,64,34,Francisco_van_Eeckeren_1,Francisco van Eeckeren_1,Kin,TRUE,,12 Bis: The extra debt of £8.15.7 is from a payment made by Rigo Minauw in Cologne.
+dfl12_067,65,NA,Jan_Voet_cleermaecker,Jan Voet cleermaecker,Preparation,FALSE,,Paid by oncosten van coopmansschappen for the making of clothes.
+dfl12_068,66,84,Napelse_Syde,Napelse Syde,Goods,FALSE,,Created a profit of £1314.9.5 1/2 written off on winninghe ende verlies nr 36.
+dfl12_069,67,35,Rensche_wynen,Rensche wynen,Goods,FALSE,,"12 Bis: Written off on creditors of the book (nr 17, 15-21) to even the account."
+dfl12_070,68,36,Willem_van_den_Mey_1,Willem van den Mey_1,Trade,FALSE,,
+dfl12_071,69,37,Willem_Mourcock,Willem Mourcock,Balancing,FALSE,,Written off on Winninge ende verlies
+dfl12_072,70,NA,Pauwels_della_Faille_2,Pauwels della Faille_2,Kin,TRUE,,Written off on his other account (nr 55)
+dfl12_073,71,278,Jan_de_Wale_1,Jan de Wale_1,Factor,TRUE,,12 Bis: The credit reached £900.16.6
+dfl12_074,72,230,Catharina_Aertssen,Catharina Aertssen,Bequest,TRUE,,"She received £166.13.4 for improvement of her house as a bequest from Jan de Oude that is listed under Armen der stadt van Antwerpen  (nr 356, 285b–286a)."
+dfl12_075,73,NA,Jeronimo_Cassina,Jeronimo Cassina,,FALSE,,Written off on the account of Iems Sipman (256a) and will go under the account of 'crediteuren vanden voors. sterffhuyse'
+dfl12_076,74,38,Robert_van_Eeckeren_1,Robert van Eeckeren_1,Kin,TRUE,,"Many of the debits to Robert's account were for payments by the cassa. Many of these payments were to people with Spanish sounding surnames. Total payments by the cassa were £604.12.1. The main credit in the account is that Robert van Eeckeren took over the debt of the book to Hester van Eeckeren (nr 280, 223a–223b). 12 Bis: Written off on the account of Anna della Faille (nr 197, 139-142) on 30 March 1584 to even the account"
+dfl12_077,75,NA,Witte_florette_syde,Witte florette syde,Goods,FALSE,,Total debt of £627.13.9 is written off on the account of florette syde (71b)
+dfl12_078,76,NA,Antonio_van_Neste_1,Antonio van Neste_1,Wissel,TRUE,,"Wissel from London and his bequest, while his original credit of £0.6.2 was written off on oncosten van coopmanschappen."
+dfl12_079,77,39,Anthoni_Peeterss_van_Brussel,Anthoni Peeterss van Brussel,Giovane,FALSE,,12 Bis: Written off on winninge ende verlies for payment made by Francisco van Eeckeren for travel to Venice.
+dfl12_080,78,281,Willem_van_den_Mey_2,Willem van den Mey_2,Trade,FALSE,,12 Bis: The credit reached £355.18.7
+dfl12_081,79,40,Francisco_van_Eeckeren_2,Francisco van Eeckeren_2,Kin,TRUE,,12 Bis: Account remains open
+dfl12_082,80,NA,Jacques_de_Wale_1,Jacques de Wale_1,Factor,TRUE,,
+dfl12_083,81,41,Catharina_de_Hane,Catharina de Hane,Kin,TRUE,,12 Bis: After a total debt of £72.10.1 1/2 the account is evened out by the same credits.
+dfl12_084,82,245,Jan_Verbeke,Jan Verbeke,Wissel,TRUE,,Jan van der Beke. Husband of Catharina de Wale and thus step-father of the heirs of Herman Pottey. Paid by cassa and through wissels.
+dfl12_085,83,42,Christalyne_spiegels,Christalyne spiegels,Goods,FALSE,,"12 Bis: The mirrors are creditor for two payments, but then winninge ende verlies is debtor for £31.7.5 for the losses to even the account out."
+dfl12_086,84,NA,Ardasse_syde_ende_cleyn_foullie,Ardasse syde ende cleyn foullie,Goods,FALSE,,"Credit of £283.7.4 written off on the account of ardasse syde ende foullie 'nieuw rekeninge' (nr 208, 181a). Created a profit of £34.6.3 written off on winninghe ende verlies nr 36."
+dfl12_087,85,43,Engelsten,Engelsten,Goods,FALSE,,Two sales of 386 pounds and 334 pounds and then to Creditors of the book to even the account.
+dfl12_088,86,44,Foullie_for_the_rekening_of_Luis_Cutsini,Foullie for the rekening of Luis Cutsini,Goods,FALSE,,Written off on the account of Luis Cutsini
+dfl12_089,87,NA,Ardasse_and_Canarine_syde_van_Marten_della_Faille_and_Jan_de_Wale,Ardasse and Canarine syde van Marten della Faille and Jan de Wale,Company,TRUE,,"Created a profit of £44.15 written off on winninghe ende verlies nr 36. A credit of £105.9.10 was sent over to the account Ardasse ende canarine syde in company with Jan de Wale nieuw rekening (nr 209, 181b–182b)."
+dfl12_090,88,45,Erardo_Beham_nieuw_rekening,Erardo Beham nieuw rekening,Factor,FALSE,,12 Bis: The debit extends to £50.11.3 and then is written off on oncosten van crediteuren for diverse things he did in Nuremberg.
+dfl12_091,89,99,Jan_Widhols_nieuw_rekening,Jan Widhols nieuw rekening,Factor,FALSE,,12 Bis: Credit was augmented by £200 payment from Voyagie van Venice.
+dfl12_092,90,NA,Lynken_Pluym_weduwe_van_Lenaert_Pluym,Lynken Pluym weduwe van Lenaert Pluym,,FALSE,,Written off on the account of Catharina Aertssen (47a)
+dfl12_093,91,46,Rente_van_44_gulden_erffelyck_op_de_huysen_van_Jan_de_Clerck_1,Rente van 44 gulden erffelyck op de huysen van Jan de Clerck_1,Erffgoed,FALSE,,"Written off on the account of 'tcapittel van de erffgoeden'. 12 Bis: Placed under the capital van erffgoeden nr 175, 132"
+dfl12_094,92,47,Rente_van_32_gulden_erffen_op't_huys_t'Gulden_Cruys_in_the_manstraete_1,Rente van 32 gulden erffen op't huys t'Gulden Cruys in the manstraete_1,Erffgoed,FALSE,,"Written off on the account of 'tcapittel van de erffgoeden'. 12 Bis: Placed under the capital van erffgoeden nr 176, 132"
+dfl12_095,93,234,Florette_syde,Florette syde,Goods,FALSE,,"Created a profit of £4281.5.8 written off on winninghe ende verlies nr 36. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92). This was due to a mistake in the accounting. The rest of the credit for Florette syde was placed on the nieuwe rekening."
+dfl12_096,94,NA,Fyn_syde,Fyn syde,Goods,FALSE,,"The debts come from silk sent by the Branches of Venice and Verona. The credits mostly on the branch in London. The account is closed by placing the remaining £7168.11.1 1/2 as credit on the account of winninghe ende verlies (nr 36, 17b). A credit of £10191.8.1 is written off on the account of Fyn syde nieuwe rekening (nr 206, 179b–180a)"
+dfl12_097,95,NA,Bouratten_overhoop,Bouratten overhoop,Goods,FALSE,,"Written off on the accounts of Marten della Faille and Jacques della Faille and oncosten van coopmansschappen (nr 86, 86a)"
+dfl12_098,96,270,Oncosten_van_coopmansschappen,Oncosten van coopmansschappen,Accounting,FALSE,,"The majority of the costs for trade and various household costs listed in the first section are written off on the account of the Creditors of book n. 9 (nr 286: £5644.0.0 1/4) and on Winninge ende verlies (nr 36: £3584.17.4). 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_099,97,NA,Lodewyck_Blommaert_1,Lodewyck Blommaert_1,Wissel,FALSE,,5 wissels: 1 to Marten della Faille; 1 to Branch of London; 2 to Branch of Venice
+dfl12_100,98,50,Jan_de_Wale_2,Jan de Wale_2,Factor,TRUE,,12 Bis: Received by cassa.
+dfl12_101,99,NA,Joos_de_Voghele_nieuw_rekening,Joos de Voghele nieuw rekening,Trade,TRUE,,Trade dealing with lynwaeten and Bocralen overhoop (nr 191) as well as bequest
+dfl12_102,100,280,Jacques_della_Faille_1,Jacques della Faille_1,Heir,TRUE,,"This is his involvement in trade. Many of the payments come from the cassa or trade in Italy. 12 Bis: £23.18.3 is written off on the account of his paternal inheritance (nr 260, 172-176) in order to close the account."
+dfl12_103,101,NA,Canifassen_overhoop,Canifassen overhoop,Goods,FALSE,,
+dfl12_104,102,51,Rente_van_150_gulden_erffelyck_opden_Grooten_Beer_op_de_Groote_Merct_1,Rente van 150 gulden erffelyck opden Grooten Beer op de Groote Merct_1,Erffgoed,FALSE,,"12 Bis: Placed under the capital van erffgoeden nr 177, 133-134"
+dfl12_105,103,52,Rente_van_100_gulden_erffelyck_op_den_Witten_Leeuw,Rente van 100 gulden erffelyck op den Witten Leeuw,Erffgoed,FALSE,,"12 Bis: Placed under the capital van erffgoeden nr 178, 134"
+dfl12_106,104,NA,Jan_de_Reyer,Jan de Reyer,Preparation,FALSE,,Preparation of Carseyen overhoop
+dfl12_107,105,53,D'erffgenaemen_van_Simon_Longin_in_Brussels,D'erffgenaemen van Simon Longin in Brussels,Erffgoed,FALSE,,12 Bis: The debt came from the purchase of three houses in Brussels on 13 June 1582. The credits come from a payment to the cassa and another payment to the cassa involving Richardot.
+dfl12_108,106,54,Prince_van_Simay,Prince van Simay,Balancing,FALSE,,12 Bis: Written off on Creditors of the book.
+dfl12_109,107,55,Rente_van_100_gulden_erffen_op_Calcoeten_inde_Sackstratte,Rente van 100 gulden erffen op Calcoeten inde Sackstratte,Erffgoed,FALSE,,"Written off on the account of 'tcapittel van erffgoeden'. 12 Bis: Placed under the capital van erffgoeden nr 179, 135"
+dfl12_110,108,80,Voyagie_van_Polen_(Verona),Voyagie van Verona,Branch,FALSE,,"Created a profit of £2589.5 written off on winninghe ende verlies nr 36. 12 Bis: Credit of £57.7.10 was brought over to Voyagie van Verona nieuwe rekening (nr 125, 92) in order to even the account."
+dfl12_111,109,56,Voyagie_van_Weenen_in_Osterryck_(Venice),Voyagie van Venice,Branch,FALSE,,"Created a profit of £8000 written off on winninghe ende verlies nr 36. £23357.15.5 is written off on the account of Branch of Venice new rekening nr 178, 162a–168b. 12 Bis: The remaining debit of £9.16.11 is written off on winninge ende verlies on 30 March 1584 'voor abus ende erreur'."
+dfl12_112,110,97,Voyagie_van_London,Voyagie van London,Branch,FALSE,,"12 Bis: Includes payments on 22 March 1584 to the heirs. In the end, £21959.3.10 is brought over to Voyagie van London nieuwe rekening nr 156, 104-109"
+dfl12_113,111,NA,Dierick_de_Jagere_rekening_van_erffgoeden_1,Dierick de Jagere rekening van erffgoeden_1,Erffgoed,TRUE,,"Jagere bought land in Beveren bij Cortryck and so will be written off on the account of 'capittel van erffgoeden nr 229, 198b–199a. This will be given to Hester as part of her paternal inheritance."
+dfl12_114,112,57,Louis_Malapert_1,Louis Malapert_1,Kin,TRUE,,12 Bis: Written off on his other account on 20 September 1594.
+dfl12_115,113,NA,Cassa_in_contant,Cassa in contant,Accounting,FALSE,,
+dfl12_116,114,241,Carseyen_overhoop,Carseyen overhoop,Goods,FALSE,,"This account is interesting because the debits show expenses for textiles. The credits show the division of these textiles between the heirs, which was done on 6 and 31 January 1583. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92) after an additional credit to £67.8.3."
+dfl12_117,115,16,Jan_de_Lannoy_1,Jan de Lannoy_1,Wissel,FALSE,,Son of Jan Maechans. Three Wissels from London for a total of £555.8.4 across DFL 12 and 12bis
+dfl12_118,116,19,Robert_Collimor,Robert Collimor,Wissel,FALSE,,Two wissels from London for a total of £397.18.4 across DFL 12 and 12bis
+dfl12_119,117,NA,Embrecht_Pellicorne,Embrecht Pellicorne,Wissel,FALSE,,Wissel from London
+dfl12_120,118,20,Bartholomeeus_Peltier,Bartholomeeus Peltier,Wissel,FALSE,,Wissel from London
+dfl12_121,119,NA,Jan_Gaultier_and_Geeraert_Hemaert_1,Jan Gaultier and Geeraert Hemaert_1,Wissel,FALSE,,Two wissels from London
+dfl12_122,120,NA,Jacob_Lange,Jacob Lange,Wissel,FALSE,,"Three wissels, one from Augsburg for Marten and two from Venice"
+dfl12_123,121,NA,Antonio_Gardino,Antonio Gardino,Wissel,FALSE,,Wissel from Venice
+dfl12_124,122,NA,Antonio_Marischal,Antonio Marischal,Wissel,FALSE,,Wissel from London
+dfl12_125,123,NA,Ritsaert_Caterol,Ritsaert Caterol,Wissel,FALSE,,Wissel from London
+dfl12_126,124,NA,Fernando_Ximenes_and_Ruy_Nunez,Fernando Ximenes and Ruy Nunez,Wissel,FALSE,,Wissel from Venice
+dfl12_127,125,NA,Hugo_Janssen,Hugo Janssen,Wissel,FALSE,,Two wissels from London
+dfl12_128,126,NA,Balthasar_Bonters_1,Balthasar Bonters_1,Wissel,FALSE,,Two wissels from London
+dfl12_129,127,NA,Jaspar_Dingens,Jaspar Dingens,Wissel,FALSE,,Wissel from London
+dfl12_130,128,NA,Willem_Touley,Willem Touley,Wissel,FALSE,,Wissel from London
+dfl12_131,129,NA,Mauritio_Lanfranchi_and_Fabio_Augustini_1,Mauritio Lanfranchi and Fabio Augustini_1,Wissel,FALSE,,Two wissels from Venice
+dfl12_132,130,NA,Ludovico_Perez,Ludovico Perez,Wissel,FALSE,,Wissel from Venice plus another payment made to the cassa
+dfl12_133,131,233,Gaspar_Rouelasca_1,Gaspar Rouelasca_1,Wissel,FALSE,,"Four wissels from Venice. However, not all were paid and this amount was written off on the account of Carlo Lanfranchi, but paid too much and so now in credit. 12 Bis: Payment to cassa augmented the credit to £78.3.3, but then mostly written off on Voyagie van Venice by to payment: £113.18.1, £78.2.8. A small debt of £0.0.7 was written off on Winninge ende verlies to even the account."
+dfl12_134,132,48,Jan_Reynaerts,Jan Reynaerts,Kin,TRUE,,"Married to Johanna della Faille, daughter of Peter della Faille. Debits are from two payments made by Jacques de Wale to Jan Reynaerts."
+dfl12_135,133,49,Guilliamme_Coppin_and_Ferry_Dornille,Guilliamme Coppin and Ferry Dornille,Wissel,FALSE,,Wissel from Venice. 12 Bis: Received by cassa.
+dfl12_136,134,NA,Absolon_Leerse_1,Absolon Leerse_1,Wissel,FALSE,,Three wissels from Venice
+dfl12_137,135,NA,Jan_Angelo_Vergano_1,Jan Angelo Vergano_1,Wissel,FALSE,,Wissel from Venice that Vergano paid to Christian van Wiele (nr 297) and wissel from London
+dfl12_138,136,NA,Thomas_Eton,Thomas Eton,Wissel,FALSE,,Wissel from London
+dfl12_139,137,NA,Emanuel_Henricques,Emanuel Henricques,Wissel,FALSE,,Wissel from London
+dfl12_140,138,NA,Tibere_Peltier,Tibere Peltier,Wissel,FALSE,,Wissel from London
+dfl12_141,139,NA,Thomas_Monton,Thomas Monton,Wissel,FALSE,,Wissel from London
+dfl12_142,140,242,Henrick_Vool,Henrick Vool,Wissel,FALSE,,Wissel from Venice
+dfl12_143,141,NA,Franchoys_van_Hove,Franchoys van Hove,Wissel,FALSE,,Wissel from Venice
+dfl12_144,142,58,Jan_Simons,Jan Simons,Wissel,FALSE,,Two wissels from London for a total of £157.5.10 across DFL 12 and 12bis
+dfl12_145,143,59,Hans_de_Weert,Hans de Weert,Wissel,TRUE,,Wissel from London
+dfl12_146,144,60,Willem_Walcker,Willem Walcker,Wissel,FALSE,,Wissel from London
+dfl12_147,145,246,Turcxe_camelotten_in_company_with_Jan_de_Wale,Turcxe camelotten in company with Jan de Wale,Company,TRUE,,"Created a loss of £10.16.8, which was written off on nr 36. A credit of £258.12.4 was also written off on the account Camelotten in Company with Jan de Wale (nr 211, 183a–184a). 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_148,146,61,Eduart_van_Ghistele,Eduart van Ghistele,Balancing,FALSE,,Account is balanced through book transfer that was written off on the account of Adriaen van Afferden de Jonge (nr 319)
+dfl12_149,147,63,Luis_Cutsini_1,Luis Cutsini_1,Transport,FALSE,,Debts deal with expenses for goods.
+dfl12_150,148,64,Hilaria_della_Faille_2,Hilaria della Faille_2,Kin,TRUE,,"This is Hilaria's rekening van houwelyck. She must return the gift Jan de Oude gave to her of £400 for her second wedding, but in his testament Jan de Oude decided to give this amount to her son from her first marriage, Gaspar Losschaert. 12 Bis: Transfered to Gaspar Losschaert on 22 February 1584 (nr 255, 165)"
+dfl12_151,149,NA,Jan_de_Oude_1,Jan de Oude_1,Accounting,TRUE,,"Rekeninge van legaten. Written off as debt to the 'crediteuren van den boeck' (nr 286, 227b)"
+dfl12_152,150,65,Jan_della_Faille_sororal_1,Jan della Faille_sororal_1,Inheritance,TRUE,Jan,"These are debts for the division of the furniture of Cornelia. See Capital van Cornelia della Faille (nr 347, 279b–280b) for the list of these debits. The sum is £311.12.11 (150a). 12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_153,151,66,Marten_della_Faille_sororal_1,Marten della Faille_sororal_1,Inheritance,TRUE,Marten,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_154,152,67,Anna_della_Faille_sororal_1,Anna della Faille_sororal_1,Inheritance,TRUE,Anna,"Anne's entry is mistakenly left unnumbered. 12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_155,152,68,Carlo_della_Faille_sororal_1,Carlo della Faille_sororal_1,Inheritance,TRUE,Carlo,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_156,153,69,Jacques_della_Faille_sororal_1,Jacques della Faille_sororal_1,Inheritance,TRUE,Jacques,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_157,154,70,Steven_della_Faille_sororal_1,Steven della Faille_sororal_1,Inheritance,TRUE,Steven,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_158,155,71,D’erffgenaemen_van_Maria_della_Faille_sororal_1,D'erffgenaemen van Maria della Faille_sororal_1,Inheritance,TRUE,Maria,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_159,156,72,Hester_della_Faille_sororal_1,Hester della Faille_sororal_1,Inheritance,TRUE,Hester,"12 Bis: Written off on Capital of Cornelia della Faille on 7 January 1584 (nr 265, 184-187)."
+dfl12_160,157,73,Jan_della_Faille_1,Jan della Faille_1,Heir,TRUE,Jacques,"Purchases during auction of sterfhuis textiles on 31 January 1583. The only credit is from the bequest of Goyvaerts. 12 Bis: Written off on his account for his paternal inheritance (nr 256, 165-167)."
+dfl12_161,158,NA,Peeter_and_Jan_van_der_Meert,Peeter and Jan van der Meert,Wissel,FALSE,,Wissel from Venice
+dfl12_162,159,NA,Gillis_Schops,Gillis Schops,Wissel,FALSE,,Wissel from Venice
+dfl12_163,160,74,Jan_Walter,Jan Walter,Transport,FALSE,,"Wissels in Nuremberg from Ludovico Perez (nr 130) and from Adriaen de la Barra but the credits in 12bis deal with the transportation of goods, and so he seems to have been paid for transporting goods."
+dfl12_164,161,NA,Andrea_Barretta_1,Andrea Barretta_1,Wissel,FALSE,,Two wissels from Venice
+dfl12_165,162,NA,Jan_Helduwier_and_Bernardino_Paluasmo,Jan Helduwier and Bernardino Paluasmo,Wissel,FALSE,,Wissel from Venice
+dfl12_166,163,NA,Jan_Japssens,Jan Japssens,Wissel,FALSE,,Wissel from London
+dfl12_167,164,NA,Lenaert_van_Driel_de_Oude,Lenaert van Driel de Oude,Balancing,TRUE,,"Payments by the cassa and then written off on oncosten van coopmansschappen, which seems to have been done after a lawsuit and agreement."
+dfl12_168,165,NA,Jacques_de_Wale_nieuw_rekeninge,Jacques de Wale nieuw rekeninge,Factor,TRUE,,
+dfl12_169,166,NA,Reynier_Capcot,Reynier Capcot,Wissel,FALSE,,Four wissels from London
+dfl12_170,167,NA,Jan_Maniart,Jan Maniart,Wissel,FALSE,,One wissel from Marten and one from Venice
+dfl12_171,168,NA,Gaspar_Robano,Gaspar Robano,Wissel,FALSE,,Two wissels from Venice
+dfl12_172,169,NA,Sebastiaen_Leerse,Sebastiaen Leerse,Wissel,FALSE,,Wissel from Venice
+dfl12_173,170,NA,Jan_Francisco_Capello,Jan Francisco Capello,Wissel,FALSE,,Wissel from London
+dfl12_174,171,NA,Daniel_Runtweesch_1,Daniel Runtweesch_1,Wissel,FALSE,,Two wissels to Jan Widhols and Jacques della Faille
+dfl12_175,172,NA,Andries_de_la_Barre,Andries de la Barre,Wissel,FALSE,,Wissel from Jan Helduwier and Bernardino Paluasmo and then to pay Jan Walter (nr 160)
+dfl12_176,173,NA,Jacques_della_Faille_de_Oude_1,Jacques della Faille de Oude_1,Kin,TRUE,,For a wissel involving Andrea Barretta in Venice.
+dfl12_177,174,NA,Carel_and_Balthasar_van_Hoyken_and_Jan_Jupin,Carel and Balthasar van Hoyken and Jan Jupin,Wissel,FALSE,,Wissel from Venice
+dfl12_178,175,NA,Adriaen_Walschaert,Adriaen Walschaert,Wissel,FALSE,,Wissel from London
+dfl12_179,176,75,Peeter_della_Faille_in_Venice,Peeter della Faille in Venice,Giovane,TRUE,,"12 Bis: Peeter was creditor for money owed to him for clothes during his 6 years in Venice. The total debt of £80 was paid by Winninge ende verlies (nr 124, 84-92)."
+dfl12_180,177,NA,Simon_and_Steven_Nunez,Simon and Steven Nunez,Wissel,FALSE,,Wissel from London
+dfl12_181,178,93,Voyagie_van_Weenen_nieuwe_rekening_(Venice),Voyagie van Venice nieuwe rekening,Branch,FALSE,,"The beginning balance is mentioned on nr 109, page 111a. The sum of the debit is £30737.1.2. This shows how much capital is still in Venice. 12 Bis: Pages 58–64 have merchant marks on them. These tell of the goods that are given to each of the heirs and so can be used to figure out how they divided the Branch in Venice."
+dfl12_182,179,NA,Peeter_Bisschop,Peeter Bisschop,Wissel,FALSE,,Two wissels from London
+dfl12_183,180,NA,Henrick_van_Lemens_1,Henrick van Lemens_1,Wissel,TRUE,,Two wissels from Venice and London
+dfl12_184,181,NA,Jan_Cornelis_or_Jan_Caillir,Jan Cornelis or Jan Caillir,Wissel,FALSE,,Two wissels from London
+dfl12_185,182,NA,Clement_Caltrop,Clement Caltrop,Wissel,FALSE,,Wissel from London
+dfl12_186,183,NA,Antonio_Bonidazio,Antonio Bonidazio,Wissel,FALSE,,Wissel from Venice
+dfl12_187,184,NA,Franchoys_ver_Beke,Franchoys ver Beke,Wissel,FALSE,,Wissel from London
+dfl12_188,185,NA,Jacques_Gabri,Jacques Gabri,Wissel,FALSE,,Wissel from London
+dfl12_189,186,NA,Jacques_and_Henrick_Hoyel,Jacques and Henrick Hoyel,Wissel,FALSE,,Wissel from London
+dfl12_190,187,NA,Jan_Benedetto_Invrea_and_Jan_Bapta_Logorio,Jan Benedetto Invrea and Jan Bapta Logorio,Wissel,FALSE,,Wissel from London
+dfl12_191,188,NA,Jan_Niclaes_Walinstey,Jan Niclaes Walinstey,Wissel,FALSE,,Wissel from London
+dfl12_192,189,76,Godefrido_Houtappel,Godefrido Houtappel,Wissel,FALSE,,Two wissels one from London and one from Venice
+dfl12_193,190,NA,Jan_Pellicoren_1,Jan Pellicoren_1,Wissel,FALSE,,Jan Pellicoren was debtor to Jacques della Faille for a wissel from London and paid the wissel to the cassa on 12 July 1583
+dfl12_194,191,77,Bocralen_overhoop_2,Bocralen overhoop_2,Goods,FALSE,,
+dfl12_195,192,NA,James_Wickers,James Wickers,Wissel,FALSE,,Wissel from London
+dfl12_196,193,NA,Simon_de_le_Bosquiel,Simon de le Bosquiel,Wissel,FALSE,,Two wissels from London
+dfl12_197,194,NA,Peeter_des_Marez,Peeter des Marez,Wissel,FALSE,,Wissel from London
+dfl12_198,195,NA,Guilliam_Walschaert,Guilliam Walschaert,Wissel,FALSE,,Two wissels from London
+dfl12_199,196,78,Peeter_della_Faille_Peterssen,Peeter della Faille Peterssen,Kin,TRUE,,Peeter is debtor due to a payment he ordered from the cassa. 12 Bis: Written off on winninge ende verlies because of his inability to pay.
+dfl12_200,197,NA,Carel_Navaroli_and_brothers,Carel Navaroli and brothers,Wissel,FALSE,,Wissel from Jan Verbeke that they paid to Oswaldus Cleynhaus ende company.
+dfl12_201,198,273,Fernando_Ximenez_and_the_heirs_of_Ruy_Nunez,Fernando Ximenez and the heirs of Ruy Nunez,Wissel,FALSE,,Wissel from Venice and one from Jan Verbeke. The amount paid was one more groten than the debit.
+dfl12_202,199,79,Gallen_de_Soria,Gallen de Soria,Goods,FALSE,,Would seem to be gallnoten. 37 sacks of galen were sent from Venice on a ship and eventually sold in London. The sales resulted in a loss of £179.10.10.
+dfl12_203,200,NA,Wolle_Francisca_overhoop,Wolle Francisca overhoop,Goods,FALSE,,Written off on oncosten van coopmansschappen
+dfl12_204,201,81,Jan_van_Borne_1,Jan van Borne_1,Factor,TRUE,,The cassa made two payments upon his request. The first was £22.1.2 to Josynken Calvaerts. The second was also to Josynken for £12.11.6. The account remains open for the same amount.
+dfl12_205,202,NA,Hendrick_Poincter_(Herry_Pointer),Hendrick Poincter (Herry Pointer),Wissel,FALSE,,Wissel from London
+dfl12_206,203,NA,Gysbrecht_Boudeson_1,Gysbrecht Boudeson_1,Wissel,FALSE,,Wissel from London
+dfl12_207,204,82,Jan_Wevel,Jan Wevel,Wissel,FALSE,,Wissel from London
+dfl12_208,205,83,Abraham_Hogson,Abraham Hogson,Wissel,FALSE,,Four wissels from London across DFL 12 and 12bis. Debt that continues in from DFL 12 to 12bis is a wissel that had yet to be paid.
+dfl12_209,206,85,Fyn_syde_nieuw_rekeninge,Fyn syde nieuw rekeninge,Goods,FALSE,,"£10191.8.1 came over from the account Fyn syde (nr 94, page 75a)"
+dfl12_210,207,277,Florette_syde_nieuw_rekening,Florette syde nieuw rekening,Goods,FALSE,,"£2937.0.4 came over from the account Florette syde (nr 93, page 73a). 12 Bis: The credit reached £2592.9.6"
+dfl12_211,208,87,Ardasse_syde_ende_cleyn_foullie_nieuw_rekeninge,Ardasse syde ende cleyn foullie nieuw rekeninge,Goods,FALSE,,"£283.7.4 came over from the account Ardasse syde ende cleyn foullie (nr 84, page 68a)."
+dfl12_212,209,NA,Ardasse_ende_Canarine_syde_in_company_with_Jan_de_Wale_nieuw_rekening,Ardasse ende Canarine syde in company with Jan de Wale nieuw rekening,Company,TRUE,,"£105.9.10 came over from the account Ardasse and Canary syde van Marten della Faille and Jan de Wale (nr 87, page 69b). The textiles were sold in London for £210.10.10. One half went to the sterfhuis and the other half to Jan de Wale. The half for the sterfhuis was £105.5.5. This led to a loss that goes on the account Winninghe ende verlies of £0.4.5."
+dfl12_213,210,NA,Lynwaeten_in_company_with_Hilaria_della_Faille,Lynwaeten in company with Hilaria della Faille,Company,TRUE,,"The £333.17.0 came over from the company with Gillis del Ponte and Hilaria della Faille (nr 24, (10a–11a). It is for 47 stukken lynwaeten."
+dfl12_214,211,90,Camelotten_in_company_with_Jan_de_Wale,Camelotten in company with Jan de Wale,Goods,FALSE,,"£258.12.4 comes from Turcxe camelotten in company with Jan de Wale (nr 145, 145a). 12 Bis: Total of £136.10.1 is written off as profit on Winninge ende verlies."
+dfl12_215,212,91,Camelotten_overhoop_nieuw_rekeninge,Camelotten overhoop nieuw rekeninge,Goods,FALSE,,"£652.4.0 came over from the account Camelotten overhoop (nr 42, page 23a)"
+dfl12_216,213,NA,Jacques_Gillis,Jacques Gillis,Wissel,FALSE,,Wissel from London
+dfl12_217,214,NA,Jeronimo_Schorza_1,Jeronimo Schorza_1,Wissel,FALSE,,Wissel from London
+dfl12_218,215,NA,Franchois_le_Fort_1,Franchois le Fort_1,Wissel,FALSE,,Wissel from London
+dfl12_219,216,NA,Joris_Angliesie,Joris Angliesie,Wissel,FALSE,,Wissel from London
+dfl12_220,217,NA,Eduaert_Cobbe,Eduaert Cobbe,Wissel,FALSE,,Wissel from London
+dfl12_221,218,94,Sidiach_Roo,Sidiach Roo,Wissel,FALSE,,Wissel from London
+dfl12_222,219,95,Gillis_van_den_Bogaerde_and_Marcus_Scorrer_2,Gillis van den Bogaerde and Marcus Scorrer_2,Wissel,FALSE,,Wissel from Venice. 12 Bis: Paid to cassa
+dfl12_223,220,96,Balthasar_van_Enthoven,Balthasar van Enthoven,Wissel,FALSE,,Three Wissels from London for a total of £474.15.10 across DFL 12 and 12bis
+dfl12_224,221,172,De_dekens_van_de_Goutsmits_camer_2,De dekens van de Goutsmits camer_2,Erffgoed,FALSE,,"Written off on their account at 5b–6a. This concerns 18 gulden and a house in the Coepoortstraete, whose rent is due on 16 August each year. 12 Bis: Debt goes from the £39.19.0 to £57, which is then evened out when £48 is brought over to the account of Capital van diverse rente (nr 167, 123-125)."
+dfl12_225,222,173,Philips_Hockaert_2,Philips Hockaert_2,Erffgoed,FALSE,,"Written off on their account at 8b. This is also about a house. It is about the house called Den Vliegenden Hert in the Oude Borsse. 12 Bis: Debt goes from the £69.6.8 to £69.18.6 1/2, which is then evened out when £65.11.6 1/2 is brought over to the account of Creditors of the Book as a loss (nr 17, 15-21)."
+dfl12_226,223,174,Erffgoeden,Erffgoeden,Erffgoed,FALSE,,"The beginning balance comes over from the account erffgoedere n. 21 (9b). The debits are for the property in houses and land that Jan de Oude owned. The credits are income from the property and bequests of the houses and land to the heirs, as well as £1240.10.0 1/2 that goes to the heirs as creditors (nr 286, 227b–231b). The bequests to the heirs are given on 26 December 1583. The bequests are given to Hester, Cornelia and Marten with Marten receiving the large house on the Huyvettersstraete. 12 Bis: The debt is augmented by a payment of £400. £300 is then given to the poor of Wevelgem for the 7.25 bunderen of land. The further £400 was divided by the heirs with each getting £50."
+dfl12_227,224,175,Rente_van_44_gulden_erffelyck_op_de_huysen_van_Jan_de_Clerck_2,Rente van 44 gulden erffelyck op de huysen van Jan de Clerck_2,Erffgoed,FALSE,,"The amount that these accounts are debtor are 16 times the yearly rent for the property. 12 Bis: On 10 September 1594 written off on Capital van diverse rente (nr 167, 123-125)."
+dfl12_228,225,176,Rente_van_32_gulden_erffen_op't_huys_t'Gulden_Cruys_in_the_manstraete_2,Rente van 32 gulden erffen op't huys t'Gulden Cruys in the manstraete_2,Erffgoed,FALSE,,"Listed in Brulez pg 189. 12 Bis: Debt goes to £124.6.6, which is then evened out when £85.6.8 is brought over to the account of Capital van diverse rente (nr 167, 123-125)."
+dfl12_229,226,177,Rente_van_150_gulden_erffelyck_opden_Grooten_Beer_op_de_Groote_Merct_2,Rente van 150 gulden erffelyck opden Grooten Beer op de Groote Merct_2,Erffgoed,FALSE,,"12 Bis: Debt goes to £435.8.7 1/2, which is then evened out when £400 is brought over to the huys of the Grooten Beer (nr 164, 118-120)."
+dfl12_230,227,178,Rente_van_100_gulden_erffelyck_op_den_Witten_Leeuw_in_de_Silversmitsstraete,Rente van 100 gulden erffelyck op den Witten Leeuw in de Silversmitsstraete,Erffgoed,FALSE,,"12 Bis: Debt goes to £402.2.2 2/3, which is then evened out when £266.13.4 is brought over to the account of Capital van diverse rente (nr 167, 123-125)."
+dfl12_231,228,179,Rente_van_100_gulden_erffelyck_op_Calcoten_inde_Sackstraete,Rente van 100 gulden erffelyck op Calcoten inde Sackstraete,Erffgoed,FALSE,,"12 Bis: Debt goes to £449.4.1, which is then evened out when £266.13.4 is brought over to the account of Capital van diverse rente (nr 167, 123-125)."
+dfl12_232,229,NA,Dierick_de_Jagere_rekening_van_erffgoeden_2,Dierick de Jagere rekening van erffgoeden_2,Erffgoed,TRUE,,"This concerns 20 bunderen in Beveren, which was to go to Hester della Faille."
+dfl12_233,230,180,Jan_van_Neste_2,Jan van Neste_2,Erffgoed,TRUE,,"12 Bis: This concerns the yearly amount of Anthoni van Neste of £8.15, which Daniel van Neste agreed to pay on 1 May 1579."
+dfl12_234,231,181,Bapta_Tornello,Bapta Tornello,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_235,232,182,Peeter_and_Antonio_Donati_in_Venice,Peeter and Antonio Donati in Venice,Balancing,FALSE,,"Old account from Venice. Credit has been open for 45 years in 1583. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_236,233,183,Lanckpeper_van_Loys_Bragadin,Lanckpeper van Loys Bragadin,Balancing,FALSE,,"Old account from Venice. Credit has been open for 45 years in 1583. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_237,234,184,Crediteuren_of_Huybrecht_Houtappel,Crediteuren of Huybrecht Houtappel,Balancing,FALSE,,"Old account from Venice. Credit has been open for 45 years in 1583. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_238,235,185,Oude_rebarbe_in_huys_bevonden,Oude rebarbe in huys bevonden,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_239,236,186,Monna_and_Lacha_van_Benedicto_Venier_and_brothers,Monna and Lacha van Benedicto Venier and brothers,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_240,237,187,Coopmansschappen_van_Beneditto_Venier_and_brothers,Coopmansschappen van Beneditto Venier and brothers,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_241,238,188,Swert_out_Seven_staet_voor_rekeninge_van_Beneditto_Venier_and_brothers,Swert out Seven staet voor rekeninge van Beneditto Venier and brothers,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_242,239,189,Blomcoolsaet_Jan_van_Chrisostomo_de_Mazi,Blomcoolsaet Jan van Chrisostomo de Mazi,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_243,240,190,Jan_Ambriosio_dorco,Jan Ambriosio dorco,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_244,241,191,Joris_Naus,Joris Naus,Balancing,FALSE,,"Old account from Venice. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_245,242,NA,Martynken_van_Capellen_1,Martynken van Capellen_1,Kin,TRUE,,"Wife of Henrick van Berge. £73 was amount invested in trade. Paid £75.13.2 by cassa for investment in trade and interest and then written off on her other rekening nr 394, 296b, which is bequest from Jan de Oude."
+dfl12_246,243,192,Carel_Helman,Carel Helman,Balancing,FALSE,,"Debt of sterfhuis comes from 3 years of rent for a house of Jan de Oude from 1544–1547. 12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_247,244,193,Aert_Cornelis_Lootgietere,Aert Cornelis Lootgietere,Balancing,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_248,245,194,Guilliam_Ghyselinck,Guilliam Ghyselinck,Balancing,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_249,246,195,Christoffel_Pruynen,Christoffel Pruynen,Balancing,FALSE,,"It is noted next to his credit that he is debtor for the rent of the house in which he lives. 12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_250,247,196,Rugge_Vellekens,Rugge Vellekens,Balancing,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_251,248,197,Anna_della_Faille,Anna della Faille,Inheritance,TRUE,Anna,For her maternal inheritance. 12 Bis: Total credit augments to £5341.16.2 7/8
+dfl12_252,249,244,Hester_della_Faille,Hester della Faille,Inheritance,TRUE,Hester,For her maternal inheritance
+dfl12_253,250,268,Cornelia_della_Faille,Cornelia della Faille,Inheritance,TRUE,Cornelia,"For her maternal inheritance. 12 Bis: Written off on Capitael van Cornelia della Faille: nr 265, 184-187."
+dfl12_254,251,198,Jacques_della_Faille_de_Oude_2,Jacques della Faille de Oude_2,Kin,TRUE,,"Mostly paid to Jan van Borne (nr 81, 43-44) for a trip he took to recover some silk."
+dfl12_255,252,10,Maria_Volders,Maria Volders,,FALSE,,Dienstmaeste van huyse. She was paid £85.12.10 by the cassa on 1 February 1583. In 12 Bis her debt is written off on winninge ende verlies.
+dfl12_256,253,199,Olifants_tanden_ende_root_sandelhout_from_Angelo_Lion_in_Lisbon,Olifants tanden ende root sandelhout from Angelo Lion in Lisbon,Goods,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_257,254,200,Salzaparilla_van_Adriaen_de_Groote,Salzaparilla van Adriaen de Groote,Balancing,FALSE,,"12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_258,255,201,Ferdinando_de_Frias_Canelhos,Ferdinando de Frias Canelhos,Open,FALSE,,
+dfl12_259,256,202,Maria_van_der_Capellen,Maria van der Capellen,Bequest,TRUE,,"12 Bis: Concerns the money for Lenora, and Urssula van Driel. Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_260,257,203,Rogier_de_Vendevillo,Rogier de Vendevillo,Open,FALSE,,
+dfl12_261,258,NA,Maria_van_Driel,Maria van Driel,Kin,TRUE,,Paid by the cassa paid out on account of onscosten van coopmansschappen
+dfl12_262,259,NA,Catharina_van_Driel,Catharina van Driel,Kin,TRUE,,"This must have been an investment that she had with Jan de Oude. The total credit of £112.10.0, which was augmented by interest for 1 year at 6.25%, was paid out by the cassa in two payments. First a payment of £6.5.0 on 19 February 1583 and then of £106.5.0 on 28 November 1583 to Marten."
+dfl12_263,260,204,Daniel_Hoochstetter,Daniel Hoochstetter,Trade,FALSE,,Note that it was not to be paid until the issues over wool in London were figured out. 12 Bis: Written off on Oncosten van wolle
+dfl12_264,261,205,Passchier_van_eele_van_Brugge,Passchier van eele van Brugge,Trade,FALSE,,Note that it was not to be paid until the issues over wool in London were figured out. 12 Bis: Written off on Oncosten van wolle
+dfl12_265,262,206,Anna_della_Faille_rekeninge_bysonder,Anna della Faille rekeninge bysonder,Heir,TRUE,Anna,"There is no information about what this credit is for. 12 Bis: Augmented to £200 through another of her accounts. It is written off on her maternal inheritance (nr 197, 139-142), but it was paid by Marten on 27 November 1584 (nr 220, 151-154)."
+dfl12_266,263,NA,Urssula_van_Driel,Urssula van Driel,Kin,TRUE,,£82.5.7 paid to Marten on 28 November 1583
+dfl12_267,264,NA,Gaspar_Losschaert_1,Gaspar Losschaert_1,Giovane,TRUE,,"He was son of Hilaria della Faille. The entries show that he had previously worked for the Branch of Verona, but more recently he appears to have been living in Haarlem."
+dfl12_268,265,207,Oncosten_van_conduitten,Oncosten van conduitten,Transport,FALSE,,"This seems to be for the costs of transport. 12 Bis: After a total credit of £918.11.1 the account is debtor for a variety of entries. In the end, there is a debit of £89.3.3 on Winninge ende verlies in order to even the account."
+dfl12_269,266,NA,Gillis_del_Ponte_and_Hilaria_della_Faille,Gillis del Ponte and Hilaria della Faille,Kin,TRUE,,"Written off on the account of Hilaria della Faille on 25 August 1583 on nr 62, 35a–39b.  This must have been money Hilaria invested in the trade of Jan de Oude. Nr 62 shows that they received interest for this amount."
+dfl12_270,267,NA,Hendrick_della_Faille_1,Hendrick della Faille_1,Kin,TRUE,,After interest £62.2.8 was paid on the account of oncosten van coopmansschappen.
+dfl12_271,268,208,Oncosten_van_arrested_wool,Oncosten van arrested wool,Goods,FALSE,,"Note that this amount remains in their hands against the expenses that they must daily pay in the process against Gillis Sorbreuck, Geert Schepper, and consorten. So it is taken up in a lawsuit."
+dfl12_272,269,209,Louis_Malapert_2,Louis Malapert_2,Kin,TRUE,,
+dfl12_273,270,210,Rekeninghe_van_armen,Rekeninghe van armen,Accounting,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_274,271,211,Gillis_Bontenaken,Gillis Bontenaken,Giovane,FALSE,,"12 Bis: Written off on Winninge ende verlies (nr 124, 84–92)."
+dfl12_275,272,212,Jan_de_Lannoy_2,Jan de Lannoy_2,Balancing,FALSE,,"12 Bis: Written off on Debiteurs ende crediteurs voor rekening van diverse persoon (nr 166, 121-123)."
+dfl12_276,273,NA,Tanneken_and_Lynken_Noirot_1,Tanneken and Lynken Noirot_1,Kin,TRUE,,"They were owed a total of £433.6.8 from Jan de Oude. The account was closed through payment by Marten. This is spoken of in the Testament of Jan de Oude, paragraph g. They were to get half of the money free, but the other half is to go to their children after their death."
+dfl12_277,274,NA,Joos_van_Damme,Joos van Damme,Loan,FALSE,,After interest £143.15.0 was paid by Michiel Dresseler seemingly through the cassa.
+dfl12_278,275,NA,Lenaert_van_Driel_de_Jonge,Lenaert van Driel de Jonge,Kin,TRUE,,After interest £70.18.8 was paid for his maternal and grandmaternal goods
+dfl12_279,276,NA,Beelken_van_Driel,Beelken van Driel,Kin,TRUE,,After interest £111.14.6 was paid to Marten on 3 October 1583.
+dfl12_280,277,NA,Sara_van_Driel,Sara van Driel,Kin,TRUE,,"This amount was paid on condition that it was to be used only in her life time, and would pass to Lenaert van Driel and his brother."
+dfl12_281,278,213,D'erffgenaemen_van_Anna_de_Hane_1,D'erffgenaemen van Anna de Hane_1,Lawsuit,TRUE,,"This is amount set aside to deal with the lawsuit of De Hane. 12 Bis: Written off on Oncosten van processen tegens Jan ende Daniel de Hande (nr 221, 154-156), because this 'somme destineert tot betalinge vanden oncosten van selve processen tot salderinge vanden selve pertye'"
+dfl12_282,279,214,D'erffgenaemen_van_Gilles_Hasebaert_ende_Magdalena_du_Boys,D'erffgenaemen van Gilles Hasebaert ende Magdalena du Boys,Lawsuit,,,"After interest of £12.5.10 was added, the credit was £219.18.11. Deals with lawsuit with De Hane. The credit is not to be paid until a declaration of the lawsuit of De Hane is made."
+dfl12_283,280,NA,Hester_van_Eeckeren_1,Hester van Eeckeren_1,Kin,TRUE,,"Wife of Jan Noirot. After interest, £603.12.6 was written off on 19 September 1583 on the account of Robert van Eeckeren (nr 74, 50a–50b), thereby closing the account."
+dfl12_284,281,NA,Wouter_Aertsen_and_Maria_de_Wale,Wouter Aertsen and Maria de Wale,Kin,TRUE,,After interest £145.2.9 was paid in two different payments
+dfl12_285,282,215,Carlo_della_Faille,Carlo della Faille,Heir,TRUE,Carlo,Carlo was not involved in many interactions with the sterfhuis. The only credit is from the bequest of Goyvaerts. He then had two debts. This left Carlo with a credit to the sterfhuis of £71.19.4. 12 Bis: Paid by cassa.
+dfl12_286,283,216,D'erffgenaemen_of_Maria_della_Faille,D'erffgenaemen of Maria della Faille,Inheritance,TRUE,Maria,The additional £16.13.4 comes from her 1/8th part in the 800 gulden from Ambrosio Goyvaerts. 12 Bis: The money was used by Marten to purchase 200 gulden erffrente in the huys of Jan Vrinden in the Langenieuwesstraete. It was purchased from Fernando Helman.
+dfl12_287,284,92,Jan_della_Faille_2,Jan della Faille_2,Heir,TRUE,Jan,"Jan begins with a credit of £113.2.10 and then after a payment he made to the cassa, all of the entries are various debts, mostly to the cassa. The payments from the cassa amounted to £1330.17.9 1/2. The total debts were £1351.3.1 1/2. Thus, Jan was left with a debt to the sterfhuis of £1205.15.10. 12 Bis: Brought over to the account of his paternal inheritance on 7 January 1584"
+dfl12_288,285,217,Oncosten_van_English_wool,Oncosten van English wool,Goods,FALSE,,"£200 placed in credit in advance of the expected losses from the £624 sterling concerning the Merchant Adventurers. 12 Bis: Total credit is augmented to £220.17.4, but the debts reach £515.17.8, mainly through payments made by the cassa, therefore the account continues with a debt of £295.0.4."
+dfl12_289,286,17,Creditors_of_this_Book_9,Creditors of this Book_9,Accounting,FALSE,,"This is essentially the paternal inheritance of the heirs of Jan de Oude. It is the calculation of the wealth of Jan de Oude. The book begins with a credit of £41112.10.5. This is the capital of Jan de Oude in 1578, see DFL 13-4 page 2 #2 as well as Carlo's explanation in DvdM 57-107. All of the entries, both credit and debit take place on the date of the rekening of 26 December 1583 (15831226). All of the entries here are in order to bring an end to and even out the accounts mentioned here."
+dfl12_290,287,218,Marcus_Stickers,Marcus Stickers,Giovane,FALSE,,"This money was held by the estate, because he had served the branch of London poorly when Marten was the head of the branch. 12 Bis: Paid by cassa."
+dfl12_291,288,NA,Peeter_Mesureur,Peeter Mesureur,Trade,FALSE,,Sold three kerseys that were placed on the account Carseyen overhoop.
+dfl12_292,289,NA,Jacques_Noirot_1,Jacques Noirot_1,Giovane,TRUE,,"After an increase of £33.6.8 from a bequest from the testament of Jan de Oude (291b) the credit was £333.6.8. Jacques Noirot was paid mostly by gaining possession of kerseys that were sent on a ship from London to Venice. He was on the ship. The amount given to him for this, £224.10.5, include the expenses, but one would assume that any profit he gained above this would be his to keep."
+dfl12_293,290,272,Gheeraert_Corhase_(Coerhaes),Gheeraert Corhase (Coerhaes),Giovane,FALSE,,Corhaes was a servant in Venice for six years. The account tells that he was paid £10 for the first three years and then £16.13.4 for the last three years. His service ended on 10 August 1584. On 6 July 1583 the branch in Verona paid him £40.
+dfl12_294,291,219,Gedeputeerde_van_20000_gulden,Gedeputeerde van 20000 gulden,Political,FALSE,,"12 Bis: Written off on Creditors of the Book (nr 17, 15-21)."
+dfl12_295,292,220,Capitael_of_Marten_della_Faille,Capitael of Marten della Faille,Inheritance,TRUE,Marten,Maternal inheritance. 12 Bis: The credit of Marten's account is augmented to £7472.6.0 1/24. The debits total £7507.6.1 14/24. This leaves Marten with a debt of £35.0.1 13/14 on the next rekening.
+dfl12_296,293,221,Oncosten_van't_process_tegens_Daniel_de_Hane,Oncosten van't process tegens Daniel de Hane,Lawsuit,TRUE,,The debits of the account are all for payments made by the cassa dealing with expenses for the lawsuit. These range from gifts to the secretary Goyvaerts to paperwork and payments for hearings. There are multiple entries dealing with the purchase of wine. It is these debits that are interesting.
+dfl12_297,294,NA,Onse_Provise,Onse Provise,Accounting,FALSE,,Written off on the account of oncosten van coopmansschappen (89b–90a)
+dfl12_298,295,NA,Jacques_Rugge,Jacques Rugge,Wissel,FALSE,,Transfer of money through various people.
+dfl12_299,296,NA,Jan_Wallaert,Jan Wallaert,Balancing,FALSE,,Paid by cassa through order of Dierick de Jagere.
+dfl12_300,297,NA,Christiaen_van_Wiele_1,Christiaen van Wiele_1,Lawyer,FALSE,,After interest of £18.18.9 the amount of £443.18.9 was paid out.
+dfl12_301,298,243,Dierick_de_Jagere,Dierick de Jagere,Trade,TRUE,,"12 Bis: Total credit of £162.12.10 1/2 was paid by Marten (nr 149, 102)"
+dfl12_302,299,222,Jacques_della_Faille_2,Jacques della Faille_2,Heir,TRUE,Jacques,"There is no indication why Jacques is owed £1. The account continues with the same amount without any explanation. 12 Bis: On 30 March 1584 the credit is placed on Jacques' other rekening (nr 280, 194-195)."
+dfl12_303,300,223,Jan_Bernaert_1,Jan Bernaert_1,Balancing,TRUE,,12 Bis: Paid by cassa
+dfl12_304,301,NA,Jan_Nollet,Jan Nollet,Loan,FALSE,,After interest £123.8.9 was paid by the cassa through Jacques and Jan de Wale
+dfl12_305,302,224,Rigo_Minauw_nieuwe_rekening,Rigo Minauw nieuwe rekening,Factor,FALSE,,12 Bis: Written off on his other account nr 49
+dfl12_306,303,NA,Gedeputeerde_van_de_fortificatie_der_stadt_van_Antwerpen,Gedeputeerde van de fortificatie der stadt van Antwerpen,Political,FALSE,,Written off on the account of oncosten van coopmansschappen.
+dfl12_307,304,226,Jan_de_Backere,Jan de Backere,Balancing,FALSE,,"12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_308,305,NA,Joos_Grendel,Joos Grendel,Trade,FALSE,,Credit seems to have dealt with Dierick de Jagere. Paid by cassa.
+dfl12_309,306,NA,Henrick_della_Faille,Henrick della Faille,Kin,TRUE,,Written off on the account of Pauwels della Faille
+dfl12_310,307,229,D'erffgenaemen_van_Anna_de_Hane_2,D'erffgenaemen van Anna de Hane_2,Inheritance,TRUE,,"Part of the money was invested in the trade of Jan de Oude at 8%. I am not sure why the account remains open. Possibly because not everyone had agreed to not ask for more from the inheritance of Anna de Hane. 12 Bis: The credit is augmented by interest for 11 years at the rate of £54.6.10 per year. The amount for the interest appears to be correct, but the beginning credit and the ending credit are both mistaken amounts. The amounts I have put are correct."
+dfl12_311,308,NA,Robert_and_Maria_Frumault_1,Robert and Maria Frumault_1,Kin,TRUE,,This must be for the inheritance of Anna de Hane. After interest £409.4.7 was paid in two payments.
+dfl12_312,309,231,Jan_de_Oude_2,Jan de Oude_2,Accounting,TRUE,,"The credits of the account are some bequests given by Jan de Oude, including payments to the aalmoezeniers and poor of Antwerp. The debits include payments made for expenses at the time of Jan de Oude's death and a payment made to Tanneken and Lynken Noirot. 12 Bis: The credit is augmented by a payment to cassa to £780.18.4 1/2. A debt of £757.18.4 1/2 was written off on Creditors of the Book (nr 17, 15-21) to close the account."
+dfl12_313,310,232,Jan_de_Vooght_2,Jan de Vooght_2,Trade,FALSE,,"After the addition of £4.3.4 for the 25 gulden he was given in the testament of Jan de Oude he was owed a total of £14.6.11 1/2, £12.10.0 was paid. 12 Bis: Written off on account nr 22, 22."
+dfl12_314,311,NA,Philippma_van_Heyden,Philippma van Heyden,Loan,FALSE,,
+dfl12_315,312,NA,D'erffegaemen_of_Herman_Pottey,D'erffegaemen of Herman Pottey,Kin,TRUE,,Payments made by the cassa in London and in Antwerp for the debt of Jan de Oude to the heirs of Herman Pottey that mainly derived from a promise made by Jan de Oude to give the heirs of Herman Pottey £1000.
+dfl12_316,313,62,Marten_Ensberger_nieuw_rekening,Marten Ensberger nieuw rekening,Factor,FALSE,,(Hencxberger or Enzesperger) in Hamburg. 12 Bis: One debt for a wisselbrief and then many credits.
+dfl12_317,314,275,Oswaldus_Cleynhaus_ende_company,Oswaldus Cleynhaus ende company,Transport,FALSE,,Transportation company. 12 Bis: The credit reached £519.15.5
+dfl12_318,315,NA,Henrick_Hulsscher,Henrick Hulsscher,Balancing,FALSE,,Written off on oncosten van coopmansschappen.
+dfl12_319,316,NA,Jems_Boel,Jems Boel,Wissel,FALSE,,"Wissel from London of £159.3.4, while original credit of £0.5.0 written off on oncosten van coopmanschappen"
+dfl12_320,317,235,Luis_Cutsini_2,Luis Cutsini_2,Balancing,FALSE,,"12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_321,318,236,Capitael_of_Jacques_della_Faille,Capitael of Jacques della Faille,Inheritance,TRUE,Jacques,Maternal inheritance. 12 Bis: Written off on Voyagie van London and on his paternal inheritance.
+dfl12_322,319,237,Adriaen_van_Afferden_de_Jonge,Adriaen van Afferden de Jonge,Balancing,FALSE,,
+dfl12_323,320,238,Jan_Pellicoren_2,Jan Pellicoren_2,Erffgoed,FALSE,,Dealing with the house Calcoeten. Received £130 from Jan Helduwier and Bernardino Paluasmo (nr 162)
+dfl12_324,321,NA,Hester_and_Cornelia_della_Faille,Hester and Cornelia della Faille,Heir,TRUE,Hester/Cornelia,This is a bequest of £9.15 each from the testament of Adriaen van Affaerden. This credit is written off on their separate accounts (207a and 209a).
+dfl12_325,322,NA,Jan_van_Borne_in_Verona_loopende_rekeninge,Jan van Borne in Verona loopende rekeninge,Factor,TRUE,,"Jan van Borne's running account begins with a credit of £2549.4.6 1/2. Jan van Borne was the factor in Verona (Polonien) (nr 108, 102b–106b) and so most of the larger amounts deal with the branch of Verona. Jan van Borne was paid a salary along with profits of £800. Then, in order to close the account he was debtor of £2540.18.10 1/2 to the Branch in Verona, which seems to have been paid through wissel."
+dfl12_326,323,NA,Schilderye_op_doeck,Schilderye op doeck,Balancing,FALSE,,
+dfl12_327,324,NA,Jems_Tipman,Jems Tipman,Wissel,FALSE,,Received through two wissesl
+dfl12_328,325,NA,Jacob_de_Rinck,Jacob de Rinck,Balancing,FALSE,,Paid by cassa
+dfl12_329,326,239,Walran_Elbauw,Walran Elbauw,Balancing,FALSE,,"Not sure about the spelling of the last name. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
+dfl12_330,327,271,Marten_della_Faille_1,Marten della Faille_1,Heir,TRUE,Marten,"Marten begins with a credit of £1176.4.1. The credits come from various transfers and wissels. He is also creditor for purchases made by siblings of furniture and jewels of Jan de Oude. The debts are for payments from the cassa, items he purchased from the sterfhuis in the auction, and wissels that he paid for. The account ends with Marten as creditor of £18.18.4. 12 Bis: Marten received £49.12.5 from the cassa in order to close the account."
+dfl12_331,328,NA,Jan_de_Backere_and_Sevaes_Wouters,Jan de Backere and Sevaes Wouters,Trade,FALSE,,Wissels from Venice and also for mirrors sent from Venice.
+dfl12_332,329,NA,Melchior_Noirot,Melchior Noirot,Kin,TRUE,,The £50 was paid out on 11 August 1583 to Jan della Faille on the order of Melchior Noirot.
+dfl12_333,330,274,Steven_della_Faille,Steven della Faille,Inheritance,TRUE,Steven,"Maternal inheritance. Many of the debts are payments from the cassa. The most interesting are payments dealing with and even to Jeanne Schuttens, his ex-wife."
+dfl12_334,331,NA,Carlo_Lanfranchi,Carlo Lanfranchi,Wissel,FALSE,,Wissel from Venice
+dfl12_335,332,227,Jan_van_Woonsel_1,Jan van Woonsel_1,Bequest,FALSE,,Written down on 17 January 1583 on the rekening of Jan de Oude legaten
+dfl12_336,333,NA,Simon_Rodriges,Simon Rodriges,Wissel,FALSE,,Wissel from Marten Ensberger
+dfl12_337,334,NA,Jan_Struyck,Jan Struyck,Erffgoed,FALSE,,Creditor for two years of rent
+dfl12_338,335,NA,Roelant_Verbraken,Roelant Verbraken,Wissel,FALSE,,Wissel to Venice
+dfl12_339,336,NA,Synken_della_Faille_weduwe_of_Peeter_della_Faille,Synken della Faille weduwe of Peeter della Faille,Kin,TRUE,,
+dfl12_340,337,256,Jan_della_Faille_paternal,Jan della Faille_paternal,Inheritance,TRUE,Jan,"Paternal inheritance after a debit of £102.8.3 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: Total credits reached £5514.15.0 3/8."
+dfl12_341,338,257,Marten_della_Faille_paternal,Marten della Faille_paternal,Inheritance,TRUE,Marten,"Paternal inheritance after a debit of £105.11.11 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a) and for receiving the groot huys on the Huyvettersstaete worth £1600. 12 Bis: The credit reached £4211.2.9."
+dfl12_342,339,258,Anna_della_Faille_paternal,Anna della Faille_paternal,Inheritance,TRUE,Anna,"Paternal inheritance after a debit of £105.4.6 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: Her credit was not augmented at all."
+dfl12_343,340,259,Carlo_della_Faille_paternal,Carlo della Faille_paternal,Inheritance,TRUE,Carlo,"Paternal inheritance after a debit of £102.8.2 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: The credit reached £5327.13.0 7/8."
+dfl12_344,341,260,Jacques_della_Faille_paternal,Jacques della Faille_paternal,Inheritance,TRUE,Jacques,"Paternal inheritance after a debit of £104.0.0 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: The credit reached £6855.6.7 7/8."
+dfl12_345,342,261,Steven_della_Faille_paternal,Steven della Faille_paternal,Inheritance,TRUE,Steven,"Paternal inheritance after a debit of £105.17.5 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: The credit reached £6250.2.4 7/8"
+dfl12_346,343,262,D'erffgenaemen_of_Maria_della_Faille_paternal,D'erffgenaemen of Maria della Faille_paternal,Inheritance,TRUE,Maria,"Paternal inheritance after a debit of £105.1.7 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a). 12 Bis: The credit reached £3921.19.9 3/24"
+dfl12_347,344,263,Hester_della_Faille_paternal,Hester della Faille_paternal,Inheritance,TRUE,Hester,"Paternal inheritance after a debit of £105.13.11 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a), £200 for the house in the schuttershoffstraete (193b), and £542.6.10 for 30 bunderen of land in Beveren (126a and 198b–199a). Total debit: £848.0.9. 12 Bis: The credit reached £5696.15.3 3/8."
+dfl12_348,345,264,Cornelia_della_Faille_paternal,Cornelia della Faille_paternal,Inheritance,TRUE,Cornelia,"Paternal inheritance after a debit of £105.0.11 for receiving 'diverse meubelen, clederen, ende silverwerck' (278a), £400 for the cleyn house in the huyvettersstraete next to the groot huis (193a), and £1400 for 30 bunderen of land in Sevenbergen (193a) (total debit of £1905.0.11). 12 Bis: Written off on Capital of Cornelia (nr 265, 184-187)."
+dfl12_349,346,NA,Sterfhuis_of_Jan_de_Oude,Sterfhuis of Jan de Oude,Accounting,FALSE,,"This account is for the furniture and silverwerk of Jan de Oude that was divided among the heirs. Because this is paid out to the heirs, this is placed on the credit of the account of the creditors of the Book n. 9 (nr 286 227b–231b)."
+dfl12_350,347,265,Capitael_van_Cornelia_della_Faille,Capitael van Cornelia della Faille,Inheritance,TRUE,Cornelia,"DFL 12: List of amounts given out to the other Della Faille children on pages 148a–148b. 12 Bis: This is the disbursal of Cornelia's inheritance to her siblings. The total credit, taking her paternal and maternal inheritance, was £10416.11.1 1/2. The sororal inheritance is given to the accounts dealing with the inheritance of London and then to the accounts of the paternal inheritance of all of the siblings."
+dfl12_351,348,266,Erffgenaemen_van_Maria_della_Faille,Erffgenaemen van Maria della Faille,Heir,TRUE,Maria,The heirs of Maria are creditor on 31 January 1583 for payment by Marten for furniture from Jan de Oude that Louis Malapert did not want. 12 Bis: Paid by cassa by Marten on 4 January 1584.
+dfl12_352,349,267,D'erffgenaemen_van_Maria_della_Faille,D'erffgenaemen van Maria della Faille,Inheritance,TRUE,Maria,"This is the other 1/3 of the £5000 from n. 343 (275b–276b). Jan de Oude gave this 1/3 to his eight children in his testament. However, in his codicille he gave this to the discretion of Jan, Jacques, and Marten to give to the heirs of Maria."
+dfl12_353,350,269,Innecommen_van_diverse_renten,Innecommen van diverse renten,Accounting,FALSE,,"These entries are debits to the cassa contant ontfangen, because it is money that is coming into the cassa from various loans. 12 Bis: The credit reached £105.12.1 1/2"
+dfl12_354,351,NA,Guilliam_Marischal,Guilliam Marischal,Wissel,FALSE,,Three wissels that are paid to London
+dfl12_355,352,NA,Anna_Sirens_of_Dort,Anna Sirens of Dort,Wissel,FALSE,,Wissel from Venice
+dfl12_356,353,NA,Lodewyck_Blommaert_2,Lodewyck Blommaert_2,Wissel,FALSE,,Wissel to Venice
+dfl12_357,354,NA,Gout_ende_Silverdraet,Gout ende Silverdraet,Goods,FALSE,,6lbs sold in London and then written off through account of Napelse Syde nr 66
+dfl12_358,355,NA,Geleyen_Lytgat,Geleyen Lytgat,Balancing,FALSE,,Book transfer with Ghysbrecht Tytgat
+dfl12_359,356,NA,Armen_der_stadt_van_Antwerpen,Armen der stadt van Antwerpen,Bequest,FALSE,,"Payments to the poor included £66.13.4, to the aalmoezeniers,£166.13.4 for the improvement of the house of the late Catharina Aertsen, and £25 to the ‘gevangenen dalhuyse ende vindelingen decken.’ The £166.13.4 was written off on the account of Catharina Aertsen. The remaining £91.13.4 was written off on the account of Jan de Oude (242a–244a) under the entry for £159.0.3."
+dfl12_360,357,NA,Aalmoezeniers_of_Antwerpen,Aalmoezeniers of Antwerpen,Bequest,FALSE,,The aalmoezaniers are creditors for a maeltyt from the testament. Written off on the account of Jan de Oude (242a–244a) under the entry for £159.0.3.
+dfl12_361,358,247,Armen_of_Wevelgem,Armen of Wevelgem,Bequest,FALSE,,They are given an estimated 7.5 bunderen in Wevelgem that Jan de Oude left them in his testament. 12 Bis: Written off on erffgoeden for the 7.25 bunderen in Wevelgem.
+dfl12_362,359,NA,Jan_Bernaert_2,Jan Bernaert_2,Bequest,TRUE,,Bequest to Jan Bernaert's oldest daughter for marriage gift. He was paid £12 by the cassa on 22 February 1583.
+dfl12_363,360,NA,Losynken_van_Brugge,Losynken van Brugge,Bequest,TRUE,,Widow of Peeter della Faille. Lyffrenten: For 16 years of the £10 she was yearly bequeathed for the rest of her life. The entry then explains that the capital from all of the 'lyffrenten' bequeathed by Jan de Oude is taken for 16 years and placed in the hands of Marten. Marten is to pay the lyffrenten yearly. The money remaining in the account after the death of the 'legaten' will be brought under the 'gemeyne masse' 'tusschen den erffgenaemen gelyckelyck gedeylt te worden.'
+dfl12_364,361,NA,Synken_della_Faille_daughter_of_Peeter_della_Faille,Synken della Faille daughter of Peeter della Faille,Bequest,TRUE,,"Lyffrenten: The cassa paid Marten this amount. On 16 November 1583 £10 for the renten was paid out on the account of oncosten van coopmansschappen. It also tells that Synken was in Haarlem, and that she was paid through Margarita Hoogersteyn."
+dfl12_365,362,248,Beelken_della_Faille_2,Beelken della Faille_2,Bequest,TRUE,,"Lyffrenten: After £14 was given to Catharina Nollet, widow of Peeter della Faille Bernaerssen (for two years of payments) £119.6.8 remains in credit. 12 Bis: Due to the death of Beelken the money is given back to the heirs of Jan de Oude on 30 September 1591 for £14.18.4 each."
+dfl12_366,363,NA,Hilaria_della_Faille_3,Hilaria della Faille_3,Bequest,TRUE,,"Written off on her loopende rekeninge nr 62, 35a–39b"
+dfl12_367,364,NA,Gaspar_Losschaert_2,Gaspar Losschaert_2,Bequest,TRUE,,"Written off on his loopende rekeninge nr 264, 216a–217b. Losschaert also received a gift of £400 (nr 413)"
+dfl12_368,365,NA,Antonio_van_Neste_2,Antonio van Neste_2,Bequest,TRUE,,"Written off on his loopende rekeninge nr 76, 51b–52b"
+dfl12_369,366,NA,Catharina_de_Wale,Catharina de Wale,Bequest,TRUE,,Lyffrenten: The cassa paid Marten this amount. She was wife of Jan van der Beken (pensionary) and widow of Herman Pottey. The money is given to the three children she had with Herman Pottey.
+dfl12_370,367,NA,Jacques_de_Wale_2,Jacques de Wale_2,Bequest,TRUE,,"Lyffrenten: Son of Jan de Oude's sister, Johnanna della Faille. Jacques was paid the full £48 owed for his lyffrenten by the cassa on 19 September 1583. This was likely because he was one of the few people to receive lyffrenten who was also involved in trade."
+dfl12_371,368,NA,Jan_de_Wale_3,Jan de Wale_3,Bequest,TRUE,,"Lyffrenten: Son of Jan de Oude's sister, Johnanna della Faille. Jan de Wale received the full £48 from the cassa on 26 September 1583."
+dfl12_372,369,NA,Maria_de_Wale,Maria de Wale,Bequest,TRUE,,Wife of Wouter Aertsen. Lyffrenten: The cassa paid Marten this amount
+dfl12_373,370,NA,Children_of_Dierick_de_Jagere_and_Johanna_de_Wale,Children of Dierick de Jagere and Johanna de Wale,Bequest,TRUE,,"Janneken, Jacques, and Gillis de Jagere. Lyffrenten: The cassa paid Marten this amount. Each child was to receive 6 gulden per year each."
+dfl12_374,371,NA,Hester_van_Eeckeren_2,Hester van Eeckeren_2,Bequest,TRUE,,"ife of Jan Noirot. The cassa paid Marten this amount. This is given on condition that it will go to her 5 youngest children Adriaen, Robert, Jaspar, Melchior, and Balten and that she will renounce all claims to the sterfhuis of Marten and Anna de Hanne, her grandmother and grandfather."
+dfl12_375,372,NA,Tanneken_and_Lynken_Noirot_2,Tanneken and Lynken Noirot_2,Bequest,,,"Written off on their accounts (nr 273, 220a–220b). This is to be given to them when they marry with the consent of their mother, Hester van Eeckeren, as well as Jan, Marten, and Jacaues. This seems to be in addition to the 2200 gulden they are to get at their marriage."
+dfl12_376,373,NA,Jacques_Noirot_2,Jacques Noirot_2,Bequest,TRUE,,Written off on his lopende rekening n. 289 (232b–233b) and paid by cassa.
+dfl12_377,374,NA,Jan_Noirot_de_Jonge,Jan Noirot de Jonge,Bequest,FALSE,,Jan Noirot received this amount from the cassa on 27 July 1583
+dfl12_378,375,NA,Robert_and_Maria_Frumault_2,Robert and Maria Frumault_2,Bequest,TRUE,,The cassa paid Marten this amount. This is the 100 gulden that they were each due from the testament on condition that they came to an agreement with the executors over the sterfhuis of Anna de Hane.
+dfl12_379,376,NA,Sara_Lenora_Urssula_van_Driel,Sara_Lenora_Urssula van Driel,Bequest,TRUE,,The cassa paid Marten this amount. This is the 600 gulden that was given to each in the testament on condition that they renounce all claims to the sterfhuis of Anna de Hane.
+dfl12_380,377,NA,Hendrick_della_Faille_2,Hendrick della Faille_2,Bequest,TRUE,,Lyffrenten: The cassa paid Marten this amount
+dfl12_381,378,249,Maria_Segers,Maria Segers,Bequest,TRUE,,"Niece of Jan de Oude and living in Kortrijk. Lyffrenten: They live in Kortrijk, and the account is still open 12 Bis: The amount was divided among the heirs after he death. This was done on 30 September 1594 with each getting £2."
+dfl12_382,379,NA,Jan_van_Borne_2,Jan van Borne_2,Bequest,TRUE,,"Written off on his account nr 322, 254a–256a"
+dfl12_383,380,NA,Maria_Hoyes,Maria Hoyes,Bequest,FALSE,,This amount was given to her from the cassa as shown by a quitantie made by Lieven van Rockeghem on 28 June 1583
+dfl12_384,381,NA,Jan_de_Hilte,Jan de Hilte,Bequest,FALSE,,Living in Wilryck (Histe). Lyffrenten: The cassa paid Marten this amount. Oncosten van Coopmanschappen owes £1.10 for a year of this bequest. The cassa paid this to him and then gave the rest to Marten.
+dfl12_385,382,NA,Jeronimo_and_Andrea_della_Faille,Jeronimo and Andrea della Faille,Bequest,TRUE,,Bastard sons of Jan della Faille de Jonge. These are the bastard sons of Jan della Faille. They are each to receive £100 when they marry with the consent of Jan. The cassa paid Marten this amount.
+dfl12_386,383,NA,Cornelis_della_Faille,Cornelis della Faille,Bequest,TRUE,,"Bastard son of Marten. The cassa paid Marten this amount. He is to receive this money when he marries with the consent of Marten. There is no mention of Hans (Gio) della Faille, who was the other bastard son of Marten."
+dfl12_387,384,NA,Jan_van_Woonsel_2,Jan van Woonsel_2,Bequest,FALSE,,"Written off on his running account nr 332, 270a"
+dfl12_388,385,NA,Joos_de_Voghele_3,Joos de Voghele_3,Bequest,TRUE,,"Written off on his running account nr 99, 93b–94b. Jan de Oude also gave his wife, Catharina della Faille, a bequest of £16.13.4 (nr 409)."
+dfl12_389,386,250,Vincentia_della_Faille,Vincentia della Faille,Bequest,TRUE,,Wife of Jan Berrewyns. The account remains open.. Paid to her husband Jan Berrewyns on 9 July 1584.
+dfl12_390,387,NA,Catharina_de_Hane_and_Frederico_de_Molin,Catharina de Hane and Frederico de Molin,Bequest,TRUE,,"Written off on the account of Catharina de Hane nr 81, 60b–64a. Each are given 25 gulden."
+dfl12_391,388,NA,Lucretia_de_Hane,Lucretia de Hane,Bequest,TRUE,,"Widow of Daniel de Hane in Venice. Written off on the branch in Venice so that the amount can be given to her (nr 178, 162a–168b)"
+dfl12_392,389,NA,Luis_Cutsini_3,Luis Cutsini_3,Bequest,FALSE,,"Written off on his running account nr 147, 146a–147a"
+dfl12_393,390,251,Jan_Widhols_and_Jan_Jacomo,Jan Widhols and Jan Jacomo,Bequest,FALSE,,"Jan Jacomo is son of Jan Widhols. Each are to receive 50 gulden for their 'goeden dienst'. The account remains open. They are to get 50 gulden each. Written off on his running account (nr 99, 74-75)"
+dfl12_394,391,NA,Henrick_or_Rigo_Minauw_in_Cologne,Henrick or Rigo Minauw in Cologne,Bequest,FALSE,,"Written off on their account nr 302, 240a"
+dfl12_395,392,NA,Marten_Ensberger,Marten Ensberger,Bequest,FALSE,,"(Hencxberger or Enzesperger) in Hamburg. Written off on his account nr 313, 246b–249b"
+dfl12_396,393,NA,Willem_van_den_Mey_3,Willem van den Mey_3,Bequest,FALSE,,"Written off on his account nr 78, 52b–56a"
+dfl12_397,394,NA,Martynken_van_Capellen_2,Martynken van Capellen_2,Bequest,TRUE,,"Wife of Henrick van Berge. Written off on her account nr 242, 203b–204a"
+dfl12_398,395,NA,Jan_de_Vooght_3,Jan de Vooght_3,Bequest,FALSE,,"Written off on his account nr 310, 244a–244b"
+dfl12_399,396,NA,Maria_Calvaert,Maria Calvaert,Bequest,TRUE,,The amount was paid to her from the cassa on 28 October 1583
+dfl12_400,397,252,Cornelia_Dittermans,Cornelia Dittermans,Bequest,FALSE,,Daughter of Janneken van Borne
+dfl12_401,398,NA,Francisco_van_Eeckeren_3,Francisco van Eeckeren_3,Bequest,TRUE,,"Written off on his account nr 79, 56a"
+dfl12_402,399,NA,Janneken_van_Eeckeren,Janneken van Eeckeren,Bequest,TRUE,,Daughter of Robert van Eeckeren and Anna della Faille. The cassa paid Marten this amount. She is to receive this money when she marries with the consent of her mother and father.
+dfl12_403,400,NA,Henrick_van_Liesvelt_Heer_van_Hamme_and_Cancellier_of_Brabant,Henrick van Liesvelt Heer van Hamme and Cancellier of Brabant,Bequest,FALSE,,He was paid by the cassa on 12 February 1583
+dfl12_404,401,NA,Ambrosius_Goyvaerts_2,Ambrosius Goyvaerts_2,Bequest,FALSE,,"Written off on his account nr 53, 30b–31b. This is for payment of half of the debt that Goyvaerts was owed on that account."
+dfl12_405,402,NA,Ambrosius_Goyvaerts_3,Ambrosius Goyvaerts_3,Bequest,FALSE,,"Lyffrenten: For the lyffrenten of £8.6.8. Written off on his account nr 53, 30b–31b. It is this sum that is divided into 8 equal parts to be returned to the heirs of Jan de Oude."
+dfl12_406,403,NA,Henrick_Kinschot,Henrick Kinschot,Bequest,FALSE,,Lyffrenten: For the lyffrenten of £8.6.8. The cassa paid Marten this amount. It is above the salary that he was due for his services. This is on condition that his children do not make a lawsuit.
+dfl12_407,404,253,Otto_Hartius,Otto Hartius,Bequest,FALSE,,"Lawyer in Brussels. Lyffrenten: For the lyffrenten of £8.6.8. The £133.6.8 was given to Marten by the cassa, but it seems that one years worth was already due to him. This is the same as occurs on nr 381. This is given on the same conditions as to Henrick Kinschot. 12 Bis: Paid by cassa. Hartius was also paid for helping with compromise with Jan in Oncosten van d'erffgenaemen Jan de Oude (nr 123, 79-84)."
+dfl12_408,405,254,Christiaen_van_Wiele_2,Christiaen van Wiele_2,Bequest,FALSE,,"Lyffrenten: For the lyffrenten of £8.6.8. The £133.6.8 was given to Marten by the cassa, but it seems that one years worth was already due to him. This is given on the same conditions as those above. 12 Bis: Paid by cassa."
+dfl12_409,406,NA,Antonio_Schoormans_1,Antonio Schoormans_1,Bequest,FALSE,,Lyffrenten: For the lyffrenten of £4.3.4. The cassa paid Marten this amount.
+dfl12_410,407,NA,Roelant_Paulet_2,Roelant Paulet_2,Bequest,FALSE,,Lyffrenten: For the lyffrenten of £4.3.4. The cassa paid Marten this amount.
+dfl12_411,408,NA,Children_of_Peeter_della_Faille,Children of Peeter della Faille,Bequest,TRUE,,"Maria, Jan, Peeter, Jacques, Gillis, and Piat della Faille. Jan de Oude left 200 gulden to each of the six children of Peeter della Faille. The money was given out by the cassa to Peeter, Jan Reynaerts, Jacques, and then £100 to Marten for the contingent of Maria, Piat, and Gillis."
+dfl12_412,409,NA,Catharina_della_Faille,Catharina della Faille,Bequest,TRUE,,"Wife of Joos de Voghele . Written off on the account of Joos de Voghele nr 99, 93a–94b. Jan de Oude also gave a bequest of £10 to her husband Joos de Voghele (nr 385)."
+dfl12_413,410,NA,Joos_and_Peeter_della_Faille,Joos and Peeter della Faille,Bequest,TRUE,,"Sons of Bernaert della Faille (brother of Jan de Oude). This is the 200 gulden that is given to each, and may supposed to be used to give them interest. The cassa paid Marten this amount."
+dfl12_414,411,NA,Hans_and_Anna_della_Faille,Hans and Anna della Faille,Bequest,TRUE,,"The two children of Rogier della Faille, son of Bernaert della Faille. Each are given 200 gulden and if one dies, the money is to go to the longest living. The cassa paid Marten this amount."
+dfl12_415,412,NA,Luis_Samyn_and_siblings,Luis Samyn and siblings,Bequest,TRUE,,"Luis Samyn and his two youngest brothers and two youngest sisters, their mother was Maria della Faille (sister of Jan de Oude). Each of the five received 200 gulden. The cassa paid Marten this amount."
+dfl12_416,413,255,Gaspar_Losschaert_3,Gaspar Losschaert_3,Bequest,TRUE,,"Jan de Oude gave money to Hilaria della Faille and Gillis del Ponte, but if they did not have children then the donation would come back to Jan de Oude, this was done and Jan de Oude has decided to give it to Jaspar Losschaert, Hilaria’s oldest son from her first marriage, when he comes to marry. Losschart also received a gift of £16.13.4 (nr 364). 12 Bis: Written off on Hilaria della Faille's account (nr 64, 34-35)."
+dfl12_417,414,NA,Regina_Care,Regina Care,Bequest,FALSE,,Born in Wevelgem. Lyffrenten: The cassa paid Marten this amount. This is found on the Codicille of Jan de Oude.
+dfl12_418,415,NA,Antonio_Schoormans_2,Antonio Schoormans_2,Bequest,FALSE,,"This is for a year of rent in the house in the Schuttershoffstraete, which is due on half March (15 March?) 1583. Written off on the account of the erffgoeden ende meubelen nr 223 192a–195b. This is found on the Codicille of Jan de Oude."
+dfl12_419,416,NA,D'erffgenaemen_of_Willem_Boutens_and_Hilaria_della_Faille,D'erffgenaemen of Willem Boutens and Hilaria della Faille,Bequest,TRUE,,Daughter of Peeter della Faille (brother of Jan de Oude). The cassa paid Marten this amount. This is found on the Codicille of Jan de Oude.
+dfl12_420,NA,98,Cassa_in_Contant_is_schuldich,Cassa in Contant is schuldich,Accounting,FALSE,,"The cassa received more than it paid and so it is listed as debtor. Thus it does not have an entry number, but is added to the list as the second to last entry on the list of debtors. 12 Bis: It seems that they are moving this account and keeping track of the cassa elsewhere, so the account is closed as niet."
+dfl12_421,NA,100,Hersten_Henry_Smit,Hersten Henry Smit,Wissel,FALSE,,Wissel from London
+dfl12_422,NA,101,Jan_Gaultier_and_Geeraert_Hemaert_2,Jan Gaultier and Geeraert Hemaert_2,Wissel,FALSE,,Wissel from London
+dfl12_423,NA,102,Richard_Catherel,Richard Catherel,Wissel,FALSE,,Wissel from London
+dfl12_424,NA,103,Balthasar_Bonters_2,Balthasar Bonters_2,Wissel,FALSE,,Wissel from London
+dfl12_425,NA,104,Mauritio_Lanfranchi_and_Fabio_Augustini_2,Mauritio Lanfranchi and Fabio Augustini_2,Wissel,FALSE,,Wissel from Venice
+dfl12_426,NA,105,Absalon_Leerse_2,Absalon Leerse_2,Wissel,FALSE,,Two wissels from London
+dfl12_427,NA,106,Jan_Angelo_Vergans_2,Jan Angelo Vergans_2,Wissel,FALSE,,Wissel from Venice
+dfl12_428,NA,107,Thomas_Loddel,Thomas Loddel,Wissel,FALSE,,Wissel from London
+dfl12_429,NA,108,Thomas_Leestaet,Thomas Leestaet,Wissel,FALSE,,Wissel from London
+dfl12_430,NA,109,Michiel_de_Molin,Michiel de Molin,Wissel,FALSE,,Wissel from Venice
+dfl12_431,NA,110,Gaspar_Rouelasca_2,Gaspar Rouelasca_2,Wissel,FALSE,,Wissel from Venice
+dfl12_432,NA,111,Daniel_Runtweesch_2,Daniel Runtweesch_2,Wissel,FALSE,,Wissel from Venice
+dfl12_433,NA,112,Henrick_van_Lemens_2,Henrick van Lemens_2,Wissel,TRUE,,Wissel from Venice
+dfl12_434,NA,113,Niclaes_Walinstey,Niclaes Walinstey,Wissel,FALSE,,Wissel from London
+dfl12_435,NA,114,Hugo_Over,Hugo Over,Wissel,FALSE,,Wissel from London
+dfl12_436,NA,115,Gysbrecht_Boudeson_2,Gysbrecht Boudeson_2,Wissel,FALSE,,Wissel from London
+dfl12_437,NA,116,Thomas_Rouley,Thomas Rouley,Wissel,FALSE,,Wissel from London
+dfl12_438,NA,117,Ritsaert_Ware,Ritsaert Ware,Wissel,FALSE,,Two wissels from London
+dfl12_439,NA,118,Francois_Cambi,Francois Cambi,Wissel,FALSE,,Wissel from Venice
+dfl12_440,NA,119,Samuel_Cutter,Samuel Cutter,Wissel,FALSE,,Wissel from London
+dfl12_441,NA,120,Pauwels_Anraet,Pauwels Anraet,Wissel,FALSE,,Wissel from London
+dfl12_442,NA,121,Jeronimo_Schorza_2,Jeronimo Schorza_2,Wissel,FALSE,,Wissel from London
+dfl12_443,NA,122,Franchois_le_Fort_2,Franchois le Fort_2,Wissel,FALSE,,Wissel from London
+dfl12_444,NA,123,Oncosten_van_d'erffgenaemen_of_Jan_de_Oude_1,Oncosten van d'erffgenaemen of Jan de Oude_1,Accounting,FALSE,,"£521.1.9 1/2 is brought over to Creditors of this Book (nr 17, 15-21) to even the account."
+dfl12_445,NA,124,Winninge_ende_verlies_2,Winninge ende verlies_2,Accounting,FALSE,,The amount that the credit is more than the debits is £1550.6.10 1/2. This amount is written off as debit to the heirs. It is split between the maternal portion of the profits (£520.10.6) and the paternal and sororal portion (£1030.2.4 1/2).
+dfl12_446,NA,125,Voyagie_van_Verona_nieuwe_rekening,Voyagie van Verona nieuwe rekening,Branch,FALSE,,"This is brought over from the old rekening of the Voyagie van Verona (nr 80, 41-43)"
+dfl12_447,NA,126,Gaspar_Tradeler,Gaspar Tradeler,Wissel,FALSE,,Wissel from Venice
+dfl12_448,NA,127,Thomas_Hese,Thomas Hese,Trade,FALSE,,Purchased 56 stukken grossgreynen from Camelotten overhoop nieuw rekeninge (nr 91)
+dfl12_449,NA,128,Lodewyck_Blommaert_3,Lodewyck Blommaert_3,Wissel,FALSE,,Two wissels from Venice
+dfl12_450,NA,129,Pauwels_Ratan,Pauwels Ratan,Wissel,FALSE,,Wissel from Thomas Hese (nr 129) dealing with Camelotten overhoop nieuw rekeninge.
+dfl12_451,NA,130,Louis_Alvares_Caldera,Louis Alvares Caldera,Wissel,FALSE,,Wissel from Venice
+dfl12_452,NA,131,Bembo_Rodriguez_de_Serpa,Bembo Rodriguez de Serpa,Wissel,FALSE,,Wissel from Venice
+dfl12_453,NA,132,Blank_woolens,Blank_woolens,Goods,FALSE,,"The name for the account is just a horizontal line. It deals with 'groffgreyn, segge, camelotten overhoop' and is creditor to camerycx doek nr 133."
+dfl12_454,NA,133,Camerycx_doek,Camerycx doek,Goods,FALSE,,The camerycx was divided between Jacques and Marten.
+dfl12_455,NA,134,Huys_in_the_Merckgraveley,Huys in the Merckgraveley,Erffgoed,FALSE,,Written off on the Creditors of the Book
+dfl12_456,NA,135,Marten_della_Faille_sororal_2,Marten della Faille_sororal_2,Inheritance,TRUE,Marten,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_457,NA,136,Jan_Gaultier_and_Geeraert_Hemaert_3,Jan Gaultier and Geeraert Hemaert_3,Wissel,FALSE,,Wissel from Venice
+dfl12_458,NA,137,Arnout_van_Eede,Arnout van Eede,Wissel,FALSE,,Wissel from Venice
+dfl12_459,NA,138,Jan_della_Faille_sororal_2,Jan della Faille_sororal_2,Inheritance,TRUE,Jan,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_460,NA,139,Carlo_della_Faille_sororal_2,Carlo della Faille_sororal_2,Inheritance,TRUE,Carlo,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_461,NA,140,D’erffgenaemen_van_Maria_della_Faille_sororal_2,D'erffgenaemen van Maria della Faille_sororal_2,Inheritance,TRUE,Maria,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_462,NA,141,Jacques_della_Faille_sororal_2,Jacques della Faille_sororal_2,Inheritance,TRUE,Jacques,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_463,NA,142,Anna_della_Faille_sororal_2,Anna della Faille_sororal_2,Inheritance,TRUE,Anna,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_464,NA,143,Steven_della_Faille_sororal_2,Steven della Faille_sororal_2,Inheritance,TRUE,Steven,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_465,NA,144,Hester_della_Faille_sororal_2,Hester della Faille_sororal_2,Inheritance,TRUE,Hester,Written off on the Capital of Cornelia della Faille to even the account.
+dfl12_466,NA,145,Mauritio_Lanfranchi_and_Fabio_Augustini_3,Mauritio Lanfranchi and Fabio Augustini_3,Wissel,FALSE,,"Three wissels from Venice for £170.16.8, £699.13.9, and £397.18.4"
+dfl12_467,NA,146,Jan_van_Gels,Jan van Gels,Trade,FALSE,,Purchased 55 stukken from Camelotten in company with Jan de Wale. Paid to the cassa.
+dfl12_468,NA,147,Ambrosius_Goyvaerts_4,Ambrosius Goyvaerts_4,Lawyer,FALSE,,"Payment for his service and to close all of his accounts. This was for £300 plus interest. It is written off on Creditors of the Book nr 17, 15-21."
+dfl12_469,NA,148,Andrea_Barretta_2,Andrea Barretta_2,Wissel,FALSE,,Wissel from Venice
+dfl12_470,NA,149,Marten_della_Faille_2,Marten della Faille_2,Heir,TRUE,Marten,
+dfl12_471,NA,150,Peeter_Dably,Peeter Dably,Wissel,FALSE,,Wissel from Venice
+dfl12_472,NA,151,Peeter_van_der_Goes,Peeter van der Goes,Wissel,TRUE,,Wissel from Andrea Barretta (nr 148) for wissel from Venice
+dfl12_473,NA,152,Simon_Fabi,Simon Fabi,Wissel,FALSE,,Wissel from Venice
+dfl12_474,NA,153,Engelse_wolle,Engelse wolle,Goods,FALSE,,"This accounts shows an investment in wool from England of £4414.10.3 sterling or £6842.9.10 vlams for a total of 259 sacks of wool. The cassa of Marten paid £17.11.0 vlams for expenses for transportation to Hamburg, while other expenses were included in the price of the sale of the wool in Venice and Haarlem. However, after all of this the profits were a measly £104.10.10 or a return of about 1.5%."
+dfl12_475,NA,154,Rasse_van_Venice,Rasse van Venice,Goods,FALSE,,Created through debt to Voyagie van Venice. Written off on the account of Jacques' paternal inheritance (nr 260)
+dfl12_476,NA,155,Peeter_Wannemaker,Peeter Wannemaker,Balancing,FALSE,,Debt comes from Branch of London
+dfl12_477,NA,156,Voyagie_van_London_nieuwe_rekening,Voyagie van London nieuwe rekening,Branch,FALSE,,"First brings over £21959.3.10 from the old rekening nr 97, 65-73. This should give a good idea of what was going on in London."
+dfl12_478,NA,157,Jacques_Jan_Carlo_Hester,Jacques_Jan_Carlo_Hester,Inheritance,TRUE,Jacques,"Begins with the £4537.12.4 1/2 sterling that they received for their part in the branch of London, £7033.6.2 vlems. The total credits are only £9634.8.0, so that the account of the four heirs continues with a debt of £2115.8.2."
+dfl12_479,NA,158,Marten_Steven_Anna,Marten_Steven_Anna,Inheritance,TRUE,Marten,"Begins with the £3241.5.9 1/2 sterling that they received for their part in the branch of London, £4861.18.8 vlems. The total credits are £7739.8.4 and so more than the debits. The account continues with a credit of £433.7.4."
+dfl12_480,NA,159,Laecken_vercoopers_van_Haarlem,Laecken vercoopers van Haarlem,Trade,FALSE,,"Almost all of this is given to Jacques. Robert van Eeckeren received £1.1.8 worth, but Jacques received £1122.0.4."
+dfl12_481,NA,160,Olivier_Coeck,Olivier Coeck,Trade,FALSE,,Purchase of 92 pounds 7 ounces fyn rouwe syde in Antwerp (nr 86)
+dfl12_482,NA,161,Robert_van_Eeckeren_2,Robert van Eeckeren_2,Kin,TRUE,,"£8.18.11 is written off on Anna's account of her maternal inheritance (nr 197, 139-142) in order to close the account."
+dfl12_483,NA,162,Robert_van_Eeckeren_3,Robert van Eeckeren_3,Kin,TRUE,,"Written off on the capital of Marten (nr 220, 151-154) "
+dfl12_484,NA,163,Lieven_van_Rockeghem,Lieven van Rockeghem,Lawyer,FALSE,,"On 15 September 1594 for payment for the making various documents. Oncosten van d'erffgenaemen Jan de Oude (nr 123, 79-84) shows that on 20 February 1584 Lieven van Rockeghem was already paid £30 for various writings concerning the sterfhuis."
+dfl12_485,NA,164,Huis_de_Grooten_Beer_op_de_Groote_Merct,Huis de Grooten Beer op de Groote Merct,Erffgoed,FALSE,,
+dfl12_486,NA,165,Gerard_de_Schepper,Gerard de Schepper,Trade,FALSE,,Payment received from the cassa of Marten. He was involved in the sale of the wool that was arrested.
+dfl12_487,NA,166,Debiteuren_ende_crediteuren_voor_rekeninge_van_diverse_persoonen,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,Accounting,FALSE,,The debits are the outstanding debits that were declared bad debits in order to even out the accounts.
+dfl12_488,NA,167,Capital_of_diverse_rente,Capital of diverse rente,Accounting,FALSE,,The creditors are the heirs of Jan de Oude who each receive £115.10
+dfl12_489,NA,168,Coteels-Aertsen_rekeninge_van_erffgenaemen van_Maria_della_Faille,Coteels-Aertsen rekeninge van erffgenaemen van Maria della Faille,Inheritance,TRUE,Maria,
+dfl12_490,NA,169,Oncosten_van_d'erffgenaemen_of_Jan_de_Oude_2,Oncosten van d'erffgenaemen of Jan de Oude_2,Accounting,FALSE,,
+dfl12_491,NA,170,Marten_della_Faille_rekening_van_Gillis_Hasebaert,Marten della Faille rekening van Gillis Hasebaert,Wissel,FALSE,,Wissel from Venice
+dfl12_492,NA,171,Marten_della_Faille_rekening_van_inheritance_of_Anna_de_Hane,Marten della Faille rekening van inheritance of Anna de Hane,Inheritance,TRUE,,This is payment of 5457 ducats 3d that Marten pulled from Venice
