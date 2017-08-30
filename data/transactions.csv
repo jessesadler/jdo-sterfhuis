@@ -13,11 +13,13 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 13,12,dfl12_001,dfl12_015,Julio Bargarusio,debtor,Balance on 8 November,15821108,38,15,,,
 14,13,dfl12_001,dfl12_016,Heirs of Huysbrecht Verstraeten,debtor,Balance on 8 November,15821108,0,0,1,,
 15,NA,dfl12_001,dfl12_017,Frederico Perenot Heer van Champagny,debtor,Balance on 8 November,15821108,75,0,0,,
+15,NA,dfl12_017,dfl12_002,Frederico Perenot Heer van Champagny,creditor,Cassa,15830312,98,11,7,,
 16,NA,dfl12_001,dfl12_018,City of Antwerp,debtor,Balance on 8 November,15821108,317,11,2,,
 17,14,dfl12_001,dfl12_019,Wouter Aertsen,debtor,Balance on 8 November,15821108,1,10,8,,
 19,NA,dfl12_001,dfl12_021,Jan de Witthem Heere van Beersele,debtor,Balance on 8 November,15821108,130,10,0,,
 20,NA,dfl12_001,dfl12_022,Jan Peeterssen,debtor,Balance on 8 November,15821108,0,12,0,,
 22,18,dfl12_001,dfl12_024,Lucas de Hemele,debtor,Balance on 8 November,15821108,1,7,3,,
+22,18,dfl12_024,dfl12_002,Lucas de Hemele,creditor,Cassa,15940913,1,7,3,,
 23,NA,dfl12_001,dfl12_025,Bocralen Overhoop_1,debtor,Balance on 8 November,15821108,36,5,0,,
 23,NA,dfl12_025,dfl12_116,Bocralen Overhoop_1,creditor,Carseyen overhoop,15831116,36,5,0,,
 24,NA,dfl12_001,dfl12_026,Lynwaet in company with Gillis del Ponte and Hilaria della Faille,debtor,Balance on 8 November,15821108,138,11,1,,
@@ -26,19 +28,32 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 24,NA,dfl12_026,dfl12_213,Lynwaet in company with Gillis del Ponte and Hilaria della Faille,debtor,Lynwaeten in company with Hilaria della Faille,15830919,33,17,0,Accounting,Brought over to a new account
 210,NA,dfl12_213,dfl12_064,Lynwaeten in company with Hilaria della Faille,creditor,Hilaria della Faille_1,15831211,0,3,1.5,,Hilaria’s half of the profits
 25,21,dfl12_001,dfl12_027,Antoine Malapert,debtor,Balance on 8 November,15821108,6,2,4.5,,
+25,21,dfl12_027,dfl12_272,Antoine Malapert,creditor,Louis Malapert_2,15940920,6,2,4.5,,
 26,22,dfl12_001,dfl12_028,Jan de Vooght_1,debtor,Balance on 8 November,15821108,80,0,0,,
+26,22,dfl12_028,dfl12_313,Jan de Vooght_1,creditor,Jan de Vooght_2,15940920,1,16,11.5,,
 27,23,dfl12_001,dfl12_029,Loys Hasebaert,debtor,Balance on 8 November,15821108,58,3,10,,
 28,24,dfl12_001,dfl12_030,Mayken Reyniers weduwe of Jan Ridderincx,debtor,Balance on 8 November,15821108,1,10,0,,
+28,24,dfl12_030,dfl12_083,Mayken Reyniers weduwe of Jan Ridderincx,creditor,Catharina de Hane,15841122,1,10,0,,
 29,NA,dfl12_001,dfl12_031,Heer Dierick van Liesvelt,debtor,Balance on 8 November,15821108,100,0,0,,
+29,NA,dfl12_031,dfl12_296,Heer Dierick van Liesvelt,creditor,Oncosten van't process tegens Daniel de Hane,15830919,100,0,0,Lawsuit,
 30,NA,dfl12_001,dfl12_032,Gillis van den Bogaerde and Marcus Schoor_1,debtor,Balance on 8 November,15821108,173,8,9,,
+30,NA,dfl12_032,dfl12_002,Gillis van den Bogaerde and Marcus Schoor_1,creditor,Cassa,15821114,108,8,9,,
+30,NA,dfl12_032,dfl12_080,Gillis van den Bogaerde and Marcus Schoor_1,creditor,Willem van den Mey_2,15831023,65,0,0,,
 31,NA,dfl12_001,dfl12_033,Jacomo Widhols,debtor,Balance on 8 November,15821108,81,1,5,,
+31,NA,dfl12_002,dfl12_033,Jacomo Widhols,debtor,Cassa,15830919,12,4,8,,
+31,NA,dfl12_033,dfl12_091,Jacomo Widhols,creditor,Jan Widhols nieuw rekening,15830113,91,9,10,,
 32,NA,dfl12_001,dfl12_034,Gillis del Ponte,debtor,Balance on 8 November,15821108,47,14,1,,
+32,NA,dfl12_034,dfl12_064,Gillis del Ponte,creditor,Hilaria della Faille_1,15830825,37,14,1,,
+32,NA,dfl12_034,dfl12_064,Gillis del Ponte,creditor,Hilaria della Faille_1,15831116,10,0,0,,
 33,NA,dfl12_001,dfl12_035,Weduwe van Henrick Packmuts,debtor,Balance on 8 November,15821108,100,0,0,,
-34,NA,dfl12_001,dfl12_036,Matthys van Bergen,debtor,Balance on 8 November,15821108,90,10,9,,
+34,NA,dfl12_001,dfl12_036,Matthys van Bergen,debtor,Balance on 8 November,15821108,90,10,9,Wissel,
 35,25,dfl12_001,dfl12_037,Jaspar Celosse,debtor,Balance on 8 November,15821108,48,0,0,,
+35,25,dfl12_002,dfl12_037,Jaspar Celosse,debtor,Cassa,15830628,16,13,4,,
+35,25,dfl12_037,dfl12_149,Jaspar Celosse,creditor,Luis Cutsini_1,15830629,9,7,2.5,,
+35,25,dfl12_002,dfl12_037,Jaspar Celosse,debtor,Cassa,15841122,2,16,7,Wissel,
 36,NA,dfl12_001,dfl12_038,Winninge ende verlies_1,debtor,Balance on 8 November,15821108,324,16,0,,
-36,NA,dfl12_035,dfl12_038,Winninge ende verlies_1,debtor,Weduwe van Henrick Packmuts,15830919,100,0,0,,
-36,NA,dfl12_036,dfl12_038,Winninge ende verlies_1,debtor,Matthys van Bergen,15830919,90,10,9,Wissel,"For a wissel from Hamburg to London, 'd'welck mits syn faillissement voor verloren geschict woort’."
+36,NA,dfl12_035,dfl12_038,Winninge ende verlies_1,debtor,Weduwe van Henrick Packmuts,15830919,100,0,0,Bad_debt,
+36,NA,dfl12_036,dfl12_038,Winninge ende verlies_1,debtor,Matthys van Bergen,15830919,90,10,9,Bad_debt,"For a wissel from Hamburg to London, 'd'welck mits syn faillissement voor verloren geschict woort’."
 36,NA,dfl12_147,dfl12_038,Winninge ende verlies_1,debtor,Turcxe camelotten in company with Jan de Wale,15830919,10,16,8,,
 36,NA,dfl12_044,dfl12_038,Winninge ende verlies_1,debtor,Camelotten overhoop,15830919,39,16,3,,
 36,NA,dfl12_213,dfl12_038,Winninge ende verlies_1,debtor,Lynwaeten in company with Hilaria della Faille,15831215,0,3,1.5,,
@@ -77,6 +92,10 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 40,86,dfl12_042,dfl12_211,Fyn rouwe syde,creditor,Ardasse syde ende cleyn foullie nieuw rekeninge,15940905,137,3,0,,
 40,86,dfl12_042,dfl12_481,Fyn rouwe syde,creditor,Olivier Coeck,15940912,189,9,11,,
 41,240,dfl12_001,dfl12_043,Peeter della Faille de Jonge,debtor,Balance on 8 November,15821108,69,17,3,,
+41,240,dfl12_002,dfl12_043,Peeter della Faille de Jonge,debtor,Cassa,15821121,20,0,0,,Paid himself
+41,240,dfl12_002,dfl12_043,Peeter della Faille de Jonge,debtor,Cassa,15830212,30,0,0,,Paid himself
+41,240,dfl12_002,dfl12_043,Peeter della Faille de Jonge,debtor,Cassa,15830723,8,3,8,,Paid himself
+41,240,dfl12_050,dfl12_043,Peeter della Faille de Jonge,debtor,Margriete van Hoogersteyn,15830103,0,16,8,,For bleaching of two pieces of linen
 42,225,dfl12_001,dfl12_044,Camelotten overhoop,debtor,Balance on 8 November,15821108,1313,14,11,,
 42,225,dfl12_084,dfl12_044,Camelotten overhoop,debtor,Jan Verbeke,15830110,0,2,4,,
 42,225,dfl12_044,dfl12_215,Camelotten overhoop,creditor,Camelotten overhoop nieuw rekeninge,15830919,652,4,0,,
@@ -93,21 +112,73 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 46,89,dfl12_080,dfl12_048,Lynwaet in the company of Willem van den Mey,debtor,Willem van den Mey_2,15830919,324,1,5,,For Willem van den Mey’s part in the sale of 96 pieces of linen sold in London
 46,89,dfl12_080,dfl12_048,Lynwaet in the company of Willem van den Mey,debtor,Willem van den Mey_2,15940905,184,17,9,,For Willem van den Mey’s part in the sale of linen
 47,NA,dfl12_001,dfl12_049,Ghysbrecht Tytgat,debtor,Balance on 8 November,15821108,2,2,4,,
+47,NA,dfl12_049,dfl12_064,Ghysbrecht Tytgat,creditor,Hilaria della Faille_1,15830825,2,2,4,,
 48,NA,dfl12_001,dfl12_050,Margriete van Hoogersteyn,debtor,Balance on 8 November,15821108,7,13,1.5,,
+48,NA,dfl12_002,dfl12_050,Margriete van Hoogersteyn,debtor,Cassa,15830312,145,4,1,,
+48,NA,dfl12_050,dfl12_301,Margriete van Hoogersteyn,creditor,Dierick de Jagere,15830103,6,16,0,,
+48,NA,dfl12_050,dfl12_099,Margriete van Hoogersteyn,creditor,Lodewyck Blommaert_1,15830212,217,4,7,Wissel,
 49,29,dfl12_001,dfl12_051,Rigo Minauw,debtor,Balance on 8 November,15821108,102,13,10,,
+49,29,dfl12_002,dfl12_051,Rigo Minauw,debtor,Cassa,15940915,25,0,0,,
+49,29,dfl12_051,dfl12_305,Rigo Minauw,creditor,Rigo Minauw nieuwe rekening,15940915,5,7,8,,
+49,29,dfl12_051,dfl12_066,Rigo Minauw,creditor,Francisco van Eeckeren_1,15940915,8,15,7,,
 50,NA,dfl12_001,dfl12_052,Capitoen syde ende Hoffsaet,debtor,Balance on 8 November,15821108,58,19,5,,
 51,NA,dfl12_001,dfl12_053,Carel van Malsem,debtor,Balance on 8 November,15821108,4,11,8,,
+51,NA,dfl12_002,dfl12_053,Carel van Malsem,debtor,Cassa,15821115,8,6,8,,
+51,NA,dfl12_002,dfl12_053,Carel van Malsem,debtor,Cassa,15821121,4,0,0,,
+51,NA,dfl12_002,dfl12_053,Carel van Malsem,debtor,Cassa,15830208,13,1,8,,
+51,NA,dfl12_053,dfl12_301,Carel van Malsem,creditor,Dierick de Jagere,15830919,30,0,0,,
 52,NA,dfl12_001,dfl12_054,Beelken della Faille_1,debtor,Balance on 8 November,15821108,12,0,0,,
+52,NA,dfl12_054,dfl12_098,Beelken della Faille_1,creditor,Oncosten van coopmansschappen,15830604,12,0,0,Accounting,This entry does not seem to be listed under the account of Oncosten van coopmansschappen
 53,NA,dfl12_001,dfl12_055,Ambrosius Goyvaerts_1,debtor,Balance on 8 November,15821108,344,7,8,,
+53,NA,dfl12_076,dfl12_055,Ambrosius Goyvaerts_1,debtor,Robert van Eeckeren_1,15831116,16,13,4,,
 54,30,dfl12_001,dfl12_056,Nicolaes Antonio van Smillien,debtor,Balance on 8 November,15821108,43,6,8,,
 55,31,dfl12_001,dfl12_057,Pauwels della Faille_1,debtor,Balance on 8 November,15821108,100,0,0,,
+55,31,dfl12_002,dfl12_057,Pauwels della Faille_1,debtor,Cassa,15830312,6,0,0,,
+55,31,dfl12_072,dfl12_057,Pauwels della Faille_1,debtor,Pauwels della Faille_2,15830919,19,0,0,,
+55,31,dfl12_057,dfl12_309,Pauwels della Faille_1,creditor,Henrick della Faille,15830919,100,0,0,,
+55,31,dfl12_057,dfl12_002,Pauwels della Faille_1,creditor,Cassa,15940912,25,0,0,,
 56,32,dfl12_001,dfl12_058,Peeter Rutgeert,debtor,Balance on 8 November,15821108,35,14,5,,
 57,33,dfl12_001,dfl12_059,Hans Noirot,debtor,Balance on 8 November,15821108,50,0,0,,
 58,NA,dfl12_001,dfl12_060,Henrick van Berge,debtor,Balance on 8 November,15821108,2,11,4,,
+58,NA,dfl12_002,dfl12_060,Henrick van Berge,debtor,Cassa,15830108,5,5,7,,
 59,NA,dfl12_001,dfl12_061,States of Brabant,debtor,Balance on 8 November,15821108,86,13,4,,
+59,NA,dfl12_002,dfl12_061,States of Brabant,creditor,Cassa,15830426,73,6,8,,
+59,NA,dfl12_002,dfl12_061,States of Brabant,creditor,Cassa,15830919,26,13,4,,
 60,NA,dfl12_001,dfl12_062,Andries van der Meulen,debtor,Balance on 8 November,15821108,333,6,8,,
+60,NA,dfl12_062,dfl12_002,Andries van der Meulen,creditor,Cassa,15821110,333,6,8,,
 61,228,dfl12_001,dfl12_063,Simon de Deckere,debtor,Balance on 8 November,15821108,15,12,4,,
+61,228,dfl12_002,dfl12_063,Simon de Deckere,debtor,Cassa,15830723,0,0,8,,
+61,228,dfl12_063,dfl12_002,Simon de Deckere,creditor,Cassa,15830312,15,13,0,,
+61,228,dfl12_063,dfl12_002,Simon de Deckere,creditor,Cassa,15830723,15,11,8,,
+61,228,dfl12_063,dfl12_002,Simon de Deckere,creditor,Cassa,15840315,23,7,6,,
 62,276,dfl12_001,dfl12_064,Hilaria della Faille_1,debtor,Balance on 8 November,15821108,39,17,10,,
+62,276,dfl12_082,dfl12_064,Hilaria della Faille_1,debtor,Jacques de Wale_1,15830106,8,4,2,,
+62,276,dfl12_082,dfl12_064,Hilaria della Faille_1,debtor,Jacques de Wale_1,15830106,8,1,11.5,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830201,15,0,0,,Paid Willem van Mey on her order
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830312,2,0,0,,Paid Schorremans for consultation fee
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830312,4,19,4,,Paid Willem vanden Heuvel for a silver 'schaele' that was sent to Dordrecht as a kindergifte to the wife of Carlo
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830325,15,0,0,,Paid Antonio van Neste
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830528,20,0,0,,Sent with the messenger from Haarlem
+62,276,dfl12_080,dfl12_064,Hilaria della Faille_1,debtor,Willem van den Mey_2,15830629,44,0,0,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830711,10,0,0,,Paid Schorremans to go to Ghent and to 'appelleren' (appeal) the judgement against her
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830719,12,7,0,,Paid Schorremans for expenses on his trip to Ghent
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830805,155,0,0,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830806,155,8,4,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830806,155,8,4,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830810,16,13,4,Bequest,Payment for a bequest
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830813,105,11,1.5,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830813,83,6,8,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15830825,1056,5,1,,Paid to herself from the cassa
+62,276,dfl12_101,dfl12_064,Hilaria della Faille_1,debtor,Joos de Voghele nieuw rekening,15830825,19,13,3,,
+62,276,dfl12_082,dfl12_064,Hilaria della Faille_1,debtor,Jacques de Wale_1,15830919,127,15,7,,Jacques de Wale paid in Ghent to Apolonis vanden Berge for the rest due him for the inheritance of Gillis del Ponte following the accord made with him
+62,276,dfl12_082,dfl12_064,Hilaria della Faille_1,debtor,Jacques de Wale_1,15830919,31,4,4,,Jacques de Wale paid an additional sum to Apolonis vanden Berge in Ghent
+62,276,dfl12_082,dfl12_064,Hilaria della Faille_1,debtor,Jacques de Wale_1,15830919,0,0,3,,
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15831201,45,0,0,,Paid to Jaspar Losschaert
+62,276,dfl12_064,dfl12_082,Hilaria della Faille_1,creditor,Jacques de Wale_1,15830106,2,1,2,,
+62,276,dfl12_064,dfl12_269,Hilaria della Faille_1,creditor,Gillis del Ponte and Hilaria della Faille,15830825,1600,0,0,,
+62,276,dfl12_064,dfl12_082,Hilaria della Faille_1,creditor,Jacques de Wale_1,15830919,14,4,11,,For the payment he received from Jan Bocquaert that Bocquaert had borrowed from Gillis del Ponte in his life time
+62,276,dfl12_064,dfl12_082,Hilaria della Faille_1,creditor,Jacques de Wale_1,15830919,1,14,2,,For the payment he received from Geleyn Tytgat in Ghent
+62,276,dfl12_002,dfl12_064,Hilaria della Faille_1,debtor,Cassa,15840713,13,10,7,,
 63,88,dfl12_001,dfl12_065,Lynwaeten,debtor,Balance on 8 November,15821108,5526,4,11.5,,
 63,88,dfl12_050,dfl12_065,Lynwaeten,debtor,Margriete van Hoogersteyn,15830103,2,14,7,,
 63,88,dfl12_082,dfl12_065,Lynwaeten,debtor,Jacques de Wale_1,15830106,2,17,2,,
@@ -128,21 +199,109 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 66,84,dfl12_316,dfl12_068,Napelse Syde,debtor,Marten Ensberger nieuw rekening,15840315,1,1,11,,
 67,35,dfl12_001,dfl12_069,Rensche wynen,debtor,Balance on 8 November,15821108,8,15,7,,
 68,36,dfl12_001,dfl12_070,Willem van den Mey_1,debtor,Balance on 8 November,15821108,100,0,0,,
+68,36,dfl12_080,dfl12_070,Willem van den Mey_1,debtor,Willem van den Mey_2,15830629,250,0,0,Accounting,This is due to an error
+68,36,dfl12_070,dfl12_080,Willem van den Mey_1,creditor,Willem van den Mey_2,15831228,350,0,0,,
 69,37,dfl12_001,dfl12_071,Willem Mourcock,debtor,Balance on 8 November,15821108,15,10,0,,
 70,NA,dfl12_001,dfl12_072,Pauwels della Faille_2,debtor,Balance on 8 November,15821108,19,0,0,,
 71,278,dfl12_001,dfl12_073,Jan de Wale_1,debtor,Balance on 8 November,15821108,100,14,11,,
+71,278,dfl12_002,dfl12_073,Jan de Wale_1,debtor,Cassa,15830926,160,0,0,,Paid to himself
+71,278,dfl12_002,dfl12_073,Jan de Wale_1,debtor,Cassa,15831128,159,11,8,,Paid to himself
+71,278,dfl12_002,dfl12_073,Jan de Wale_1,debtor,Cassa,15831128,76,8,10,,Paid to Jacques Noirot on his order
+71,278,dfl12_073,dfl12_467,Jan de Wale_1,creditor,Jan van Gels,15840730,88,0,0,,
 72,230,dfl12_001,dfl12_074,Catharina Aertssen,debtor,Balance on 8 November,15821108,122,8,6,,
+72,230,dfl12_092,dfl12_074,Catharina Aertssen,debtor,Lynken Pluym weduwe van Lenaert Pluym,15831116,2,0,0,,
+72,230,dfl12_002,dfl12_074,Catharina Aertssen,debtor,Cassa,15831116,0,2,0,,
 73,NA,dfl12_001,dfl12_075,Jeronimo Cassina,debtor,Balance on 8 November,15821108,153,15,6,,
+73,NA,dfl12_327,dfl12_075,Jeronimo Cassina,creditor,Jems Tipman,15821123,153,15,6,,
 74,38,dfl12_001,dfl12_076,Robert van Eeckeren_1,debtor,Balance on 8 November,15821108,6,3,2,,
+74,38,dfl12_316,dfl12_076,Robert van Eeckeren_1,debtor,Marten Ensberger nieuw rekening,15830115,4,5,6,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830720,1,12,3,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830813,241,18,0,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830813,100,0,0,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830813,45,1,7,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830825,146,7,1,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830825,0,5,0,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15830906,70,5,10,,
+74,38,dfl12_002,dfl12_076,Robert van Eeckeren_1,debtor,Cassa,15831104,0,14,7,,
+74,38,dfl12_076,dfl12_002,Robert van Eeckeren_1,creditor,Cassa,15830521,159,11,8,,
+74,38,dfl12_076,dfl12_316,Robert van Eeckeren_1,creditor,Marten Ensberger nieuw rekening,15830629,4,5,6,,
+74,38,dfl12_076,dfl12_084,Robert van Eeckeren_1,creditor,Jan Verbeke,15830801,3,10,0,,
+74,38,dfl12_076,dfl12_283,Robert van Eeckeren_1,creditor,Hester van Eeckeren_1,15830919,603,12,6,,
 75,NA,dfl12_001,dfl12_077,Witte florette syde,debtor,Balance on 8 November,15821108,326,14,11,,
 75,NA,dfl12_077,dfl12_095,Witte florette syde,creditor,Florette syde,15830919,627,13,9,Accounting,To close the account
 76,NA,dfl12_001,dfl12_078,Antonio van Neste_1,debtor,Balance on 8 November,15821108,0,6,2,,
+76,NA,dfl12_002,dfl12_078,Antonio van Neste_1,debtor,Cassa,15830811,4,3,4,Bequest,Payment of bequest
 77,39,dfl12_001,dfl12_079,Anthoni Peeterss van Brussel,debtor,Balance on 8 November,15821108,14,17,5,,
 78,281,dfl12_001,dfl12_080,Willem van den Mey_2,debtor,Balance on 8 November,15821108,96,6,0,,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15821117,95,0,0,,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15821128,12,0,0,,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15830122,50,3,4,,
+78,281,dfl12_161,dfl12_080,Willem van den Mey_2,debtor,Peeter and Jan van der Meert,15830205,200,0,0,,For payment to Henrick van Uffele by the assignment of Jacques Schot
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15830216,50,0,0,,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15830216,4,3,4,,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15830825,30,0,0,Wissel,
+78,281,dfl12_002,dfl12_080,Willem van den Mey_2,debtor,Cassa,15831129,13,7,2,Wissel,
+78,281,dfl12_080,dfl12_084,Willem van den Mey_2,creditor,Jan Verbeke,15830110,14,17,3,,
+78,281,dfl12_080,dfl12_267,Willem van den Mey_2,creditor,Gaspar Losschaert_1,15830629,101,0,0,,
+78,281,dfl12_080,dfl12_168,Willem van den Mey_2,creditor,Jacques de Wale nieuw rekeninge,15830629,4,13,0,,For two ‘vierendeelen’ of butter
+78,281,dfl12_080,dfl12_098,Willem van den Mey_2,creditor,Oncosten van coopmansschappen,15830629,53,9,2,,This transaction is not found in Oncosten van coopmansschappen (nr 96). In Oncosten van coopmansschappen this amount is paid for by the cassa through Goyvaerts.
 79,40,dfl12_001,dfl12_081,Francisco van Eeckeren_2,debtor,Balance on 8 November,15821108,163,4,0,,
 80,NA,dfl12_001,dfl12_082,Jacques de Wale_1,debtor,Balance on 8 November,15821108,462,5,10,,
+80,NA,dfl12_002,dfl12_082,Jacques de Wale_1,debtor,Cassa,15830216,42,17,4,,
+80,NA,dfl12_168,dfl12_082,Jacques de Wale_1,debtor,Jacques de Wale nieuw rekeninge,15831116,150,1,0,,
+80,NA,dfl12_082,dfl12_313,Jacques de Wale_1,creditor,Jan de Vooght_2,15830106,8,6,8,,
+80,NA,dfl12_082,dfl12_134,Jacques de Wale_1,creditor,Jan Reynaerts,15830106,16,0,0,,
+80,NA,dfl12_082,dfl12_002,Jacques de Wale_1,creditor,Cassa,15830717,1,10,0,,
+80,NA,dfl12_082,dfl12_134,Jacques de Wale_1,creditor,Jan Reynaerts,15830717,3,19,7,,
 81,41,dfl12_001,dfl12_083,Catharina de Hane,debtor,Balance on 8 November,15821108,1,0,9.5,,
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15821123,1,6,4,,Paid to Gillis Blomaert for diverse things done to her house in the Beddestraeten
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830103,1,3,4,,Paid to the timmerman for repairs to the groothuys in the Beddestraeten
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830107,2,13,4,,For a year of rente
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830131,1,17,4,,
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830312,0,12,8,,Repairs for her house
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830427,1,4,8,,
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830811,5,17,4,,"For the six hundredth penny for her house in the Beddestraeten, which was paid on 9 February."
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15830924,2,13,4,,For repairs to her house
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15831026,1,16,8,,For repairs to her house
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15831102,1,6,8,,For repairs to the house in the Lombaertstraet
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15831102,1,0,0,,For repairs to two small houses
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830316,9,12,6,,For 9 months ‘huyshueren’ from Jan Lierse
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830426,6,3,8,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830426,23,6,6,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830514,10,11,4,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830811,15,0,0,,For three months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830811,3,6,8,,For three months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830811,6,17,6,,For three months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15830906,0,12,2,,For three months huyshuere
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15840203,1,0,0,,Paid to Gillis Blomaert for repairs to her groothuys
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15840203,1,19,3,,For a year of rente to Anna van Depenbeke
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15840422,3,4,8,,For repairs to one of her houses
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15840507,1,15,0,,For repairs to one of her houses
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15850118,1,10,0,,For diverse repairs to her groothuys
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15850219,1,14,1,,For rente
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15850219,8,16,2,,"For the 2/3 part in payment of taxes of the 4th, 5th, 7th, and 100th penny"
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15850301,1,16,3,,For repairs to her house
+81,41,dfl12_002,dfl12_083,Catharina de Hane,debtor,Cassa,15940120,0,6,6,,Payment for documents from Lieven van Rockegem
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15840315,5,10,0,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15840320,12,4,8,,For three months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15840412,10,7,8,,For nine months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15841207,7,10,0,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15841231,13,15,0,,For six months huyshuere
+81,41,dfl12_083,dfl12_002,Catharina de Hane,creditor,Cassa,15850118,5,12,5,,For six months huyshuere
 82,245,dfl12_001,dfl12_084,Jan Verbeke,debtor,Balance on 8 November,15821108,17,10,9,,
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15830212,0,7,8,,Cassa paid on his order to Josynken Calvart
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15830825,50,0,0,Wissel,Cassa paid Jacques Oublyn for a wisselbrief from Willem van den Mey
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831015,50,0,0,Wissel,Cassa paid Han Lucas for a wisselbrief from Joos de Voghele in Bruges
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831015,100,0,0,Wissel,Cassa paid Hans Bulteel for a wisselbrief from Joos de Voghele in Bruges
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831028,50,0,0,Wissel,Cassa paid Simon Jacobsz for a wisselbrief from Joos de Voghele in Bruges
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831128,50,0,0,Wissel,Cassa paid Herman Hoffman for a wisselbrief from Joos de Voghele in Bruges
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831129,12,2,1,Wissel,Cassa paid Hans de Cuyper for a wisselbrief from Willem van den Mey
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15831215,15,0,0,,Cassa paid to his wife
+82,245,dfl12_084,dfl12_315,Jan Verbeke,creditor,D'erffegaemen of Herman Pottey,15830110,36,8,3,,
+82,245,dfl12_084,dfl12_200,Jan Verbeke,creditor,Carel Navaroli and brothers,15830804,346,12,4,Wissel,
+82,245,dfl12_084,dfl12_201,Jan Verbeke,creditor,Fernando Ximenez and the heirs of Ruy Nunez,15830807,109,4,9,Wissel,
+82,245,dfl12_084,dfl12_002,Jan Verbeke,creditor,Cassa,15840220,51,5,2,Wissel,
+82,245,dfl12_002,dfl12_084,Jan Verbeke,debtor,Cassa,15840107,116,13,4,Wiisel,Wisselbrief from Amsterdam
 83,42,dfl12_001,dfl12_085,Christalyne spiegels,debtor,Balance on 8 November,15821108,216,4,8,,
 83,42,dfl12_002,dfl12_085,Christalyne spiegels,debtor,Cassa,15831021,25,8,3,Purchase,For 81 dozen mirrors bough from Robert van Eeckeren
 84,NA,dfl12_001,dfl12_086,Ardasse syde ende cleyn foullie,debtor,Balance on 8 November,15821108,249,1,1,,
@@ -156,7 +315,11 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 87,NA,dfl12_089,dfl12_212,Ardasse and Canarine syde van Marten della Faille and Jan de Wale,creditor,Ardasse ende Canarine syde in company with Jan de Wale nieuw rekening,15830919,105,9,10,Accounting,For half of a bale of ardasse silk estimated to have a value of £136.2.6 sterling
 87,NA,dfl12_089,dfl12_073,Ardasse and Canarine syde van Marten della Faille and Jan de Wale,creditor,Jan de Wale_1,15830919,8,16,0,,
 88,45,dfl12_001,dfl12_090,Erardo Beham nieuw rekening,debtor,Balance on 8 November,15821108,16,6,10,,
+88,45,dfl12_091,dfl12_090,Erardo Beham nieuw rekening,debtor,Jan Widhols nieuw rekening,15840222,8,18,4,,
+88,45,dfl12_091,dfl12_090,Erardo Beham nieuw rekening,debtor,Jan Widhols nieuw rekening,15940920,25,6,3,,
 89,99,dfl12_001,dfl12_091,Jan Widhols nieuw rekening,debtor,Balance on 8 November,15821108,95,11,10,,
+89,99,dfl12_091,dfl12_174,Jan Widhols nieuw rekening,creditor,Daniel Runtweesch_1,15830221,152,6,2,Wissel,
+89,99,dfl12_091,dfl12_163,Jan Widhols nieuw rekening,creditor,Jan Walter,15840222,31,5,0,,
 90,NA,dfl12_001,dfl12_092,Lynken Pluym weduwe van Lenaert Pluym,debtor,Balance on 8 November,15821108,2,0,0,,
 93,234,dfl12_001,dfl12_095,Florette syde,debtor,Balance on 8 November,15821108,5446,3,7,,
 93,234,dfl12_210,dfl12_095,Florette syde,creditor,Florette syde nieuw rekening,15830919,2937,0,4,,
@@ -186,13 +349,12 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 96,270,dfl12_316,dfl12_098,Oncosten van coopmansschappen,debtor,Marten Ensberger nieuw rekening,15830115,55,17,4,,
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15830122,1,16,8,,Paid to Gillis Verbert the collector of the 5th penney 
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15830207,6,5,0,,
-96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15830212,53,9,2,,Paid Ambrosius Goyvaerts upon the order of Jan de Oude before he died that Goyvaerts be paid for the butter and cheese that Goyvaerts seems to have sent
 96,270,dfl12_080,dfl12_098,Oncosten van coopmansschappen,debtor,Willem van den Mey_2,15830212,10,17,8,,
 96,270,dfl12_245,dfl12_098,Oncosten van coopmansschappen,debtor,Martynken van Capellen_1,15830715,2,13,2,Interest,
 96,270,dfl12_325,dfl12_098,Oncosten van coopmansschappen,debtor,Jan van Borne in Verona loopende rekeninge,15830730,800,0,0,,
 96,270,dfl12_316,dfl12_098,Oncosten van coopmansschappen,debtor,Marten Ensberger nieuw rekening,15830730,1,0,1,,
 96,270,dfl12_076,dfl12_098,Oncosten van coopmansschappen,debtor,Robert van Eeckeren_1,15830730,0,15,0,,
-96,270,dfl12_284,dfl12_098,Oncosten van coopmansschappen,debtor,Wouter Aertsen and Maria de Wale,15830801,8,6,8,,
+96,270,dfl12_284,dfl12_098,Oncosten van coopmansschappen,debtor,Wouter Aertsen and Maria de Wale,15830801,8,6,8,Interest,
 96,270,dfl12_317,dfl12_098,Oncosten van coopmansschappen,debtor,Oswaldus Cleynhaus ende company,15830825,440,13,1,,
 96,270,dfl12_317,dfl12_098,Oncosten van coopmansschappen,debtor,Oswaldus Cleynhaus ende company,15830825,326,2,8,,
 96,270,dfl12_317,dfl12_098,Oncosten van coopmansschappen,debtor,Oswaldus Cleynhaus ende company,15830825,36,2,5,,
@@ -208,7 +370,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 96,270,dfl12_060,dfl12_098,Oncosten van coopmansschappen,debtor,Henrick van Berge,15830919,2,11,4,,
 96,270,dfl12_067,dfl12_098,Oncosten van coopmansschappen,debtor,Jan Voet cleermaecker,15830919,2,6,8,,
 96,270,dfl12_315,dfl12_098,Oncosten van coopmansschappen,debtor,D'erffegaemen of Herman Pottey,15830919,65,3,1,Interest,
-96,270,dfl12_304,dfl12_098,Oncosten van coopmansschappen,debtor,Jan Nollet,15830919,23,8,9,,
+96,270,dfl12_304,dfl12_098,Oncosten van coopmansschappen,debtor,Jan Nollet,15830919,23,8,9,Interest,
 96,270,dfl12_274,dfl12_098,Oncosten van coopmansschappen,debtor,Gillis Bontenaken,15830919,0,2,0,Accounting,To close the account
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15830927,621,19,4,,For 'diverse cleyn oncosten' from 26 May 1582 to 22 September 1583
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15831010,1,6,4,,
@@ -245,7 +407,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 96,270,dfl12_408,dfl12_098,Oncosten van coopmansschappen,debtor,Christiaen van Wiele_2,15831116,8,6,8,Lyffrente,
 96,270,dfl12_167,dfl12_098,Oncosten van coopmansschappen,debtor,Lenaert van Driel de Oude,15831116,6,0,0,,Payment for services
 96,270,dfl12_355,dfl12_098,Oncosten van coopmansschappen,debtor,Anna Sirens of Dort,15831116,0,0,6,Accounting,To close the account
-96,270,dfl12_293,dfl12_098,Oncosten van coopmansschappen,debtor,Gheeraert Corhase (Coerhaes),15831116,80,0,0,,Salary for 6 years of service in Venice
+96,270,dfl12_293,dfl12_098,Oncosten van coopmansschappen,debtor,Gheeraert Corhase (Coerhaes),15831116,80,0,0,Interest,Salary for 6 years of service in Venice
 96,270,dfl12_203,dfl12_098,Oncosten van coopmansschappen,debtor,Wolle Francisca overhoop,15831116,13,14,10,,Expenses for wool
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15831128,12,19,0,,Payment to Jacques della Faille for various expenses
 96,270,dfl12_002,dfl12_098,Oncosten van coopmansschappen,debtor,Cassa,15831128,12,0,0,,Payment to Jacques for travel to and from London
@@ -274,8 +436,17 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 96,270,dfl12_098,dfl12_300,Oncosten van coopmansschappen,creditor,Christiaen van Wiele_1,15831215,0,3,9,Accounting,To close the account
 96,270,dfl12_098,dfl12_289,Oncosten van coopmansschappen,creditor,Creditors of this Book_9,15831226,5644,0,0.25,Accounting,
 97,NA,dfl12_001,dfl12_099,Lodewyck Blommaert_1,debtor,Balance on 8 November,15821108,291,6,11,,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830109,291,6,11,Wissel,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830115,165,8,4,Wissel,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830312,217,4,7,Wissel,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830409,174,18,10,Wissel,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830507,88,9,0,Wissel,
+97,NA,dfl12_099,dfl12_002,Lodewyck Blommaert_1,creditor,Cassa,15830624,342,1,8,Wissel,
 98,50,dfl12_001,dfl12_100,Jan de Wale_2,debtor,Balance on 8 November,15821108,33,6,8,,
+98,50,dfl12_100,dfl12_002,Jan de Wale_2,creditor,Cassa,15830505,16,13,4,,
+98,50,dfl12_100,dfl12_002,Jan de Wale_2,creditor,Cassa,15840315,16,13,4,,
 99,NA,dfl12_001,dfl12_101,Joos de Voghele nieuw rekening,debtor,Balance on 8 November,15821108,159,14,2,,
+99,NA,dfl12_101,dfl12_002,Joos de Voghele nieuw rekening,creditor,Cassa,15830817,0,12,2,,
 100,280,dfl12_001,dfl12_102,Jacques della Faille_1,debtor,Balance on 8 November,15821108,89,14,11,,
 100,280,dfl12_316,dfl12_102,Jacques della Faille_1,debtor,Marten Ensberger nieuw rekening,15821123,5,9,6,,
 100,280,dfl12_316,dfl12_102,Jacques della Faille_1,debtor,Marten Ensberger nieuw rekening,15830106,0,7,11,,
@@ -309,7 +480,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830719,3,16,8,,
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830720,20,0,0,,
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830720,129,14,2,,Payment Hans Engelbert
-100,280,dfl12_185,dfl12_102,Jacques della Faille_1,debtor,Clement Caltrop,15830721,157,1,8,,
+100,280,dfl12_185,dfl12_102,Jacques della Faille_1,debtor,Clement Caltrop,15830721,157,1,8,Wissel,
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830721,200,0,0,,
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830723,200,0,0,,Paid to himself
 100,280,dfl12_002,dfl12_102,Jacques della Faille_1,debtor,Cassa,15830726,20,0,0,,Paid to himself
@@ -437,7 +608,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 178,93,dfl12_474,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Engelse wolle,15940905,3827,1,4,,
 178,93,dfl12_474,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Engelse wolle,15940905,1849,10,0,,
 178,93,dfl12_474,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Engelse wolle,15940905,164,18,4,,
-178,93,dfl12_181,dfl12_133,Voyagie van Venice nieuwe rekening,creditor,Gaspar Rouelasca_1,15831228,113,18,1,Wissel,
+178,93,dfl12_181,dfl12_431,Voyagie van Venice nieuwe rekening,creditor,Gaspar Rouelasca_2,15831228,113,18,1,Wissel,
 178,93,dfl12_181,dfl12_425,Voyagie van Venice nieuwe rekening,creditor,Mauritio Lanfranchi and Fabio Augustini_2,15831228,194,5,5,Wissel,
 178,93,dfl12_181,dfl12_112,Voyagie van Venice nieuwe rekening,creditor,Voyagie van London,15840127,383,5,8,Wissel,
 178,93,dfl12_181,dfl12_439,Voyagie van Venice nieuwe rekening,creditor,Francois Cambi,15840216,154,3,4,Wissel,
@@ -592,7 +763,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,tr_type,Not
 110,97,dfl12_112,dfl12_223,Voyagie van London,creditor,Balthasar van Enthoven,15831212,158,15,0,Wissel,
 110,97,dfl12_112,dfl12_146,Voyagie van London,creditor,Willem Walcker,15831212,158,15,0,Wissel,
 110,97,dfl12_112,dfl12_080,Voyagie van London,creditor,Willem van den Mey_2,15831212,377,15,8,,For 4537 pounds of wool
-110,97,dfl12_163,dfl12_112,Voyagie van London,debtor,Jan Walter,15840222,124,17,7,,
+110,97,dfl12_163,dfl12_112,Voyagie van London,debtor,Jan Walter,15840222,120,17,7,Wissel,
 110,97,dfl12_209,dfl12_112,Voyagie van London,debtor,Fyn syde nieuw rekeninge,15940905,1122,5,0,Sale,
 110,97,dfl12_210,dfl12_112,Voyagie van London,debtor,Florette syde nieuw rekening,15940905,1323,19,0,Sale,
 110,97,dfl12_048,dfl12_112,Voyagie van London,debtor,Lynwaet in the company of Willem van den Mey,15940905,369,15,7,Sale,
@@ -649,7 +820,10 @@ NA,156,dfl12_477,dfl12_474,Voyagie van London nieuwe rekening,creditor,Engelse w
 NA,156,dfl12_477,dfl12_073,Voyagie van London nieuwe rekening,creditor,Jan de Wale_1,15940910,880,15,1,,
 NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten van English wool,15940928,120,11,1,,
 112,57,dfl12_001,dfl12_114,Louis Malapert_1,debtor,Balance on 8 November,15821108,100,0,0,,
-113,NA,dfl12_001,dfl12_115,Cassa in contant,debtor,Balance on 8 November,15821108,291,18,5,,
+112,57,dfl12_002,dfl12_114,Louis Malapert_1,debtor,Cassa,15831104,0,14,7,,For payment to Roelant Paulet for expenses of Peeter Rutsers
+112,57,dfl12_114,dfl12_317,Louis Malapert_1,creditor,Oswaldus Cleynhaus ende company,15831123,100,0,0,,For payment that Malapert made to the Cleynhaus company
+112,57,dfl12_114,dfl12_272,Louis Malapert_1,creditor,Louis Malapert_2,15940920,0,14,7,,
+113,NA,dfl12_002,dfl12_115,Cassa in contant,debtor,Cassa,15821108,291,18,5,,Need to make sure that this is what this account is actually doing.
 114,241,dfl12_001,dfl12_116,Carseyen overhoop,debtor,Balance on 8 November,15821108,66,18,5,,
 114,241,dfl12_002,dfl12_116,Carseyen overhoop,debtor,Cassa,15821126,200,2,7,,
 114,241,dfl12_002,dfl12_116,Carseyen overhoop,debtor,Cassa,15821211,0,10,0,,
@@ -663,42 +837,60 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 114,241,dfl12_116,dfl12_091,Carseyen overhoop,creditor,Jan Widhols nieuw rekening,15830115,2,10,0,,
 114,241,dfl12_116,dfl12_325,Carseyen overhoop,creditor,Jan van Borne in Verona loopende rekeninge,15830117,3,6,3,,
 114,241,dfl12_116,dfl12_084,Carseyen overhoop,creditor,Jan Verbeke,15831228,3,3,0,,
-115,16,,dfl12_117,Jan de Lannoy_1,debtor,,,,,,,
-116,19,,dfl12_118,Robert Collimor,debtor,,,,,,,
-117,NA,,dfl12_119,Embrecht Pellicorne,debtor,,,,,,,
-118,20,,dfl12_120,Bartholomeeus Peltier,debtor,,,,,,,
-119,NA,,dfl12_121,Jan Gaultier and Geeraert Hemaert_1,debtor,,,,,,,
-120,NA,,dfl12_122,Jacob Lange,debtor,,,,,,,
-121,NA,,dfl12_123,Antonio Gardino,debtor,,,,,,,
-122,NA,,dfl12_124,Antonio Marischal,debtor,,,,,,,
-123,NA,,dfl12_125,Ritsaert Caterol,debtor,,,,,,,
-124,NA,,dfl12_126,Fernando Ximenes and Ruy Nunez,debtor,,,,,,,
-125,NA,,dfl12_127,Hugo Janssen,debtor,,,,,,,
-126,NA,,dfl12_128,Balthasar Bonters_1,debtor,,,,,,,
-127,NA,,dfl12_129,Jaspar Dingens,debtor,,,,,,,
-128,NA,,dfl12_130,Willem Touley,debtor,,,,,,,
-129,NA,,dfl12_131,Mauritio Lanfranchi and Fabio Augustini_1,debtor,,,,,,,
-130,NA,,dfl12_132,Ludovico Perez,debtor,,,,,,,
-131,233,,dfl12_133,Gaspar Rouelasca_1,debtor,,,,,,,
-132,48,,dfl12_134,Jan Reynaerts,debtor,,,,,,,
-133,49,,dfl12_135,Guilliamme Coppin and Ferry Dornille,debtor,,,,,,,
-134,NA,,dfl12_136,Absolon Leerse_1,debtor,,,,,,,
-135,NA,,dfl12_137,Jan Angelo Vergano_1,debtor,,,,,,,
-136,NA,,dfl12_138,Thomas Eton,debtor,,,,,,,
-137,NA,,dfl12_139,Emanuel Henricques,debtor,,,,,,,
-138,NA,,dfl12_140,Tibere Peltier,debtor,,,,,,,
-139,NA,,dfl12_141,Thomas Monton,debtor,,,,,,,
-140,242,,dfl12_142,Henrick Vool,debtor,,,,,,,
-141,NA,,dfl12_143,Franchoys van Hove,debtor,,,,,,,
-142,58,,dfl12_144,Jan Simons,debtor,,,,,,,
-143,59,,dfl12_145,Hans de Weert,debtor,,,,,,,
-144,60,,dfl12_146,Willem Walcker,debtor,,,,,,,
+115,16,dfl12_117,dfl12_002,Jan de Lannoy_1,creditor,Cassa,15840114,158,15,0,Wissel,
+115,16,dfl12_117,dfl12_002,Jan de Lannoy_1,creditor,Cassa,15840121,160,8,4,Wissel,
+115,16,dfl12_117,dfl12_002,Jan de Lannoy_1,creditor,Cassa,15840315,236,5,0,Wissel,
+116,19,dfl12_118,dfl12_002,Robert Collimor,creditor,Cassa,15840127,240,12,6,Wissel,
+116,19,dfl12_118,dfl12_002,Robert Collimor,creditor,Cassa,15840421,157,5,10,Wissel,
+117,NA,dfl12_119,dfl12_002,Embrecht Pellicorne,creditor,Cassa,15830702,80,0,0,Wissel,
+118,20,dfl12_120,dfl12_002,Bartholomeeus Peltier,creditor,Cassa,15840106,158,10,10,Wissel,
+119,NA,dfl12_121,dfl12_002,Jan Gaultier and Geeraert Hemaert_1,creditor,Cassa,15830525,160,8,4,Wissel,
+119,NA,dfl12_121,dfl12_002,Jan Gaultier and Geeraert Hemaert_1,creditor,Cassa,15831201,312,18,4,Wissel,
+120,NA,dfl12_122,dfl12_002,Jacob Lange,creditor,Cassa,15830203,197,18,4,Wissel,
+120,NA,dfl12_122,dfl12_002,Jacob Lange,creditor,Cassa,15830624,404,3,4,Wissel,
+120,NA,dfl12_122,dfl12_002,Jacob Lange,creditor,Cassa,15831006,400,0,0,Wissel,
+121,NA,dfl12_123,dfl12_002,Antonio Gardino,creditor,Cassa,15831215,118,6,2,Wissel,
+122,NA,dfl12_124,dfl12_002,Antonio Marischal,creditor,Cassa,15830716,161,13,4,Wissel,
+123,NA,dfl12_125,dfl12_002,Ritsaert Caterol,creditor,Cassa,15831228,156,13,4,Wissel,
+124,NA,dfl12_126,dfl12_002,Fernando Ximenes and Ruy Nunez,creditor,Cassa,15830503,24,10,9,Wissel,
+125,NA,dfl12_127,dfl12_002,Hugo Janssen,creditor,Cassa,15830602,160,8,4,Wissel,
+125,NA,dfl12_127,dfl12_002,Hugo Janssen,creditor,Cassa,15830610,192,10,0,Wissel,
+126,NA,dfl12_128,dfl12_002,Balthasar Bonters_1,creditor,Cassa,15830617,241,17,6,Wissel,
+126,NA,dfl12_128,dfl12_002,Balthasar Bonters_1,creditor,Cassa,15830628,127,19,7,Wissel,
+127,NA,dfl12_129,dfl12_002,Jaspar Dingens,creditor,Cassa,15830312,163,6,8,Wissel,
+128,NA,dfl12_130,dfl12_002,Willem Touley,creditor,Cassa,15831214,162,18,4,Wissel,
+129,NA,dfl12_131,dfl12_002,Mauritio Lanfranchi and Fabio Augustini_1,creditor,Cassa,15830331,246,5,0,Wissel,
+129,NA,dfl12_131,dfl12_002,Mauritio Lanfranchi and Fabio Augustini_1,creditor,Cassa,15830628,242,10,0,Wissel,
+130,NA,dfl12_002,dfl12_132,Ludovico Perez,debtor,Cassa,15830312,33,12,11,Wissel,
+130,NA,dfl12_132,dfl12_163,Ludovico Perez,creditor,Jan Walter,15830205,33,12,11,Wissel,
+130,NA,dfl12_132,dfl12_002,Ludovico Perez,creditor,Cassa,15830428,173,3,2,Wissel,
+131,233,dfl12_133,dfl12_002,Gaspar Rouelasca_1,creditor,Cassa,15831004,421,10,0,Wissel,
+131,233,dfl12_133,dfl12_002,Gaspar Rouelasca_1,creditor,Cassa,15831205,278,0,2,Wissel,
+131,233,dfl12_133,dfl12_334,Gaspar Rouelasca_1,creditor,Carlo Lanfranchi,15830430,226,9,10,,
+131,233,dfl12_133,dfl12_002,Gaspar Rouelasca_1,creditor,Cassa,15840907,78,2,8,Wissel,
+133,49,dfl12_135,dfl12_002,Guilliamme Coppin and Ferry Dornille,creditor,Cassa,15840114,234,7,6,Wissel,
+134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830514,15,16,8,Wissel,
+134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830729,32,8,4,Wissel,
+134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830906,16,1,8,Wissel,
+135,NA,dfl12_137,dfl12_300,Jan Angelo Vergano_1,creditor,Christiaen van Wiele_1,15830401,287,5,10,Wissel,
+135,NA,dfl12_137,dfl12_002,Jan Angelo Vergano_1,creditor,Cassa,15830919,158,2,6,Wissel,
+136,NA,dfl12_138,dfl12_002,Thomas Eton,creditor,Cassa,15831110,163,6,8,Wissel,
+137,NA,dfl12_139,dfl12_002,Emanuel Henricques,creditor,Cassa,15831118,238,15,0,Wissel,
+138,NA,dfl12_140,dfl12_002,Tibere Peltier,creditor,Cassa,15821220,246,17,6,Wissel,
+139,NA,dfl12_141,dfl12_002,Thomas Monton,creditor,Cassa,15830104,164,3,4,Wissel,
+140,242,dfl12_142,dfl12_002,Henrick Vool,creditor,Cassa,15831226,262,9,0,Wissel,
+141,NA,dfl12_143,dfl12_002,Franchoys van Hove,creditor,Cassa,15831214,116,12,0,Wissel,
+142,58,dfl12_144,dfl12_002,Jan Simons,creditor,Cassa,15840104,79,7,6,Wissel,
+142,58,dfl12_144,dfl12_002,Jan Simons,creditor,Cassa,15840122,77,18,4,Wissel,
+143,59,dfl12_145,dfl12_002,Hans de Weert,creditor,Cassa,15840104,158,10,10,Wissel,
+144,60,dfl12_146,dfl12_002,Willem Walcker,creditor,Cassa,15840104,158,15,0,Wissel,
+144,60,dfl12_146,dfl12_002,Willem Walcker,creditor,Cassa,15840421,157,10,0,Wissel,
 145,246,dfl12_002,dfl12_147,Turcxe camelotten in company with Jan de Wale,debtor,Cassa,15830628,6,10,8,,Paid to Adriaen Goyvaerts for 49 pieces of camelotten
 145,246,dfl12_080,dfl12_147,Turcxe camelotten in company with Jan de Wale,debtor,Willem van den Mey_2,15830629,2,5,5,,For freight and license for two packs of grossgreynen from Hamburg to Antwerp
 145,246,dfl12_147,dfl12_214,Turcxe camelotten in company with Jan de Wale,creditor,Camelotten in company with Jan de Wale,15830919,258,12,4,,
-146,61,,dfl12_148,Eduart van Ghistele,debtor,,,,,,,
-147,63,,dfl12_149,Luis Cutsini_1,debtor,,,,,,,
-148,64,,dfl12_150,Hilaria della Faille_2,debtor,,,,,,,
+146,61,dfl12_148,dfl12_322,Eduart van Ghistele,creditor,Adriaen van Afferden de Jonge,15840327,6,11,8,,
+147,63,dfl12_316,dfl12_149,Luis Cutsini_1,debtor,Marten Ensberger nieuw rekening,15830115,8,13,8,Trade,For expenses for 10 sacks of wool
+147,63,dfl12_317,dfl12_149,Luis Cutsini_1,debtor,Oswaldus Cleynhaus ende company,15830825,53,7,11,Transportation,For transportation of the 10 sacks of wool from Hamburg to Venice
 149,NA,dfl12_151,dfl12_289,Jan de Oude_1,creditor,Creditors of this Book_9,15831201,4709,10,6,,
 150,65,dfl12_350,dfl12_152,Jan della Faille_sororal_1,debtor,Capitael van Cornelia della Faille,15830131,52,3,4,,
 150,65,dfl12_152,dfl12_350,Jan della Faille_sororal_1,creditor,Capitael van Cornelia della Faille,15840107,52,3,4,,
@@ -730,58 +922,79 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 157,73,dfl12_065,dfl12_160,Jan della Faille_1,debtor,Lynwaeten,15830131,37,16,6.5,,
 157,73,dfl12_068,dfl12_160,Jan della Faille_1,debtor,Napelse Syde,15830131,56,11,8,,
 157,73,dfl12_160,dfl12_055,Jan della Faille_1,creditor,Ambrosius Goyvaerts_1,15831116,16,13,4,,
-157,73,dfl12_160,dfl12_340,Jan della Faille_1,creditor,Jan della Faille_paternal,15840107,123,12,7.5,Accounts,To close the account
-158,NA,,dfl12_161,Peeter and Jan van der Meert,debtor,,,,,,,
-159,NA,,dfl12_162,Gillis Schops,debtor,,,,,,,
-160,74,,dfl12_163,Jan Walter,debtor,,,,,,,
-161,NA,,dfl12_164,Andrea Barretta_1,debtor,,,,,,,
-162,NA,,dfl12_165,Jan Helduwier and Bernardino Paluasmo,debtor,,,,,,,
-163,NA,,dfl12_166,Jan Japssens,debtor,,,,,,,
-164,NA,,dfl12_167,Lenaert van Driel de Oude,debtor,,,,,,,
-165,NA,,dfl12_168,Jacques de Wale nieuw rekeninge,debtor,,,,,,,
-166,NA,,dfl12_169,Reynier Capcot,debtor,,,,,,,
-167,NA,,dfl12_170,Jan Maniart,debtor,,,,,,,
-168,NA,,dfl12_171,Gaspar Robano,debtor,,,,,,,
-169,NA,,dfl12_172,Sebastiaen Leerse,debtor,,,,,,,
-170,NA,,dfl12_173,Jan Francisco Capello,debtor,,,,,,,
-171,NA,,dfl12_174,Daniel Runtweesch_1,debtor,,,,,,,
-172,NA,,dfl12_175,Andries de la Barre,debtor,,,,,,,
-173,NA,,dfl12_176,Jacques della Faille de Oude_1,debtor,,,,,,,
-174,NA,,dfl12_177,Carel and Balthasar van Hoyken and Jan Jupin,debtor,,,,,,,
-175,NA,,dfl12_178,Adriaen Walschaert,debtor,,,,,,,
-176,75,,dfl12_179,Peeter della Faille in Venice,debtor,,,,,,,
-177,NA,,dfl12_180,Simon and Steven Nunez,debtor,,,,,,,
-179,NA,,dfl12_182,Peeter Bisschop,debtor,,,,,,,
-180,NA,,dfl12_183,Henrick van Lemens_1,debtor,,,,,,,
-181,NA,,dfl12_184,Jan Cornelis or Jan Caillir,debtor,,,,,,,
-182,NA,,dfl12_185,Clement Caltrop,debtor,,,,,,,
-183,NA,,dfl12_186,Antonio Bonidazio,debtor,,,,,,,
-184,NA,,dfl12_187,Franchoys ver Beke,debtor,,,,,,,
-185,NA,,dfl12_188,Jacques Gabri,debtor,,,,,,,
-186,NA,,dfl12_189,Jacques and Henrick Hoyel,debtor,,,,,,,
-187,NA,,dfl12_190,Jan Benedetto Invrea and Jan Bapta Logorio,debtor,,,,,,,
-188,NA,,dfl12_191,Jan Niclaes Walinstey,debtor,,,,,,,
-189,76,,dfl12_192,Godefrido Houtappel,debtor,,,,,,,
-190,NA,,dfl12_193,Jan Pellicoren_1,debtor,,,,,,,
+157,73,dfl12_160,dfl12_340,Jan della Faille_1,creditor,Jan della Faille_paternal,15840107,123,12,7.5,Accounting,To close the account
+158,NA,dfl12_161,dfl12_002,Peeter and Jan van der Meert,creditor,Cassa,15830205,120,0,0,Wissel,
+159,NA,dfl12_162,dfl12_002,Gillis Schops,creditor,Cassa,15830205,6,5,0,Wissel,
+160,74,dfl12_175,dfl12_163,Jan Walter,debtor,Andries de la Barre,15830312,100,6,3,Wissel,Wissel from Nuremberg
+161,NA,dfl12_164,dfl12_176,Andrea Barretta_1,creditor,Jacques della Faille de Oude_1,15830323,362,8,0,Wissel,
+162,NA,dfl12_165,dfl12_002,Jan Helduwier and Bernardino Paluasmo,creditor,Cassa,15830323,33,6,8,,
+162,NA,dfl12_165,dfl12_175,Jan Helduwier and Bernardino Paluasmo,creditor,Andries de la Barre,15830323,81,13,4,,
+163,NA,dfl12_166,dfl12_002,Jan Japssens,creditor,Cassa,15830209,400,0,0,Wissel,
+164,NA,dfl12_002,dfl12_167,Lenaert van Driel de Oude,debtor,Cassa,15830211,2,0,0,Loan,
+164,NA,dfl12_002,dfl12_167,Lenaert van Driel de Oude,debtor,Cassa,15830323,4,0,0,Loan,
+165,NA,dfl12_002,dfl12_168,Jacques de Wale nieuw rekeninge,debtor,Cassa,15830216,9,2,8,Wissel,Cassa paid Joris van Mock for wissels from Ghent
+165,NA,dfl12_002,dfl12_168,Jacques de Wale nieuw rekeninge,debtor,Cassa,15830706,8,6,8,Wissel,
+165,NA,dfl12_002,dfl12_168,Jacques de Wale nieuw rekeninge,debtor,Cassa,15830922,124,18,4,,
+166,NA,dfl12_169,dfl12_002,Reynier Capcot,creditor,Cassa,15830414,165,0,0,Wissel,
+166,NA,dfl12_169,dfl12_002,Reynier Capcot,creditor,Cassa,15830429,157,18,4,Wissel,
+166,NA,dfl12_169,dfl12_002,Reynier Capcot,creditor,Cassa,15830604,162,1,8,Wissel,
+166,NA,dfl12_169,dfl12_002,Reynier Capcot,creditor,Cassa,15831005,160,16,8,Wissel,
+167,NA,dfl12_170,dfl12_300,Jan Maniart,creditor,Christiaen van Wiele_1,15830405,100,0,0,Book_transfer,
+167,NA,dfl12_170,dfl12_002,Jan Maniart,creditor,Cassa,15830408,105,4,2,Wissel,
+167,NA,dfl12_170,dfl12_002,Jan Maniart,creditor,Cassa,15831214,157,15,6,Wissel,
+168,NA,dfl12_171,dfl12_002,Gaspar Robano,creditor,Cassa,15830406,2,1,8,Wissel,
+168,NA,dfl12_171,dfl12_002,Gaspar Robano,creditor,Cassa,15830621,242,10,0,Wissel,
+169,NA,dfl12_172,dfl12_002,Sebastiaen Leerse,creditor,Cassa,15830405,46,19,2,Wissel,
+170,NA,dfl12_173,dfl12_002,Jan Francisco Capello,creditor,Cassa,15831128,156,9,2,Wissel,
+171,NA,dfl12_174,dfl12_002,Daniel Runtweesch_1,creditor,Cassa,15830405,152,6,2,Wissel,
+171,NA,dfl12_174,dfl12_002,Daniel Runtweesch_1,creditor,Cassa,15830506,287,5,10,Wissel,
+172,NA,dfl12_002,dfl12_175,Andries de la Barre,debtor,Cassa,15830401,18,12,11,,
+173,NA,dfl12_176,dfl12_002,Jacques della Faille de Oude_1,creditor,Cassa,15830323,362,8,0,Wissel,
+174,NA,dfl12_177,dfl12_002,Carel and Balthasar van Hoyken and Jan Jupin,creditor,Cassa,15830430,126,14,4,Wissel,
+175,NA,dfl12_178,dfl12_002,Adriaen Walschaert,creditor,Cassa,15830607,162,1,8,Wissel,
+177,NA,dfl12_180,dfl12_002,Simon and Steven Nunez,creditor,Cassa,15831128,156,13,4,Wissel,
+179,NA,dfl12_182,dfl12_002,Peeter Bisschop,creditor,Cassa,15830702,161,17,6,Wissel,
+179,NA,dfl12_182,dfl12_002,Peeter Bisschop,creditor,Cassa,15831213,157,1,8,Wissel,
+180,NA,dfl12_183,dfl12_002,Henrick van Lemens_1,creditor,Cassa,15830618,323,15,0,Wissel,
+180,NA,dfl12_183,dfl12_002,Henrick van Lemens_1,creditor,Cassa,15830924,158,2,6,Wissel,
+181,NA,dfl12_184,dfl12_002,Jan Cornelis or Jan Caillir,creditor,Cassa,15830723,162,1,8,Wissel,
+181,NA,dfl12_184,dfl12_002,Jan Cornelis or Jan Caillir,creditor,Cassa,15831008,315,16,8,Wissel,
+182,NA,dfl12_185,dfl12_002,Clement Caltrop,creditor,Cassa,15830721,5,0,0,Wissel,
+184,NA,dfl12_187,dfl12_002,Franchoys ver Beke,creditor,Cassa,15830815,178,5,10,Wissel,
+185,NA,dfl12_188,dfl12_002,Jacques Gabri,creditor,Cassa,15830706,160,8,4,Wissel,
+186,NA,dfl12_189,dfl12_002,Jacques and Henrick Hoyel,creditor,Cassa,15830705,160,8,4,Wissel,
+187,NA,dfl12_190,dfl12_317,Jan Benedetto Invrea and Jan Bapta Logorio,creditor,Oswaldus Cleynhaus ende company,15830703,160,8,4,Book_transfer,
+187,NA,dfl12_190,dfl12_002,Jan Benedetto Invrea and Jan Bapta Logorio,creditor,Cassa,15830706,0,4,2,Wissel,
+188,NA,dfl12_191,dfl12_002,Jan Niclaes Walinstey,creditor,Cassa,15830730,243,15,0,Wissel,
+189,76,dfl12_192,dfl12_002,Godefrido Houtappel,creditor,Cassa,15830704,183,6,8,Wissel,
+189,76,dfl12_192,dfl12_002,Godefrido Houtappel,creditor,Cassa,15831111,191,13,7,Wissel,
+190,NA,dfl12_193,dfl12_002,Jan Pellicoren_1,creditor,Cassa,15830712,80,1,0,Wissel,
 191,77,dfl12_101,dfl12_194,Bocralen overhoop_2,debtor,Joos de Voghele nieuw rekening,15830702,19,19,5,,31 pieces of bocralen made from 10 pieces of linen. The account remains open at the end of 1594.
-192,NA,,dfl12_195,James Wickers,debtor,,,,,,,
-193,NA,,dfl12_196,Simon de le Bosquiel,debtor,,,,,,,
-194,NA,,dfl12_197,Peeter des Marez,debtor,,,,,,,
-195,NA,,dfl12_198,Guilliam Walschaert,debtor,,,,,,,
-196,78,,dfl12_199,Peeter della Faille Peterssen,debtor,,,,,,,
-197,NA,,dfl12_200,Carel Navaroli and brothers,debtor,,,,,,,
-198,273,,dfl12_201,Fernando Ximenez and the heirs of Ruy Nunez,debtor,,,,,,,
+192,NA,dfl12_195,dfl12_002,James Wickers,creditor,Cassa,15831128,159,11,8,Wissel,
+193,NA,dfl12_196,dfl12_002,Simon de le Bosquiel,creditor,Cassa,15830813,159,3,4,Wissel,
+193,NA,dfl12_196,dfl12_002,Simon de le Bosquiel,creditor,Cassa,15831116,159,11,8,Wissel,
+194,NA,dfl12_197,dfl12_002,Peeter des Marez,creditor,Cassa,15830811,159,3,4,Wissel,
+195,NA,dfl12_198,dfl12_002,Guilliam Walschaert,creditor,Cassa,15831018,157,18,4,Wissel,
+195,NA,dfl12_198,dfl12_002,Guilliam Walschaert,creditor,Cassa,15831105,94,7,6,Wissel,
+196,78,dfl12_002,dfl12_199,Peeter della Faille Peterssen,debtor,Cassa,15830728,22,0,0,Loan,
+197,NA,dfl12_200,dfl12_317,Carel Navaroli and brothers,creditor,Oswaldus Cleynhaus ende company,15830919,346,12,4,Book_transfer,
+198,273,dfl12_201,dfl12_002,Fernando Ximenez and the heirs of Ruy Nunez,creditor,Cassa,15830923,265,0,8,Wissel,
 199,79,dfl12_047,dfl12_202,Gallen de Soria,debtor,Carseyen in company of Jan de Wale,15830809,340,13,6,,37 sacks of gallen from Venice and sent to London
 199,79,dfl12_073,dfl12_202,Gallen de Soria,debtor,Jan de Wale_1,15940905,165,13,2,,
 199,79,dfl12_202,dfl12_073,Gallen de Soria,creditor,Jan de Wale_1,15940905,4,10,6,,
 200,NA,dfl12_316,dfl12_203,Wolle Francisca overhoop,debtor,Marten Ensberger nieuw rekening,15830730,13,14,10,,
-201,81,,dfl12_204,Jan van Borne_1,debtor,,,,,,,
-202,NA,,dfl12_205,Hendrick Poincter (Herry Pointer),debtor,,,,,,,
-203,NA,,dfl12_206,Gysbrecht Boudeson_1,debtor,,,,,,,
-204,82,,dfl12_207,Jan Wevel,debtor,,,,,,,
-205,83,,dfl12_208,Abraham Hogson,debtor,,,,,,,
-206,85,,dfl12_209,Fyn syde nieuw rekeninge,debtor,,,,,,,
-207,277,,dfl12_210,Florette syde nieuw rekening,debtor,,,,,,,
+201,81,dfl12_002,dfl12_204,Jan van Borne_1,debtor,Cassa,15830820,22,1,2,,
+201,81,dfl12_002,dfl12_204,Jan van Borne_1,debtor,Cassa,15831003,12,11,6,,
+201,81,dfl12_204,dfl12_254,Jan van Borne_1,creditor,Jacques della Faille de Oude_2,15941015,59,18,3.5,,The two transactions between these accounts on this day are listed together as a credit to Jacques de Oude of £43.12.3 1/2
+201,81,dfl12_254,dfl12_204,Jan van Borne_1,debtor,Jacques della Faille de Oude_2,15941015,16,6,0,,The two transactions between these accounts on this day are listed together as a credit to Jacques de Oude of £43.12.3 1/2
+201,81,dfl12_204,dfl12_483,Jan van Borne_1,creditor,Robert van Eeckeren_3,15941015,23,4,0.66,,
+202,NA,dfl12_205,dfl12_002,Hendrick Poincter (Herry Pointer),creditor,Cassa,15831008,159,3,4,Wissel,
+203,NA,dfl12_206,dfl12_002,Gysbrecht Boudeson_1,creditor,Cassa,15831026,160,0,0,Wissel,
+204,82,dfl12_207,dfl12_002,Jan Wevel,creditor,Cassa,15840117,160,8,4,Wissel,
+205,83,dfl12_208,dfl12_002,Abraham Hogson,creditor,Cassa,15831108,159,11,8,Wissel,
+205,83,dfl12_208,dfl12_002,Abraham Hogson,creditor,Cassa,15831205,158,15,0,Wissel,
+205,83,dfl12_208,dfl12_002,Abraham Hogson,creditor,Cassa,15840106,158,6,8,Wissel,
+205,83,dfl12_208,dfl12_002,Abraham Hogson,creditor,Cassa,15840305,157,5,10,Wissel,
 211,90,dfl12_073,dfl12_214,Camelotten in company with Jan de Wale,debtor,Jan de Wale_1,15940905,187,18,7,,
 211,90,dfl12_214,dfl12_467,Camelotten in company with Jan de Wale,creditor,Jan van Gels,15840706,88,0,0,,
 211,90,dfl12_214,dfl12_073,Camelotten in company with Jan de Wale,debtor,Jan de Wale_1,15940905,8,13,5,,
@@ -790,14 +1003,16 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 212,91,dfl12_454,dfl12_215,Camelotten overhoop nieuw rekeninge,debtor,Camerycx doek,15840730,35,15,0,,
 212,91,dfl12_215,dfl12_448,Camelotten overhoop nieuw rekeninge,creditor,Thomas Hese,15840429,193,6,10,Sale,
 212,91,dfl12_215,dfl12_453,Camelotten overhoop nieuw rekeninge,creditor,Blank_woolens,15840516,204,8,0,,
-213,NA,,dfl12_216,Jacques Gillis,debtor,,,,,,,
-214,NA,,dfl12_217,Jeronimo Schorza_1,debtor,,,,,,,
-215,NA,,dfl12_218,Franchois le Fort_1,debtor,,,,,,,
-216,NA,,dfl12_219,Joris Angliesie,debtor,,,,,,,
-217,NA,,dfl12_220,Eduaert Cobbe,debtor,,,,,,,
-218,94,,dfl12_221,Sidiach Roo,debtor,,,,,,,
-219,95,,dfl12_222,Gillis van den Bogaerde and Marcus Scorrer_2,debtor,,,,,,,
-220,96,,dfl12_223,Balthasar van Enthoven,debtor,,,,,,,
+213,NA,dfl12_216,dfl12_002,Jacques Gillis,creditor,Cassa,15831015,316,3,7,Wissel,
+214,NA,dfl12_217,dfl12_002,Jeronimo Schorza_1,creditor,Cassa,15831201,78,4,7,Wissel,
+215,NA,dfl12_218,dfl12_002,Franchois le Fort_1,creditor,Cassa,15831203,156,9,2,Wissel,
+216,NA,dfl12_219,dfl12_002,Joris Angliesie,creditor,Cassa,15831203,156,9,2,Wissel,
+217,NA,dfl12_220,dfl12_002,Eduaert Cobbe,creditor,Cassa,15831203,156,9,2,Wissel,
+218,94,dfl12_221,dfl12_002,Sidiach Roo,creditor,Cassa,15840103,158,6,8,Wissel,
+219,95,dfl12_222,dfl12_002,Gillis van den Bogaerde and Marcus Scorrer_2,creditor,Cassa,15831229,313,19,2,Wissel,
+220,96,dfl12_223,dfl12_002,Balthasar van Enthoven,creditor,Cassa,15840103,158,15,0,Wissel,
+220,96,dfl12_223,dfl12_002,Balthasar van Enthoven,creditor,Cassa,15840114,158,15,0,Wissel,
+220,96,dfl12_223,dfl12_002,Balthasar van Enthoven,creditor,Cassa,15840730,157,5,10,Wissel,
 221,172,dfl12_001,dfl12_224,De dekens van de Goutsmits camer_2,debtor,Balance on 8 November,15821108,39,19,0,,
 221,172,dfl12_002,dfl12_224,De dekens van de Goutsmits camer_2,debtor,Cassa,15940914,1,11,6,,
 221,172,dfl12_224,dfl12_002,De dekens van de Goutsmits camer_2,creditor,Cassa,15940913,9,0,0,,
@@ -846,6 +1061,8 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 240,190,dfl12_243,dfl12_001,Jan Ambriosio dorco,creditor,Balance on 8 November,15821108,7,0,0,,
 241,191,dfl12_244,dfl12_001,Joris Naus,creditor,Balance on 8 November,15821108,1,6,0,,
 242,NA,dfl12_245,dfl12_001,Martynken van Capellen_1,creditor,Balance on 8 November,15821108,73,0,0,,
+242,NA,dfl12_002,dfl12_245,Martynken van Capellen_1,debtor,Cassa,15830801,75,13,2,,
+242,NA,dfl12_002,dfl12_245,Martynken van Capellen_1,debtor,Cassa,15830801,4,3,4,,
 243,192,dfl12_246,dfl12_001,Carel Helman,creditor,Balance on 8 November,15821108,67,8,11,,
 244,193,dfl12_247,dfl12_001,Aert Cornelis Lootgietere,creditor,Balance on 8 November,15821108,12,7,9,,
 245,194,dfl12_248,dfl12_001,Guilliam Ghyselinck,creditor,Balance on 8 November,15821108,2,6,8,,
@@ -877,6 +1094,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 248,197,dfl12_251,dfl12_477,Anna della Faille,creditor,Voyagie van London nieuwe rekening,15941001,155,14,8,,
 248,197,dfl12_482,dfl12_251,Anna della Faille,debtor,Robert van Eeckeren_2,15941004,8,18,11,,
 248,197,dfl12_080,dfl12_251,Anna della Faille,debtor,Willem van den Mey_2,15941004,10,7,11,,
+248,197,dfl12_028,dfl12_251,Anna della Faille,debtor,Jan de Vooght_1,15941004,10,10,3.75,Bad_debt,
 248,197,dfl12_344,dfl12_251,Anna della Faille,debtor,Jacques della Faille_paternal,15941004,20,5,6,,
 248,197,dfl12_289,dfl12_251,Anna della Faille,debtor,Creditors of this Book_9,15941004,51,5,2,,
 248,197,dfl12_477,dfl12_251,Anna della Faille,debtor,Voyagie van London nieuwe rekening,15941004,180,1,5.33,,
@@ -934,20 +1152,36 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 250,268,dfl12_253,dfl12_038,Cornelia della Faille,creditor,Winninge ende verlies_1,15831215,1732,4,2.5,,
 251,198,dfl12_254,dfl12_001,Jacques della Faille de Oude_2,creditor,Balance on 8 November,15821108,56,6,3,,
 252,10,dfl12_255,dfl12_001,Maria Volders,creditor,Balance on 8 November,15821108,82,6,8,,
+252,10,dfl12_002,dfl12_255,Maria Volders,debtor,Cassa,15830201,85,12,10,,
 253,199,dfl12_256,dfl12_001,Olifants tanden ende root sandelhout from Angelo Lion in Lisbon,creditor,Balance on 8 November,15821108,49,0,3,,
 254,200,dfl12_257,dfl12_001,Salzaparilla van Adriaen de Groote,creditor,Balance on 8 November,15821108,70,2,6,,
 255,201,dfl12_258,dfl12_001,Ferdinando de Frias Canelhos,creditor,Balance on 8 November,15821108,33,18,4,,
-256,202,dfl12_259,dfl12_001,Maria van der Capellen,creditor,Balance on 8 November,15821108,200,,,,
+256,202,dfl12_259,dfl12_001,Maria van der Capellen,creditor,Balance on 8 November,15821108,200,0,0,,
 257,203,dfl12_260,dfl12_001,Rogier de Vendevillo,creditor,Balance on 8 November,15821108,9,5,0,,
 258,NA,dfl12_261,dfl12_001,Maria van Driel,creditor,Balance on 8 November,15821108,108,10,0,,
+258,NA,dfl12_002,dfl12_261,Maria van Driel,debtor,Cassa,15830510,6,5,0,,
+258,NA,dfl12_002,dfl12_261,Maria van Driel,debtor,Cassa,15831212,107,11,6,,
 259,NA,dfl12_262,dfl12_001,Catharina van Driel,creditor,Balance on 8 November,15821108,106,5,0,,
+259,NA,dfl12_002,dfl12_262,Catharina van Driel,debtor,Cassa,15830219,6,5,0,,
+259,NA,dfl12_002,dfl12_262,Catharina van Driel,debtor,Cassa,15831128,106,5,0,,
 260,204,dfl12_263,dfl12_001,Daniel Hoochstetter,creditor,Balance on 8 November,15821108,19,1,7,,
 261,205,dfl12_264,dfl12_001,Passchier van eele van Brugge,creditor,Balance on 8 November,15821108,28,6,5,,
+261,205,dfl12_002,dfl12_264,Passchier van eele van Brugge,debtor,Cassa,15940913,24,0,0,,
 262,206,dfl12_265,dfl12_001,Anna della Faille rekeninge bysonder,creditor,Balance on 8 November,15821108,149,6,8,,
 262,206,dfl12_251,dfl12_265,Anna della Faille rekeninge bysonder,debtor,Anna della Faille,15841127,200,0,0,Accounting,To close the account
 262,206,dfl12_265,dfl12_251,Anna della Faille rekeninge bysonder,creditor,Anna della Faille,15940930,50,13,4,Accounting,To close the account
 263,NA,dfl12_266,dfl12_001,Urssula van Driel,creditor,Balance on 8 November,15821108,77,16,4.5,,
+263,NA,dfl12_002,dfl12_266,Urssula van Driel,debtor,Cassa,15831128,82,5,7,,
 264,NA,dfl12_267,dfl12_001,Gaspar Losschaert_1,creditor,Balance on 8 November,15821108,353,1,10,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15821128,10,0,0,,
+264,NA,dfl12_316,dfl12_267,Gaspar Losschaert_1,debtor,Marten Ensberger nieuw rekening,15830115,0,7,10,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830202,20,0,0,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830325,15,0,0,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830706,12,0,0,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830808,80,0,0,Wissel,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830820,20,0,0,,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15830927,16,13,4,Bequest,
+264,NA,dfl12_002,dfl12_267,Gaspar Losschaert_1,debtor,Cassa,15831021,94,14,0,,
 265,207,dfl12_268,dfl12_001,Oncosten van conduitten,creditor,Balance on 8 November,15821108,483,1,3.5,,
 265,207,dfl12_268,dfl12_043,Oncosten van conduitten,creditor,Peeter della Faille de Jonge,15830106,0,15,0,,
 265,207,dfl12_268,dfl12_149,Oncosten van conduitten,creditor,Luis Cutsini_1,15840222,24,13,10.5,,
@@ -958,7 +1192,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 265,207,dfl12_090,dfl12_268,Oncosten van conduitten,debtor,Erardo Beham nieuw rekening,15840222,50,11,5,,
 265,207,dfl12_163,dfl12_268,Oncosten van conduitten,debtor,Jan Walter,15840222,44,10,4,,
 265,207,dfl12_091,dfl12_268,Oncosten van conduitten,debtor,Jan Widhols nieuw rekening,15840222,11,9,11,,
-265,207,dfl12_316,dfl12_268,Oncosten van conduitten,debtor,Marten Ensberger nieuw rekening,15830315,0,5,10,,
+265,207,dfl12_316,dfl12_268,Oncosten van conduitten,debtor,Marten Ensberger nieuw rekening,15830315,0,5,10,,On the account of Marten Ensberger nieuw rekening on page 33 lists this as £0.15.10
 265,207,dfl12_316,dfl12_268,Oncosten van conduitten,debtor,Marten Ensberger nieuw rekening,15830315,27,10,8,,
 265,207,dfl12_037,dfl12_268,Oncosten van conduitten,debtor,Jaspar Celosse,15830327,30,12,2,,
 265,207,dfl12_316,dfl12_268,Oncosten van conduitten,debtor,Marten Ensberger nieuw rekening,15830328,13,15,1,,
@@ -972,6 +1206,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 265,207,dfl12_091,dfl12_268,Oncosten van conduitten,debtor,Jan Widhols nieuw rekening,15940920,47,13,1,,
 266,NA,dfl12_269,dfl12_001,Gillis del Ponte and Hilaria della Faille,creditor,Balance on 8 November,15821108,1600,0,0,,
 267,NA,dfl12_270,dfl12_001,Hendrick della Faille_1,creditor,Balance on 8 November,15821108,48,19,2,,
+267,NA,dfl12_002,dfl12_270,Hendrick della Faille_1,debtor,Cassa,15830929,62,2,8,,
 268,208,dfl12_271,dfl12_001,Oncosten van arrested wool,creditor,Balance on 8 November,15821108,54,0,4.5,,
 268,208,dfl12_002,dfl12_271,Oncosten van arrested wool,debtor,Cassa,15840507,1,10,4,,
 268,208,dfl12_002,dfl12_271,Oncosten van arrested wool,debtor,Cassa,15840813,33,6,8,,
@@ -981,14 +1216,24 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 271,211,dfl12_274,dfl12_001,Gillis Bontenaken,creditor,Balance on 8 November,15821108,0,2,0,,
 272,212,dfl12_275,dfl12_001,Jan de Lannoy_2,creditor,Balance on 8 November,15821108,4,12,8,,
 273,NA,dfl12_276,dfl12_001,Tanneken and Lynken Noirot_1,creditor,Balance on 8 November,15821108,200,0,0,,
-274,NA,dfl12_277,dfl12_001,Joos van Damme,creditor,Balance on 8 November,15821108,133,6,6,,
-275,NA,dfl12_278,dfl12_001,Lenaert van Driel de Jonge,creditor,Balance on 8 November,15821108,67,8,5,,
+273,NA,dfl12_002,dfl12_276,Tanneken and Lynken Noirot_1,debtor,Cassa,15831003,433,6,8,Bequest,Paid to Marten della Faille
+274,NA,dfl12_277,dfl12_001,Joos van Damme,creditor,Balance on 8 November,15821108,133,6,6,Loan,
+274,NA,dfl12_277,dfl12_098,Joos van Damme,creditor,Oncosten van coopmansschappen,15830628,8,6,8,Interest,This seems to be one of the entries on the missing pages of Oncosten van coopmansschappen
+274,NA,dfl12_002,dfl12_277,Joos van Damme,debtor,Cassa,15830730,8,6,8,,"Seems to be paid by the cassa, but only says ‘contant betaelt zyn’"
+274,NA,dfl12_002,dfl12_277,Joos van Damme,debtor,Cassa,15831006,135,8,4,,"Seems to be paid by the cassa, but only says ‘contant betaelt zyn’"
+275,NA,dfl12_278,dfl12_001,Lenaert van Driel de Jonge,creditor,Balance on 8 November,15821108,67,8,5,,For her maternal and grandmaternal inheritance
+275,NA,dfl12_002,dfl12_278,Lenaert van Driel de Jonge,debtor,Cassa,15831028,70,18,8,,
 276,NA,dfl12_279,dfl12_001,Beelken van Driel,creditor,Balance on 8 November,15821108,106,5,0,,
+276,NA,dfl12_002,dfl12_279,Beelken van Driel,debtor,Cassa,15831003,111,14,6,,Paid to Marten della Faille
 277,NA,dfl12_280,dfl12_001,Sara van Driel,creditor,Balance on 8 November,15821108,105,1,8.5,,
-278,213,dfl12_281,dfl12_001,D'erffgenaemen van Anna de Hane_1,creditor,Balance on 8 November,15821108,142,9,6,,
+277,NA,dfl12_002,dfl12_280,Sara van Driel,debtor,Cassa,15831212,105,1,8.5,,Paid to Marten della Faille
+278,213,dfl12_281,dfl12_001,D'erffgenaemen van Anna de Hane_1,creditor,Balance on 8 November,15821108,142,9,6,Lawsuit,
+278,213,dfl12_296,dfl12_281,D'erffgenaemen van Anna de Hane_1,debtor,Oncosten van't process tegens Daniel de Hane,15940920,142,9,6,Lawsuit,
 279,214,dfl12_282,dfl12_001,D'erffgenaemen van Gilles Hasebaert ende Magdalena du Boys,creditor,Balance on 8 November,15821108,207,13,1,,
 280,NA,dfl12_283,dfl12_001,Hester van Eeckeren_1,creditor,Balance on 8 November,15821108,580,19,2.5,,
 281,NA,dfl12_284,dfl12_001,Wouter Aertsen and Maria de Wale,creditor,Balance on 8 November,15821108,133,6,8,,
+281,NA,dfl12_002,dfl12_284,Wouter Aertsen and Maria de Wale,debtor,Cassa,15830801,8,6,8,,Paid to Jacques della Faille
+281,NA,dfl12_002,dfl12_284,Wouter Aertsen and Maria de Wale,debtor,Cassa,15831003,136,16,1,,Paid to Marten della Faille
 282,215,dfl12_285,dfl12_001,Carlo della Faille,creditor,Balance on 8 November,15821108,82,13,0,,
 282,215,dfl12_116,dfl12_285,Carlo della Faille,debtor,Carseyen overhoop,15830106,25,7,0,,
 282,215,dfl12_002,dfl12_285,Carlo della Faille,debtor,Cassa,15830628,2,0,0,,
@@ -1034,7 +1279,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 286,17,dfl12_051,dfl12_289,Creditors of this Book_9,debtor,Rigo Minauw,15940915,91,11,5,,
 286,17,dfl12_069,dfl12_289,Creditors of this Book_9,debtor,Rensche wynen,15940915,8,15,7,Accounting,To close the account
 286,17,dfl12_087,dfl12_289,Creditors of this Book_9,debtor,Engelsten,15940915,6,10,3,Accounting,To close the account
-286,17,dfl12_029,dfl12_289,Creditors of this Book_9,debtor,Loys Hasebaert,15940915,58,3,10,Accounting,To close the account
+286,17,dfl12_029,dfl12_289,Creditors of this Book_9,debtor,Loys Hasebaert,15940915,58,3,10,Bad_debt,To close the account
 286,17,dfl12_002,dfl12_289,Creditors of this Book_9,debtor,Cassa,15940920,100,0,0,,
 286,17,dfl12_014,dfl12_289,Creditors of this Book_9,debtor,Servaes Baes,15940920,0,0,1,Accounting,To close the account
 286,17,dfl12_016,dfl12_289,Creditors of this Book_9,debtor,Heirs of Huysbrecht Verstraeten,15940920,0,0,1,Accounting,To close the account
@@ -1051,7 +1296,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 286,17,dfl12_289,dfl12_294,Creditors of this Book_9,creditor,Gedeputeerde van 20000 gulden,15940915,11,4,1,Accounting,To close the account
 286,17,dfl12_289,dfl12_247,Creditors of this Book_9,creditor,Aert Cornelis Lootgietere,15940920,12,7,9,Accounting,To close the account
 286,17,dfl12_289,dfl12_248,Creditors of this Book_9,creditor,Guilliam Ghyselinck,15940920,2,6,8,Accounting,To close the account
-286,17,dfl12_289,dfl12_249,Creditors of this Book_9,creditor,Guilliam Ghyselinck,15940920,16,15,6,Accounting,To close the account
+286,17,dfl12_289,dfl12_249,Creditors of this Book_9,creditor,Christoffel Pruynen,15940920,16,15,6,Accounting,To close the account
 286,17,dfl12_289,dfl12_250,Creditors of this Book_9,creditor,Rugge Vellekens,15940920,5,10,8,Accounting,To close the account
 286,17,dfl12_289,dfl12_256,Creditors of this Book_9,creditor,Olifants tanden ende root sandelhout from Angelo Lion in Lisbon,15940920,49,0,3,Accounting,To close the account
 286,17,dfl12_289,dfl12_273,Creditors of this Book_9,creditor,Rekeninghe van armen,15940920,336,15,5.5,Accounting,To close the account
@@ -1062,8 +1307,13 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 286,17,dfl12_289,dfl12_231,Creditors of this Book_9,creditor,Rente van 100 gulden erffelyck op Calcoten inde Sackstraete,15940920,166,4,1,Erffgoed,12bis 179 gives the amount as £118.15.6 2/3
 286,17,dfl12_289,dfl12_228,Creditors of this Book_9,creditor,Rente van 32 gulden erffen op't huys t'Gulden Cruys in the manstraete_2,15940920,38,19,10,Erffgoed,
 287,218,dfl12_290,dfl12_001,Marcus Stickers,creditor,Balance on 8 November,15821108,50,0,0,,
+287,218,dfl12_002,dfl12_290,Marcus Stickers,debtor,Cassa,15940915,50,0,0,,Paid to his sister Maria Stcikers
 288,NA,dfl12_291,dfl12_001,Peeter Mesureur,creditor,Balance on 8 November,15821108,0,14,0,,
+288,NA,dfl12_291,dfl12_116,Peeter Mesureur,creditor,Carseyen overhoop,15830107,10,0,0,,"This transaction is not listed in the account Carseyen overhoop, but it seems to the right account."
+288,NA,dfl12_002,dfl12_291,Peeter Mesureur,debtor,Cassa,15830503,10,0,0,Trade,For three pieces of camerycx doeck
+288,NA,dfl12_002,dfl12_291,Peeter Mesureur,debtor,Cassa,15830525,0,4,0,,
 289,NA,dfl12_292,dfl12_001,Jacques Noirot_1,creditor,Balance on 8 November,15821108,300,0,0,,
+289,NA,dfl12_002,dfl12_292,Jacques Noirot_1,debtor,Cassa,15830907,108,16,3,,
 290,272,dfl12_293,dfl12_001,Gheeraert Corhase (Coerhaes),creditor,Balance on 8 November,15821108,3,8,0,,
 291,219,dfl12_294,dfl12_001,Gedeputeerde van 20000 gulden,creditor,Balance on 8 November,15821108,11,4,1,,
 292,220,dfl12_295,dfl12_001,Capitael of Marten della Faille,creditor,Balance on 8 November,15821108,4945,10,7,,
@@ -1083,7 +1333,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 292,220,dfl12_073,dfl12_295,Capitael of Marten della Faille,debtor,Jan de Wale_1,15941001,242,10,1,,To close the account
 292,220,dfl12_295,dfl12_251,Capitael of Marten della Faille,creditor,Anna della Faille,15941004,3,6,8,,
 292,220,dfl12_080,dfl12_295,Capitael of Marten della Faille,debtor,Willem van den Mey_2,15941004,12,17,6,,
-292,220,dfl12_028,dfl12_295,Capitael of Marten della Faille,debtor,Jan de Vooght_1,15941004,13,0,4.75,,
+292,220,dfl12_028,dfl12_295,Capitael of Marten della Faille,debtor,Jan de Vooght_1,15941004,13,0,4.75,Bad_debt,
 292,220,dfl12_483,dfl12_295,Capitael of Marten della Faille,debtor,Robert van Eeckeren_3,15941004,23,4,0.33,,
 292,220,dfl12_316,dfl12_295,Capitael of Marten della Faille,debtor,Marten Ensberger nieuw rekening,15941004,23,15,3.5,,To close the account
 292,220,dfl12_295,dfl12_091,Capitael of Marten della Faille,creditor,Jan Widhols nieuw rekening,15941004,24,15,10,,
@@ -1097,25 +1347,61 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 292,220,dfl12_488,dfl12_295,Capitael of Marten della Faille,debtor,Capital of diverse rente,15941215,115,10,0,,
 292,220,dfl12_083,dfl12_295,Capitael of Marten della Faille,debtor,Catharina de Hane,15941216,17,10,5.5,,
 292,220,dfl12_002,dfl12_295,Capitael of Marten della Faille,debtor,Cassa,15941216,524,12,10.166,,
-293,221,dfl12_296,dfl12_001,Oncosten van't process tegens Daniel de Hane,creditor,Balance on 8 November,15821108,328,10,10,,
+293,221,dfl12_296,dfl12_001,Oncosten van't process tegens Daniel de Hane,creditor,Balance on 8 November,15821108,328,10,10,Lawsuit,
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830702,14,16,8,Lawsuit,Paid to Christiaen van Wiele
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830721,5,3,4,Lawsuit,For Renschen wyn sent to Brussels
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830723,0,6,8,Lawsuit,To Goyvaerts
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830820,2,2,6,Lawsuit,To Secretary Boudewyns
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830820,1,9,8,Lawsuit,To Marcelis van Wossum for copies of requests
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830820,0,10,11,Lawsuit,To the bode of Brussels
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15830907,6,8,9,Lawsuit,For Rensen wyn sent to Brussels
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15831021,25,2,9,Lawsuit,For 5 amen rensschen wyn
+293,221,dfl12_296,dfl12_002,Oncosten van't process tegens Daniel de Hane,creditor,Cassa,15840628,8,16,7,Lawsuit,
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15840305,10,0,0,Lawsuit,To Otto Hartius
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15840422,2,0,0,Lawsuit,To Otto Hartius
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15840423,4,19,6,Lawsuit,For fruit sent to Brussels
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15840608,1,9,8,Lawsuit,To secretary Boudewyns
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15840628,0,13,4,Lawsuit,
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841004,20,0,0,Lawsuit,To Otto Hartius
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841015,0,14,8,Lawsuit,
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841216,5,9,0,Lawsuit,To Roelant Paulet for his service
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841216,20,0,0,Lawsuit,To Henrick Kinschot
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841228,16,13,4,Lawsuit,
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15841228,2,0,0,Lawsuit,To Henrick Uwens
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15850128,25,0,0,Lawsuit,To Jan de Prince through the order of Christiaen van Wiele
+293,221,dfl12_002,dfl12_296,Oncosten van't process tegens Daniel de Hane,debtor,Cassa,15940914,1,13,6,Lawsuit,To Christiaen van Wiele for Secretary Boudewyns
 294,NA,dfl12_297,dfl12_001,Onse Provise,creditor,Balance on 8 November,15821108,8,11,10,,
 295,NA,dfl12_298,dfl12_001,Jacques Rugge,creditor,Balance on 8 November,15821108,100,0,0,,
+295,NA,dfl12_002,dfl12_298,Jacques Rugge,debtor,Cassa,15830521,100,0,0,,
 296,NA,dfl12_299,dfl12_001,Jan Wallaert,creditor,Balance on 8 November,15821108,66,3,4,,
+296,NA,dfl12_002,dfl12_299,Jan Wallaert,debtor,Cassa,15831206,66,3,4,,Through his order and from Dierick de Jagere
 297,NA,dfl12_300,dfl12_001,Christiaen van Wiele_1,creditor,Balance on 8 November,15821108,425,0,0,,
+297,NA,dfl12_300,dfl12_098,Christiaen van Wiele_1,creditor,Oncosten van coopmansschappen,15830212,18,18,9,Interest,This seems to be one of the entries on the missing pages of Oncosten van coopmansschappen
+297,NA,dfl12_002,dfl12_300,Christiaen van Wiele_1,debtor,Cassa,15830212,25,0,0,,
+297,NA,dfl12_002,dfl12_300,Christiaen van Wiele_1,debtor,Cassa,15830405,12,14,2,,
+297,NA,dfl12_002,dfl12_300,Christiaen van Wiele_1,debtor,Cassa,15830407,18,15,0,,
 298,243,dfl12_301,dfl12_001,Dierick de Jagere,creditor,Balance on 8 November,15821108,303,1,9.5,,
+298,243,dfl12_002,dfl12_301,Dierick de Jagere,debtor,Cassa,15830312,100,0,0,Wissel,
+298,243,dfl12_308,dfl12_301,Dierick de Jagere,debtor,Joos Grendel,15830919,26,12,11,,
 299,222,dfl12_302,dfl12_001,Jacques della Faille_2,creditor,Balance on 8 November,15821108,1,0,0,,
 300,223,dfl12_303,dfl12_001,Jan Bernaert_1,creditor,Balance on 8 November,15821108,0,15,1,,
+300,223,dfl12_002,dfl12_303,Jan Bernaert_1,debtor,Cassa,15840128,0,15,1,,
 301,NA,dfl12_304,dfl12_001,Jan Nollet,creditor,Balance on 8 November,15821108,100,0,0,,
+301,NA,dfl12_002,dfl12_304,Jan Nollet,debtor,Cassa,15830919,100,0,0,,Paid to Jan and Jacques de Wale
+301,NA,dfl12_002,dfl12_304,Jan Nollet,debtor,Cassa,15830919,23,8,9,,Paid to Jan and Jacques de Wale
 302,224,dfl12_305,dfl12_001,Rigo Minauw nieuwe rekening,creditor,Balance on 8 November,15821108,1,4,4,,
 303,NA,dfl12_306,dfl12_001,Gedeputeerde van de fortificatie der stadt van Antwerpen,creditor,Balance on 8 November,15821108,11,11,1,,
 304,226,dfl12_307,dfl12_001,Jan de Backere,creditor,Balance on 8 November,15821108,0,0,10,,
 305,NA,dfl12_308,dfl12_001,Joos Grendel,creditor,Balance on 8 November,15821108,294,4,2,,
+305,NA,dfl12_002,dfl12_308,Joos Grendel,debtor,Cassa,15821201,320,17,1,,
 306,NA,dfl12_309,dfl12_001,Henrick della Faille,creditor,Balance on 8 November,15821108,100,0,0,,
 307,229,dfl12_310,dfl12_001,D'erffgenaemen van Anna de Hane_2,creditor,Balance on 8 November,15821108,1453,11,7,,
 307,229,dfl12_310,dfl12_098,D'erffgenaemen van Anna de Hane_2,creditor,Oncosten van coopmansschappen,15831116,86,0,8.25,Interest,£679.5.4 1/2 of this was invested in the trade of Jan de Oude. Payment of interest of 8% for a year and seven months is taken from the oncosten van coopmansschappen
 307,229,dfl12_310,dfl12_445,D'erffgenaemen van Anna de Hane_2,creditor,Winninge ende verlies_2,15850128,54,6,10,Interest,For one year of interest
 307,229,dfl12_310,dfl12_445,D'erffgenaemen van Anna de Hane_2,creditor,Winninge ende verlies_2,15940915,543,8,4,Interest,For 10 years of interest
 308,NA,dfl12_311,dfl12_001,Robert and Maria Frumault_1,creditor,Balance on 8 November,15821108,367,14,4,,
+308,NA,dfl12_002,dfl12_311,Robert and Maria Frumault_1,debtor,Cassa,15831003,1,18,4,,To Maria Frumault
+308,NA,dfl12_002,dfl12_311,Robert and Maria Frumault_1,debtor,Cassa,15831008,407,6,3,,Paid to Marten della Faille
 309,231,dfl12_312,dfl12_001,Jan de Oude_2,creditor,Balance on 8 November,15821108,448,5,3.5,,
 309,231,dfl12_312,dfl12_150,Jan de Oude_2,creditor,Hilaria della Faille_2,15830215,400,0,0,Bequest,
 309,231,dfl12_312,dfl12_359,Jan de Oude_2,creditor,Armen der stadt van Antwerpen,15831116,91,13,4,Bequest,To close the account
@@ -1125,10 +1411,23 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 309,231,dfl12_312,dfl12_002,Jan de Oude_2,creditor,Cassa,15840315,33,6,8,,
 309,231,dfl12_301,dfl12_312,Jan de Oude_2,debtor,Dierick de Jagere,15840222,23,0,0,,
 310,232,dfl12_313,dfl12_001,Jan de Vooght_2,creditor,Balance on 8 November,15821108,10,3,7.5,,
+310,232,dfl12_002,dfl12_313,Jan de Vooght_2,debtor,Cassa,15831116,4,3,4,,Paid to Jacques de Wale
 311,NA,dfl12_314,dfl12_001,Philippma van Heyden,creditor,Balance on 8 November,15821108,37,6,8,,
+311,NA,dfl12_314,dfl12_098,Philippma van Heyden,creditor,Oncosten van coopmansschappen,15830430,2,18,4,,This seems to be one of the entries on the missing pages of Oncosten van coopmansschappen
+311,NA,dfl12_002,dfl12_314,Philippma van Heyden,debtor,Cassa,15830326,40,5,0,,
 312,NA,dfl12_315,dfl12_001,D'erffegaemen of Herman Pottey,creditor,Balance on 8 November,15821108,1161,19,2,,
+312,NA,dfl12_002,dfl12_315,D'erffegaemen of Herman Pottey,debtor,Cassa,15821204,6,0,0,,
+312,NA,dfl12_002,dfl12_315,D'erffegaemen of Herman Pottey,debtor,Cassa,15830919,257,13,11,,"Paid to Catharina de Wale, his mother"
 313,62,dfl12_316,dfl12_001,Marten Ensberger nieuw rekening,creditor,Balance on 8 November,15821108,6,15,1.5,,
+313,62,dfl12_336,dfl12_316,Marten Ensberger nieuw rekening,debtor,Simon Rodriges,15830110,175,0,0,Wissel,
+313,62,dfl12_002,dfl12_316,Marten Ensberger nieuw rekening,debtor,Cassa,15840218,172,18,4,Wissel,
 314,275,dfl12_317,dfl12_001,Oswaldus Cleynhaus ende company,creditor,Balance on 8 November,15821108,376,11,9,,
+314,275,dfl12_002,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Cassa,15830919,500,3,3,,Paid to Frederico Ulrich
+314,275,dfl12_002,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Cassa,15830916,54,6,1,,
+314,275,dfl12_002,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Cassa,15840507,100,0,0,,
+314,275,dfl12_449,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Lodewyck Blommaert_3,15840720,253,15,0,,
+314,275,dfl12_002,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Cassa,15941213,131,5,0,,
+314,275,dfl12_002,dfl12_317,Oswaldus Cleynhaus ende company,debtor,Cassa,15941213,1,5,6,,
 315,NA,dfl12_318,dfl12_001,Henrick Hulsscher,creditor,Balance on 8 November,15821108,1,0,0,,
 316,NA,dfl12_319,dfl12_001,Jems Boel,creditor,Balance on 8 November,15821108,0,5,0,,
 317,235,dfl12_320,dfl12_001,Luis Cutsini_2,creditor,Balance on 8 November,15821108,0,10,0,,
@@ -1264,7 +1563,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 337,256,dfl12_340,dfl12_350,Jan della Faille_paternal,creditor,Capitael van Cornelia della Faille,15940930,333,12,6.875,,
 337,256,dfl12_340,dfl12_445,Jan della Faille_paternal,creditor,Winninge ende verlies_2,15941001,128,15,4,,
 337,256,dfl12_080,dfl12_340,Jan della Faille_paternal,debtor,Willem van den Mey_2,15941004,6,8,4,,
-337,256,dfl12_028,dfl12_340,Jan della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,,
+337,256,dfl12_028,dfl12_340,Jan della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,Bad_debt,
 337,256,dfl12_344,dfl12_340,Jan della Faille_paternal,debtor,Jacques della Faille_paternal,15941004,12,10,3,,
 337,256,dfl12_340,dfl12_289,Jan della Faille_paternal,creditor,Creditors of this Book_9,15941004,41,14,8.5,,
 337,256,dfl12_226,dfl12_340,Jan della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,,
@@ -1297,7 +1596,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 340,259,dfl12_343,dfl12_350,Carlo della Faille_paternal,creditor,Capitael van Cornelia della Faille,15940930,146,10,6.875,,
 340,259,dfl12_343,dfl12_445,Carlo della Faille_paternal,creditor,Winninge ende verlies_2,15941001,128,15,3.5,,
 340,259,dfl12_080,dfl12_343,Carlo della Faille_paternal,debtor,Willem van den Mey_2,15941004,6,8,4,,
-340,259,dfl12_028,dfl12_343,Carlo della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,,
+340,259,dfl12_028,dfl12_343,Carlo della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,Bad_debt,
 340,259,dfl12_344,dfl12_343,Carlo della Faille_paternal,debtor,Jacques della Faille_paternal,15941004,12,10,3,,
 340,259,dfl12_343,dfl12_289,Carlo della Faille_paternal,creditor,Creditors of this Book_9,15941004,41,14,8.5,,
 340,259,dfl12_226,dfl12_343,Carlo della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,,
@@ -1320,7 +1619,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 341,260,dfl12_344,dfl12_347,Jacques della Faille_paternal,creditor,Hester della Faille_paternal,15941001,536,13,4,,
 341,260,dfl12_480,dfl12_344,Jacques della Faille_paternal,debtor,Laecken vercoopers van Haarlem,15941001,1122,0,4,Trade,161 pieces of laeckenen from Haarlem
 341,260,dfl12_080,dfl12_344,Jacques della Faille_paternal,debtor,Willem van den Mey_2,15941004,9,5,9,,
-341,260,dfl12_028,dfl12_344,Jacques della Faille_paternal,debtor,Jan de Vooght_1,15941004,9,7,10.75,,
+341,260,dfl12_028,dfl12_344,Jacques della Faille_paternal,debtor,Jan de Vooght_1,15941004,9,7,10.75,Bad_debt,
 341,260,dfl12_344,dfl12_340,Jacques della Faille_paternal,creditor,Jan della Faille_paternal,15941004,12,10,3,,
 341,260,dfl12_344,dfl12_343,Jacques della Faille_paternal,creditor,Carlo della Faille_paternal,15941004,12,10,3,,
 341,260,dfl12_344,dfl12_251,Jacques della Faille_paternal,creditor,Anna della Faille,15941004,20,5,6,,
@@ -1344,7 +1643,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 342,261,dfl12_345,dfl12_445,Steven della Faille_paternal,creditor,Winninge ende verlies_2,15941001,113,10,9,,Maternal profits
 342,261,dfl12_345,dfl12_445,Steven della Faille_paternal,creditor,Winninge ende verlies_2,15941001,128,15,3.5,,Paternal and sororal profits
 342,261,dfl12_080,dfl12_345,Steven della Faille_paternal,debtor,Willem van den Mey_2,15941004,12,1,6,,
-342,261,dfl12_028,dfl12_345,Steven della Faille_paternal,debtor,Jan de Vooght_1,15941004,12,4,3.25,,
+342,261,dfl12_028,dfl12_345,Steven della Faille_paternal,debtor,Jan de Vooght_1,15941004,12,4,3.75,Bad_debt,
 342,261,dfl12_345,dfl12_289,Steven della Faille_paternal,creditor,Creditors of this Book_9,15941004,26,13,4,,
 342,261,dfl12_345,dfl12_289,Steven della Faille_paternal,creditor,Creditors of this Book_9,15941004,41,14,8.5,,
 342,261,dfl12_289,dfl12_345,Steven della Faille_paternal,debtor,Creditors of this Book_9,15941004,72,17,5,,
@@ -1368,7 +1667,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 343,262,dfl12_482,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Robert van Eeckeren_2,15941001,6,6,1,Lawsuit,"To Robert van Eeckeren for diverse expenses that Van Eeckeren paid for the Malapert children in a lawsuit against their father, Louis Malapert"
 343,262,dfl12_346,dfl12_445,D'erffgenaemen of Maria della Faille_paternal,creditor,Winninge ende verlies_2,15941001,128,15,3.5,,
 343,262,dfl12_080,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Willem van den Mey_2,15941004,6,8,4,,
-343,262,dfl12_028,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,,
+343,262,dfl12_028,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,Bad_debt,
 343,262,dfl12_346,dfl12_289,D'erffgenaemen of Maria della Faille_paternal,creditor,Creditors of this Book_9,15941004,41,14,8.5,,
 343,262,dfl12_346,dfl12_477,D'erffgenaemen of Maria della Faille_paternal,creditor,Voyagie van London nieuwe rekening,15941004,96,2,4,,
 343,262,dfl12_226,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Erffgoeden,15941215,50,0,0,,
@@ -1388,7 +1687,7 @@ NA,156,dfl12_477,dfl12_288,Voyagie van London nieuwe rekening,creditor,Oncosten 
 344,263,dfl12_347,dfl12_445,Hester della Faille_paternal,creditor,Winninge ende verlies_2,15941001,139,13,6,,
 344,263,dfl12_344,dfl12_347,Hester della Faille_paternal,debtor,Jacques della Faille_paternal,15941001,536,13,4,,
 344,263,dfl12_080,dfl12_347,Hester della Faille_paternal,debtor,Willem van den Mey_2,15941004,13,7,6,,
-344,263,dfl12_028,dfl12_347,Hester della Faille_paternal,debtor,Jan de Vooght_1,15941004,13,10,8.25,,
+344,263,dfl12_028,dfl12_347,Hester della Faille_paternal,debtor,Jan de Vooght_1,15941004,13,10,8.25,Bad_debt,
 344,263,dfl12_347,dfl12_289,Hester della Faille_paternal,creditor,Creditors of this Book_9,15941004,41,14,8.5,,
 344,263,dfl12_289,dfl12_347,Hester della Faille_paternal,debtor,Creditors of this Book_9,15941004,89,12,8,,
 344,263,dfl12_347,dfl12_477,Hester della Faille_paternal,creditor,Voyagie van London nieuwe rekening,15941004,200,7,4,,
