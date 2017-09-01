@@ -22,36 +22,65 @@ deb_refactor_tb <- function(gr, sc, d) {
     d = deb_d(d))
 }
 
-
-deb_sum <- function(x) {
-  summarise(x,
+# Summarise a data frame
+deb_sum <- function(df) {
+  summarise(df,
    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
    sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
    d = sum(d) %% 12)
 }
 
-deb_account_d <- function(x, id) {
-  filter(x, to == id) %>% deb_sum()
+# Single account
+# Take dataframe and account id
+# Returns sum of credit and debit,
+# and current amount by subtracting debit from credit
+deb_account <- function(df, id) {
+credit <- filter(df, from == id) %>% summarise(
+  relation = "credit",
+  gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
+  sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
+  d = sum(d) %% 12)
+
+debit <- filter(df, to == id) %>% summarise(
+  relation = "debit",
+  gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
+  sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
+  d = sum(d) %% 12)
+
+current <- tibble(
+  relation = "current",
+  gr = credit$gr - debit$gr,
+  sc = credit$sc - debit$sc,
+  d = credit$d - debit$d
+)
+
+bind_rows(credit, debit, current)
 }
 
-deb_account_c <- function(x, id) {
-  filter(x, from == id) %>% deb_sum()
+# Calculate total credit of an account
+deb_account_c <- function(df, id) {
+  filter(df, from == id) %>% deb_sum()
+}
+
+# Calculate total debt of an account
+deb_account_d <- function(df, id) {
+  filter(df, to == id) %>% deb_sum()
 }
 
 # Take a data frame with gr, sc, and d columns and
 # return a data frame with summed credit subtracted from summed debit
-deb_current <- function(x) {
-  credit <- x %>% group_by(from) %>% summarise(
+deb_current <- function(df) {
+  credit <- df %>% group_by(from) %>% summarise(
     gr_c = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
     sc_c = (sum(sc) + (sum(d) %/% 12)) %% 20,
     d_c = sum(d) %% 12)
   
-  debit_vlams <- x %>% group_by(to) %>% summarise(
+  debit <- df %>% group_by(to) %>% summarise(
     gr_d = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
     sc_d = (sum(sc) + (sum(d) %/% 12)) %% 20,
     d_d = sum(d) %% 12)
   
-  accounts_sum <- full_join(credit_vlams, debit_vlams, by = c("from" = "to")) %>% 
+  accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
     replace_na(list(gr_c = 0, sc_c = 0, d_c = 0, gr_d = 0, sc_d = 0, d_d = 0)) %>% 
     rename(id = from)
   

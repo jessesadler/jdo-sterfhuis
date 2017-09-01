@@ -190,7 +190,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,pounds,tr_t
 63,88,dfl12_080,dfl12_065,Lynwaeten,debtor,Willem van den Mey_2,15830629,83,3,10,83.3.10,,
 63,88,dfl12_065,dfl12_101,Lynwaeten,creditor,Joos de Voghele nieuw rekening,15830825,7,4,7,7.4.7,,
 63,88,dfl12_101,dfl12_065,Lynwaeten,debtor,Joos de Voghele nieuw rekening,15830825,81,12,11,81.12.11,,
-63,88,dfl12_065,dfl12_080,Lynwaeten,debtor,Willem van den Mey_2,15831228,43,7,3,43.7.3,,
+63,88,dfl12_080,dfl12_065,Lynwaeten,debtor,Willem van den Mey_2,15831228,43,7,3,43.7.3,,
 64,34,dfl12_001,dfl12_066,Francisco van Eeckeren_1,debtor,Balance on 8 November,15821108,34,4,1,34.4.1,,
 65,NA,dfl12_001,dfl12_067,Jan Voet cleermaecker,debtor,Balance on 8 November,15821108,2,6,8,2.6.8,,
 66,84,dfl12_001,dfl12_068,Napelse Syde,debtor,Balance on 8 November,15821108,3265,13,10,3265.13.10,,
@@ -322,7 +322,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,gr,sc,d,pounds,tr_t
 89,99,dfl12_091,dfl12_163,Jan Widhols nieuw rekening,creditor,Jan Walter,15840222,31,5,0,31.5.0,,
 90,NA,dfl12_001,dfl12_092,Lynken Pluym weduwe van Lenaert Pluym,debtor,Balance on 8 November,15821108,2,0,0,2.0.0,,
 93,234,dfl12_001,dfl12_095,Florette syde,debtor,Balance on 8 November,15821108,5446,3,7,5446.3.7,,
-93,234,dfl12_210,dfl12_095,Florette syde,creditor,Florette syde nieuw rekening,15830919,2937,0,4,2937.0.4,,
+93,234,dfl12_095,dfl12_210,Florette syde,creditor,Florette syde nieuw rekening,15830919,2937,0,4,2937.0.4,,
 94,NA,dfl12_001,dfl12_096,Fyn syde,debtor,Balance on 8 November,15821108,14112,8,8,14112.8.8,,
 94,NA,dfl12_037,dfl12_096,Fyn syde,debtor,Jaspar Celosse,15830629,46,15,2.5,46.15.2 1/2,,For expenses from Samuel van Wingen in Emden
 94,NA,dfl12_316,dfl12_096,Fyn syde,debtor,Marten Ensberger nieuw rekening,15830629,21,3,0,21.3.0,,For diverse expenses done by Ensberger for bales of silk.
