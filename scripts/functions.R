@@ -22,7 +22,17 @@ deb_refactor_tb <- function(gr, sc, d) {
     d = deb_d(d))
 }
 
+## Functions for negative sc and d after subtraction ##
+
+deb_neg_scd <- function(gr, sc, d) {c(gr - 1, sc + 19, d + 12)} # negative sc and d
+deb_neg_sc <- function(gr, sc, d) {c(gr - 1, sc + 20, d)} # negative sc
+deb_neg_d <- function(gr, sc, d) {c(gr, sc - 1, d + 12)} # negative d with positive sc
+  # Also works with negative gr and sc and positive d
+deb_neg_grsc <- function(gr, sc, d) {c(gr, -(sc) - 1, -(d) + 12)} # gr is negative or 0 and sc is negative
+
 # Summarise a data frame
+# Add fr, sc, d from a data frame
+# Does not do group_by()
 deb_sum <- function(df) {
   summarise(df,
    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
@@ -30,7 +40,8 @@ deb_sum <- function(df) {
    d = sum(d) %% 12)
 }
 
-# Single account
+## Single account ##
+
 # Take dataframe and account id
 # Returns sum of credit and debit,
 # and current amount by subtracting debit from credit
@@ -67,8 +78,11 @@ deb_account_d <- function(df, id) {
   filter(df, to == id) %>% deb_sum()
 }
 
+## Create current data frame ##
+
 # Take a data frame with gr, sc, and d columns and
 # return a data frame with summed credit subtracted from summed debit
+# Resulting data frame has gr, sc, and d columns for debit, credit, and current
 deb_current <- function(df) {
   credit <- df %>% group_by(from) %>% summarise(
     gr_c = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
@@ -87,3 +101,13 @@ deb_current <- function(df) {
   mutate(accounts_sum, gr = gr_c - gr_d, sc = sc_c - sc_d, d = d_c - d_d)
 }
 
+## Create tibble of open accounts ##
+
+# Uses deb_current() function to get current amount
+# Selects only current gr, sc, and d and filters out accounts that are even
+deb_open <- function(df) {
+  df %>% deb_current() %>% 
+  select(id, gr:d) %>% 
+    filter(gr + sc + d != 0) %>% 
+    arrange(id)
+}
