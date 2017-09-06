@@ -38,7 +38,7 @@ dfl12_039,37,26,Joos_de_Voghele_1,Joos de Voghele_1,Balancing,TRUE,,12 Bis: Writ
 dfl12_040,38,279,Lynwaeten_for_the_rekening_of_Hilaria_della_Faille_and_Hester_van_Eeckeren,Lynwaeten for the rekening of Hilaria della Faille and Hester van Eeckeren,Company,TRUE,,"Created a profit of £64.12.6 written off on winninghe ende verlies nr 36. The lynwaeten was sold in London. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92)."
 dfl12_041,39,27,Joos_de_Voghele_2,Joos de Voghele_2,Balancing,TRUE,,12 Bis: Written off on winninghe ende verlies to even the account
 dfl12_042,40,86,Fyn_rouwe_syde,Fyn rouwe syde,Goods,FALSE,,Purchase of silk in Verona and sent through Augsburg. The silk was sold in London. Created a profit of £782.17.1 written off on winninghe ende verlies nr 36. In 12bis it created a profit of £222.3.8. Also had a credit from the account of Ardasse syde ende cleyn foullie nieuw rekeninge (nr 87) for sale of silk that was mistakenly put in that account instead of in that of rouwe syde.
-dfl12_043,41,240,Peeter_della_Faille_de_Jonge,Peeter della Faille de Jonge,Giovane,TRUE,,The total debit of £129.12.5 is written off by a credit from the Branch of Venice for £135.3.10. This leaves a credit of £5.11.5. 12 Bis: Paid by Marten
+dfl12_043,41,240,Peeter_della_Faille_de_Jonge,Peeter della Faille de Jonge,Giovane,TRUE,,The total debit from dfl-12 of £129.12.5 is wrong. Should be £129.12.7. This leads to an open account of credit of £0.0.2.
 dfl12_044,42,225,Camelotten_overhoop,Camelotten overhoop,Goods,FALSE,,"£645.17.0 was sold in London, but they still estimated that the account would create a loss of £39.16.3, which is written off on Winninge ende verlies nr 36. A credit of £652.4.0 was brought over to the account Camelotten overhoop nieuw rekeninge (nr 212, 184a). 12 Bis: Written off on Oncosten van conduitten (nr 207, 144-147)"
 dfl12_045,43,28,Jan_van_Neste,Jan van Neste,Erffgoed,TRUE,,"12 Bis: Written off on capital van diverse renten. See also nr 180, 135-136"
 dfl12_046,44,NA,Jan_de_Hilte_van_Cortryck,Jan de Hilte van Cortryck,Balancing,FALSE,,Written off as oncosten van coopmansschappen
@@ -63,7 +63,7 @@ dfl12_064,62,276,Hilaria_della_Faille_1,Hilaria della Faille_1,Kin,TRUE,,Hilaria
 dfl12_065,63,88,Lynwaeten,Lynwaeten,Goods,FALSE,,Created a profit of £2426.14.5 written off on winninghe ende verlies nr 36. The lynwaeten was sold in Venice and London. The vast majority was sold in London.
 dfl12_066,64,34,Francisco_van_Eeckeren_1,Francisco van Eeckeren_1,Kin,TRUE,,12 Bis: The extra debt of £8.15.7 is from a payment made by Rigo Minauw in Cologne.
 dfl12_067,65,NA,Jan_Voet_cleermaecker,Jan Voet cleermaecker,Preparation,FALSE,,Paid by oncosten van coopmansschappen for the making of clothes.
-dfl12_068,66,84,Napelse_Syde,Napelse Syde,Goods,FALSE,,Created a profit of £1314.9.5 1/2 written off on winninghe ende verlies nr 36.
+dfl12_068,66,84,Napelse_Syde,Napelse Syde,Goods,FALSE,,"DFL 12bis (nr 84) mistakenly begins the account with a debit of £115.5.7. The actual amount, as listed in DFL 12 (nr 66) is £114.15.7. This means that there is a mistake in the accounting of £0.10.0 credit."
 dfl12_069,67,35,Rensche_wynen,Rensche wynen,Goods,FALSE,,"12 Bis: Written off on creditors of the book (nr 17, 15-21) to even the account."
 dfl12_070,68,36,Willem_van_den_Mey_1,Willem van den Mey_1,Trade,FALSE,,
 dfl12_071,69,37,Willem_Mourcock,Willem Mourcock,Balancing,FALSE,,Written off on Winninge ende verlies
@@ -105,7 +105,7 @@ dfl12_111,109,56,Voyagie_van_Weenen_in_Osterryck_(Venice),Voyagie van Venice,Bra
 dfl12_112,110,97,Voyagie_van_London,Voyagie van London,Branch,FALSE,,"12 Bis: Includes payments on 22 March 1584 to the heirs. In the end, £21959.3.10 is brought over to Voyagie van London nieuwe rekening nr 156, 104-109"
 dfl12_114,112,57,Louis_Malapert_1,Louis Malapert_1,Kin,TRUE,,12 Bis: Written off on his other account on 20 September 1594.
 dfl12_115,113,NA,Cassa_in_contant,Cassa in contant,Accounting,FALSE,,
-dfl12_116,114,241,Carseyen_overhoop,Carseyen overhoop,Goods,FALSE,,"This account is interesting because the debits show expenses for textiles. The credits show the division of these textiles between the heirs, which was done on 6 and 31 January 1583. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92) after an additional credit to £67.8.3."
+dfl12_116,114,241,Carseyen_overhoop,Carseyen overhoop,Goods,FALSE,,"This account is interesting because the debits show expenses for textiles. The credits show the division of these textiles between the heirs, which was done on 6 and 31 January 1583. 12 Bis: Written off on Winninge ende verlies (nr 124, 84-92) after an additional credit to £67.8.3. The account is messed up, because there should be £10 debit that is not on the account. The account ends with debit of -£9.10.0 according to my calculation."
 dfl12_117,115,16,Jan_de_Lannoy_1,Jan de Lannoy_1,Wissel,FALSE,,Son of Jan Maechans. Three Wissels from London for a total of £555.8.4 across DFL 12 and 12bis
 dfl12_118,116,19,Robert_Collimor,Robert Collimor,Wissel,FALSE,,Two wissels from London for a total of £397.18.4 across DFL 12 and 12bis
 dfl12_119,117,NA,Embrecht_Pellicorne,Embrecht Pellicorne,Wissel,FALSE,,Wissel from London

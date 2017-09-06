@@ -22,16 +22,37 @@ deb_refactor_tb <- function(gr, sc, d) {
     d = deb_d(d))
 }
 
+# Refactor with only denari
+# Can take postive or negative value
+# If negative, returns negative gr, sc, and d in case one is 0
+deb_refactor_d <- function(d) {
+  if (d < 0) {
+    d <- -d
+    tibble(
+      gr = -((d %/% 12) %/% 20),
+      sc = -((d %/% 12) %% 20),
+      d = -(d %% 12)) 
+  } else {
+  tibble(
+    gr = (d %/% 12) %/% 20,
+    sc = (d %/% 12) %% 20,
+    d = d %% 12)
+  }
+}
+
 ## Functions for negative sc and d after subtraction ##
 
 deb_neg_scd <- function(gr, sc, d) {c(gr - 1, sc + 19, d + 12)} # negative sc and d
 deb_neg_sc <- function(gr, sc, d) {c(gr - 1, sc + 20, d)} # negative sc
 deb_neg_d <- function(gr, sc, d) {c(gr, sc - 1, d + 12)} # negative d with positive sc
-  # Also works with negative gr and sc and positive d
-deb_neg_grsc <- function(gr, sc, d) {c(gr, -(sc) - 1, -(d) + 12)} # gr is negative or 0 and sc is negative
+
+deb_neg_gr <- function(gr, sc, d) {c(gr + 1, -(sc) + 19, -(d) + 12)} # gr is negative and sc, d are positive
+deb_neg_grsc <- function(gr, sc, d) {c(gr, -(sc) - 1, -(d) + 12)} # gr is negative or  and sc is negative
+  # d has to be more than 0 if gr is 0
+deb_neg_grd <- function(gr, sc, d) {c(gr + 1, -(sc) + 20, -(d))} # gr is negative and d is negative
 
 # Summarise a data frame
-# Add fr, sc, d from a data frame
+# Add gr, sc, d from a data frame and refactor
 # Does not do group_by()
 deb_sum <- function(df) {
   summarise(df,
@@ -46,26 +67,26 @@ deb_sum <- function(df) {
 # Returns sum of credit and debit,
 # and current amount by subtracting debit from credit
 deb_account <- function(df, id) {
-credit <- filter(df, from == id) %>% summarise(
-  relation = "credit",
-  gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-  sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
-  d = sum(d) %% 12)
-
-debit <- filter(df, to == id) %>% summarise(
-  relation = "debit",
-  gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-  sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
-  d = sum(d) %% 12)
-
-current <- tibble(
-  relation = "current",
-  gr = credit$gr - debit$gr,
-  sc = credit$sc - debit$sc,
-  d = credit$d - debit$d
-)
-
-bind_rows(credit, debit, current)
+  credit <- filter(df, from == id) %>% summarise(
+    relation = "credit",
+    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
+    sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
+    d = sum(d) %% 12)
+  
+  debit <- filter(df, to == id) %>% summarise(
+    relation = "debit",
+    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
+    sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
+    d = sum(d) %% 12)
+  
+  credit_dec <- credit$gr + credit$sc / 20 + credit$d / 240
+  debit_dec <- debit$gr + debit$sc / 20 + debit$d / 240
+  
+  denari <- (credit_dec - debit_dec)*240
+  
+  current <- bind_cols(relation = "current", deb_refactor_d(denari))
+  
+  bind_rows(credit, debit, current)
 }
 
 # Calculate total credit of an account

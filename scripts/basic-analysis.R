@@ -60,13 +60,13 @@ open <- select(current, id, gr:d) %>% filter(gr + sc + d != 0) %>% arrange(id)
 # Still need to find way to deal with negative numbers in sc and d
 
 # Single account
-credit <- filter(transactions, from == "dfl12_080") %>% summarise(
+credit <- filter(transactions, from == "dfl12_112") %>% summarise(
   relation = "credit",
   gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
   sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
   d = sum(d) %% 12)
 
-debit <- filter(transactions, to == "dfl12_080") %>% summarise(
+debit <- filter(transactions, to == "dfl12_112") %>% summarise(
   relation = "debit",
   gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
   sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
