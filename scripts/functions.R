@@ -1,5 +1,8 @@
 ## Double-Entry Bookkeeping Functions ##
 
+# Requires
+library(tidyverse)
+
 # Functions to refactor gr, sc, and d
 deb_d <- function(d) {d %% 12}
 deb_sc <- function(sc, d) {(sc + d %/% 12) %% 20}
@@ -25,7 +28,7 @@ deb_refactor_tb <- function(gr, sc, d) {
 # Refactor with only denari
 # Can take postive or negative value
 # If negative, returns negative gr, sc, and d in case one is 0
-deb_refactor_d <- function(d) {
+deb_d_lsd <- function(d) {
   if (d < 0) {
     d <- -d
     tibble(
@@ -39,6 +42,19 @@ deb_refactor_d <- function(d) {
     d = d %% 12)
   }
 }
+
+# Take lsd and return denari
+deb_lsd_d <- function(gr, sc, d) {
+  gr * 240 + sc * 12 + d
+}
+
+# Exchange rate by shillings
+# This is set up to go from sterling to vlaams
+deb_exchange_s <- function(gr, sc, d, rate = 31) {
+  denari <- deb_lsd_d(gr, sc, d) * rate/20
+  deb_d_lsd(denari)
+}
+
 
 ## Functions for negative sc and d after subtraction ##
 
@@ -82,9 +98,9 @@ deb_account <- function(df, id) {
   credit_dec <- credit$gr + credit$sc / 20 + credit$d / 240
   debit_dec <- debit$gr + debit$sc / 20 + debit$d / 240
   
-  denari <- (credit_dec - debit_dec)*240
+  denari <- (credit_dec - debit_dec)*240 # Rounding issue
   
-  current <- bind_cols(relation = "current", deb_refactor_d(denari))
+  current <- bind_cols(relation = "current", deb_d_lsd(denari))
   
   bind_rows(credit, debit, current)
 }
@@ -131,4 +147,14 @@ deb_open <- function(df) {
   select(id, gr:d) %>% 
     filter(gr + sc + d != 0) %>% 
     arrange(id)
+}
+
+## Calculate interest
+# Works by mutating lsd to denari,
+# calculating interest, then back to lsd
+
+deb_interest <- function(gr, sc, d, interest = 0.0625, years = 1) {
+  per_year <- interest * deb_lsd_d(gr, sc, d)
+  denari_interest <- years * per_year
+  deb_d_lsd(denari_interest)
 }
