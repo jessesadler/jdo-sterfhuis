@@ -4,9 +4,15 @@
 library(tidyverse)
 
 # Functions to refactor gr, sc, and d
-deb_d <- function(d) {d %% 12}
-deb_sc <- function(sc, d) {(sc + d %/% 12) %% 20}
 deb_gr <- function(gr, sc, d) {gr + ((sc + d %/% 12) %/% 20)}
+deb_sc <- function(sc, d) {(sc + d %/% 12) %% 20}
+deb_d <- function(d) {d %% 12}
+
+# Functions that take sum and refactor gr, sc, and d
+# These are helper functions
+deb_gr_sum <- function(gr, sc, d) {sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20)}
+deb_sc_sum <- function(sc, d) {(sum(sc) + (sum(d) %/% 12)) %% 20}
+deb_d_sum <- function(d) {sum(d) %% 12}
 
 # Take sum of pounds, schillings, and pennies
 # and refactor to correct limit
@@ -55,6 +61,21 @@ deb_exchange_s <- function(gr, sc, d, rate = 31) {
   deb_d_lsd(denari)
 }
 
+# Exchange rate of ducats
+# This is set up to go from ducats to vlaams
+deb_exchange_ducats <- function(ducats, denari = 0, rate = 96) {
+  denari <- denari/24
+  deb_d_lsd((ducats + denari) * rate)
+}
+
+## Calculate interest
+# Works by mutating lsd to denari,
+# calculating interest, then back to lsd
+deb_interest <- function(gr, sc, d, interest = 0.0625, years = 1) {
+  per_year <- interest * deb_lsd_d(gr, sc, d)
+  denari_interest <- years * per_year
+  deb_d_lsd(denari_interest)
+}
 
 ## Functions for negative sc and d after subtraction ##
 
@@ -67,14 +88,16 @@ deb_neg_grsc <- function(gr, sc, d) {c(gr, -(sc) - 1, -(d) + 12)} # gr is negati
   # d has to be more than 0 if gr is 0
 deb_neg_grd <- function(gr, sc, d) {c(gr + 1, -(sc) + 20, -(d))} # gr is negative and d is negative
 
-# Summarise a data frame
-# Add gr, sc, d from a data frame and refactor
-# Does not do group_by()
-deb_sum <- function(df) {
-  summarise(df,
-   gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-   sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
-   d = sum(d) %% 12)
+# Summarise a data frame with sum of gr, sc, and d
+# groups by from and to in order to get all transaction types
+# sums the pounds, shillings, and pence while refactoring
+deb_sum_df <- function(df) {
+  df %>% 
+    group_by(from, to) %>% 
+    summarise(
+      gr = deb_gr_sum(gr, sc, d),
+      sc = deb_sc_sum(sc, d),
+      d = deb_d_sum(d))
 }
 
 ## Single account ##
@@ -85,20 +108,20 @@ deb_sum <- function(df) {
 deb_account <- function(df, id) {
   credit <- filter(df, from == id) %>% summarise(
     relation = "credit",
-    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-    sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
-    d = sum(d) %% 12)
+    gr = deb_gr_sum(gr, sc, d),
+    sc = deb_sc_sum(sc, d),
+    d = deb_d_sum(d))
   
   debit <- filter(df, to == id) %>% summarise(
     relation = "debit",
-    gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-    sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
-    d = sum(d) %% 12)
+    gr = deb_gr_sum(gr, sc, d),
+    sc = deb_sc_sum(sc, d),
+    d = deb_d_sum(d))
   
-  credit_dec <- credit$gr + credit$sc / 20 + credit$d / 240
-  debit_dec <- debit$gr + debit$sc / 20 + debit$d / 240
+  credit_d <- deb_lsd_d(credit$gr, credit$sc, credit$d)
+  debit_d <- deb_lsd_d(debit$gr, debit$sc, debit$d)
   
-  denari <- (credit_dec - debit_dec)*240 # Rounding issue
+  denari <- (credit_d - debit_d)
   
   current <- bind_cols(relation = "current", deb_d_lsd(denari))
   
@@ -122,20 +145,29 @@ deb_account_d <- function(df, id) {
 # Resulting data frame has gr, sc, and d columns for debit, credit, and current
 deb_current <- function(df) {
   credit <- df %>% group_by(from) %>% summarise(
-    gr_c = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-    sc_c = (sum(sc) + (sum(d) %/% 12)) %% 20,
-    d_c = sum(d) %% 12)
+    gr_c = deb_gr_sum(gr, sc, d),
+    sc_c = deb_sc_sum(sc, d),
+    d_c = deb_d_sum(d)) %>% 
+    mutate(denari_c = deb_lsd_d(gr_c, sc_c, d_c))
   
   debit <- df %>% group_by(to) %>% summarise(
-    gr_d = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
-    sc_d = (sum(sc) + (sum(d) %/% 12)) %% 20,
-    d_d = sum(d) %% 12)
+    gr_d = deb_gr_sum(gr, sc, d),
+    sc_d = deb_sc_sum(sc, d),
+    d_d = deb_d_sum(d)) %>% 
+    mutate(denari_d = deb_lsd_d(gr_d, sc_d, d_d))
   
   accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
-    replace_na(list(gr_c = 0, sc_c = 0, d_c = 0, gr_d = 0, sc_d = 0, d_d = 0)) %>% 
+    replace_na(list(gr_c = 0, sc_c = 0, d_c = 0, gr_d = 0, sc_d = 0, d_d = 0,
+                    denari_c = 0, denari_d = 0)) %>% 
     rename(id = from)
   
-  mutate(accounts_sum, gr = gr_c - gr_d, sc = sc_c - sc_d, d = d_c - d_d)
+  accounts_sum %>% mutate(denari_current = denari_c - denari_d) %>% 
+    mutate(denari_pos = if_else(denari_current < 0, -denari_current, denari_current)) %>% 
+    mutate(relation = if_else(denari_current < 0, "debit", "credit")) %>% 
+    mutate(gr = (denari_pos %/% 12) %/% 20,
+           sc = (denari_pos %/% 12) %% 20,
+           d = denari_pos %% 12) %>% 
+    select(-starts_with("denari"))
 }
 
 ## Create tibble of open accounts ##
@@ -144,17 +176,7 @@ deb_current <- function(df) {
 # Selects only current gr, sc, and d and filters out accounts that are even
 deb_open <- function(df) {
   df %>% deb_current() %>% 
-  select(id, gr:d) %>% 
+  select(id, relation:d) %>% 
     filter(gr + sc + d != 0) %>% 
     arrange(id)
-}
-
-## Calculate interest
-# Works by mutating lsd to denari,
-# calculating interest, then back to lsd
-
-deb_interest <- function(gr, sc, d, interest = 0.0625, years = 1) {
-  per_year <- interest * deb_lsd_d(gr, sc, d)
-  denari_interest <- years * per_year
-  deb_d_lsd(denari_interest)
 }

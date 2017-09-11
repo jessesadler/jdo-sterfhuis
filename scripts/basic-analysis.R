@@ -11,6 +11,16 @@ accounts <- read_csv("data/accounts.csv")
 transactions12 <- filter(transactions, date <= as.Date("1583-12-26", "%Y-%m-%d"))
 transactions12b <- filter(transactions, date > as.Date("1583-12-26", "%Y-%m-%d"))
 
+# Sum for each connection
+transactions_sum <- transactions %>% 
+  group_by(from, to) %>% 
+  summarise(gr = sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20),
+            sc = (sum(sc) + (sum(d) %/% 12)) %% 20,
+            d = sum(d) %% 12)
+
+
+transactions_sum <- deb_sum(transactions)
+
 ### Decimal vlams ###
 
 transactions_dec <- mutate(transactions, vlams_dec = gr + sc / 20 + d / 240)
