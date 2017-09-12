@@ -3,61 +3,62 @@
 # Requires
 library(tidyverse)
 
-# Functions to refactor gr, sc, and d
-deb_gr <- function(gr, sc, d) {gr + ((sc + d %/% 12) %/% 20)}
-deb_sc <- function(sc, d) {(sc + d %/% 12) %% 20}
-deb_d <- function(d) {d %% 12}
+# Functions to refactor l, s, and d
+deb_livre <- function(l, s, d) {l + ((s + d %/% 12) %/% 20)}
+deb_solidi <- function(s, d) {(s + d %/% 12) %% 20}
+deb_denari <- function(d) {d %% 12}
 
-# Functions that take sum and refactor gr, sc, and d
+# Functions that take sum and refactor l, s, and d
 # These are helper functions
-deb_gr_sum <- function(gr, sc, d) {sum(gr) + ((sum(sc) + (sum(d) %/% 12)) %/% 20)}
-deb_sc_sum <- function(sc, d) {(sum(sc) + (sum(d) %/% 12)) %% 20}
+deb_l_sum <- function(l, s, d) {sum(l) + ((sum(s) + (sum(d) %/% 12)) %/% 20)}
+deb_s_sum <- function(s, d) {(sum(s) + (sum(d) %/% 12)) %% 20}
 deb_d_sum <- function(d) {sum(d) %% 12}
 
-# Take sum of pounds, schillings, and pennies
+# Take sum of pounds, shillings, and pennies
 # and refactor to correct limit
-deb_refactor <- function(gr, sc, d) {
+deb_refactor <- function(l, s, d) {
   c(
-    gr = deb_gr(gr, sc, d),
-    sc = deb_sc(sc, d),
-    d = deb_d(d))
+    l = deb_livre(l, s, d),
+    s = deb_solidi(s, d),
+    d = deb_denari(d))
 }
 
 # Same as above but create a tibble
-deb_refactor_tb <- function(gr, sc, d) {
+deb_refactor_tb <- function(l, s, d) {
   tibble(
-    gr = deb_gr(gr, sc, d),
-    sc = deb_sc(sc, d),
-    d = deb_d(d))
+    l = deb_livre(l, s, d),
+    s = deb_solidi(s, d),
+    d = deb_denari(d))
 }
 
 # Refactor with only denari
 # Can take postive or negative value
-# If negative, returns negative gr, sc, and d in case one is 0
+# If negative, returns negative l, s, and d in case one is 0
 deb_d_lsd <- function(d) {
   if (d < 0) {
     d <- -d
     tibble(
-      gr = -((d %/% 12) %/% 20),
-      sc = -((d %/% 12) %% 20),
+      l = -((d %/% 12) %/% 20),
+      s = -((d %/% 12) %% 20),
       d = -(d %% 12)) 
   } else {
   tibble(
-    gr = (d %/% 12) %/% 20,
-    sc = (d %/% 12) %% 20,
+    l = (d %/% 12) %/% 20,
+    s = (d %/% 12) %% 20,
     d = d %% 12)
   }
 }
 
+
 # Take lsd and return denari
-deb_lsd_d <- function(gr, sc, d) {
-  gr * 240 + sc * 12 + d
+deb_lsd_d <- function(l, s, d) {
+  l * 240 + s * 12 + d
 }
 
 # Exchange rate by shillings
 # This is set up to go from sterling to vlaams
-deb_exchange_s <- function(gr, sc, d, rate = 31) {
-  denari <- deb_lsd_d(gr, sc, d) * rate/20
+deb_exchange_s <- function(l, s, d, rate = 31) {
+  denari <- deb_lsd_d(l, s, d) * rate/20
   deb_d_lsd(denari)
 }
 
@@ -71,33 +72,33 @@ deb_exchange_ducats <- function(ducats, denari = 0, rate = 96) {
 ## Calculate interest
 # Works by mutating lsd to denari,
 # calculating interest, then back to lsd
-deb_interest <- function(gr, sc, d, interest = 0.0625, years = 1) {
-  per_year <- interest * deb_lsd_d(gr, sc, d)
+deb_interest <- function(l, s, d, interest = 0.0625, years = 1) {
+  per_year <- interest * deb_lsd_d(l, s, d)
   denari_interest <- years * per_year
   deb_d_lsd(denari_interest)
 }
 
-## Functions for negative sc and d after subtraction ##
+## Functions for negative s and d after subtraction ##
 
-deb_neg_scd <- function(gr, sc, d) {c(gr - 1, sc + 19, d + 12)} # negative sc and d
-deb_neg_sc <- function(gr, sc, d) {c(gr - 1, sc + 20, d)} # negative sc
-deb_neg_d <- function(gr, sc, d) {c(gr, sc - 1, d + 12)} # negative d with positive sc
+deb_neg_sd <- function(l, s, d) {c(l - 1, s + 19, d + 12)} # negative s and d
+deb_neg_s <- function(l, s, d) {c(l - 1, s + 20, d)} # negative s
+deb_neg_d <- function(l, s, d) {c(l, s - 1, d + 12)} # negative d with positive s
 
-deb_neg_gr <- function(gr, sc, d) {c(gr + 1, -(sc) + 19, -(d) + 12)} # gr is negative and sc, d are positive
-deb_neg_grsc <- function(gr, sc, d) {c(gr, -(sc) - 1, -(d) + 12)} # gr is negative or  and sc is negative
-  # d has to be more than 0 if gr is 0
-deb_neg_grd <- function(gr, sc, d) {c(gr + 1, -(sc) + 20, -(d))} # gr is negative and d is negative
+deb_neg_l <- function(l, s, d) {c(l + 1, -(s) + 19, -(d) + 12)} # l is negative and s, d are positive
+deb_neg_ls <- function(l, s, d) {c(l, -(s) - 1, -(d) + 12)} # l is negative or  and s is negative
+  # d has to be more than 0 if l is 0
+deb_neg_ld <- function(l, s, d) {c(l + 1, -(s) + 20, -(d))} # l is negative and d is negative
 
-# Summarise a data frame with sum of gr, sc, and d
+# Summarise a data frame with sum of l, s, and d
 # groups by from and to in order to get all transaction types
 # sums the pounds, shillings, and pence while refactoring
 deb_sum_df <- function(df) {
   df %>% 
     group_by(from, to) %>% 
     summarise(
-      gr = deb_gr_sum(gr, sc, d),
-      sc = deb_sc_sum(sc, d),
-      d = deb_d_sum(d))
+      l = deb_l_sum(livre, solidi, denari),
+      s = deb_s_sum(solidi, denari),
+      d = deb_d_sum(denari))
 }
 
 ## Single account ##
@@ -108,18 +109,18 @@ deb_sum_df <- function(df) {
 deb_account <- function(df, id) {
   credit <- filter(df, from == id) %>% summarise(
     relation = "credit",
-    gr = deb_gr_sum(gr, sc, d),
-    sc = deb_sc_sum(sc, d),
-    d = deb_d_sum(d))
+    l = deb_l_sum(livre, solidi, denari),
+    s = deb_s_sum(solidi, denari),
+    d = deb_d_sum(denari))
   
   debit <- filter(df, to == id) %>% summarise(
     relation = "debit",
-    gr = deb_gr_sum(gr, sc, d),
-    sc = deb_sc_sum(sc, d),
-    d = deb_d_sum(d))
+    l = deb_l_sum(livre, solidi, denari),
+    s = deb_s_sum(solidi, denari),
+    d = deb_d_sum(denari))
   
-  credit_d <- deb_lsd_d(credit$gr, credit$sc, credit$d)
-  debit_d <- deb_lsd_d(debit$gr, debit$sc, debit$d)
+  credit_d <- deb_lsd_d(credit$l, credit$s, credit$d)
+  debit_d <- deb_lsd_d(debit$l, debit$s, debit$d)
   
   denari <- (credit_d - debit_d)
   
@@ -140,32 +141,32 @@ deb_account_d <- function(df, id) {
 
 ## Create current data frame ##
 
-# Take a data frame with gr, sc, and d columns and
+# Take a data frame with l, s, and d columns and
 # return a data frame with summed credit subtracted from summed debit
-# Resulting data frame has gr, sc, and d columns for debit, credit, and current
+# Resulting data frame has l, s, and d columns for debit, credit, and current
 deb_current <- function(df) {
   credit <- df %>% group_by(from) %>% summarise(
-    gr_c = deb_gr_sum(gr, sc, d),
-    sc_c = deb_sc_sum(sc, d),
-    d_c = deb_d_sum(d)) %>% 
-    mutate(denari_c = deb_lsd_d(gr_c, sc_c, d_c))
+    l_c = deb_l_sum(livre, solidi, denari),
+    s_c = deb_s_sum(solidi, denari),
+    d_c = deb_d_sum(denari)) %>% 
+    mutate(denari_c = deb_lsd_d(l_c, s_c, d_c))
   
   debit <- df %>% group_by(to) %>% summarise(
-    gr_d = deb_gr_sum(gr, sc, d),
-    sc_d = deb_sc_sum(sc, d),
-    d_d = deb_d_sum(d)) %>% 
-    mutate(denari_d = deb_lsd_d(gr_d, sc_d, d_d))
+    l_d = deb_l_sum(livre, solidi, denari),
+    s_d = deb_s_sum(solidi, denari),
+    d_d = deb_d_sum(denari)) %>% 
+    mutate(denari_d = deb_lsd_d(l_d, s_d, d_d))
   
   accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
-    replace_na(list(gr_c = 0, sc_c = 0, d_c = 0, gr_d = 0, sc_d = 0, d_d = 0,
+    replace_na(list(l_c = 0, s_c = 0, d_c = 0, l_d = 0, s_d = 0, d_d = 0,
                     denari_c = 0, denari_d = 0)) %>% 
     rename(id = from)
   
   accounts_sum %>% mutate(denari_current = denari_c - denari_d) %>% 
     mutate(denari_pos = if_else(denari_current < 0, -denari_current, denari_current)) %>% 
     mutate(relation = if_else(denari_current < 0, "debit", "credit")) %>% 
-    mutate(gr = (denari_pos %/% 12) %/% 20,
-           sc = (denari_pos %/% 12) %% 20,
+    mutate(l = (denari_pos %/% 12) %/% 20,
+           s = (denari_pos %/% 12) %% 20,
            d = denari_pos %% 12) %>% 
     select(-starts_with("denari"))
 }
@@ -173,10 +174,10 @@ deb_current <- function(df) {
 ## Create tibble of open accounts ##
 
 # Uses deb_current() function to get current amount
-# Selects only current gr, sc, and d and filters out accounts that are even
+# Selects only current l, s, and d and filters out accounts that are even
 deb_open <- function(df) {
   df %>% deb_current() %>% 
   select(id, relation:d) %>% 
-    filter(gr + sc + d != 0) %>% 
+    filter(l + s + d != 0) %>% 
     arrange(id)
 }
