@@ -23,14 +23,6 @@ deb_refactor <- function(l, s, d) {
     d = deb_denari(d))
 }
 
-# Same as above but create a tibble
-deb_refactor_tb <- function(l, s, d) {
-  tibble(
-    l = deb_livre(l, s, d),
-    s = deb_solidi(s, d),
-    d = deb_denari(d))
-}
-
 # Refactor with only denari
 # Can take postive or negative value
 # If negative, returns negative l, s, and d in case one is 0
@@ -48,7 +40,6 @@ deb_d_lsd <- function(d) {
     d = d %% 12)
   }
 }
-
 
 # Take lsd and return denari
 deb_lsd_d <- function(l, s, d) {
@@ -78,17 +69,6 @@ deb_interest <- function(l, s, d, interest = 0.0625, years = 1) {
   deb_d_lsd(denari_interest)
 }
 
-## Functions for negative s and d after subtraction ##
-
-deb_neg_sd <- function(l, s, d) {c(l - 1, s + 19, d + 12)} # negative s and d
-deb_neg_s <- function(l, s, d) {c(l - 1, s + 20, d)} # negative s
-deb_neg_d <- function(l, s, d) {c(l, s - 1, d + 12)} # negative d with positive s
-
-deb_neg_l <- function(l, s, d) {c(l + 1, -(s) + 19, -(d) + 12)} # l is negative and s, d are positive
-deb_neg_ls <- function(l, s, d) {c(l, -(s) - 1, -(d) + 12)} # l is negative or  and s is negative
-  # d has to be more than 0 if l is 0
-deb_neg_ld <- function(l, s, d) {c(l + 1, -(s) + 20, -(d))} # l is negative and d is negative
-
 # Summarise a data frame with sum of l, s, and d
 # groups by from and to in order to get all transaction types
 # sums the pounds, shillings, and pence while refactoring
@@ -96,9 +76,9 @@ deb_sum_df <- function(df) {
   df %>% 
     group_by(from, to) %>% 
     summarise(
-      l = deb_l_sum(livre, solidi, denari),
-      s = deb_s_sum(solidi, denari),
-      d = deb_d_sum(denari))
+      l = deb_l_sum(l, s, d),
+      s = deb_s_sum(s, d),
+      d = deb_d_sum(d))
 }
 
 ## Single account ##
@@ -109,15 +89,15 @@ deb_sum_df <- function(df) {
 deb_account <- function(df, id) {
   credit <- filter(df, from == id) %>% summarise(
     relation = "credit",
-    l = deb_l_sum(livre, solidi, denari),
-    s = deb_s_sum(solidi, denari),
-    d = deb_d_sum(denari))
+    l = deb_l_sum(l, s, d),
+    s = deb_s_sum(s, d),
+    d = deb_d_sum(d))
   
   debit <- filter(df, to == id) %>% summarise(
     relation = "debit",
-    l = deb_l_sum(livre, solidi, denari),
-    s = deb_s_sum(solidi, denari),
-    d = deb_d_sum(denari))
+    l = deb_l_sum(l, s, d),
+    s = deb_s_sum(s, d),
+    d = deb_d_sum(d))
   
   credit_d <- deb_lsd_d(credit$l, credit$s, credit$d)
   debit_d <- deb_lsd_d(debit$l, debit$s, debit$d)
@@ -129,16 +109,6 @@ deb_account <- function(df, id) {
   bind_rows(credit, debit, current)
 }
 
-# Calculate total credit of an account
-deb_account_c <- function(df, id) {
-  filter(df, from == id) %>% deb_sum()
-}
-
-# Calculate total debt of an account
-deb_account_d <- function(df, id) {
-  filter(df, to == id) %>% deb_sum()
-}
-
 ## Create current data frame ##
 
 # Take a data frame with l, s, and d columns and
@@ -146,15 +116,15 @@ deb_account_d <- function(df, id) {
 # Resulting data frame has l, s, and d columns for debit, credit, and current
 deb_current <- function(df) {
   credit <- df %>% group_by(from) %>% summarise(
-    l_c = deb_l_sum(livre, solidi, denari),
-    s_c = deb_s_sum(solidi, denari),
+    l_c = deb_l_sum(l, s, d),
+    s_c = deb_s_sum(s, d),
     d_c = deb_d_sum(denari)) %>% 
     mutate(denari_c = deb_lsd_d(l_c, s_c, d_c))
   
   debit <- df %>% group_by(to) %>% summarise(
-    l_d = deb_l_sum(livre, solidi, denari),
-    s_d = deb_s_sum(solidi, denari),
-    d_d = deb_d_sum(denari)) %>% 
+    l_d = deb_l_sum(l, s, d),
+    s_d = deb_s_sum(s, d),
+    d_d = deb_d_sum(d)) %>% 
     mutate(denari_d = deb_lsd_d(l_d, s_d, d_d))
   
   accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
@@ -181,3 +151,34 @@ deb_open <- function(df) {
     filter(l + s + d != 0) %>% 
     arrange(id)
 }
+
+
+### Extra Functions ###
+
+# Refactor to tibble
+deb_refactor_tb <- function(l, s, d) {
+  tibble(
+    l = deb_livre(l, s, d),
+    s = deb_solidi(s, d),
+    d = deb_denari(d))
+}
+
+# Calculate total credit of an account
+deb_account_c <- function(df, id) {
+  filter(df, from == id) %>% deb_sum()
+}
+
+# Calculate total debt of an account
+deb_account_d <- function(df, id) {
+  filter(df, to == id) %>% deb_sum()
+}
+
+## Functions for negative s and d after subtraction ##
+deb_neg_sd <- function(l, s, d) {c(l - 1, s + 19, d + 12)} # negative s and d
+deb_neg_s <- function(l, s, d) {c(l - 1, s + 20, d)} # negative s
+deb_neg_d <- function(l, s, d) {c(l, s - 1, d + 12)} # negative d with positive s
+
+deb_neg_l <- function(l, s, d) {c(l + 1, -(s) + 19, -(d) + 12)} # l is negative and s, d are positive
+deb_neg_ls <- function(l, s, d) {c(l, -(s) - 1, -(d) + 12)} # l is negative or  and s is negative
+# d has to be more than 0 if l is 0
+deb_neg_ld <- function(l, s, d) {c(l + 1, -(s) + 20, -(d))} # l is negative and d is negative

@@ -4,15 +4,18 @@ library(tidyverse)
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d")))
-accounts <- read_csv("data/accounts.csv")
+  date = col_date(format = "%Y%m%d"))) %>% 
+  select(from:denari, tr_type) %>% 
+  rename(l = livre, s = solidi, d = denari)
+accounts <- read_csv("data/accounts.csv") %>% 
+  select(id, account:location)
 
 # Separate data frames for DFL12 and DFL12bis
 transactions12 <- filter(transactions, date <= as.Date("1583-12-26", "%Y-%m-%d"))
 transactions12b <- filter(transactions, date > as.Date("1583-12-26", "%Y-%m-%d"))
 
 # Sum for each connection
-transactions_sum <- transactions %>% 
+transactions <- transactions %>% 
   group_by(from, to) %>% 
   summarise(l = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
             s = (sum(solidi) + (sum(denari) %/% 12)) %% 20,

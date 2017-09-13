@@ -1,16 +1,14 @@
 library(tidyverse)
 library(igraph)
 library(ggraph)
+library(tidygraph)
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d")))
 accounts <- read_csv("data/accounts.csv")
 
-transactions <- group_by(transactions, from, to) %>% 
-  summarise(count = n()) %>%
-  arrange(desc(count)) %>% 
-  ungroup()
+transactions <- deb_sum_df(transactions)
 
 accounts <- select(accounts, id, label = account)
 
