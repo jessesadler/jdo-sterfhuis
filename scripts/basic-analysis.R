@@ -17,9 +17,9 @@ transactions12b <- filter(transactions, date > as.Date("1583-12-26", "%Y-%m-%d")
 # Sum for each connection
 transactions <- transactions %>% 
   group_by(from, to) %>% 
-  summarise(l = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
-            s = (sum(solidi) + (sum(denari) %/% 12)) %% 20,
-            d = sum(denari) %% 12)
+  summarise(l = sum(l) + ((sum(s) + (sum(d) %/% 12)) %/% 20),
+            s = (sum(s) + (sum(d) %/% 12)) %% 20,
+            d = sum(d) %% 12)
 
 
 transactions_sum <- deb_sum(transactions)

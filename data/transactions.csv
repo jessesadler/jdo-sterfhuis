@@ -1,8 +1,8 @@
 dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari,lsd,tr_type,notes
 1,1,dfl12_001,dfl12_003,Benedicto Vermer and brothers_1,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
 2,2,dfl12_001,dfl12_004,Benedicto Vermer and brothers_2,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
-3,3,dfl12_001,dfl12_005,Benedicto Vermer,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
-4,4,dfl12_001,dfl12_006,Benedicto Vermer and brothers_3,debtor,Balance on 8 November,15821108,17,17,6,17.17.6,,
+3,3,dfl12_001,dfl12_005,Benedicto Vermer_3,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
+4,4,dfl12_001,dfl12_006,Benedicto Vermer and brothers_4,debtor,Balance on 8 November,15821108,17,17,6,17.17.6,,
 5,5,dfl12_001,dfl12_007,Louis Bragadin from Venice,debtor,Balance on 8 November,15821108,10,4,0,10.4.0,,
 6,6,dfl12_001,dfl12_008,Peeter Vermer Nicolaess,debtor,Balance on 8 November,15821108,0,15,2,0.15.2,,
 7,7,dfl12_001,dfl12_009,Lodewyck Helman,debtor,Balance on 8 November,15821108,16,4,10,16.4.10,,
@@ -782,9 +782,9 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 131,233,dfl12_133,dfl12_002,Gaspar Rouelasca_1,creditor,Cassa,15831205,278,0,2,278.0.2,Wissel,
 131,233,dfl12_133,dfl12_002,Gaspar Rouelasca_1,creditor,Cassa,15840907,78,2,8,78.2.8,Wissel,
 133,49,dfl12_135,dfl12_002,Guilliamme Coppin and Ferry Dornille,creditor,Cassa,15840114,234,7,6,234.7.6,Wissel,
-134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830514,15,16,8,15.16.8,Wissel,
-134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830729,32,8,4,32.8.4,Wissel,
-134,NA,dfl12_136,dfl12_002,Absolon Leerse_1,creditor,Cassa,15830906,16,1,8,16.1.8,Wissel,
+134,NA,dfl12_136,dfl12_002,Absalon Leerse_1,creditor,Cassa,15830514,15,16,8,15.16.8,Wissel,
+134,NA,dfl12_136,dfl12_002,Absalon Leerse_1,creditor,Cassa,15830729,32,8,4,32.8.4,Wissel,
+134,NA,dfl12_136,dfl12_002,Absalon Leerse_1,creditor,Cassa,15830906,16,1,8,16.1.8,Wissel,
 135,NA,dfl12_137,dfl12_300,Jan Angelo Vergano_1,creditor,Christiaen van Wiele_1,15830401,287,5,10,287.5.10,Wissel,Book transfer to Christiaen van Wiele.
 135,NA,dfl12_137,dfl12_002,Jan Angelo Vergano_1,creditor,Cassa,15830919,158,2,6,158.2.6,Wissel,
 136,NA,dfl12_138,dfl12_002,Thomas Eton,creditor,Cassa,15831110,163,6,8,163.6.8,Wissel,
@@ -866,11 +866,11 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 174,NA,dfl12_177,dfl12_002,Carel and Balthasar van Hoyken and Jan Jupin,creditor,Cassa,15830430,126,14,4,126.14.4,Wissel,
 175,NA,dfl12_178,dfl12_002,Adriaen Walschaert,creditor,Cassa,15830607,162,1,8,162.1.8,Wissel,
 177,NA,dfl12_180,dfl12_002,Simon and Steven Nunez,creditor,Cassa,15831128,156,13,4,156.13.4,Wissel,
-178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absolon Leerse_1,15830512,15,16,8,15.16.8,Wissel,
+178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absalon Leerse_1,15830512,15,16,8,15.16.8,Wissel,
 178,93,dfl12_181,dfl12_171,Voyagie van Venice nieuwe rekening,creditor,Gaspar Robano,15830513,242,10,0,242.10.0,Wissel,
 178,93,dfl12_181,dfl12_183,Voyagie van Venice nieuwe rekening,creditor,Henrick van Lemens_1,15830513,323,15,0,323.15.0,Wissel,
 178,93,dfl12_181,dfl12_186,Voyagie van Venice nieuwe rekening,creditor,Antonio Bonidazio,15830604,243,2,6,243.2.6,Wissel,
-178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absolon Leerse_1,15830614,32,8,4,32.8.4,Wissel,
+178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absalon Leerse_1,15830614,32,8,4,32.8.4,Wissel,
 178,93,dfl12_181,dfl12_164,Voyagie van Venice nieuwe rekening,creditor,Andrea Barretta_1,15830614,546,17,1,546.17.1,Wissel,
 178,93,dfl12_331,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Jan de Backere and Sevaes Wouters,15830726,1,2,6,1.2.6,Accounting,To close the account
 178,93,dfl12_181,dfl12_331,Voyagie van Venice nieuwe rekening,creditor,Jan de Backere and Sevaes Wouters,15830726,222,16,0,222.16.0,Wissel,
@@ -878,7 +878,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 178,93,dfl12_356,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Lodewyck Blommaert_2,15830730,31,5,0,31.5.0,Wissel,
 178,93,dfl12_181,dfl12_112,Voyagie van Venice nieuwe rekening,creditor,Voyagie van London,15830730,810,16,6,810.16.6,Wissel,
 178,93,dfl12_181,dfl12_201,Voyagie van Venice nieuwe rekening,creditor,Fernando Ximenez and the heirs of Ruy Nunez,15830807,155,15,11,155.15.11,Wissel,
-178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absolon Leerse_1,15830807,16,1,8,16.1.8,Wissel,
+178,93,dfl12_181,dfl12_136,Voyagie van Venice nieuwe rekening,creditor,Absalon Leerse_1,15830807,16,1,8,16.1.8,Wissel,
 178,93,dfl12_181,dfl12_355,Voyagie van Venice nieuwe rekening,creditor,Anna Sirens of Dort,15830807,5,0,6,5.0.6,Wissel,
 178,93,dfl12_047,dfl12_181,Voyagie van Venice nieuwe rekening,debtor,Carseyen in company of Jan de Wale,15830809,256,2,0,256.2.0,Profits,
 178,93,dfl12_181,dfl12_133,Voyagie van Venice nieuwe rekening,creditor,Gaspar Rouelasca_1,15830826,172,3,10,172.3.10,Wissel,
@@ -1003,7 +1003,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 211,90,dfl12_214,dfl12_073,Camelotten in company with Jan de Wale,debtor,Jan de Wale_1,15940905,8,13,5,8.13.5,,
 212,91,dfl12_002,dfl12_215,Camelotten overhoop nieuw rekeninge,debtor,Cassa,15840428,4,6,4,4.6.4,,
 212,91,dfl12_215,dfl12_448,Camelotten overhoop nieuw rekeninge,creditor,Thomas Hese,15840429,193,6,10,193.6.10,Sale,
-212,91,dfl12_215,dfl12_453,Camelotten overhoop nieuw rekeninge,creditor,Blank_woolens,15840516,204,8,0,204.8.0,,
+212,91,dfl12_215,dfl12_453,Camelotten overhoop nieuw rekeninge,creditor,Grossgrains,15840516,204,8,0,204.8.0,,
 212,91,dfl12_002,dfl12_215,Camelotten overhoop nieuw rekeninge,debtor,Cassa,15840606,1,14,0,1.14.0,,
 212,91,dfl12_454,dfl12_215,Camelotten overhoop nieuw rekeninge,debtor,Camerycx doek,15840730,35,15,0,35.15.0,,
 213,NA,dfl12_216,dfl12_002,Jacques Gillis,creditor,Cassa,15831015,316,3,7,316.3.7,Wissel,
@@ -1022,10 +1022,10 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 222,173,dfl12_001,dfl12_225,Philips Hockaert,debtor,Balance on 8 November,15821108,69,6,8,69.6.8,,
 222,173,dfl12_225,dfl12_002,Philips Hockaert,creditor,Cassa,15940913,4,6,8,4.6.8,,
 222,173,dfl12_002,dfl12_225,Philips Hockaert,debtor,Cassa,15940914,0,11,6.5,0.11.6 1/2,,
-223,174,dfl12_001,dfl12_226,Erffgoeden,debtor,Balance on 8 November,15821108,5186,3,4.5,5186.3.4 1/2,,This is the estimation of the value of the immovable property of Jan de Oude. This lists the different properties but does not give the values.
-223,174,dfl12_226,dfl12_076,Erffgoeden,creditor,Robert van Eeckeren_1,15830913,100,0,0,100.0.0,,Robert had received a year of rente from Peeter Rutgeert for the land in Zevenbergen
-223,174,dfl12_337,dfl12_226,Erffgoeden,debtor,Jan Struyck,15831116,74,6,8,74.6.8,,For 2 years renten from Hans Struyck from the hoeve in Wilryck
-223,174,dfl12_002,dfl12_226,Erffgoeden,debtor,Cassa,15940914,400,0,0,400.0.0,,
+223,174,dfl12_001,dfl12_226,Erffgoeden,debtor,Balance on 8 November,15821108,5186,3,4.5,5186.3.4 1/2,Inheritance,This is the estimation of the value of the immovable property of Jan de Oude. This lists the different properties but does not give the values.
+223,174,dfl12_226,dfl12_076,Erffgoeden,creditor,Robert van Eeckeren_1,15830913,100,0,0,100.0.0,Inheritance,Robert had received a year of rente from Peeter Rutgeert for the land in Zevenbergen
+223,174,dfl12_337,dfl12_226,Erffgoeden,debtor,Jan Struyck,15831116,74,6,8,74.6.8,Inheritance,For 2 years renten from Hans Struyck from the hoeve in Wilryck
+223,174,dfl12_002,dfl12_226,Erffgoeden,debtor,Cassa,15940914,400,0,0,400.0.0,Inheritance,
 224,175,dfl12_001,dfl12_227,Rente van 44 gulden erffelyck op de huysen van Jan de Clerck,debtor,Balance on 8 November,15821108,117,6,8,117.6.8,,
 225,176,dfl12_001,dfl12_228,Rente van 32 gulden erffen op't huys t'Gulden Cruys in the manstraete,debtor,Balance on 8 November,15821108,85,6,8,85.6.8,,
 225,176,dfl12_228,dfl12_002,Rente van 32 gulden erffen op't huys t'Gulden Cruys in the manstraete,creditor,Cassa,15940912,22,19,10,22.19.10,,
@@ -1105,7 +1105,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 248,197,dfl12_488,dfl12_251,Anna della Faille,debtor,Capital of diverse rente,15941215,115,10,0,115.10.0,,
 248,197,dfl12_251,dfl12_490,Anna della Faille,creditor,Oncosten van d'erffgenaemen of Jan de Oude_2,15941215,3,6,8,3.6.8,,
 248,197,dfl12_295,dfl12_251,Anna della Faille,debtor,Capitael of Marten della Faille,15941215,3,6,8,3.6.8,,
-248,197,dfl12_226,dfl12_251,Anna della Faille,debtor,Erffgoeden,15941215,50,0,0,50.0.0,,
+248,197,dfl12_226,dfl12_251,Anna della Faille,debtor,Erffgoeden,15941215,50,0,0,50.0.0,Inheritance,
 249,244,dfl12_252,dfl12_001,Hester della Faille,creditor,Balance on 8 November,15821108,5327,6,8,5327.6.8,,
 249,244,dfl12_002,dfl12_252,Hester della Faille,debtor,Cassa,15821213,6,0,0,6.0.0,,
 249,244,dfl12_116,dfl12_252,Hester della Faille,debtor,Carseyen overhoop,15830106,11,12,5,11.12.5,,
@@ -1265,7 +1265,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 285,217,dfl12_288,dfl12_263,Oncosten van English wool,creditor,Daniel Hoochstetter,15940920,19,1,7,19.1.7,,
 285,217,dfl12_288,dfl12_264,Oncosten van English wool,creditor,Passchier van eele van Brugge,15940920,4,6,5,4.6.5,,
 286,17,dfl12_289,dfl12_001,Creditors of this Book,creditor,Balance on 8 November,15821108,41112,10,5,41112.10.5,Inheritance,This is the paternal inheritance of the heirs of Jan de Oude
-286,17,dfl12_226,dfl12_289,Creditors of this Book,debtor,Erffgoeden,15831226,1240,10,0.5,1240.10.0 1/2,,
+286,17,dfl12_226,dfl12_289,Creditors of this Book,debtor,Erffgoeden,15831226,1240,10,0.5,1240.10.0 1/2,Inheritance,
 286,17,dfl12_021,dfl12_289,Creditors of this Book,debtor,Jan de Witthem Heere van Beersele,15831226,130,10,0,130.10.0,Political,
 286,17,dfl12_018,dfl12_289,Creditors of this Book,debtor,City of Antwerp,15831226,317,11,2,317.11.2,Political,
 286,17,dfl12_289,dfl12_312,Creditors of this Book,creditor,Jan de Oude_2,15840330,757,18,4.5,757.18.4 1/2,,
@@ -1338,7 +1338,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 292,220,dfl12_485,dfl12_295,Capitael of Marten della Faille,debtor,Huis de Grooten Beer op de Groote Merct,15941215,107,9,5.5,107.9.5 1/2,,
 292,220,dfl12_488,dfl12_295,Capitael of Marten della Faille,debtor,Capital of diverse rente,15941215,115,10,0,115.10.0,,
 292,220,dfl12_295,dfl12_204,Capitael of Marten della Faille,creditor,Jan van Borne_1,15941215,40,10,3.66,40.10.3 2/3,,
-292,220,dfl12_226,dfl12_295,Capitael of Marten della Faille,debtor,Erffgoeden,15941215,50,0,0,50.0.0,,
+292,220,dfl12_226,dfl12_295,Capitael of Marten della Faille,debtor,Erffgoeden,15941215,50,0,0,50.0.0,Inheritance,
 292,220,dfl12_083,dfl12_295,Capitael of Marten della Faille,debtor,Catharina de Hane,15941216,17,10,5.5,17.10.5 1/2,,
 292,220,dfl12_002,dfl12_295,Capitael of Marten della Faille,debtor,Cassa,15941216,524,12,10.166,524.12.10 1/6,,
 293,221,dfl12_296,dfl12_001,Oncosten van't process tegens Daniel de Hane,creditor,Balance on 8 November,15821108,328,10,10,328.10.10,Lawsuit,
@@ -1578,7 +1578,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 337,256,dfl12_488,dfl12_340,Jan della Faille_paternal,debtor,Capital of diverse rente,15941004,115,10,0,115.10.0,,
 337,256,dfl12_344,dfl12_340,Jan della Faille_paternal,debtor,Jacques della Faille_paternal,15941004,12,10,3,12.10.3,,
 337,256,dfl12_340,dfl12_289,Jan della Faille_paternal,creditor,Creditors of this Book,15941004,41,14,8.5,41.14.8 1/2,,
-337,256,dfl12_226,dfl12_340,Jan della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,,
+337,256,dfl12_226,dfl12_340,Jan della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,Inheritance,
 337,256,dfl12_080,dfl12_340,Jan della Faille_paternal,debtor,Willem van den Mey_2,15941004,6,8,4,6.8.4,,
 337,256,dfl12_028,dfl12_340,Jan della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,6.9.9 3/4,Bad_debt,
 337,256,dfl12_340,dfl12_477,Jan della Faille_paternal,creditor,Voyagie van London nieuwe rekening,15941004,96,2,4,96.2.4,,
@@ -1609,7 +1609,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 340,259,dfl12_488,dfl12_343,Carlo della Faille_paternal,debtor,Capital of diverse rente,15941004,115,10,0,115.10.0,,
 340,259,dfl12_344,dfl12_343,Carlo della Faille_paternal,debtor,Jacques della Faille_paternal,15941004,12,10,3,12.10.3,,
 340,259,dfl12_343,dfl12_289,Carlo della Faille_paternal,creditor,Creditors of this Book,15941004,41,14,8.5,41.14.8 1/2,,
-340,259,dfl12_226,dfl12_343,Carlo della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,,
+340,259,dfl12_226,dfl12_343,Carlo della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,Inheritance,
 340,259,dfl12_080,dfl12_343,Carlo della Faille_paternal,debtor,Willem van den Mey_2,15941004,6,8,4,6.8.4,,
 340,259,dfl12_028,dfl12_343,Carlo della Faille_paternal,debtor,Jan de Vooght_1,15941004,6,9,9.75,6.9.9 3/4,Bad_debt,
 340,259,dfl12_343,dfl12_477,Carlo della Faille_paternal,creditor,Voyagie van London nieuwe rekening,15941004,96,2,4,96.2.4,,
@@ -1634,7 +1634,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 341,260,dfl12_344,dfl12_347,Jacques della Faille_paternal,creditor,Hester della Faille_paternal,15941004,26,1,9,26.1.9,,
 341,260,dfl12_289,dfl12_344,Jacques della Faille_paternal,debtor,Creditors of this Book,15941004,36,19,10,36.19.10,,
 341,260,dfl12_344,dfl12_289,Jacques della Faille_paternal,creditor,Creditors of this Book,15941004,41,14,8.5,41.14.8 1/2,,
-341,260,dfl12_226,dfl12_344,Jacques della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,,
+341,260,dfl12_226,dfl12_344,Jacques della Faille_paternal,debtor,Erffgoeden,15941004,50,0,0,50.0.0,Inheritance,
 341,260,dfl12_080,dfl12_344,Jacques della Faille_paternal,debtor,Willem van den Mey_2,15941004,9,5,9,9.5.9,,
 341,260,dfl12_028,dfl12_344,Jacques della Faille_paternal,debtor,Jan de Vooght_1,15941004,9,7,10.75,9.7.10 3/4,Bad_debt,
 342,261,dfl12_349,dfl12_345,Steven della Faille_paternal,debtor,Sterfhuis of Jan de Oude,15831226,105,17,5,105.17.5,Inheritance,
@@ -1658,7 +1658,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 342,261,dfl12_477,dfl12_345,Steven della Faille_paternal,debtor,Voyagie van London nieuwe rekening,15941004,88,17,9,88.17.9,,
 342,261,dfl12_485,dfl12_345,Steven della Faille_paternal,debtor,Huis de Grooten Beer op de Groote Merct,15941215,107,9,5.5,107.9.5 1/2,,
 342,261,dfl12_488,dfl12_345,Steven della Faille_paternal,debtor,Capital of diverse rente,15941215,115,10,0,115.10.0,,
-342,261,dfl12_226,dfl12_345,Steven della Faille_paternal,debtor,Erffgoeden,15941215,50,0,0,50.0.0,,
+342,261,dfl12_226,dfl12_345,Steven della Faille_paternal,debtor,Erffgoeden,15941215,50,0,0,50.0.0,Inheritance,
 343,262,dfl12_349,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Sterfhuis of Jan de Oude,15831226,105,1,7,105.1.7,Inheritance,
 343,262,dfl12_346,dfl12_289,D'erffgenaemen of Maria della Faille_paternal,creditor,Creditors of this Book,15831226,3368,7,2.33,3368.7.2 1/3,Inheritance,
 343,262,dfl12_002,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Cassa,15840104,132,11,11,132.11.11,,For payment by cassa from Marten to be paid to Fernando Helman about the rente of 200 gulden for the house of Jan Vivien on the Langenieuwestraete.
@@ -1678,7 +1678,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 343,262,dfl12_346,dfl12_477,D'erffgenaemen of Maria della Faille_paternal,creditor,Voyagie van London nieuwe rekening,15941004,96,2,4,96.2.4,,
 343,262,dfl12_485,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Huis de Grooten Beer op de Groote Merct,15941215,107,9,5.5,107.9.5 1/2,,
 343,262,dfl12_488,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Capital of diverse rente,15941215,115,10,0,115.10.0,,
-343,262,dfl12_226,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Erffgoeden,15941215,50,0,0,50.0.0,,
+343,262,dfl12_226,dfl12_346,D'erffgenaemen of Maria della Faille_paternal,debtor,Erffgoeden,15941215,50,0,0,50.0.0,Inheritance,
 344,263,dfl12_349,dfl12_347,Hester della Faille_paternal,debtor,Sterfhuis of Jan de Oude,15831226,105,13,11,105.13.11,Inheritance,
 344,263,dfl12_226,dfl12_347,Hester della Faille_paternal,debtor,Erffgoeden,15831226,200,0,0,200.0.0,Inheritance,House in the Schuttershoffstraete
 344,263,dfl12_347,dfl12_289,Hester della Faille_paternal,creditor,Creditors of this Book,15831226,5000,0,0,5000.0.0,Inheritance,
@@ -1698,7 +1698,7 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 344,263,dfl12_289,dfl12_347,Hester della Faille_paternal,debtor,Creditors of this Book,15941004,89,12,8,89.12.8,,
 344,263,dfl12_485,dfl12_347,Hester della Faille_paternal,debtor,Huis de Grooten Beer op de Groote Merct,15941015,107,9,5.5,107.9.5 1/2,,
 344,263,dfl12_488,dfl12_347,Hester della Faille_paternal,debtor,Capital of diverse rente,15941015,115,10,0,115.10.0,,
-344,263,dfl12_226,dfl12_347,Hester della Faille_paternal,debtor,Erffgoeden,15941015,50,0,0,50.0.0,,
+344,263,dfl12_226,dfl12_347,Hester della Faille_paternal,debtor,Erffgoeden,15941015,50,0,0,50.0.0,Inheritance,
 345,264,dfl12_349,dfl12_348,Cornelia della Faille_paternal,debtor,Sterfhuis of Jan de Oude,15831226,105,0,11,105.0.11,Inheritance,
 345,264,dfl12_226,dfl12_348,Cornelia della Faille_paternal,debtor,Erffgoeden,15831226,1400,0,0,1400.0.0,Inheritance,30 bunderen of land in Zevenbergen
 345,264,dfl12_226,dfl12_348,Cornelia della Faille_paternal,debtor,Erffgoeden,15831226,400,0,0,400.0.0,Inheritance,House in the Huyvettersstraete next to the large house
@@ -1770,8 +1770,8 @@ dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,livre,solidi,denari
 375,NA,dfl12_002,dfl12_378,Robert and Maria Frumault_2,debtor,Cassa,15831003,33,6,8,33.6.8,Bequest,Paid to Marten della Faille
 376,NA,dfl12_379,dfl12_151,Sara_Lenora_Urssula van Driel,creditor,Jan de Oude_1,15821108,300,0,0,300.0.0,Bequest,
 376,NA,dfl12_002,dfl12_379,Sara_Lenora_Urssula van Driel,debtor,Cassa,15831003,300,0,0,300.0.0,Bequest,Paid to Marten della Faille
-377,NA,dfl12_380,dfl12_151,Hendrick della Faille_2,creditor,Jan de Oude_1,15821108,64,0,0,64.0.0,Bequest,
-377,NA,dfl12_002,dfl12_380,Hendrick della Faille_2,debtor,Cassa,15831003,64,0,0,64.0.0,Bequest,Paid to Marten della Faille
+377,NA,dfl12_380,dfl12_151,Hendrick della Faille_3,creditor,Jan de Oude_1,15821108,64,0,0,64.0.0,Bequest,
+377,NA,dfl12_002,dfl12_380,Hendrick della Faille_3,debtor,Cassa,15831003,64,0,0,64.0.0,Bequest,Paid to Marten della Faille
 378,249,dfl12_381,dfl12_151,Maria Segers,creditor,Jan de Oude_1,15821108,16,0,0,16.0.0,Bequest,
 379,NA,dfl12_382,dfl12_151,Jan van Borne_2,creditor,Jan de Oude_1,15821108,66,13,4,66.13.4,Bequest,
 379,NA,dfl12_325,dfl12_382,Jan van Borne_2,debtor,Jan van Borne in Verona loopende rekeninge,15830117,66,13,4,66.13.4,Bequest,
@@ -1993,7 +1993,7 @@ NA,128,dfl12_449,dfl12_002,Lodewyck Blommaert_3,creditor,Cassa,15840615,134,2,7,
 NA,129,dfl12_450,dfl12_002,Pauwels Ratan,creditor,Cassa,15841116,159,10,0,159.10.0,Wissel,Received from Sevaes Hekelaer and Jan della Faille
 NA,130,dfl12_451,dfl12_002,Louis Alvares Caldera,creditor,Cassa,15840623,312,2,3,312.2.3,Wissel,
 NA,131,dfl12_452,dfl12_002,Bembo Rodriguez de Serpa,creditor,Cassa,15840621,79,8,7,79.8.7,Wissel,Received from Simon Rodrigues
-NA,132,dfl12_453,dfl12_454,Blank_woolens,creditor,Camerycx doek,15840516,204,8,0,204.8.0,,
+NA,132,dfl12_453,dfl12_454,Grossgrains,creditor,Camerycx doek,15840516,204,8,0,204.8.0,,
 NA,134,dfl12_002,dfl12_455,Huys in the Merckgraveley,debtor,Cassa,15840523,17,7,10,17.7.10,,
 NA,135,dfl12_002,dfl12_456,Marten della Faille_sororal_2,debtor,Cassa,15840730,400,0,0,400.0.0,,
 NA,135,dfl12_002,dfl12_456,Marten della Faille_sororal_2,debtor,Cassa,15840804,136,0,0,136.0.0,,
@@ -2124,7 +2124,7 @@ NA,164,dfl12_002,dfl12_485,Huis de Grooten Beer op de Groote Merct,debtor,Cassa,
 NA,165,dfl12_002,dfl12_486,Gerard de Schepper,debtor,Cassa,15940914,58,0,0,58.0.0,,
 NA,166,dfl12_003,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer and brothers_1,15940920,0,0,1,0.0.1,Accounting,To close the account
 NA,166,dfl12_004,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer and brothers_2,15940920,0,0,1,0.0.1,Accounting,To close the account
-NA,166,dfl12_005,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer,15940920,0,0,1,0.0.1,Accounting,To close the account
+NA,166,dfl12_005,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer_3,15940920,0,0,1,0.0.1,Accounting,To close the account
 NA,166,dfl12_008,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Peeter Vermer Nicolaess,15940920,0,15,2,0.15.2,Accounting,To close the account
 NA,166,dfl12_487,dfl12_238,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Oude rebarbe in huys bevonden,15940920,0,9,0,0.9.0,Accounting,To close the account
 NA,166,dfl12_487,dfl12_244,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Joris Naus,15940920,1,6,0,1.6.0,Accounting,To close the account
@@ -2133,7 +2133,7 @@ NA,166,dfl12_011,dfl12_487,Debiteuren ende crediteuren voor rekeninge van divers
 NA,166,dfl12_487,dfl12_235,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Peeter and Antonio Donati in Venice,15940920,15,0,0,15.0.0,Accounting,To close the account
 NA,166,dfl12_487,dfl12_237,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Crediteuren of Huybrecht Houtappel,15940920,15,19,2,15.19.2,Accounting,To close the account
 NA,166,dfl12_009,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Lodewyck Helman,15940920,16,4,10,16.4.10,Accounting,To close the account
-NA,166,dfl12_006,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer and brothers_3,15940920,17,17,6,17.17.6,Accounting,To close the account
+NA,166,dfl12_006,dfl12_487,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,debtor,Benedicto Vermer and brothers_4,15940920,17,17,6,17.17.6,Accounting,To close the account
 NA,166,dfl12_487,dfl12_240,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Coopmansschappen van Beneditto Venier and brothers,15940920,18,13,10,18.13.10,Accounting,To close the account
 NA,166,dfl12_487,dfl12_236,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Lanckpeper van Loys Bragadin,15940920,18,15,5,18.15.5,Accounting,"To close the account. This transaction mistakenly has a credit of £18.18.5, but the correct amount is on the account of Lanckpeper van Loys Bragadin (nr 183)."
 NA,166,dfl12_487,dfl12_242,Debiteuren ende crediteuren voor rekeninge van diverse persoonen,creditor,Blomcoolsaet Jan van Chrisostomo de Mazi,15940920,2,13,3,2.13.3,Accounting,To close the account

@@ -118,7 +118,7 @@ deb_current <- function(df) {
   credit <- df %>% group_by(from) %>% summarise(
     l_c = deb_l_sum(l, s, d),
     s_c = deb_s_sum(s, d),
-    d_c = deb_d_sum(denari)) %>% 
+    d_c = deb_d_sum(d)) %>% 
     mutate(denari_c = deb_lsd_d(l_c, s_c, d_c))
   
   debit <- df %>% group_by(to) %>% summarise(
@@ -151,6 +151,9 @@ deb_open <- function(df) {
     filter(l + s + d != 0) %>% 
     arrange(id)
 }
+
+
+--------------------------------------------------------------------------------
 
 
 ### Extra Functions ###

@@ -5,8 +5,11 @@ library(tidygraph)
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d")))
-accounts <- read_csv("data/accounts.csv")
+  date = col_date(format = "%Y%m%d"))) %>% 
+  select(from:denari, tr_type) %>% 
+  rename(l = livre, s = solidi, d = denari)
+accounts <- read_csv("data/accounts.csv") %>% 
+  select(id, account:location)
 
 transactions <- deb_sum_df(transactions)
 
@@ -27,4 +30,6 @@ ggraph(sterfhuis, layout = "kk") +
   theme(legend.position = "none") + 
   labs(title = "Accounts of the estate of a 16th-century merchant")
 
-ggraph(sterfhuis, layout = "linear") + geom_edge_arc(aes(alpha = count)) + geom_node_point(aes(color = ac_type), alpha = 0.7)
+ggraph(sterfhuis, layout = "linear") + 
+  geom_edge_arc(aes(alpha = count)) + 
+  geom_node_point(aes(color = ac_type), alpha = 0.7)

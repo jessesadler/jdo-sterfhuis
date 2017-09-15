@@ -1,7 +1,21 @@
-## Aggregate Inheritance Accounts ##
+### Sterfhuis graph with node size by pounds received ###
 
+library(tidyverse)
 library(stringr)
+library(igraph)
+library(ggraph)
 
+# Load data
+transactions <- read_csv("data/transactions.csv", col_types = cols(
+  date = col_date(format = "%Y%m%d"))) %>% 
+  select(from:denari, tr_type) %>% 
+  rename(l = livre, s = solidi, d = denari)
+accounts <- read_csv("data/accounts.csv") %>% 
+  select(id, account:location)
+
+### Aggregate accounts ###
+
+## Inheritance accounts ##
 anna_accounts <- filter(accounts, inheritance == "Anna") %>% 
   select(id) %>% flatten() %>% as_vector()
 anna_replace <- set_names(replicate(length(anna_accounts), "dfl12_251"), anna_accounts)
@@ -53,7 +67,7 @@ transactions$from <- str_replace_all(transactions$from, steven_replace)
 transactions$from <- str_replace_all(transactions$from, hester_replace)
 transactions$from <- str_replace_all(transactions$from, cornelia_replace)
 transactions$from <- str_replace_all(transactions$from, anna_de_hane_replace)
-  
+
 transactions$to <- str_replace_all(transactions$to, anna_replace)
 transactions$to <- str_replace_all(transactions$to, jan_replace)
 transactions$to <- str_replace_all(transactions$to, marten_replace)
@@ -65,25 +79,81 @@ transactions$to <- str_replace_all(transactions$to, hester_replace)
 transactions$to <- str_replace_all(transactions$to, cornelia_replace)
 transactions$to <- str_replace_all(transactions$to, anna_de_hane_replace)
 
-
-## Explanation with one account ##
-
-# Create a vector of the accounts for the heir
-hester_accounts <- accounts %>% 
-  filter(inheritance == "Hester") %>% 
+## Estate
+estate_accounts <- filter(accounts, type == "Estate") %>% 
   select(id) %>% flatten() %>% as_vector()
+estate_replace <- set_names(replicate(length(estate_accounts), "dfl12_151"), estate_accounts)
 
-# Take vector and create named vector to use to replace account ids with one id
-# Vector is of replacement id and names are ids to be replaced
-# Two ways to do it: pick specific id to use as replacement or use first id in vector
-hester_replace <- set_names(replicate(length(hester_accounts), "dfl12_252"), hester_accounts)
-hester_replace <- set_names(replicate(length(hester_accounts), hester_accounts[1]), hester_accounts)
+transactions$from <- str_replace_all(transactions$from, estate_replace)
+transactions$to <- str_replace_all(transactions$to, estate_replace)
 
-# Create list of transactions
-hester_transactions <- transactions %>%
-  filter(to %in% hester_accounts | from %in% hester_accounts) %>% 
-  ungroup()
+## Profits and losses
+transactions$from <- str_replace_all(transactions$from, "dfl12_445", "dfl12_038")
+transactions$to <- str_replace_all(transactions$to, "dfl12_445", "dfl12_038")
 
-hester_transactions$to <- str_replace_all(hester_transactions$to, hester_replace)
-hester_transactions$from <- str_replace_all(hester_transactions$from, hester_replace)
-hester_transactions <- deb_sum_df(hester_transactions)
+## Wissels
+wissel_accounts <- filter(accounts, type == "Wissel") %>% 
+  select(id) %>% flatten() %>% as_vector()
+wissel_replace <- set_names(replicate(length(wissel_accounts), "dfl12_117"), wissel_accounts)
+
+transactions$from <- str_replace_all(transactions$from, wissel_replace)
+transactions$to <- str_replace_all(transactions$to, wissel_replace)
+
+## Branches
+
+# Verona
+transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")
+transactions$to <- str_replace_all(transactions$to, "dfl12_446", "dfl12_110")
+
+# Venice
+transactions$from <- str_replace_all(transactions$from, "dfl12_181", "dfl12_111")
+transactions$to <- str_replace_all(transactions$to, "dfl12_181", "dfl12_111")
+
+# London
+transactions$from <- str_replace_all(transactions$from, "dfl12_477", "dfl12_112")
+transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
+
+## Get dataframe of current value of accounts
+# Select only pounds debit to be used for node size
+current <- deb_current(transactions) %>% select(id, pounds = l_d)
+
+## Sum of transactions
+transactions <- deb_sum_df(transactions) %>% ungroup
+
+# Recreate accounts that are in transactions data frames
+from <- transactions %>% 
+  distinct(from) %>%
+  rename(id = from)
+
+to <- transactions %>% 
+  distinct(to) %>%
+  rename(id = to)
+
+nodes <- full_join(from, to, by = "id") # create nodes data frame
+nodes <- filter(accounts, id %in% nodes$id) # Use nodes to get subset of accounts data
+nodes <- left_join(nodes, current, by = "id") # add total pounds debit from current
+
+# Create igraph object
+# Creates vertices from inheritances_transactions data
+sterfhuis <- graph_from_data_frame(d = transactions, vertices = nodes, directed = TRUE)
+
+ggraph(sterfhuis, layout = "fr") + 
+  geom_edge_fan(aes(alpha = l)) + 
+  geom_node_point(aes(color = inheritance, size = pounds)) + 
+  scale_size_continuous(range = c(0.5, 6)) +
+  theme_graph()
+
+# Arc graph
+ggraph(sterfhuis, layout = "linear") + 
+  geom_edge_arc(aes(alpha = l)) + 
+  geom_node_point(aes(color = inheritance, size = pounds)) +
+  scale_size_continuous(range = c(0.5, 6)) +
+  theme_graph()
+
+# Circle graph
+ggraph(sterfhuis, layout = "linear", circular = TRUE) + 
+  geom_edge_arc(aes(alpha = l)) + 
+  geom_node_point(aes(color = inheritance, size = pounds)) +
+  scale_size_continuous(range = c(0.5, 6)) +
+  theme_graph()
+

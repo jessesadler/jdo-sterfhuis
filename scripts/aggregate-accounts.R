@@ -1,17 +1,38 @@
 ## Aggregate Accounts ##
 
+library(stringr)
+
 ## Estate
 estate_accounts <- filter(accounts, type == "Estate") %>% 
   select(id) %>% flatten() %>% as_vector()
-estate_replace <- set_names(replicate(length(estate_accounts), estate_accounts[1]), estate_accounts)
+estate_replace <- set_names(replicate(length(estate_accounts), "dfl12_151"), estate_accounts)
 
 transactions$from <- str_replace_all(transactions$from, estate_replace)
 transactions$to <- str_replace_all(transactions$to, estate_replace)
 
+## Profits and losses
+transactions$from <- str_replace_all(transactions$from, "dfl12_445", "dfl12_038")
+transactions$to <- str_replace_all(transactions$to, "dfl12_445", "dfl12_038")
+
+## Branches
+
+# Verona
+transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")
+transactions$to <- str_replace_all(transactions$to, "dfl12_446", "dfl12_110")
+
+# Venice
+transactions$from <- str_replace_all(transactions$from, "dfl12_181", "dfl12_111")
+transactions$to <- str_replace_all(transactions$to, "dfl12_181", "dfl12_111")
+
+# London
+transactions$from <- str_replace_all(transactions$from, "dfl12_477", "dfl12_112")
+transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
+
+
 ## Wissels
 wissel_accounts <- filter(accounts, type == "Wissel") %>% 
   select(id) %>% flatten() %>% as_vector()
-wissel_replace <- set_names(replicate(length(wissel_accounts), wissel_accounts[1]), wissel_accounts)
+wissel_replace <- set_names(replicate(length(wissel_accounts), "dfl12_117"), wissel_accounts)
 
 transactions$from <- str_replace_all(transactions$from, wissel_replace)
 transactions$to <- str_replace_all(transactions$to, wissel_replace)
@@ -19,7 +40,7 @@ transactions$to <- str_replace_all(transactions$to, wissel_replace)
 ## Erffgoed
 erffgoed_accounts <- filter(accounts, type == "Erffgoed") %>% 
   select(id) %>% flatten() %>% as_vector()
-erffgoed_replace <- set_names(replicate(length(erffgoed_accounts), "dfl12_226"), erffgoed_accounts)
+erffgoed_replace <- set_names(replicate(length(erffgoed_accounts), erffgoed_accounts[1]), erffgoed_accounts)
 
 transactions$from <- str_replace_all(transactions$from, erffgoed_replace)
 transactions$to <- str_replace_all(transactions$to, erffgoed_replace)
@@ -39,20 +60,6 @@ bequest_replace <- set_names(replicate(length(bequest_accounts), "dfl12_074"), b
 
 transactions$from <- str_replace_all(transactions$from, bequest_replace)
 transactions$to <- str_replace_all(transactions$to, bequest_replace)
-
-## Branches
-
-# Verona
-transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")
-transactions$to <- str_replace_all(transactions$to, "dfl12_446", "dfl12_110")
-
-# Venice
-transactions$from <- str_replace_all(transactions$from, "dfl12_181", "dfl12_111")
-transactions$to <- str_replace_all(transactions$to, "dfl12_181", "dfl12_111")
-
-# London
-transactions$from <- str_replace_all(transactions$from, "dfl12_477", "dfl12_112")
-transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
 
 ## Goods
 goods_accounts <- filter(accounts, type == "Goods") %>% 
@@ -81,7 +88,7 @@ transactions$to <- str_replace_all(transactions$to, companies_replace)
 ## Trade
 trade_accounts <- filter(accounts, type == "Trade") %>% 
   select(id) %>% flatten() %>% as_vector()
-factor_replace <- set_names(replicate(length(trade_accounts), trade_accounts[1]), trade_accounts)
+trade_replace <- set_names(replicate(length(trade_accounts), trade_accounts[1]), trade_accounts)
 
 transactions$from <- str_replace_all(transactions$from, trade_replace)
 transactions$to <- str_replace_all(transactions$to, trade_replace)
