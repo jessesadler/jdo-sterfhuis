@@ -12,7 +12,7 @@ deb_denari <- function(d) {d %% 12}
 # These are helper functions
 deb_l_sum <- function(l, s, d) {sum(l) + ((sum(s) + (sum(d) %/% 12)) %/% 20)}
 deb_s_sum <- function(s, d) {(sum(s) + (sum(d) %/% 12)) %% 20}
-deb_d_sum <- function(d) {sum(d) %% 12}
+deb_d_sum <- function(d) {round(sum(d) %% 12, 3)}
 
 # Take sum of pounds, shillings, and pennies
 # and refactor to correct limit
@@ -28,17 +28,22 @@ deb_refactor <- function(l, s, d) {
 # If negative, returns negative l, s, and d in case one is 0
 deb_d_lsd <- function(d) {
   if (d < 0) {
-    d <- -d
     tibble(
-      l = -((d %/% 12) %/% 20),
-      s = -((d %/% 12) %% 20),
-      d = -(d %% 12)) 
+      l = -((-d %/% 12) %/% 20),
+      s = -((-d %/% 12) %% 20),
+      d = -(-d %% 12)) 
   } else {
   tibble(
     l = (d %/% 12) %/% 20,
     s = (d %/% 12) %% 20,
     d = d %% 12)
   }
+}
+
+deb_d_lsd_print <- function(d) {
+  if_else(d < 0, 
+          paste0("-£", (-d %/% 12) %/% 20, ".", (-d %/% 12) %% 20, ".", round(-d %% 12, 3)),
+          paste0("£", (d %/% 12) %/% 20, ".", (d %/% 12) %% 20, ".", round(d %% 12, 3)))
 }
 
 # Take lsd and return denari
@@ -87,17 +92,19 @@ deb_sum_df <- function(df) {
 # Returns sum of credit and debit,
 # and current amount by subtracting debit from credit
 deb_account <- function(df, id) {
-  credit <- filter(df, from == id) %>% summarise(
-    relation = "credit",
-    l = deb_l_sum(l, s, d),
-    s = deb_s_sum(s, d),
-    d = deb_d_sum(d))
+  credit <- filter(df, from == id) %>% 
+    summarise(
+      relation = "credit",
+      l = deb_l_sum(l, s, d),
+      s = deb_s_sum(s, d),
+      d = deb_d_sum(d))
   
-  debit <- filter(df, to == id) %>% summarise(
-    relation = "debit",
-    l = deb_l_sum(l, s, d),
-    s = deb_s_sum(s, d),
-    d = deb_d_sum(d))
+  debit <- filter(df, to == id) %>% 
+    summarise(
+      relation = "debit",
+      l = deb_l_sum(l, s, d),
+      s = deb_s_sum(s, d),
+      d = deb_d_sum(d))
   
   credit_d <- deb_lsd_d(credit$l, credit$s, credit$d)
   debit_d <- deb_lsd_d(debit$l, debit$s, debit$d)
@@ -115,16 +122,18 @@ deb_account <- function(df, id) {
 # return a data frame with summed credit subtracted from summed debit
 # Resulting data frame has l, s, and d columns for debit, credit, and current
 deb_current <- function(df) {
-  credit <- df %>% group_by(from) %>% summarise(
-    l_c = deb_l_sum(l, s, d),
-    s_c = deb_s_sum(s, d),
-    d_c = deb_d_sum(d)) %>% 
+  credit <- df %>% group_by(from) %>% 
+    summarise(
+      l_c = deb_l_sum(l, s, d),
+      s_c = deb_s_sum(s, d),
+      d_c = deb_d_sum(d)) %>% 
     mutate(denari_c = deb_lsd_d(l_c, s_c, d_c))
   
-  debit <- df %>% group_by(to) %>% summarise(
-    l_d = deb_l_sum(l, s, d),
-    s_d = deb_s_sum(s, d),
-    d_d = deb_d_sum(d)) %>% 
+  debit <- df %>% group_by(to) %>% 
+    summarise(
+      l_d = deb_l_sum(l, s, d),
+      s_d = deb_s_sum(s, d),
+      d_d = deb_d_sum(d)) %>% 
     mutate(denari_d = deb_lsd_d(l_d, s_d, d_d))
   
   accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
@@ -139,6 +148,29 @@ deb_current <- function(df) {
            s = (denari_pos %/% 12) %% 20,
            d = denari_pos %% 12) %>% 
     select(-starts_with("denari"))
+}
+
+deb_current_print <- function(df) {
+  
+  # Change transactions to denari and simplify
+  df <- df %>% 
+    mutate(denari = deb_lsd_d(l, s, d))
+  
+  # Get total credit and debit for each accout by date
+  credit <- df %>% group_by(from) %>% 
+    summarise(denari_c = sum(denari))
+  debit <- df %>% group_by(to) %>% 
+    summarise(denari_d = -sum(denari))
+  
+  accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
+    replace_na(list(denari_c = 0, denari_d = 0))
+  
+  denari_sum <- accounts_sum %>% mutate(current_d = denari_c + denari_d)
+  
+  denari_sum %>% mutate(credit = deb_d_lsd_print(denari_c),
+                        debit = deb_d_lsd_print(denari_d),
+                        current = deb_d_lsd_print(current_d)) %>% 
+    select(-contains("_"))
 }
 
 ## Create tibble of open accounts ##

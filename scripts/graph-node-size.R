@@ -140,7 +140,7 @@ sterfhuis <- graph_from_data_frame(d = transactions, vertices = nodes, directed 
 ggraph(sterfhuis, layout = "fr") + 
   geom_edge_fan(aes(alpha = l)) + 
   geom_node_point(aes(color = inheritance, size = pounds)) + 
-  scale_size_continuous(range = c(0.5, 6)) +
+  scale_size_continuous(range = c(0.3, 6)) +
   theme_graph()
 
 # Arc graph

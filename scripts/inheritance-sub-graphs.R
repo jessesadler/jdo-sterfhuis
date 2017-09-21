@@ -16,8 +16,7 @@ accounts <- read_csv("data/accounts.csv") %>%
 ## Create subset of transactions that deal directly with heirs
 inheritance_accounts <- filter(accounts, type == "Inheritance" | type == "Heir")
 transactions <- transactions %>%
-  filter(to %in% inheritance_accounts$id | from %in% inheritance_accounts$id) %>% 
-  ungroup() # Need to ungroup to be able to get 
+  filter(to %in% inheritance_accounts$id | from %in% inheritance_accounts$id)
 
 ## Aggregate accounts dealing with heirs
 ## Aggregate accounts: Estate, branches, winninge ende verlies
@@ -37,6 +36,7 @@ to <- transactions %>%
 nodes <- full_join(from, to, by = "id")
 
 nodes <- filter(accounts, id %in% nodes$id)
+
 
 # Create igraph object
 # Creates vertices from inheritances_transactions data
