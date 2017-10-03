@@ -77,6 +77,7 @@ library(visNetwork)
 
 nodes$group <- nodes$inheritance
 nodes$label <- nodes$label
+nodes$title <- nodes$label
 
 visNetwork(nodes, transactions) %>% 
   visIgraphLayout(layout = "layout_with_dh") %>% 

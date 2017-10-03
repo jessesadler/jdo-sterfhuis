@@ -1,4 +1,4 @@
-## Aggregate Accounts ##
+## Aggregate accounts by type of account##
 
 library(stringr)
 

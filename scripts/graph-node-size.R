@@ -137,8 +137,8 @@ nodes <- left_join(nodes, current, by = "id") # add total pounds debit from curr
 # Creates vertices from inheritances_transactions data
 sterfhuis <- graph_from_data_frame(d = transactions, vertices = nodes, directed = TRUE)
 
-ggraph(sterfhuis, layout = "fr") + 
-  geom_edge_fan(aes(alpha = l)) + 
+ggraph(sterfhuis, layout = "kk") + 
+  geom_edge_link(aes(alpha = l)) + 
   geom_node_point(aes(color = inheritance, size = pounds)) + 
   scale_size_continuous(range = c(0.3, 6)) +
   theme_graph()
