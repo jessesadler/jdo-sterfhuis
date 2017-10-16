@@ -14,9 +14,21 @@ deb_l_sum <- function(l, s, d) {sum(l) + ((sum(s) + (sum(d) %/% 12)) %/% 20)}
 deb_s_sum <- function(s, d) {(sum(s) + (sum(d) %/% 12)) %% 20}
 deb_d_sum <- function(d) {round(sum(d) %% 12, 3)}
 
-# Take sum of pounds, shillings, and pennies
+# Take pounds, shillings, and pennies
 # and refactor to correct limit
 deb_refactor <- function(l, s, d) {
+  c(
+    l = deb_livre(l, s, d),
+    s = deb_solidi(s, d),
+    d = deb_denari(d))
+}
+
+# Same as above but create sum of l, s, d first
+# meant to be used with df$l, df$s, df$d
+deb_refactor_sum <- function(l, s, d) {
+  l = sum(l)
+  s = sum(s)
+  d = sum(d)
   c(
     l = deb_livre(l, s, d),
     s = deb_solidi(s, d),
@@ -184,6 +196,55 @@ deb_open <- function(df) {
     arrange(id)
 }
 
+### Create tibble of credit and debit transactions from one account or vector of accounts ###
+# This function needs account_names tibble to exist. If it does not, function gives a warning
+# Can be run on transactions tibble or transactions_sum tibble
+# Single accounts must have quotations around account id
+# These functions make percentage from denari
+
+deb_sub_cred <- function(df, id){
+  if (exists("account_names")) {
+    if (is_vector(id)) {
+      df %>% filter(from %in% id) %>%
+        left_join(account_names, by = c("to" = "id")) %>% 
+        select(from:to, account, l:d, everything()) %>% 
+        mutate(denari = deb_lsd_d(l, s, d),
+               pct = round(denari*100/sum(denari), 2)) %>% 
+        arrange(desc(l))
+    } else {
+      df %>% filter(to == id) %>%
+        left_join(account_names, by = c("from" = "id")) %>% 
+        select(from:to, account, l:d, everything()) %>% 
+        mutate(denari = deb_lsd_d(l, s, d),
+               pct = round(denari*100/sum(denari), 2)) %>% 
+        arrange(desc(l))
+    } 
+  } else {
+    warning("account_names tibble needs to exist")
+  } 
+}
+
+deb_sub_deb <- function(df, id){
+  if (exists("account_names")) {
+    if (is_vector(id)) {
+      df %>% filter(to %in% id) %>%
+        left_join(account_names, by = c("from" = "id")) %>% 
+        select(from:to, account, l:d, everything()) %>% 
+        mutate(denari = deb_lsd_d(l, s, d),
+               pct = round(denari*100/sum(denari), 2)) %>% 
+        arrange(desc(l))
+    } else {
+      df %>% filter(to == id) %>%
+        left_join(account_names, by = c("from" = "id")) %>% 
+        select(from:to, account, l:d, everything()) %>% 
+        mutate(denari = deb_lsd_d(l, s, d),
+               pct = round(denari*100/sum(denari), 2)) %>% 
+       arrange(desc(l))
+      } 
+  } else {
+    warning("account_names tibble needs to exist")
+  } 
+}
 
 --------------------------------------------------------------------------------
 
