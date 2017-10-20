@@ -14,9 +14,9 @@ accounts <- read_csv("data/accounts.csv") %>%
   select(id, account:location)
 
 ## Create subset of transactions that deal directly with heirs
-inheritance_accounts <- filter(accounts, type == "Inheritance" | type == "Heir")
+heirs_accounts <- filter(accounts, type == "Inheritance" | type == "Heir")
 transactions <- transactions %>%
-  filter(to %in% inheritance_accounts$id | from %in% inheritance_accounts$id)
+  filter(to %in% heirs_accounts$id | from %in% heirs_accounts$id)
 
 ## Aggregate accounts dealing with heirs
 ## Aggregate accounts: Estate, branches, winninge ende verlies
