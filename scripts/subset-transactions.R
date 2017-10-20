@@ -1,4 +1,11 @@
-### Account Types ###
+### Subset of transactions for single and multiple accounts ###
+
+# This script led to creation of ded_sub_credit and debit functions
+# It uses the structure of the function and the function itself to get
+# subsets of transactions for significant accounts. The function creates
+# a percentage column to show percentages for each transaction.
+
+# Get subset of transactions with single and multiple accounts
 
 library(tidyverse)
 library(stringr)
@@ -11,42 +18,24 @@ transactions <- read_csv("data/transactions.csv", col_types = cols(
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
-# Data frame with account ids and names to use for joins
+# Data frame with account ids and names to use for joins. Necessary for functions.
 account_names <- select(accounts, id, account)
 
 # Summary of transactions
+# This can be used instead of transactions if looking at aggregate of transactions
 transactions_sum <- deb_sum_df(transactions)
 
 ### Sum of credit and debit for the accounts ###
 # This only uses pounds for percentage, because shilling and pence not significant
+# Takes out dfl12_001, since this was not a real account
 # It is a good way to show the most significant accounts
 accounts_sum <- deb_current(transactions)
 accounts_sum <- left_join(account_names, accounts_sum, by = "id") %>% 
   select(id:l_c, l_d, relation, l) %>% 
-  mutate(pct_c = round(l_c*100/sum(l_c), 2), 
-         pct_d = round(l_d*100/sum(l_d), 2)) %>% 
+  filter(id != "dfl12_001") %>% 
+  mutate(pct_c = round(l_c*100/sum(l_c), 4), 
+         pct_d = round(l_d*100/sum(l_d), 4)) %>% 
   arrange(desc(l_c))
-
-### Inheritance accounts ###
-maternal_accounts <- c("dfl12_251", "dfl12_252", "dfl12_253", "dfl12_321", "dfl12_333", "dfl12_295")
-paternal_accounts <- c("dfl12_340", "dfl12_341", "dfl12_342", "dfl12_343", "dfl12_344", "dfl12_345", 
-                          "dfl12_346", "dfl12_347", "dfl12_348", "dfl12_352")
-
-# Sororal accounts
-accounts$sororal <- str_detect(accounts$account, "sororal")
-sororal_accounts <- filter(accounts, sororal == TRUE) %>% 
-  select(id) %>% flatten() %>% as_vector()
-sororal_inheritance <-  filter(transactions, from %in% sororal_accounts | to %in% sororal_accounts)
-
-cornelia_accounts <- filter(accounts, inheritance == "Cornelia") %>% 
-  select(id) %>% flatten() %>% as_vector()
-cornelia_inheritance <- transactions %>% 
-  filter(from %in% cornelia_accounts | to %in% cornelia_accounts) %>% 
-  select(from, to, date:d)
-cornelia_cred <- transactions %>% 
-  filter(from %in% cornelia_accounts) %>% 
-  left_join(account_names, by = c("to" = "id")) %>% 
-  select(from, to, account, l:d, date)
 
 ### Workflow for single account ###
 book <- filter(transactions, from == "dfl12_289" | to == "dfl12_289")
@@ -88,9 +77,10 @@ open_deb <- filter(open, relation == "debit") %>%
   mutate(denari = deb_lsd_d(l, s, d), 
          pct = round(denari*100/sum(denari), 2))
 
-### Single accounts through functions that do same as above ###
+### Accounts through functions that do same as above ###
 
 ### Balance on 8 November 1582 ###
+balance_8_nov_sum <- deb_account(transactions, "dfl12_001")
 balance_8_nov <- transactions %>% 
   filter(from == "dfl12_001" | to == "dfl12_001") %>% 
   arrange(desc(l))
