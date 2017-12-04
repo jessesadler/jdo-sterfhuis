@@ -36,20 +36,28 @@ deb_refactor_sum <- function(l, s, d) {
 }
 
 # Refactor with only denari
+# Functions to go between d and lsd
+# Helper functions to return livre, solidi, and denari separately from denari
 # Can take postive or negative value
 # If negative, returns negative l, s, and d in case one is 0
+deb_d_livre <- function(d) {
+  if_else(d < 0, -((-d %/% 12) %/% 20), (d %/% 12) %/% 20)
+}
+
+deb_d_solidi <- function(d) {
+  if_else(d < 0, -((-d %/% 12) %% 20), (d %/% 12) %% 20)
+}
+deb_d_denari <- function(d) {
+  if_else(d < 0, -(-d %% 12), d %% 12)
+}
+
+# Create tibble with lsd from d
 deb_d_lsd <- function(d) {
-  if (d < 0) {
-    tibble(
-      l = -((-d %/% 12) %/% 20),
-      s = -((-d %/% 12) %% 20),
-      d = -(-d %% 12)) 
-  } else {
   tibble(
-    l = (d %/% 12) %/% 20,
-    s = (d %/% 12) %% 20,
-    d = d %% 12)
-  }
+    l = deb_d_livre(d),
+    s = deb_d_solidi(d),
+    d = deb_d_denari(d)
+  )
 }
 
 deb_d_lsd_print <- function(d) {
