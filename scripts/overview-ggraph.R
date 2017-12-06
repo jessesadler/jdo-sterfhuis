@@ -19,6 +19,7 @@ nodes <- deb_current(transactions) %>%
   arrange(pounds)
 
 # Take out balance on 8 November
+# This leads to more accurate picture of relationships between accounts
 nodes_alt <- deb_current(transactions) %>% 
   select(id, pounds = l_d) %>% 
   filter(id != "dfl12_001") %>% arrange(pounds)

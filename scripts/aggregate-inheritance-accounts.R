@@ -1,44 +1,46 @@
-## Aggregate Inheritance Accounts ##
+## Aggregate Accounts of heirs ##
+
+# 
 
 library(stringr)
 
-anna_accounts <- filter(accounts, inheritance == "Anna") %>% 
+anna_accounts <- filter(accounts, group == "Anna & Robert") %>% 
   select(id) %>% flatten() %>% as_vector()
 anna_replace <- set_names(replicate(length(anna_accounts), "dfl12_251"), anna_accounts)
 
-jan_accounts <- filter(accounts, inheritance == "Jan") %>% 
+jan_accounts <- filter(accounts, group == "Jan") %>% 
   select(id) %>% flatten() %>% as_vector()
 jan_replace <- set_names(replicate(length(jan_accounts), "dfl12_287"), jan_accounts)
 
-marten_accounts <- filter(accounts, inheritance == "Marten") %>% 
+marten_accounts <- filter(accounts, group == "Marten") %>% 
   select(id) %>% flatten() %>% as_vector()
 marten_replace <- set_names(replicate(length(marten_accounts), "dfl12_295"), marten_accounts)
 
-maria_accounts <- filter(accounts, inheritance == "Maria") %>% 
+maria_accounts <- filter(accounts, group == "Maria") %>% 
   select(id) %>% flatten() %>% as_vector()
 maria_replace <- set_names(replicate(length(maria_accounts), "dfl12_351"), maria_accounts)
 
-carlo_accounts <- filter(accounts, inheritance == "Carlo") %>% 
+carlo_accounts <- filter(accounts, group == "Carlo") %>% 
   select(id) %>% flatten() %>% as_vector()
 carlo_replace <- set_names(replicate(length(carlo_accounts), "dfl12_285"), carlo_accounts)
 
-jacques_accounts <- filter(accounts, inheritance == "Jacques") %>% 
+jacques_accounts <- filter(accounts, group == "Jacques") %>% 
   select(id) %>% flatten() %>% as_vector()
 jacques_replace <- set_names(replicate(length(jacques_accounts), "dfl12_102"), jacques_accounts)
 
-steven_accounts <- filter(accounts, inheritance == "Steven") %>% 
+steven_accounts <- filter(accounts, group == "Steven") %>% 
   select(id) %>% flatten() %>% as_vector()
 steven_replace <- set_names(replicate(length(steven_accounts), "dfl12_333"), steven_accounts)
 
-hester_accounts <- filter(accounts, inheritance == "Hester") %>% 
+hester_accounts <- filter(accounts, group == "Hester") %>% 
   select(id) %>% flatten() %>% as_vector()
 hester_replace <- set_names(replicate(length(hester_accounts), "dfl12_252"), hester_accounts)
 
-cornelia_accounts <- filter(accounts, inheritance == "Cornelia") %>% 
+cornelia_accounts <- filter(accounts, group == "Cornelia") %>% 
   select(id) %>% flatten() %>% as_vector()
 cornelia_replace <- set_names(replicate(length(cornelia_accounts), "dfl12_253"), cornelia_accounts)
 
-anna_de_hane_accounts <- filter(accounts, inheritance == "Anna de Hane") %>% 
+anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>% 
   select(id) %>% flatten() %>% as_vector()
 anna_de_hane_replace <- set_names(replicate(length(anna_de_hane_accounts), "dfl12_310"), anna_de_hane_accounts)
 
@@ -64,7 +66,6 @@ transactions$to <- str_replace_all(transactions$to, steven_replace)
 transactions$to <- str_replace_all(transactions$to, hester_replace)
 transactions$to <- str_replace_all(transactions$to, cornelia_replace)
 transactions$to <- str_replace_all(transactions$to, anna_de_hane_replace)
-
 
 ## Explanation with one account ##
 

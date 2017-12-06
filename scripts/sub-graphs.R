@@ -18,7 +18,7 @@ accounts <- read_csv("data/accounts.csv") %>%
 transactions_sum <- deb_sum_df(transactions)
 
 hester_accounts <- accounts %>% 
-  filter(inheritance == "Hester") %>% 
+  filter(group == "Hester") %>% 
   select(id) %>% flatten() %>% as_vector()
 
 hester_transactions <- transactions_sum %>%
@@ -34,7 +34,7 @@ to <- hester_transactions %>%
   distinct(to) %>%
   rename(id = to)
 
-hester_nodes <- full_join(from, to)
+hester_nodes <- full_join(from, to, by = "id")
 hester_nodes <- filter(accounts, id %in% hester_nodes$id)
 
 # Create igraph object
@@ -46,4 +46,6 @@ ggraph(hester, layout = "kk") +
                  arrow = arrow(length = unit(3, 'mm')), 
                  end_cap = circle(2, 'mm')) + 
   geom_node_point(alpha = 0.7) + 
-  geom_node_text(aes(label = account), repel = TRUE)
+  geom_node_text(aes(label = account), repel = TRUE) +
+  theme_graph()
+

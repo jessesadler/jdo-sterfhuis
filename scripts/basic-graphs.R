@@ -21,7 +21,7 @@ set_graph_style()
 
 ggraph(sterfhuis) + 
   geom_edge_link(aes(alpha = l)) + 
-  geom_node_point(aes(color = inheritance))
+  geom_node_point()
 
 ggraph(sterfhuis, layout = "kk") + 
   geom_edge_link(aes(alpha = l)) + 

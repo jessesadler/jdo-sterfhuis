@@ -44,38 +44,38 @@ inheritance <- graph_from_data_frame(d = transactions, vertices = nodes, directe
 
 ggraph(inheritance, layout = "dh") + 
   geom_edge_fan(aes(alpha = l)) + 
-  geom_node_point(aes(color = inheritance), size = 2) + 
+  geom_node_point(size = 2) + 
   theme_graph()
 
 ggraph(inheritance, layout = "fr") + 
   geom_edge_fan(aes(alpha = l)) + 
-  geom_node_point(aes(color = inheritance, size = pounds)) + 
+  geom_node_point(aes(size = pounds)) + 
   scale_size_continuous(range = c(0.5, 5)) +
   theme_graph()
 
 # Arc graph
 ggraph(inheritance, layout = "linear") + 
   geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(aes(color = inheritance), size = 2) +
+  geom_node_point(size = 2) +
   theme_graph()
 
 # Circle graph
 ggraph(inheritance, layout = "linear", circular = TRUE) + 
   geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(aes(color = inheritance), size = 2) +
+  geom_node_point(size = 2) +
   theme_graph()
 
 # Circle graph with alpha for direction
 ggraph(inheritance, layout = "linear", circular = TRUE) + 
   geom_edge_arc(aes(color = l, alpha = ..index..)) + 
   scale_edge_alpha('Edge direction', guide = 'edge_direction') +
-  geom_node_point(aes(color = inheritance), size = 2) +
+  geom_node_point(size = 2) +
   theme_graph()
 
 ## visNetwork
 library(visNetwork)
 
-nodes$group <- nodes$inheritance
+nodes$group <- nodes$group
 nodes$label <- nodes$label
 nodes$title <- nodes$label
 

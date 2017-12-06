@@ -37,13 +37,10 @@ london_inheritance_accounts <- c("dfl12_478", "dfl12_479", "dfl12_489")
 
 # Anna de Hane's estate
 # This also includes dfl12_281, which deals with lawsuit against De Hane.
-# dfl12_281 is not included in inheritance accounts
-anna_de_hane_accounts <- filter(accounts, inheritance == "Anna de Hane") %>% 
+# These are not included in the inheritance accounts
+anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>% 
   select(id) %>% flatten() %>% as_vector()
-
-# Miscellaneous account of children of Maria's part in bequest to Goyvaerts
-miscellaneous_account <- c("dfl12_286")
 
 inheritance <- c(maternal_accounts, paternal_accounts, 
                  sororal_accounts, london_inheritance_accounts, 
-                 anna_de_hane_accounts, miscellaneous_account)
+                 anna_de_hane_accounts)
