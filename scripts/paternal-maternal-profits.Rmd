@@ -1,0 +1,242 @@
+---
+title: "paternal-maternal-profits"
+author: "Jesse Sadler"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Set up script
+
+```{r load libraries and data}
+setwd("~/Documents/R/jdo-sterfhuis")
+library(tidyverse)
+library(lubridate)
+
+transactions <- read_csv("data/transactions.csv", col_types = cols(
+  date = col_date(format = "%Y%m%d"))) %>% 
+  select(from:to, date:denari) %>% 
+  rename(l = livre, s = solidi, d = denari)
+accounts <- read_csv("data/accounts.csv") %>% 
+  select(id, account:location)
+# Data frame with account ids and names to use for joins
+account_names <- select(accounts, id, account)
+```
+
+Get a list of the maternal accounts so that they can be distinguished from the paternal accounts of the heirs.
+
+```{r maternal accounts}
+maternal_accounts <- c("dfl12_251", "dfl12_252", "dfl12_253", "dfl12_321", "dfl12_333", "dfl12_295")
+```
+
+Create a function to get a one line tibble with label, date, l, s, d, and denari from a denari. This is to be used to take a tibble with multiple rows and return a total. It is essentially a more customized version of the `deb_d_lsd()` function by including additional information. It is meant to be used by imputing the sum of denari from a tibble into the denari argument.
+
+```{r total tibble function}
+deb_total_tbl <- function(type, denari, date) {
+  tibble(type = type,
+         l = deb_d_livre(denari),
+         s = deb_d_solidi(denari),
+         d = deb_d_denari(denari),
+         date = ymd(date),
+         denari = denari)
+}
+```
+
+## Capital invested in trade in 1578
+The maternal and paternal capital invested in trade at the end of 1578 has to be created, because it is not in the accounts in DFL 12. Here, the base of the paternal capital is £34000 and the maternal capital is as listed in the agreement between the heirs on 26 December 1583. See DvdM 55-10 among others. The `maternal_capital` also calculates the percentage of the maternal capital held by each heir.
+
+```{r paternal-maternal capital 1578}
+paternal_capital <- tibble(id = "dfl12_289",
+                           account = "Jan de Oude",
+                           type = "paternal",
+                           l = 34000, s = 0, d = 0,
+                           date = ymd("1578-12-31"),
+                           denari = deb_lsd_d(34000, 0, 0))
+maternal_capital <- tibble(id = maternal_accounts,
+                           account = c("Hester", "Cornelia", "Marten", "Steven", "Anna", "Jacques"),
+                           type = "maternal",
+                           l = c(5333, 5333, 4945, 4335, 3050, 2200),
+                           s = c(6, 6, 10, 5, 0, 0), 
+                           d = c(8, 8, 7, 6, 0, 0),
+                           date = ymd("1578-12-31")) %>% 
+  mutate(denari = deb_lsd_d(l, s, d),
+         pct = round(denari*100/sum(denari), 4))
+```
+
+To get the total maternal capital in 1578 I use the sum of the denari from `maternal_capital`. This uses the `deb_total_tbl()` function from above.
+
+```{r total maternal capital 1578}
+maternal_capital_total <- deb_total_tbl(type = "maternal",
+                                        denari = sum(maternal_capital$denari),
+                                        date = "1578-12-31")
+```
+
+Get the total movable capital for 1578. This acts as a basis for the profits in 1583 and the percentages of capital invested for the rest of the existence of the estate. `movable_capital_1578` includes the paternal capital and the various accounts of the maternal capital for those heirs who had yet to receive their full maternal inheritance. This gives the percentages for each account. `paternal_maternal_capital` compares the paternal capital to the total maternal capital as created above. It shows the percentage of paternal and maternal capital invested in trade. The total movable capital tibble is created by first finding the total denari to simplify the code.
+
+```{r movable capital 1578}
+movable_capital_1578 <- bind_rows(paternal_capital, maternal_capital) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+paternal_maternal_capital <- bind_rows(paternal_capital, maternal_capital_total) %>% 
+  select(-id, -account) %>% # Get rid of id and account columns from paternal_capital
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+movable_capital_1578_total <- deb_total_tbl("Capital 1578", sum(movable_capital_1578$denari), "1578-12-31")
+```
+
+## Profits up to 26 December 1583
+The profits and losses, as well as the amount of the profits given to the heirs, from the end of 1578 to 26 Decmeber 1583 are contained in the account "dfl12_038". The credits for the account are the profits that came from the trade of Jan de Oude. The debits include the paternal and maternal share of the profits, as well as the losses from the trade.
+
+```{r winninge ende verlies 1583}
+winninge_verlies_cred1 <- deb_sub_credit(transactions, "dfl12_038")
+winninge_verlies_deb1 <- deb_sub_debit(transactions, "dfl12_038")
+```
+
+Paternal profits are contained in the account of the Creditors of the Book. However, the paternal profits as calculated here contain a credit of £3644.0.0 from the household costs. This ammount was part of the £5644.0.0 1/4 charged to the Creditors of the Book. See DFL 13-2 and DvdM 55-10 for explanations. Therefore, to get the correct amount of the paternal profits and thus the correct percentage £3644.0.0 needs to be subtracted from the amount of the paternal profits listed here.
+
+```{r paternal profits 1583}
+paternal_profits1 <- filter(winninge_verlies_deb1, from == "dfl12_289") %>% 
+  select(id = from, account:pct) %>% 
+  add_column(type = "paternal")
+
+# Paternal profits without household costs of £3644.0.0
+paternal_profits1_housecost <- paternal_profits1 %>% 
+  mutate(l = l - 3644, denari = denari - deb_lsd_d(3644, 0, 0))
+```
+
+Maternal profits is more straightforward to calculate. The percentages for the different heirs can be compared to the base percentages for the maternal capital in 1578.
+```{r maternal profits 1583}
+maternal_profits1 <- filter(winninge_verlies_deb1, from %in% maternal_accounts) %>% 
+  select(id = from, account:denari) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4)) %>% 
+  add_column(type = "maternal")
+
+maternal_profits1_total <- deb_total_tbl("maternal", sum(maternal_profits1$denari), "1583-12-26")
+```
+
+Bring together the paternal and maternal profits in 1583. This is first done with the paternal profits with the household costs of £3644.0.0 subtracted from the paternal profits. This leads to a total profit of £19236.15.0 1/2, which I have not found directly in the archives. However, this methods maintains the basic percentages of the profits between the paternal and maternal capital as established at the end of 1578.
+
+```{r profits 1583 with household costs subtracted}
+profits_1583 <- bind_rows(paternal_profits1_housecost, maternal_profits1) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+profits_1583_paternal_maternal <- bind_rows(maternal_profits1_total, paternal_profits1_housecost) %>% 
+  select(-id, -account) %>%
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+profits_1583_total <- deb_total_tbl("Profits 1583", sum(profits_1583$denari), "1583-12-26")
+```
+
+Bringing together the paternal and maternal without the household costs being subtracted from the paternal inheritance leads to the total profits of £22889.15.0 1/2, which is the amount listed in DFL 13-2. However, this method changes the percentages of the profits that should go to the maternal and paternal capital.
+
+```{r profits 1583 without household costs subtracted}
+profits_1583_unaltered <- bind_rows(paternal_profits1, maternal_profits1) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+profits_1583_paternal_maternal_unaltered <- bind_rows(maternal_profits1_total, paternal_profits1) %>% 
+  select(-id, -account) %>%
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+profits_1583_total_unaltered <- deb_total_tbl("Profits 1583",
+                                              sum(profits_1583_unaltered$denari),
+                                              "1583-12-26")
+```
+
+The percentage for the profits up to 1583. This includes calculations for both with and without household costs being subtracted. First this is done with household costs subtracted and then without. The main issue for the profit percentage per year is whether this should be calculated over four or five years. It was 5 years between the end of 1578 and 26 December 1583. However, Brulez uses four years. This seems to come from a point made by Marten. In DFL 8-2 page 15 Marten speaks about the total revenue in his answer to Jan, Jacques, and Carlo. He says that this profit was from 11 January 1580 until the end of 1583. This is associated with the groote boek nr 9, which was started on 2 July 1579 according to DFL 13-1 nr 1.
+
+```{r profits percentage 1583}
+profit_pct_1583 <- sum(profits_1583$denari)/sum(movable_capital_1578$denari)
+profit_pct_1583_year <- profit_pct_1583/4
+
+profit_pct_1583_hc <- sum(profits_1583_unaltered$denari)/sum(movable_capital_1578$denari)
+profit_pct_1583_year_hc <- profit_pct_1583_hc/4
+```
+
+## Profits in 1594
+The profits and losses, as well as the amount of the profits given to the heirs, from 26 Decmeber 1583 to the end of December 1594 are contained in the account "dfl12_445. The credits for the account are the profits that came from the trade of Jan de Oude. The debits include the paternal and maternal share of the profits, as well as the losses from the trade.
+
+```{r winninge ende verlies 1594}
+winninge_verlies_cred2 <- deb_sub_credit(transactions, "dfl12_445")
+winninge_verlies_deb2 <- deb_sub_debit(transactions, "dfl12_445")
+```
+
+Need a list of the inheritance accounts used to give out profits in 1594. This is necessary because the profits are not clearly divided between maternal and paternal in dfl12bis.
+
+```{r inheritance_accounts 1594}
+inheritance_accounts_1594 <- c("dfl12_251", "dfl12_295", "dfl12_340", "dfl12_343", 
+                          "dfl12_344", "dfl12_345", "dfl12_346", "dfl12_347")
+```
+
+Get the profits in 1594. This has maternal profits for those who still had maternal inheritance and paternal profits. Within the amount for the paternal profits is also the profits from Cornelia split between the other eight errors.
+
+```{r profits 1594}
+profits_1594 <- filter(winninge_verlies_deb2, from %in% inheritance_accounts_1594) %>% 
+  select(id = from, account:pct) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+profits_1594_total <- deb_total_tbl("Profits 1594", sum(profits_1594$denari), "1594-10-01")
+```
+
+Divide the profits between maternal profits and paternal profits. Maternal profits can be found by all accounts that do not have 128 livre. Paternal profits are those with 128 livre. This does not take into account the fact that Cornelia's profits are in the paternal profits instead of the maternal profits.
+
+```{r unaltered paternal and maternal profits 1594}
+paternal_profits2_unaltered <- filter(profits_1594, l == 128) %>% 
+  add_column(type = "paternal") %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+paternal_profits2_unaltered_total <- deb_total_tbl("paternal",
+                                                   sum(paternal_profits2_unaltered$denari),
+                                                   "1594-10-01")
+
+maternal_profits2_unaltered <- filter(profits_1594, l != 128) %>% 
+  add_column(type = "maternal") %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+
+maternal_profits2_unaltered_total <- deb_total_tbl("maternal",
+                                                   sum(maternal_profits2_unaltered$denari),
+                                                   "1594-10-01")
+```
+
+In order to move Cornelia's part in the profits in 1594 from paternal to maternal this gets the denari for sororal profits, paternal profits, and maternal profits. The sororal profits are figured out by getting the denari from Hester's account, since their profits were based on the same basis.
+
+```{r sororal, paternal, and maternal denari, 1594}
+sororal_1594d <- maternal_profits2_unaltered %>% 
+  filter(id == "dfl12_347") %>% 
+  select(denari) %>% 
+  as.numeric()
+
+paternal_1594d <- sum(paternal_profits2_unaltered$denari)
+maternal_1594d <- sum(maternal_profits2_unaltered$denari)
+```
+
+Subtract sororal denari from paternal denari and add it to maternal to get the correct totals.
+
+```{r paternal and maternal denari, 1594}
+paternal_profits2d <- paternal_1594d - sororal_1594d
+maternal_profits2d <- maternal_1594d + sororal_1594d
+```
+
+Create tibbles for paternal and maternal profits after Cornelia's maternal profits are placed with the maternal profits. Then get percentage of profits as split between paternal and maternal.
+
+```{r paternal and maternal profits 1594}
+paternal_profits2 <- deb_total_tbl("paternal", paternal_profits2d, "1594-10-01")
+maternal_profits2 <- deb_total_tbl("maternal", maternal_profits2d, "1594-10-01")
+
+profits_1594_paternal_maternal <- bind_rows(paternal_profits2, maternal_profits2) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
+```
+
+## Overview
+Create a table with the paternal and maternal profits and total profits from 1578, 1583, and 1594.
+
+```{r overview of paternal and maternal profits}
+paternal_maternal_overview <- bind_rows(paternal_maternal_capital,
+                                        movable_capital_1578_total,
+                                        profits_1583_paternal_maternal,
+                                        profits_1583_total,
+                                        profits_1594_paternal_maternal,
+                                        profits_1594_total)
+```
+

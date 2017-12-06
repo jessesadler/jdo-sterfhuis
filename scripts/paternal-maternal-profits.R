@@ -23,17 +23,25 @@ paternal_capital <- tibble(id = "dfl12_289",
                            date = ymd("1578-12-31"),
                            denari = deb_lsd_d(34000, 0, 0))
 maternal_capital <- tibble(id = maternal_accounts,
-                           account = c("Hester", "Cornelia", "Anna", "Steven", "Jacques", "Marten"),
+                           account = c("Hester", "Cornelia", "Marten", "Steven", "Anna", "Jacques"),
                            type = "maternal",
-                           l = c(5333, 5333, 3050, 4335, 2200, 4945),
-                           s = c(6, 6, 0, 5, 0, 10), 
-                           d = c(8, 8, 0, 6, 0, 7),
+                           l = c(5333, 5333, 4945, 4335, 3050, 2200),
+                           s = c(6, 6, 10, 5, 0, 0), 
+                           d = c(8, 8, 7, 6, 0, 0),
                            date = ymd("1578-12-31")) %>% 
   mutate(denari = deb_lsd_d(l, s, d),
          pct = round(denari*100/sum(denari), 4))
 
 movable_capital_1578 <- bind_rows(paternal_capital, maternal_capital) %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
+
+total_denari_1578 <- sum(movable_capital_1578$denari)
+movable_capital_1578_total <- tibble(account = "Total 1578",
+                                     l = deb_d_livre(total_denari_1578),
+                                     s = deb_d_solidi(total_denari_1578),
+                                     d = deb_d_denari(total_denari_1578),
+                                     date = ymd("1578-12-31"),
+                                     denari = total_denari_1578)
 
 ### Profits up to 26 December 1583 ###
 winninge_verlies_cred1 <- deb_sub_credit(transactions, "dfl12_038")
@@ -43,12 +51,16 @@ paternal_profits1 <- filter(winninge_verlies_deb1, from == "dfl12_289") %>%
   select(id = from, account:pct) %>% 
   add_column(type = "paternal")
 
+# Paternal profits without household costs of £3644.0.0
+paternal_profits1_housecost <- paternal_profits1 %>% 
+  mutate(l = l - 3644, denari = denari - deb_lsd_d(3644, 0, 0))
+
 maternal_profits1 <- filter(winninge_verlies_deb1, from %in% maternal_accounts) %>% 
   select(id = from, account:denari) %>% 
-  add_column(type = "maternal") %>% 
-  mutate(pct = round(denari*100/sum(denari), 4))
+  mutate(pct = round(denari*100/sum(denari), 4)) %>% 
+  add_column(type = "maternal")
 
-profits_1583 <- bind_rows(paternal_profits1, maternal_profits1) %>% 
+profits_1583 <- bind_rows(paternal_profits1_housecost, maternal_profits1) %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
 
 ### Profits up to end of 1594 ###
@@ -59,7 +71,8 @@ winninge_verlies_deb2 <- deb_sub_debit(transactions, "dfl12_445")
 inheritance_accounts <- c("dfl12_251", "dfl12_295", "dfl12_340", "dfl12_343", 
                           "dfl12_344", "dfl12_345", "dfl12_346", "dfl12_347")
 
-heir_profits <- filter(winninge_verlies_deb2, from %in% inheritance_accounts)
+profits_1594 <- filter(winninge_verlies_deb2, from %in% inheritance_accounts) %>% 
+  mutate(pct = round(denari*100/sum(denari), 4))
 
 maternal_profits2 <- filter(heir_profits, l != 128) %>% 
   select(id = from, account:pct) %>% 
@@ -68,9 +81,6 @@ maternal_profits2 <- filter(heir_profits, l != 128) %>%
 paternal_profits2 <- filter(heir_profits, l == 128) %>% 
   select(id = from, account:pct) %>% 
   add_column(type = "paternal") %>% 
-  mutate(pct = round(denari*100/sum(denari), 4))
-
-profits_1594 <- bind_rows(paternal_profits2, maternal_profits2) %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
 
 ### Bring together the above to show all capital and profits ###
