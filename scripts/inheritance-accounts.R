@@ -42,8 +42,7 @@ anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>%
   select(id) %>% flatten() %>% as_vector()
 
 inheritance <- c(maternal_accounts, paternal_accounts, 
-                 sororal_accounts, london_inheritance_accounts, 
-                 anna_de_hane_accounts)
+                 sororal_accounts)
 
 ### Individual inheritance accounts ###
 # See aggregate-inheritance-accounts.R for similar scripts

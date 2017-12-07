@@ -7,8 +7,8 @@
 library(stringr)
 
 ### Accounts of all the heirs ###
-heir_groups <- c("Anna & Robert", "Jan", "Marten", "Maria","Carlo", "Jacques", "Steven",
-                 "Hester", "Cornelia", "Hester and Cornelia", "London Inheritance")
+heir_groups <- c("Anna & Robert", "Jan", "Marten", "Maria","Carlo", "Jacques",
+                 "Steven", "Hester", "Cornelia", "Hester and Cornelia")
 
 # This way includes Robert van Eeckeren's accounts
 heir_accounts <- filter(accounts, group %in% heir_groups) %>% 
