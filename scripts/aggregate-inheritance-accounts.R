@@ -1,8 +1,28 @@
-## Aggregate Accounts of heirs ##
+## Aggregate Accounts of heirs and inheritance ##
 
-# 
+# Can use this to aggregate either all accounts for each heir or only the inheritance accounts
+# The difference is whether to filter accounts to only inheritance accounts at the beginning or not
+# First part fge
 
 library(stringr)
+
+### Accounts of all the heirs ###
+heir_groups <- c("Anna & Robert", "Jan", "Marten", "Maria","Carlo", "Jacques", "Steven",
+                 "Hester", "Cornelia", "Hester and Cornelia", "London Inheritance")
+
+# This way includes Robert van Eeckeren's accounts
+heir_accounts <- filter(accounts, group %in% heir_groups) %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+# Alternative way does not include Robert's accounts
+heir_accounts <- filter(accounts, type == "Inheritance" | type == "Heir") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+### Inheritance Accounts ###
+# Can run this and use it in place of accounts tbl
+inheritance_accounts_tbl <- filter(accounts, type == "Inheritance")
+
+### Individual Heirs ###
 
 anna_accounts <- filter(accounts, group == "Anna & Robert") %>% 
   select(id) %>% flatten() %>% as_vector()

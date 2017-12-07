@@ -44,3 +44,35 @@ anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>%
 inheritance <- c(maternal_accounts, paternal_accounts, 
                  sororal_accounts, london_inheritance_accounts, 
                  anna_de_hane_accounts)
+
+### Individual inheritance accounts ###
+# See aggregate-inheritance-accounts.R for similar scripts
+
+inheritance_accounts_tbl <- filter(accounts, type == "Inheritance")
+
+anna_accounts <- filter(inheritance_accounts_tbl, group == "Anna & Robert") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+jan_accounts <- filter(inheritance_accounts_tbl, group == "Jan") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+marten_accounts <- filter(inheritance_accounts_tbl, group == "Marten") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+maria_accounts <- filter(inheritance_accounts_tbl, group == "Maria") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+carlo_accounts <- filter(inheritance_accounts_tbl, group == "Carlo") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+jacques_accounts <- filter(inheritance_accounts_tbl, group == "Jacques") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+steven_accounts <- filter(inheritance_accounts_tbl, group == "Steven") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+hester_accounts <- filter(inheritance_accounts_tbl, group == "Hester") %>% 
+  select(id) %>% flatten() %>% as_vector()
+
+cornelia_accounts <- filter(inheritance_accounts_tbl, group == "Cornelia") %>% 
+  select(id) %>% flatten() %>% as_vector()
