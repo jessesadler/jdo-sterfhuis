@@ -1,7 +1,7 @@
 ## Double-Entry Bookkeeping Functions ##
 
 # Requires
-library(tidyverse)
+library(dplyr)
 
 # Functions to refactor l, s, and d
 deb_livre <- function(l, s, d) {l + ((s + d %/% 12) %/% 20)}
