@@ -15,6 +15,8 @@ transactions$from <- str_replace_all(transactions$from, "dfl12_445", "dfl12_038"
 transactions$to <- str_replace_all(transactions$to, "dfl12_445", "dfl12_038")
 
 ## Branches
+branch_accounts <- filter(accounts, type == "Branch") %>% 
+  select(id) %>% flatten() %>% as_vector()
 
 # Verona
 transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")

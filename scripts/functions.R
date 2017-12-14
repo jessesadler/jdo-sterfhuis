@@ -214,7 +214,7 @@ deb_sub_credit <- function(df, id){
   if (exists("account_names")) {
     df %>% filter(from %in% id) %>%
       left_join(account_names, by = c("to" = "id")) %>% 
-      select(from:to, account, l:d, everything()) %>% 
+      select(from:to, account, l:d, date) %>% 
       mutate(denari = deb_lsd_d(l, s, d),
              pct = round(denari*100/sum(denari), 2)) %>% 
       arrange(desc(l))
@@ -227,7 +227,7 @@ deb_sub_debit <- function(df, id){
   if (exists("account_names")) {
     df %>% filter(to %in% id) %>%
       left_join(account_names, by = c("from" = "id")) %>% 
-      select(from:to, account, l:d, everything()) %>% 
+      select(from:to, account, l:d, date) %>% 
       mutate(denari = deb_lsd_d(l, s, d),
              pct = round(denari*100/sum(denari), 2)) %>% 
       arrange(desc(l))
