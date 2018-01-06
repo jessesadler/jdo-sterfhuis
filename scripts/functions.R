@@ -211,7 +211,10 @@ deb_open <- function(df) {
 # These functions make percentage from denari
 
 deb_sub_credit <- function(df, id){
-  if (exists("account_names")) {
+  if (exists("accounts")) {
+    
+    account_names <- select(accounts, id, account)
+    
     df %>% filter(from %in% id) %>%
       left_join(account_names, by = c("to" = "id")) %>% 
       select(from:to, account, l:d, date) %>% 
@@ -219,12 +222,15 @@ deb_sub_credit <- function(df, id){
              pct = round(denari*100/sum(denari), 2)) %>% 
       arrange(desc(l))
   } else {
-    warning("account_names tibble needs to exist")
+    warning("accounts tibble needs to exist")
   } 
 }
 
 deb_sub_debit <- function(df, id){
-  if (exists("account_names")) {
+  if (exists("accounts")) {
+    
+    account_names <- select(accounts, id, account)
+    
     df %>% filter(to %in% id) %>%
       left_join(account_names, by = c("from" = "id")) %>% 
       select(from:to, account, l:d, date) %>% 
@@ -232,7 +238,7 @@ deb_sub_debit <- function(df, id){
              pct = round(denari*100/sum(denari), 2)) %>% 
       arrange(desc(l))
   } else {
-    warning("account_names tibble needs to exist")
+    warning("accounts tibble needs to exist")
   } 
 }
 
