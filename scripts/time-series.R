@@ -7,7 +7,7 @@
 # This is problematic, because the amounts are not going down over this time.
 # Creating an xts object makes it possible to fill in values for each date.
 # This script goes from running accounts to xts, fills in dates, graphs, and changes back to tibble.
-# Gives an example with both single and multiple accounts
+# Gives examples with both single and multiple accounts
 
 library(xts)
 library(tibbletime)

@@ -8,18 +8,20 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-## Set up script
+This script creates an overview of the profits and losses accounts from DFL 12 and DFL 12bis. It works to divide the profits between the maternal and paternal profits. It creates a series of tables showing the capital invested in trade in 1578, the profits to 26 December 1583, and the profits to the end of 1594.
 
+## Set up script
 ```{r load libraries and data}
-setwd("~/Documents/R/jdo-sterfhuis")
 library(tidyverse)
 library(lubridate)
+# load double-entry bookkeeping functions
+source("~/Documents/R/jdo-sterfhuis/scripts/functions.R")
 
-transactions <- read_csv("data/transactions.csv", col_types = cols(
+transactions <- read_csv("~/Documents/R/jdo-sterfhuis/data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:to, date:denari) %>% 
   rename(l = livre, s = solidi, d = denari)
-accounts <- read_csv("data/accounts.csv") %>% 
+accounts <- read_csv("~/Documents/R/jdo-sterfhuis/data/accounts.csv") %>% 
   select(id, account:location)
 # Data frame with account ids and names to use for joins
 account_names <- select(accounts, id, account)

@@ -4,7 +4,7 @@ library(tidyr)
 library(timetk)
 library(xts)
 
-# Create running accounts by group Function takes a transactions data frame and
+# Create running accounts by group function takes a transactions data frame and
 # vector of ids to filter by. Returns a running account with group, date, and
 # cumulative sum of denari. Function comes from time-series-branch script.
 # Can also be used as cumulative for single group, such as single heir.
@@ -35,7 +35,7 @@ deb_running_group <- function(df, ids) {
 }
 
 # Cumulative running value of a set of accounts. Same as above, but instead of
-# grouping by a groups, this only groups by date. Output is tibble with date and
+# grouping by a group, this only groups by date. Output is tibble with date and
 # cumulative column. This can work with above to add cumulative to a group of
 # running accounts. Result cannot be placed into to_fill_xts, because there is
 # no group.

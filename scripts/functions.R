@@ -242,12 +242,10 @@ deb_sub_debit <- function(df, id){
   } 
 }
 
---------------------------------------------------------------------------------
 
 
 ### Extra Functions ###
 
-# Refactor to tibble
 deb_refactor_tb <- function(l, s, d) {
   tibble(
     l = deb_livre(l, s, d),
