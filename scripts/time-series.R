@@ -13,6 +13,7 @@ library(xts)
 library(tibbletime)
 library(timetk)
 library(dygraphs)
+source("scripts/functions.R")
 
 # Get running accoungts from running accounts script
 # Load data

@@ -4,6 +4,7 @@ library(tidyverse)
 library(stringr)
 library(igraph)
 library(ggraph)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
@@ -118,7 +119,7 @@ transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
 current <- deb_current(transactions) %>% select(id, pounds = l_d)
 
 ## Sum of transactions
-transactions <- deb_sum_df(transactions) %>% ungroup
+transactions <- deb_group_sum(transactions) %>% ungroup
 
 # Recreate accounts that are in transactions data frames
 from <- transactions %>% 

@@ -7,6 +7,7 @@ library(xts)
 library(timetk)
 library(lubridate)
 library(dygraphs)
+source("scripts/functions.R")
 
 # This script uses tbl-xts functions
 

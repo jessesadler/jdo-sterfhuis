@@ -5,6 +5,7 @@ library(stringr)
 library(ggmap)
 library(tidygraph)
 library(ggraph)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(

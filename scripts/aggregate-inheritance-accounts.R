@@ -107,4 +107,4 @@ hester_transactions <- transactions %>%
 
 hester_transactions$to <- str_replace_all(hester_transactions$to, hester_replace)
 hester_transactions$from <- str_replace_all(hester_transactions$from, hester_replace)
-hester_transactions <- deb_sum_df(hester_transactions)
+hester_transactions <- deb_group_sum(hester_transactions)

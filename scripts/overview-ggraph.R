@@ -3,6 +3,7 @@
 library(tidyverse)
 library(igraph)
 library(ggraph)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
@@ -25,13 +26,13 @@ nodes_alt <- deb_current(transactions) %>%
   filter(id != "dfl12_001") %>% arrange(pounds)
 
 # Sum of transactions between accounts
-transactions_sum <- deb_sum_df(transactions) %>% ungroup()
+transactions_sum <- deb_group_sum(transactions) %>% ungroup()
 
 # Take out transactions with balance
 transactions_sum_alt <- transactions %>% 
   filter(from != "dfl12_001") %>% 
   filter(to != "dfl12_001") %>% 
-  deb_sum_df() %>% ungroup()
+  deb_group_sum() %>% ungroup()
 
 # igraph object
 sterfhuis <- graph_from_data_frame(d = transactions_sum, vertices = nodes, directed = TRUE)

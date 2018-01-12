@@ -4,6 +4,7 @@ library(tidyverse)
 library(xts)
 library(timetk)
 library(dygraphs)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(

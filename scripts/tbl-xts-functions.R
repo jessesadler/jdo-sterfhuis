@@ -3,6 +3,7 @@
 library(tidyr)
 library(timetk)
 library(xts)
+source("scripts/functions.R")
 
 # Create running accounts by group function takes a transactions data frame and
 # vector of ids to filter by. Returns a running account with group, date, and

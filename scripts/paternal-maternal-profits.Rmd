@@ -92,8 +92,8 @@ movable_capital_1578_total <- deb_total_tbl("Capital 1578", sum(movable_capital_
 The profits and losses, as well as the amount of the profits given to the heirs, from the end of 1578 to 26 Decmeber 1583 are contained in the account "dfl12_038". The credits for the account are the profits that came from the trade of Jan de Oude. The debits include the paternal and maternal share of the profits, as well as the losses from the trade.
 
 ```{r winninge ende verlies 1583}
-winninge_verlies_cred1 <- deb_sub_credit(transactions, "dfl12_038")
-winninge_verlies_deb1 <- deb_sub_debit(transactions, "dfl12_038")
+winninge_verlies_cred1 <- deb_account_credit(transactions, "dfl12_038")
+winninge_verlies_deb1 <- deb_account_debit(transactions, "dfl12_038")
 ```
 
 Paternal profits are contained in the account of the Creditors of the Book. However, the paternal profits as calculated here contain a credit of £3644.0.0 from the household costs. This ammount was part of the £5644.0.0 1/4 charged to the Creditors of the Book. See DFL 13-2 and DvdM 55-10 for explanations. Therefore, to get the correct amount of the paternal profits and thus the correct percentage £3644.0.0 needs to be subtracted from the amount of the paternal profits listed here.
@@ -160,8 +160,8 @@ profit_pct_1583_year_hc <- profit_pct_1583_hc/4
 The profits and losses, as well as the amount of the profits given to the heirs, from 26 Decmeber 1583 to the end of December 1594 are contained in the account "dfl12_445. The credits for the account are the profits that came from the trade of Jan de Oude. The debits include the paternal and maternal share of the profits, as well as the losses from the trade.
 
 ```{r winninge ende verlies 1594}
-winninge_verlies_cred2 <- deb_sub_credit(transactions, "dfl12_445")
-winninge_verlies_deb2 <- deb_sub_debit(transactions, "dfl12_445")
+winninge_verlies_cred2 <- deb_account_credit(transactions, "dfl12_445")
+winninge_verlies_deb2 <- deb_account_debit(transactions, "dfl12_445")
 ```
 
 Need a list of the inheritance accounts used to give out profits in 1594. This is necessary because the profits are not clearly divided between maternal and paternal in dfl12bis.

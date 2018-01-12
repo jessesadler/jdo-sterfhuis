@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(lubridate)
+source("scripts/functions.R")
 
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
@@ -44,8 +45,8 @@ movable_capital_1578_total <- tibble(account = "Total 1578",
                                      denari = total_denari_1578)
 
 ### Profits up to 26 December 1583 ###
-winninge_verlies_cred1 <- deb_sub_credit(transactions, "dfl12_038")
-winninge_verlies_deb1 <- deb_sub_debit(transactions, "dfl12_038")
+winninge_verlies_cred1 <- deb_account_credit(transactions, "dfl12_038")
+winninge_verlies_deb1 <- deb_account_debit(transactions, "dfl12_038")
 
 paternal_profits1 <- filter(winninge_verlies_deb1, from == "dfl12_289") %>% 
   select(id = from, account:pct) %>% 
@@ -64,8 +65,8 @@ profits_1583 <- bind_rows(paternal_profits1_housecost, maternal_profits1) %>%
   mutate(pct = round(denari*100/sum(denari), 4))
 
 ### Profits up to end of 1594 ###
-winninge_verlies_cred2 <- deb_sub_credit(transactions, "dfl12_445")
-winninge_verlies_deb2 <- deb_sub_debit(transactions, "dfl12_445")
+winninge_verlies_cred2 <- deb_account_credit(transactions, "dfl12_445")
+winninge_verlies_deb2 <- deb_account_debit(transactions, "dfl12_445")
 
 # Necessary because accounts not clearly divided between maternal and paternal in dfl12bis
 inheritance_accounts <- c("dfl12_251", "dfl12_295", "dfl12_340", "dfl12_343", 
@@ -74,11 +75,11 @@ inheritance_accounts <- c("dfl12_251", "dfl12_295", "dfl12_340", "dfl12_343",
 profits_1594 <- filter(winninge_verlies_deb2, from %in% inheritance_accounts) %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
 
-maternal_profits2 <- filter(heir_profits, l != 128) %>% 
+maternal_profits2 <- filter(profits_1594, l != 128) %>% 
   select(id = from, account:pct) %>% 
   add_column(type = "maternal") %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
-paternal_profits2 <- filter(heir_profits, l == 128) %>% 
+paternal_profits2 <- filter(profits_1594, l == 128) %>% 
   select(id = from, account:pct) %>% 
   add_column(type = "paternal") %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
@@ -90,9 +91,7 @@ movable_capital <- bind_rows(movable_capital_1578, profits_1583, profits_1594)
 
 ### Paternal and maternal capital invested in 1578 ###
 paternal_1578 <- select(paternal_capital, -(id:account))
-maternal_1578 <- deb_refactor_sum(maternal_capital$l, 
-                                 maternal_capital$s, 
-                                 maternal_capital$d) %>% 
+maternal_1578 <- deb_refactor_sum(maternal_capital) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1578-12-31"), type = "maternal")
 
@@ -101,9 +100,7 @@ capital_mp_1578 <- bind_rows(paternal_1578, maternal_1578) %>%
 
 ### Paternal and maternal capital profits in 1583 ###
 paternal_profits_sum1 <- paternal_profits1 %>% select(l:denari, type)
-maternal_profits_sum1 <- deb_refactor_sum(maternal_profits1$l, 
-                                          maternal_profits1$s, 
-                                          maternal_profits1$d) %>% 
+maternal_profits_sum1 <- deb_refactor_sum(maternal_profits1) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1583-12-15"), type = "maternal")
 
@@ -111,14 +108,10 @@ profits_mp_1583 <- bind_rows(paternal_profits_sum1, maternal_profits_sum1) %>%
   mutate(pct = round(denari*100/sum(denari), 4))
 
 ### Paternal and maternal capital profits in 1594 ###
-paternal_profits_sum2 <- deb_refactor_sum(paternal_profits2$l, 
-                                          paternal_profits2$s, 
-                                          paternal_profits2$d) %>% 
+paternal_profits_sum2 <- deb_refactor_sum(paternal_profits2) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1594-10-01"), type = "paternal")
-maternal_profits_sum2 <- deb_refactor_sum(maternal_profits2$l, 
-                                          maternal_profits2$s, 
-                                          maternal_profits2$d) %>% 
+maternal_profits_sum2 <- deb_refactor_sum(maternal_profits2) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1594-10-01"), type = "maternal")
 
@@ -136,23 +129,17 @@ profits_overview <- bind_rows(capital_mp_1578, profits_mp_1583, profits_mp_1594)
 ### Total capital and profit ###
 
 # 1578
-movable_sum_1578 <- deb_refactor_sum(movable_capital_1578$l,
-                                     movable_capital_1578$s, 
-                                     movable_capital_1578$d) %>% 
+movable_sum_1578 <- deb_refactor_sum(movable_capital_1578) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1578-12-31"))
 
 # 1583
-movable_sum_1583 <- deb_refactor_sum(profits_1583$l,
-                                     profits_1583$s, 
-                                     profits_1583$d) %>% 
+movable_sum_1583 <- deb_refactor_sum(profits_1583) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1583-12-15"))
 
 # 1594
-movable_sum_1594 <- deb_refactor_sum(profits_1594$l,
-                                     profits_1594$s, 
-                                     profits_1594$d) %>% 
+movable_sum_1594 <- deb_refactor_sum(profits_1594) %>% 
   mutate(denari = deb_lsd_d(l, s, d)) %>% 
   add_column(date = ymd("1594-10-01"))
 

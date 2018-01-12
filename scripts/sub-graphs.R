@@ -3,6 +3,7 @@
 library(tidyverse)
 library(igraph)
 library(ggraph)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
@@ -15,7 +16,7 @@ accounts <- read_csv("data/accounts.csv") %>%
 ### Subgraph through a single account ###
 
 # Sum of transactions
-transactions_sum <- deb_sum_df(transactions)
+transactions_sum <- deb_group_sum(transactions)
 
 hester_accounts <- accounts %>% 
   filter(group == "Hester") %>% 

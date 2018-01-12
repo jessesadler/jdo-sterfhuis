@@ -2,6 +2,7 @@ library(tidyverse)
 library(igraph)
 library(ggraph)
 library(tidygraph)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
@@ -11,7 +12,7 @@ transactions <- read_csv("data/transactions.csv", col_types = cols(
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
-transactions <- deb_sum_df(transactions)
+transactions <- deb_group_sum(transactions)
 
 accounts <- select(accounts, id, label = account)
 

@@ -1,6 +1,6 @@
 ### Subset of transactions for single and multiple accounts ###
 
-# This script led to creation of ded_sub_credit and debit functions
+# This script led to creation of ded_account_credit and debit functions
 # It uses the structure of the function and the function itself to get
 # subsets of transactions for significant accounts. The function creates
 # a percentage column to show percentages for each transaction.
@@ -9,6 +9,7 @@
 
 library(tidyverse)
 library(stringr)
+source("scripts/functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
@@ -23,7 +24,7 @@ account_names <- select(accounts, id, account)
 
 # Summary of transactions
 # This can be used instead of transactions if looking at aggregate of transactions
-transactions_sum <- deb_sum_df(transactions)
+transactions_sum <- deb_group_sum(transactions)
 
 ### Sum of credit and debit for the accounts ###
 # This only uses pounds for percentage, because shilling and pence not significant
@@ -84,13 +85,13 @@ balance_8_nov_sum <- deb_account(transactions, "dfl12_001")
 balance_8_nov <- transactions %>% 
   filter(from == "dfl12_001" | to == "dfl12_001") %>% 
   arrange(desc(l))
-balance_8_nov_cred <- deb_sub_credit(transactions, "dfl12_001")
-balance_8_nov_deb <- deb_sub_debit(transactions, "dfl12_001")
+balance_8_nov_cred <- deb_account_credit(transactions, "dfl12_001")
+balance_8_nov_deb <- deb_account_debit(transactions, "dfl12_001")
 
 ### Winninge ende verlies ###
 winninge_verlies <- filter(transactions, from == "dfl12_038" | to == "dfl12_038")
-winninge_verlies_cred <- deb_sub_credit(transactions, "dfl12_038")
-winninge_verlies_deb <- deb_sub_debit(transactions, "dfl12_038")
+winninge_verlies_cred <- deb_account_credit(transactions, "dfl12_038")
+winninge_verlies_deb <- deb_account_debit(transactions, "dfl12_038")
 
 ### Branches ###
 verona_accounts <- c("dfl12_110", "dfl12_446")
@@ -98,13 +99,13 @@ venice_accounts <- c("dfl12_111", "dfl12_181")
 london_accounts <- c("dfl12_112", "dfl12_446")
 
 verona <- filter(transactions, from %in% verona_accounts | to %in% verona_accounts)
-verona_cred <- deb_sub_credit(transactions, verona_accounts)
-verona_deb <- deb_sub_debit(transactions, verona_accounts)  
+verona_cred <- deb_account_credit(transactions, verona_accounts)
+verona_deb <- deb_account_debit(transactions, verona_accounts)  
 
 venice <- filter(transactions, from %in% venice_accounts | to %in% venice_accounts)
-venice_cred <- deb_sub_credit(transactions_sum, venice_accounts)
-venice_deb <- deb_sub_debit(transactions_sum, venice_accounts)
+venice_cred <- deb_account_credit(transactions_sum, venice_accounts)
+venice_deb <- deb_account_debit(transactions_sum, venice_accounts)
 
 london <- filter(transactions, from %in% london_accounts | to %in% london_accounts)
-london_cred <- deb_sub_credit(transactions, london_accounts)
-london_deb <- deb_sub_debit(transactions, london_accounts)
+london_cred <- deb_account_credit(transactions, london_accounts)
+london_deb <- deb_account_debit(transactions, london_accounts)
