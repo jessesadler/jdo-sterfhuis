@@ -53,6 +53,11 @@ deb_group_sum <- function(df, credit = from, debit = to) {
       d = deb_d_sum(d))
 }
 
+# Convert lsd to l with decimal
+deb_lsd_decimal <- function(l, s, d) {
+  l + s/20 + d/240
+}
+
 ### Refactor with through denari ###
 # Functions to go between d and lsd
 
@@ -90,10 +95,16 @@ deb_d_lsd <- function(d, vector = FALSE) {
   }
 }
 
+# Print out lsd form
 deb_d_lsd_print <- function(d) {
   if_else(d < 0, 
           paste0("-£", (-d %/% 12) %/% 20, ".", (-d %/% 12) %% 20, ".", round(-d %% 12, 3)),
           paste0("£", (d %/% 12) %/% 20, ".", (d %/% 12) %% 20, ".", round(d %% 12, 3)))
+}
+
+# Convert denarius to l with decimal
+deb_d_lsd_decimal <- function(d) {
+  deb_d_livre(d) + deb_d_solidi(d)/20 + deb_d_denari(d)/240
 }
 
 # Exchange rate by shillings
