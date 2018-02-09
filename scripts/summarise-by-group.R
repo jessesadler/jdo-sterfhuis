@@ -3,15 +3,22 @@
 library(tidyverse)
 source("scripts/functions.R")
 
-account_groups <- accounts %>% select(id, group)
-account_groups <- account_groups %>% 
-  add_column(group_id = 1:nrow(account_groups))
+transactions <- read_csv("data/transactions.csv", col_types = cols(
+  date = col_date(format = "%Y%m%d"))) %>% 
+  select(from:to, date:denari) %>% 
+  rename(l = livre, s = solidi, d = denari)
+accounts <- read_csv("data/accounts.csv") %>% 
+  select(id, account:location)
 
-distinct_groups <- distinct(account_groups, group, .keep_all = TRUE)
+account_groups <- accounts %>%
+  select(id, group) %>% 
+  distinct(group, .keep_all = TRUE) %>% 
+  rowid_to_column("group_id")
 
 trans_group <- transactions %>% 
   left_join(account_groups, by = c("from" = "id")) %>% 
-  left_join(account_groups, by = c("to" = "id"))
+  left_join(account_groups, by = c("to" = "id")) %>% 
+  rename(group_cred = group.x, group_cred_id = group_id.x,
+         group_deb = group.y, group_deb_id = group_id.y)
 
-trans_group_sum <- deb_group_sum(trans_group, credit = group.x, debit = group.y)
-
+trans_group_sum <- deb_group_sum(trans_group, credit = group_cred_id, debit = group_deb_id)

@@ -1,11 +1,13 @@
 ---
-title: "paternal-maternal-profits"
+title: "Maternal and paternal profits"
 author: "Jesse Sadler"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      out.width = "70%")
+knitr::opts_knit$set(root.dir = "..") # Sets working directory to jdo-sterfhuis directory
 ```
 
 This script creates an overview of the profits and losses accounts from DFL 12 and DFL 12bis. It works to divide the profits between the maternal and paternal profits. It creates a series of tables showing the capital invested in trade in 1578, the profits to 26 December 1583, and the profits to the end of 1594.
@@ -15,13 +17,13 @@ This script creates an overview of the profits and losses accounts from DFL 12 a
 library(tidyverse)
 library(lubridate)
 # load double-entry bookkeeping functions
-source("~/Documents/R/jdo-sterfhuis/scripts/functions.R")
+source("scripts/functions.R")
 
-transactions <- read_csv("~/Documents/R/jdo-sterfhuis/data/transactions.csv", col_types = cols(
+transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:to, date:denari) %>% 
   rename(l = livre, s = solidi, d = denari)
-accounts <- read_csv("~/Documents/R/jdo-sterfhuis/data/accounts.csv") %>% 
+accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 # Data frame with account ids and names to use for joins
 account_names <- select(accounts, id, account)
@@ -88,6 +90,13 @@ paternal_maternal_capital <- bind_rows(paternal_capital, maternal_capital_total)
 movable_capital_1578_total <- deb_total_tbl("Capital 1578", sum(movable_capital_1578$denari), "1578-12-31")
 ```
 
+```{r tables 1578, echo = FALSE}
+knitr::kable(movable_capital_1578,
+             caption = "Movable capital, 1578")
+knitr::kable(paternal_maternal_capital,
+             caption = "Maternal and paternal capital, 1578")
+```
+
 ## Profits up to 26 December 1583
 The profits and losses, as well as the amount of the profits given to the heirs, from the end of 1578 to 26 Decmeber 1583 are contained in the account "dfl12_038". The credits for the account are the profits that came from the trade of Jan de Oude. The debits include the paternal and maternal share of the profits, as well as the losses from the trade.
 
@@ -124,11 +133,18 @@ Bring together the paternal and maternal profits in 1583. This is first done wit
 profits_1583 <- bind_rows(paternal_profits1_housecost, maternal_profits1) %>% 
   mutate(pct = round(denari*100/sum(denari), 4))
 
-profits_1583_paternal_maternal <- bind_rows(maternal_profits1_total, paternal_profits1_housecost) %>% 
+profits_1583_paternal_maternal <- bind_rows(paternal_profits1_housecost, maternal_profits1_total) %>% 
   select(-id, -account) %>%
   mutate(pct = round(denari*100/sum(denari), 4))
 
 profits_1583_total <- deb_total_tbl("Profits 1583", sum(profits_1583$denari), "1583-12-26")
+```
+
+```{r tables 1583 w/ household costs subtracted, echo = FALSE}
+knitr::kable(profits_1583,
+             caption = "Profits 1583 with household costs subtracted")
+knitr::kable(profits_1583_paternal_maternal,
+             caption = "Maternal and paternal profits 1583 with household costs subtracted")
 ```
 
 Bringing together the paternal and maternal without the household costs being subtracted from the paternal inheritance leads to the total profits of £22889.15.0 1/2, which is the amount listed in DFL 13-2. However, this method changes the percentages of the profits that should go to the maternal and paternal capital.
@@ -144,6 +160,13 @@ profits_1583_paternal_maternal_unaltered <- bind_rows(maternal_profits1_total, p
 profits_1583_total_unaltered <- deb_total_tbl("Profits 1583",
                                               sum(profits_1583_unaltered$denari),
                                               "1583-12-26")
+```
+
+```{r tables 1583 w/o household costs subtracted, echo = FALSE}
+knitr::kable(profits_1583_unaltered,
+             caption = "Profits 1583 unaltered")
+knitr::kable(profits_1583_paternal_maternal_unaltered,
+             caption = "Maternal and paternal profits 1583 unaltered")
 ```
 
 The percentage for the profits up to 1583. This includes calculations for both with and without household costs being subtracted. First this is done with household costs subtracted and then without. The main issue for the profit percentage per year is whether this should be calculated over four or five years. It was 5 years between the end of 1578 and 26 December 1583. However, Brulez uses four years. This seems to come from a point made by Marten. In DFL 8-2 page 15 Marten speaks about the total revenue in his answer to Jan, Jacques, and Carlo. He says that this profit was from 11 January 1580 until the end of 1583. This is associated with the groote boek nr 9, which was started on 2 July 1579 according to DFL 13-1 nr 1.
@@ -199,6 +222,8 @@ maternal_profits2_unaltered <- filter(profits_1594, l != 128) %>%
 maternal_profits2_unaltered_total <- deb_total_tbl("maternal",
                                                    sum(maternal_profits2_unaltered$denari),
                                                    "1594-10-01")
+
+profits_1594_unaltered <- bind_rows(maternal_profits2_unaltered, paternal_profits2_unaltered)
 ```
 
 In order to move Cornelia's part in the profits in 1594 from paternal to maternal this gets the denari for sororal profits, paternal profits, and maternal profits. The sororal profits are figured out by getting the denari from Hester's account, since their profits were based on the same basis.
@@ -230,6 +255,14 @@ profits_1594_paternal_maternal <- bind_rows(paternal_profits2, maternal_profits2
   mutate(pct = round(denari*100/sum(denari), 4))
 ```
 
+```{r tables 1594, echo = FALSE}
+knitr::kable(profits_1594_unaltered,
+             caption = "Profits 1594 unaltered")
+knitr::kable(profits_1594_paternal_maternal,
+             caption = "Maternal and paternal profits 1594")
+```
+
+
 ## Overview
 Create a table with the paternal and maternal profits and total profits from 1578, 1583, and 1594.
 
@@ -242,3 +275,7 @@ paternal_maternal_overview <- bind_rows(paternal_maternal_capital,
                                         profits_1594_total)
 ```
 
+```{r overview table, echo = FALSE}
+knitr::kable(paternal_maternal_overview,
+             caption = "Overview of paternal and maternal profits")
+```
