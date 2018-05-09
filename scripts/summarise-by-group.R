@@ -3,12 +3,8 @@
 library(tidyverse)
 source("scripts/functions.R")
 
-transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:to, date:denarii) %>% 
-  rename(l = librae, s = solidi, d = denarii)
-accounts <- read_csv("data/accounts.csv") %>% 
-  select(id, account:location)
+transactions <- read_csv("data/transactions.csv")
+accounts <- read_csv("data/accounts.csv")
 
 account_groups <- accounts %>%
   select(id, group) %>% 

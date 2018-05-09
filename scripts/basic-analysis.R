@@ -3,12 +3,8 @@
 library(tidyverse)
 
 # Load data
-transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:denarii, tr_type) %>% 
-  rename(l = librae, s = solidi, d = denarii)
-accounts <- read_csv("data/accounts.csv") %>% 
-  select(id, account:location)
+transactions <- read_csv("data/transactions.csv")
+accounts <- read_csv("data/accounts.csv")
 
 # Separate data frames for DFL12 and DFL12bis
 transactions12 <- filter(transactions, date <= as.Date("1583-12-26", "%Y-%m-%d"))

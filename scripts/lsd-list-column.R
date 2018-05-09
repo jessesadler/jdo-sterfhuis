@@ -3,10 +3,7 @@
 library(tidyverse)
 source("scripts/functions.R")
 
-transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:to, date:denarii) %>% 
-  rename(l = librae, s = solidi, d = denarii)
+transactions <- read_csv("data/transactions.csv")
 
 # Create list column
 trans_list <- transactions %>% mutate(data = pmap(select(., l, s, d), c))
@@ -19,12 +16,12 @@ trans_sum <- trans_list %>%
 
 # Take vector of length three with l, s, and d values and refactors to correct limit of 20s and 12d
 deb_refactor_vector <- function(x) {
-   vector <- c(
+   temp <- c(
       x[1] + ((x[2] + x[3] %/% 12) %/% 20),
       (x[2] + x[3] %/% 12) %% 20,
       x[3] %% 12)
-   names(vector) <- c("l", "s", "d")
-   return(vector)
+   names(temp) <- c("l", "s", "d")
+   return(temp)
 }
 
 # Group_by and summarise list column with refactor

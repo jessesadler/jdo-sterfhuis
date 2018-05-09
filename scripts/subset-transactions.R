@@ -12,12 +12,8 @@ library(stringr)
 source("scripts/functions.R")
 
 # Load data
-transactions <- read_csv("data/transactions.csv", col_types = cols(
-  date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:to, date:denarii) %>% 
-  rename(l = librae, s = solidi, d = denarii)
-accounts <- read_csv("data/accounts.csv") %>% 
-  select(id, account:location)
+transactions <- read_csv("data/transactions.csv")
+accounts <- read_csv("data/accounts.csv")
 
 # Data frame with account ids and names to use for joins. Necessary for functions.
 account_names <- select(accounts, id, account)
