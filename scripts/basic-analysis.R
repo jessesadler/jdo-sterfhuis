@@ -5,8 +5,8 @@ library(tidyverse)
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  select(from:denarii, tr_type) %>% 
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
@@ -26,7 +26,7 @@ transactions_sum <- deb_sum(transactions)
 
 ### Decimal vlams ###
 
-transactions_dec <- mutate(transactions, vlams_dec = livre + solidi / 20 + denari / 240)
+transactions_dec <- mutate(transactions, vlams_dec = librae + solidi / 20 + denarii / 240)
 
 credit_dec <- transactions_dec %>% group_by(from) %>% summarise(credit = sum(vlams_dec))
 debit_dec <- transactions_dec %>% group_by(to) %>% summarise(debit = sum(vlams_dec))
@@ -44,7 +44,7 @@ closed <- filter(current, near(current, 0))
 
 ## With two steps ##
 credit_vlams <- transactions %>% group_by(from) %>% 
-  summarise(l = sum(livre), s = sum(solidi), d = sum(denari))
+  summarise(l = sum(librae), s = sum(solidi), d = sum(denarii))
 credit_vlams <- mutate(credit_vlams,
                 l_c = l + ((s + d %/% 12) %/% 20),
                 s_c = (s + d %/% 12) %% 20,
@@ -56,14 +56,14 @@ credit_vlams <- mutate(credit_vlams,
 credit_vlams <- transactions %>% 
   group_by(from) %>% 
   summarise(
-    l_c = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
-    s_c = (sum(solidi) + (sum(denari) %/% 12)) %% 20,
-    d_c = sum(denari) %% 12)
+    l_c = sum(librae) + ((sum(solidi) + (sum(denarii) %/% 12)) %/% 20),
+    s_c = (sum(solidi) + (sum(denarii) %/% 12)) %% 20,
+    d_c = sum(denarii) %% 12)
 
 debit_vlams <- transactions %>% group_by(to) %>% summarise(
-  l_d = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
-  s_d = (sum(solidi) + (sum(denari) %/% 12)) %% 20,
-  d_d = sum(denari) %% 12)
+  l_d = sum(librae) + ((sum(solidi) + (sum(denarii) %/% 12)) %/% 20),
+  s_d = (sum(solidi) + (sum(denarii) %/% 12)) %% 20,
+  d_d = sum(denarii) %% 12)
 
 accounts_sum <- full_join(credit_vlams, debit_vlams, by = c("from" = "to")) %>% 
   replace_na(list(l_c = 0, s_c = 0, d_c = 0, l_d = 0, s_d = 0, d_d = 0)) %>% 
@@ -78,14 +78,14 @@ open <- select(current, id, l:d) %>% filter(l + s + d != 0) %>% arrange(id)
 # Single account
 credit <- filter(transactions, from == "dfl12_112") %>% summarise(
   relation = "credit",
-  l = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
-  s = (sum(solidi) + (sum(denari) %/% 12)) %% 20,
-  d = sum(denari) %% 12)
+  l = sum(librae) + ((sum(solidi) + (sum(denarii) %/% 12)) %/% 20),
+  s = (sum(solidi) + (sum(denarii) %/% 12)) %% 20,
+  d = sum(denarii) %% 12)
 
 debit <- filter(transactions, to == "dfl12_112") %>% summarise(
   relation = "debit",
-  l = sum(livre) + ((sum(solidi) + (sum(denari) %/% 12)) %/% 20),
-  s = (sum(solidi) + (sum(denari) %/% 12)) %% 20,
-  d = sum(denari) %% 12)
+  l = sum(librae) + ((sum(solidi) + (sum(denarii) %/% 12)) %/% 20),
+  s = (sum(solidi) + (sum(denarii) %/% 12)) %% 20,
+  d = sum(denarii) %% 12)
 
 dfl_080 <- bind_rows(credit, debit)

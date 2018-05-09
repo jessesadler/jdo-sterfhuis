@@ -7,8 +7,8 @@ source("scripts/functions.R")
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  select(from:denarii, tr_type) %>% 
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 

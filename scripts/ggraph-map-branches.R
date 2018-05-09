@@ -11,13 +11,13 @@ source("scripts/functions.R")
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
 transactions_d <- transactions %>% 
-  mutate(denari = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denari)
+  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+  select(from, to, date, denarii)
 
 ### Filter transactions to only those between branches ###
 branch_accounts <- filter(accounts, type == "Branch") %>% 
@@ -42,7 +42,7 @@ branch_transactions$to <- str_replace_all(branch_transactions$to, "dfl12_477", "
 ### Summarise transactions between accounts and take out transactions within a branch ###
 branch_edges <- branch_transactions %>% 
   group_by(from, to) %>% 
-  summarise(denari = sum(denari)) %>% 
+  summarise(denarii = sum(denarii)) %>% 
   mutate(pounds = floor(denari/240)) %>% 
   filter(from != to)
 

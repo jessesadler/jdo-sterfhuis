@@ -9,6 +9,7 @@
 # This script goes from running accounts to xts, fills in dates, graphs, and changes back to tibble.
 # Gives examples with both single and multiple accounts
 
+library(tidyverse)
 library(xts)
 library(tibbletime)
 library(timetk)
@@ -20,35 +21,35 @@ source("scripts/functions.R")
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
-# Change transactions to denari and simplify
+# Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
-  mutate(denari = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denari)
+  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+  select(from, to, date, denarii)
 
 # Get total credit and debit for each accout by date
-# Make denari negative for debit transactions
+# Make denarii negative for debit transactions
 credit <- transactions_d %>% 
   group_by(from, date) %>% 
-  summarise(denari = sum(denari)) %>% 
+  summarise(denarii = sum(denarii)) %>% 
   rename(id = from)
 debit <- transactions_d %>% 
   group_by(to, date) %>% 
-  summarise(denari = -sum(denari)) %>% 
+  summarise(denarii = -sum(denarii)) %>% 
   rename(id = to)
 
 # Accounts running with date, id, and running sum of denari
-# Get rid of denari variable, which is daily total, because
+# Get rid of denarii variable, which is daily total, because
 # Can only have one type of value in time series matrix.
-# Keep values in denari to maintain as much data as possible
+# Keep values in denarii to maintain as much data as possible
 accounts_running <- bind_rows(credit, debit) %>% 
   group_by(id, date) %>% 
-  summarise(denari = sum(denari)) %>% 
-  mutate(current = cumsum(denari)) %>% 
-  select(-denari)
+  summarise(denarii = sum(denarii)) %>% 
+  mutate(current = cumsum(denarii)) %>% 
+  select(-denarii) %>% 
   ungroup()
 
 ### tibbletime ###
@@ -79,7 +80,7 @@ cassa_xts <- na.locf(merge(cassa_xts, seq(min(cassa$date), max(cassa$date), by =
 # Remove now empty date column if it was present
 cassa_xts <- cassa_xts[,-1]
 
-# Can convert denari to pounds for plotting
+# Can convert denarii to pounds for plotting
 # Use division and round to floow to have same pounds
 # as would appear if l, s, and d were present
 # Want to keep original cassa_xts if you want to transform back to tibble
@@ -105,7 +106,7 @@ maternal_xts <- tk_xts(maternal_wide)
 maternal_xts <- na.locf(merge(maternal_xts, seq(min(maternal_running$date),
                                                 max(maternal_running$date), by = 1)))
 
-# Convert denari to pounds rounded down
+# Convert denarii to pounds rounded down
 maternal_xts_l <- floor(maternal_xts/240)
 
 dygraph(maternal_xts_l) %>% dyRangeSelector()

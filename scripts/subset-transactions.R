@@ -14,8 +14,8 @@ source("scripts/functions.R")
 # Load data
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
-  select(from:to, date:denari) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  select(from:to, date:denarii) %>% 
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
@@ -44,15 +44,15 @@ book_cred <- transactions %>%
   filter(from == "dfl12_289") %>% 
   left_join(account_names, by = c("to" = "id")) %>% 
   select(from:to, account, l:d, everything()) %>% 
-  mutate(denari = deb_lsd_d(l, s, d), 
-         pct = round(denari*100/sum(denari), 2)) %>% 
+  mutate(denarii = deb_lsd_d(l, s, d), 
+         pct = round(denari*100/sum(denarii), 2)) %>% 
   arrange(desc(l))
 book_deb <- transactions %>% 
   filter(to == "dfl12_289") %>% 
   left_join(account_names, by = c("from" = "id")) %>% 
   select(from:to, account, l:d, everything()) %>% 
-  mutate(denari = deb_lsd_d(l, s, d), 
-         pct = round(denari*100/sum(denari), 2)) %>% 
+  mutate(denarii = deb_lsd_d(l, s, d), 
+         pct = round(denari*100/sum(denarii), 2)) %>% 
   arrange(desc(l))
 
 ### Bequests ###
@@ -61,9 +61,9 @@ bequests <- transactions %>%
   filter(to == "dfl12_151") %>% 
   left_join(account_names, by = c("from" = "id")) %>% 
   select(from:to, account, l:d, everything()) %>% 
-  mutate(denari = deb_lsd_d(l, s, d), 
-         pct = round(denari*100/sum(denari), 2)) %>% 
-  arrange(desc(denari))
+  mutate(denarii = deb_lsd_d(l, s, d), 
+         pct = round(denari*100/sum(denarii), 2)) %>% 
+  arrange(desc(denarii))
 
 ### Open accounts at end of 1594 ###
 open <- transactions %>% 
@@ -72,11 +72,11 @@ open <- transactions %>%
   select(id, account, everything()) %>% 
   arrange(desc(l))
 open_cred <- filter(open, relation == "credit") %>% 
-  mutate(denari = deb_lsd_d(l, s, d), 
-         pct = round(denari*100/sum(denari), 2))
+  mutate(denarii = deb_lsd_d(l, s, d), 
+         pct = round(denari*100/sum(denarii), 2))
 open_deb <- filter(open, relation == "debit") %>% 
-  mutate(denari = deb_lsd_d(l, s, d), 
-         pct = round(denari*100/sum(denari), 2))
+  mutate(denarii = deb_lsd_d(l, s, d), 
+         pct = round(denari*100/sum(denarii), 2))
 
 ### Accounts through functions that do same as above ###
 

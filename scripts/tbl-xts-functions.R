@@ -11,16 +11,16 @@ source("scripts/functions.R")
 # Can also be used as cumulative for single group, such as single heir.
 deb_running_group <- function(df, ids) {
   df_d <- df %>% 
-    mutate(denari = deb_lsd_d(l, s, d)) %>% 
-    select(from, to, date, denari)
+    mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+    select(from, to, date, denarii)
   
   credit <- df_d %>% 
     group_by(from, date) %>% 
-    summarise(denari = sum(denari)) %>% 
+    summarise(denarii = sum(denarii)) %>% 
     rename(id = from)
   debit <- df_d %>% 
     group_by(to, date) %>% 
-    summarise(denari = -sum(denari)) %>% 
+    summarise(denarii = -sum(denarii)) %>% 
     rename(id = to)
   
   account_groups <- accounts %>% select(id, group)
@@ -29,9 +29,9 @@ deb_running_group <- function(df, ids) {
     filter(id %in% ids) %>% 
     left_join(account_groups, by = "id") %>% 
     group_by(group, date) %>% 
-    summarise(denari = sum(denari)) %>% 
-    mutate(current = cumsum(denari)) %>% 
-    select(-denari) %>% 
+    summarise(denarii = sum(denarii)) %>% 
+    mutate(current = cumsum(denarii)) %>% 
+    select(-denarii) %>% 
     ungroup()
 }
 
@@ -43,24 +43,24 @@ deb_running_group <- function(df, ids) {
 
 deb_running_cumulative <- function(df, ids) {
   df_d <- df %>% 
-    mutate(denari = deb_lsd_d(l, s, d)) %>% 
-    select(from, to, date, denari)
+    mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+    select(from, to, date, denarii)
   
   credit <- df_d %>% 
     group_by(from, date) %>% 
-    summarise(denari = sum(denari)) %>% 
+    summarise(denarii = sum(denarii)) %>% 
     rename(id = from)
   debit <- df_d %>% 
     group_by(to, date) %>% 
-    summarise(denari = -sum(denari)) %>% 
+    summarise(denarii = -sum(denarii)) %>% 
     rename(id = to)
   
   bind_rows(credit, debit) %>% 
     filter(id %in% ids) %>% 
     group_by(date) %>% 
-    summarise(denari = sum(denari)) %>% 
-    mutate(cumulative = cumsum(denari)) %>% 
-    select(-denari) %>% 
+    summarise(denarii = sum(denarii)) %>% 
+    mutate(cumulative = cumsum(denarii)) %>% 
+    select(-denarii) %>% 
     ungroup()
 }
 

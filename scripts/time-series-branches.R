@@ -10,24 +10,24 @@ source("scripts/functions.R")
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
-# Change transactions to denari and simplify
+# Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
-  mutate(denari = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denari)
+  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+  select(from, to, date, denarii)
 
 # Get total credit and debit for each accout by date
-# Make denari negative for debit transactions
+# Make denarii negative for debit transactions
 credit <- transactions_d %>% 
   group_by(from, date) %>% 
-  summarise(denari = sum(denari)) %>% 
+  summarise(denarii = sum(denarii)) %>% 
   rename(id = from)
 debit <- transactions_d %>% 
   group_by(to, date) %>% 
-  summarise(denari = -sum(denari)) %>% 
+  summarise(denarii = -sum(denarii)) %>% 
   rename(id = to)
 
 # Get groups from accounts tibble
@@ -45,9 +45,9 @@ branches_running <- bind_rows(credit, debit) %>%
   filter(id %in% branch_accounts) %>% 
   left_join(account_groups, by = "id") %>% 
   group_by(group, date) %>% 
-  summarise(denari = sum(denari)) %>% 
-  mutate(current = cumsum(denari)) %>% 
-  select(-denari) %>% 
+  summarise(denarii = sum(denarii)) %>% 
+  mutate(current = cumsum(denarii)) %>% 
+  select(-denarii) %>% 
   ungroup()
 
 # Plot of branches data
@@ -68,7 +68,7 @@ branches_xts <- tk_xts(branches_wide, silent = TRUE)
 branches_xts <- na.locf(merge(branches_xts, seq(min(branches_running$date),
                                                 max(branches_running$date), by = 1)))
 
-# Convert denari to pounds rounded down for plotting
+# Convert denarii to pounds rounded down for plotting
 branches_xts_l <- floor(branches_xts/240)
 
 # Plot

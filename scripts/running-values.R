@@ -7,34 +7,34 @@ source("scripts/functions.R")
 transactions <- read_csv("data/transactions.csv", col_types = cols(
   date = col_date(format = "%Y%m%d"))) %>% 
   select(from:denari, tr_type) %>% 
-  rename(l = livre, s = solidi, d = denari)
+  rename(l = librae, s = solidi, d = denarii)
 accounts <- read_csv("data/accounts.csv") %>% 
   select(id, account:location)
 
-# Change transactions to denari and simplify
+# Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
-  mutate(denari = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denari)
+  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+  select(from, to, date, denarii)
 
 # Get total credit and debit for each accout by date
-# Make denari negative for debit transactions
+# Make denarii negative for debit transactions
 credit <- transactions_d %>% 
   group_by(from, date) %>% 
-  summarise(denari = sum(denari)) %>% 
+  summarise(denarii = sum(denarii)) %>% 
   rename(id = from)
 debit <- transactions_d %>% 
   group_by(to, date) %>% 
-  summarise(denari = -sum(denari)) %>% 
+  summarise(denarii = -sum(denarii)) %>% 
   rename(id = to)
 
 # Create accounts running
 # Row bind the two data frame together
-# Includes sum of denari for day, cumulative sum of denari,
+# Includes sum of denarii for day, cumulative sum of denari,
 # and cumulative sum as printed vlaams
 accounts_running <- bind_rows(credit, debit) %>% 
   group_by(id, date) %>% 
-  summarise(denari = sum(denari)) %>% 
-  mutate(current = cumsum(denari)) %>% 
+  summarise(denarii = sum(denarii)) %>% 
+  mutate(current = cumsum(denarii)) %>% 
   mutate(vlaams = deb_d_lsd_print(current))
 
 ### Create line graph from branches ###
@@ -54,7 +54,7 @@ library(lubridate)
 date_break <- ymd(15850316)
 
 ### Plots ###
-# y = current/240 to turn denari to pounds
+# y = current/240 to turn denarii to pounds
 inheritance_running_1 <- filter(inheritance_running, date < date_break)
 inheritance_running_2 <- filter(inheritance_running, date > date_break)
 
@@ -69,12 +69,12 @@ ggplot(inheritance_running_1) +
 # Inheritance of the heirs cumulative
 inheritance_cumulative_heir <- inheritance_running %>% 
   group_by(group, date) %>% 
-  summarise(id = "cumulative", day = sum(denari)) %>% 
+  summarise(id = "cumulative", day = sum(denarii)) %>% 
   mutate(cumulative = cumsum(day))
 
 inheritance_cumulative <- inheritance_running %>% 
   group_by(date) %>% 
-  summarise(id = "cumulative", day = sum(denari)) %>% 
+  summarise(id = "cumulative", day = sum(denarii)) %>% 
   mutate(cumulative = cumsum(day))
 
 # Maximum owed to the heirs on any day
@@ -96,7 +96,7 @@ branches <- accounts_running %>% filter(id %in% branch_accounts$id)
 branches <- left_join(branches, branch_accounts, by = "id")
 
 ### Plots ###
-# y = current/240 to turn denari to pounds
+# y = current/240 to turn denarii to pounds
 ggplot(branches) + 
   geom_line(aes(x = date, y = current/240, group = label, color = label))
 
@@ -131,7 +131,7 @@ hester_current <- accounts_running %>% filter(id %in% hester_accounts$id)
 
 hester_cumulative <- hester_current %>% 
   group_by(date) %>% 
-  summarise(id = "cumulative", day = sum(denari)) %>% 
+  summarise(id = "cumulative", day = sum(denarii)) %>% 
   mutate(cumulative = cumsum(day))
 
 ## Plot with cumulative
