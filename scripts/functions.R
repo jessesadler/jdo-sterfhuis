@@ -33,11 +33,14 @@ deb_d_sum <- function(d) {round(sum(d) %% 12, 3)}
 
 # Sum of l, s, d from data frame
 # Adds lsd columns and refactors
-deb_lsd_sum <- function(df, l, s, d) {
+deb_lsd_sum <- function(df, l = l, s = s, d = d) {
+  l <- enquo(l)
+  s <- enquo(s)
+  d <- enquo(d)
     summarise(df,
-              l = deb_l_sum(l, s, d),
-              s = deb_s_sum(s, d),
-              d = deb_d_sum(d))
+              l = deb_l_sum(!!l, !!s, !!d),
+              s = deb_s_sum(!!s,!! d),
+              d = deb_d_sum(!!d))
 }
 
 # Similar to above, but with group_by(). This is not really necessary.
@@ -67,7 +70,7 @@ deb_lsd_d <- function(l, s, d) {
   l * 240 + s * 12 + d
 }
 
-# Helper functions to return librae, solidi, and denarii separately from denarii
+# Helper functions to return librae, solidi, and denarii from denarii
 # Can take postive or negative value
 # If negative, returns negative l, s, and d in case one is 0
 deb_d_librae <- function(d) {
