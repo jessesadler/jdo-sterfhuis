@@ -1,5 +1,7 @@
 ## Clean data ##
 
+library(tidyverse)
+
 ## Transactions ##
 
 transactions <- read_csv("data-raw/transactions.csv", col_types = cols(
@@ -12,6 +14,7 @@ write_csv(transactions, "data/transactions.csv")
 
 ## Accounts ##
 accounts <- read_csv("data-raw/accounts.csv") %>% 
-  select(id, account:location)
+  select(id, account:location) %>% 
+  rowid_to_column("id_int")
 
 write_csv(accounts, "data/accounts.csv")
