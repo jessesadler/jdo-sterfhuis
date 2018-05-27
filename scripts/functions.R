@@ -46,7 +46,7 @@ deb_lsd_sum <- function(df, l = l, s = s, d = d) {
 # Similar to above, but with group_by(). This is not really necessary.
 # Sum of l, s, d from data frame with `group_by()` of credit and debit account
 # Uses tidyeval, so can have different names for credit and debit columns
-deb_group_sum <- function(df, credit = from, debit = to) {
+deb_group_sum <- function(df, credit = credit, debit = debit) {
   credit <- enquo(credit)
   debit <- enquo(debit)
   df %>% 
@@ -99,16 +99,16 @@ deb_d_lsd <- function(d, vector = FALSE) {
   }
 }
 
+# Convert denarii to l with decimal
+deb_d_lsd_decimal <- function(d) {
+  deb_d_librae(d) + deb_d_solidi(d)/20 + deb_d_denarii(d)/240
+}
+
 # Print out lsd form
 deb_d_lsd_print <- function(d) {
   if_else(d < 0, 
           paste0("-£", (-d %/% 12) %/% 20, ".", (-d %/% 12) %% 20, ".", round(-d %% 12, 3)),
           paste0("£", (d %/% 12) %/% 20, ".", (d %/% 12) %% 20, ".", round(d %% 12, 3)))
-}
-
-# Convert denarii to l with decimal
-deb_d_lsd_decimal <- function(d) {
-  deb_d_librae(d) + deb_d_solidi(d)/20 + deb_d_denarii(d)/240
 }
 
 # Exchange rate by shillings
@@ -145,7 +145,7 @@ deb_interest <- function(l, s, d, interest = 0.0625, years = 1) {
 # Take dataframe and account id
 # Returns sum of credit and debit,
 # and current amount by subtracting debit from credit
-deb_account <- function(df, account, credit = from, debit = to) {
+deb_account <- function(df, account, credit = credit, debit = debit) {
   credit <- enquo(credit)
   debit <- enquo(debit)
   
@@ -186,9 +186,9 @@ deb_account_credit <- function(df, id){
     
     account_names <- select(accounts, id, account)
     
-    df %>% filter(from %in% id) %>%
-      left_join(account_names, by = c("to" = "id")) %>% 
-      select(from:to, account, l:d, date) %>% 
+    df %>% filter(credit %in% id) %>%
+      left_join(account_names, by = c("debit" = "id")) %>% 
+      select(credit:debit, account, l:d, date) %>% 
       mutate(denarii = deb_lsd_d(l, s, d),
              pct = round(denarii*100/sum(denarii), 2)) %>% 
       arrange(desc(denarii))
@@ -202,9 +202,9 @@ deb_account_debit <- function(df, id){
     
     account_names <- select(accounts, id, account)
     
-    df %>% filter(to %in% id) %>%
-      left_join(account_names, by = c("from" = "id")) %>% 
-      select(from:to, account, l:d, date) %>% 
+    df %>% filter(debit %in% id) %>%
+      left_join(account_names, by = c("credit" = "id")) %>% 
+      select(credit:debit, account, l:d, date) %>% 
       mutate(denarii = deb_lsd_d(l, s, d),
              pct = round(denarii*100/sum(denarii), 2)) %>% 
       arrange(desc(denarii))
@@ -219,7 +219,7 @@ deb_account_debit <- function(df, id){
 # return a data frame with summed credit subtracted from summed debit
 # Resulting data frame has l, s, and d columns for debit, credit, and current
 
-deb_current <- function(df, credit = from, debit = to) {
+deb_current <- function(df, credit = credit, debit = debit) {
   credit <- enquo(credit)
   debit <- enquo(debit)
   
@@ -281,12 +281,12 @@ deb_current_print <- function(df) {
   
   # Get total credit and debit for each accout by date
   credit <- df %>% 
-    group_by(from) %>% 
+    group_by(credit) %>% 
     summarise(denarii_c = sum(denarii))
-  debit <- df %>% group_by(to) %>% 
+  debit <- df %>% group_by(debit) %>% 
     summarise(denarii_d = -sum(denarii))
   
-  accounts_sum <- full_join(credit, debit, by = c("from" = "to")) %>% 
+  accounts_sum <- full_join(credit, debit, by = c("credit" = "debit")) %>% 
     replace_na(list(denarii_c = 0, denarii_d = 0))
   
   denarii_sum <- accounts_sum %>% 
@@ -296,7 +296,7 @@ deb_current_print <- function(df) {
     mutate(credit = deb_d_lsd_print(denarii_c),
            debit = deb_d_lsd_print(denarii_d),
            current = deb_d_lsd_print(current_d)) %>% 
-    select(-contains("_"), id = from)
+    select(-contains("_"), id = credit)
 }
 
 deb_open_print <- function(df) {
