@@ -1,4 +1,4 @@
-dfl12,dfl12bis,from,to,account_1,relationship,account_2,date,librae,solidi,denarii,lsd,tr_type,notes
+dfl12,dfl12bis,credit,debit,account_1,relationship,account_2,date,librae,solidi,denarii,lsd,tr_type,notes
 1,1,dfl12_001,dfl12_003,Benedicto Vermer and brothers_1,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
 2,2,dfl12_001,dfl12_004,Benedicto Vermer and brothers_2,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
 3,3,dfl12_001,dfl12_005,Benedicto Vermer_3,debtor,Balance on 8 November,15821108,0,0,1,0.0.1,,
