@@ -2,39 +2,29 @@ library(tidyverse)
 library(debkeepr)
 library(packcircles)
 
-transactions <- read_csv("data/transactions.csv")
-accounts <- read_csv("data/accounts.csv") %>% 
-  select(-id_int, -account, -kinship, -location)
+# Use group transactions and accounts
+transactions_group <- read_csv("data/transactions_group.csv")
+accounts_group <- read_csv("data/accounts_group.csv") %>% 
+  select(-account, -kinship, -location)
 
-accounts_debit <- deb_debit(transactions) %>% 
-  left_join(accounts, by = c("account_id" = "id")) %>% 
-  filter(account_id != "dfl12_001")
-
-groups_debit <- accounts_debit %>% 
-  group_by(group) %>% 
-  deb_sum(l, s, d) %>% 
-  mutate(debit = round(deb_lsd_l(l, s, d), 3))
-
-group_types <- accounts %>% 
-  group_by(type, group) %>% 
-  summarise()
-
-# Add type to data frame. This adds extra rows, to zap extra rows
-# Create label for groups over £2000.
-groups_debit <- left_join(groups_debit, group_types, by = "group") %>% 
-  distinct(group, .keep_all = TRUE) %>% 
+groups_debit <- deb_debit(transactions_group) %>% 
+  left_join(accounts_group, by = c("account_id" = "id")) %>% 
+  rename(id = account_id, account_id = account_id.y) %>% 
+  filter(account_id != "dfl12_001") %>% 
+  select(-id, -account_id) %>% 
+  mutate(debit = round(deb_lsd_l(l, s, d), 3)) %>% 
   mutate(lsd = paste0("£", scales::comma(l), " ", s, "s. ", round(d), "d.")) %>% 
   mutate(label = if_else(debit > 2000, paste(group, lsd, sep = "-"), ""))
 
+## Make circles ##
 packing <- circleProgressiveLayout(groups_debit$debit, sizetype = "area")
-
 debit_circles <- bind_cols(groups_debit, packing)
 
+# Add type to circles data
 type_id <- debit_circles %>% 
   rowid_to_column("id") %>% 
   select(id, type)
 
-# Add type for color of circles
 dat.gg <- circleLayoutVertices(packing, npoints = 50) %>% 
   left_join(type_id, by = "id")
 
@@ -49,6 +39,7 @@ ggplot() +
   theme(legend.position = "none") +
   coord_equal()
 
+# With legend
 ggplot() + 
   geom_polygon(data = dat.gg, aes(x, y, group = id, fill = as.factor(type)),
                color = "black", alpha = 0.6) +

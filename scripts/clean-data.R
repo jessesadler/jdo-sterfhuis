@@ -51,7 +51,8 @@ transactions_group <- transactions %>%
   left_join(accounts_group_id, by = c("debit" = "account_id")) %>% 
   select(-credit, -debit) %>% 
   rename(credit = id.x, debit = id.y) %>% 
-  select(credit, debit, date, l:d)
+  select(credit, debit, date, l:d) %>% 
+  filter(credit != debit) # Remove transactions between the same group
 
 write_csv(accounts_group, "data/accounts_group.csv")
 write_csv(transactions_group, "data/transactions_group.csv")
