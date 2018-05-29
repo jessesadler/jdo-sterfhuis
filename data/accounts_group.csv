@@ -1,0 +1,222 @@
+id,group,account_id,account,label,type,kinship,location
+1,Balance on 8 November,dfl12_001,Balance on 8 November,Balance on 8 November,Estate,FALSE,Antwerp
+2,Cash register,dfl12_002,Cassa,Cash register,Cassa,FALSE,Antwerp
+3,Benedicto Vermer and brothers,dfl12_003,Benedicto Vermer and brothers_1,Benedicto Vermer and brothers,Written off,FALSE,NA
+4,Louis Bragadin,dfl12_007,Louis Bragadin,Louis Bragadin,Written off,FALSE,NA
+5,Peeter Vermer Nicolaess,dfl12_008,Peeter Vermer Nicolaess,Peeter Vermer Nicolaess,Written off,FALSE,NA
+6,Lodewyck Helman,dfl12_009,Lodewyck Helman,Lodewyck Helman,Written off,FALSE,NA
+7,Michiel Dermoyen,dfl12_011,Michiel Dermoyen,Michiel Dermoyen,Written off,FALSE,NA
+8,Peeter della Faille de Oude,dfl12_012,Peeter della Faille de Oude,Peeter della Faille de Oude,Written off,TRUE,NA
+9,Antwerp,dfl12_013,Roelant Paulet_1,Roelant Paulet,Political,FALSE,Antwerp
+10,Servaes Baes,dfl12_014,Servaes Baes,Servaes Baes,Written off,FALSE,NA
+11,Julio Bargarusio,dfl12_015,Julio Bargarusio,Julio Bargarusio,Miscellaneous,FALSE,NA
+12,Heirs of Huysbrecht Verstraeten,dfl12_016,Heirs of Huysbrecht Verstraeten,Heirs of Huysbrecht Verstraeten,Written off,FALSE,NA
+13,Frederico Perenot Heer van Champagny,dfl12_017,Frederico Perenot Heer van Champagny,Frederico Perenot Heer van Champagny,Loan,FALSE,NA
+14,Wouter Aertsen,dfl12_019,Wouter Aertsen,Wouter Aertsen,Miscellaneous,TRUE,NA
+15,Jan Peeterssen,dfl12_022,Jan Peeterssen,Jan Peeterssen,Written off,FALSE,NA
+16,Lucas de Hemele,dfl12_024,Lucas de Hemele,Lucas de Hemele,Miscellaneous,FALSE,NA
+17,Linen,dfl12_025,Bocralen overhoop_1,Assorted rough packing linen,Goods,FALSE,NA
+18,Antoine Malapert,dfl12_027,Antoine Malapert,Antoine Malapert,Trade,TRUE,NA
+19,Jan de Vooght,dfl12_028,Jan de Vooght_1,Jan de Vooght,Written off,FALSE,NA
+20,Loys Hasebaert,dfl12_029,Loys Hasebaert,Loys Hasebaert,Written off,FALSE,NA
+21,"Mayken Reyniers, widow of Jan Ridderincx",dfl12_030,Mayken Reyniers weduwe of Jan Ridderincx,"Mayken Reyniers, widow of Jan Ridderincx",Miscellaneous,FALSE,NA
+22,Heer Dierick van Liesvelt,dfl12_031,Heer Dierick van Liesvelt,Heer Dierick van Liesvelt,Law,FALSE,NA
+23,Gillis van den Bogaerde and Marcus Schoor,dfl12_032,Gillis van den Bogaerde and Marcus Schoor_1,Gillis van den Bogaerde and Marcus Schoor,Trade,FALSE,NA
+24,Jacomo Widhols,dfl12_033,Jacomo Widhols,Jacomo Widhols,Factor,FALSE,Augsburg
+25,Gillis del Ponte,dfl12_034,Gillis del Ponte,Gillis del Ponte,Trade,TRUE,NA
+26,Bills of exchange,dfl12_035,Weduwe van Henrick Packmuts,Widow of Henrick Packmuts,Wissel,FALSE,NA
+27,Jaspar Celosse,dfl12_037,Jaspar Celosse,Jaspar Celosse,Trade,TRUE,Emden
+28,Profits and losses,dfl12_038,Winninge ende verlies_1,Profits and losses,Trade,FALSE,Antwerp
+29,Joos de Voghele,dfl12_039,Joos de Voghele_1,Joos de Voghele,Written off,TRUE,NA
+30,Fine silk,dfl12_042,Fyn rouwe syde,Fine raw silk,Goods,FALSE,NA
+31,Peeter della Faille de Jonge,dfl12_043,Peeter della Faille de Jonge,Peeter della Faille de Jonge,Giovane,TRUE,NA
+32,Camlet,dfl12_044,Camelotten overhoop,Assorted camlet,Goods,FALSE,NA
+33,Jan van Neste,dfl12_045,Jan van Neste,Jan van Neste,Erffgoed,TRUE,NA
+34,Jan de Hilte van Cortryck,dfl12_046,Jan de Hilte van Cortryck,Jan de Hilte van Cortryck,Written off,FALSE,NA
+35,Kerseys,dfl12_047,Carseyen in company of Jan de Wale,Kerseys in company of Jan de Wale,Company,TRUE,NA
+36,Ghysbrecht Tytgat,dfl12_049,Ghysbrecht Tytgat,Ghysbrecht Tytgat,Miscellaneous,FALSE,NA
+37,Margriete van Hoogersteyn,dfl12_050,Margriete van Hoogersteyn,Margriete van Hoogersteyn,Trade,FALSE,Haarlem
+38,Rigo Minauw,dfl12_051,Rigo Minauw,Rigo Minauw,Trade,FALSE,Cologne
+39,Capitona silk,dfl12_052,Capitoen syde ende Hoffsaet,Capitona silk,Goods,FALSE,NA
+40,Carel van Malsen,dfl12_053,Carel van Malsen,Carel van Malsen,Trade,FALSE,NA
+41,Beelken della Faille,dfl12_054,Beelken della Faille_1,Beelken della Faille,Written off,TRUE,NA
+42,Ambrosius Goyvaerts,dfl12_055,Ambrosius Goyvaerts_1,Ambrosius Goyvaerts,Law,FALSE,NA
+43,Nicolaes Antonio van Smillien,dfl12_056,Nicolaes Antonio van Smillien,Nicolaes Antonio van Smillien,Miscellaneous,FALSE,NA
+44,Pauwels della Faille,dfl12_057,Pauwels della Faille_1,Pauwels della Faille,Kin,TRUE,NA
+45,Peeter Rutgeert,dfl12_058,Peeter Rutgeert,Peeter Rutgeert,Erffgoed,FALSE,NA
+46,Hans Noirot,dfl12_059,Hans Noirot,Hans Noirot,Miscellaneous,TRUE,NA
+47,Henrick van Berge,dfl12_060,Henrick van Berge,Henrick van Berge,Trade,FALSE,NA
+48,Andries van der Meulen,dfl12_062,Andries van der Meulen,Andries van der Meulen,Trade,FALSE,NA
+49,Simon de Deckere,dfl12_063,Simon de Deckere,Simon de Deckere,Trade,FALSE,NA
+50,Hilaria della Faille,dfl12_064,Hilaria della Faille_1,Hilaria della Faille,Trade,TRUE,NA
+51,Francisco van Eeckeren,dfl12_066,Francisco van Eeckeren_1,Francisco van Eeckeren,Giovane,TRUE,Venice
+52,Jan Voet,dfl12_067,Jan Voet cleermaecker,Jan Voet,Miscellaneous,FALSE,NA
+53,Silk,dfl12_068,Napelse Syde,Napolese silk,Goods,FALSE,NA
+54,Wine,dfl12_069,Rensche wynen,Rheinish wine,Goods,FALSE,NA
+55,Willem van den Mey,dfl12_070,Willem van den Mey_1,Willem van den Mey,Trade,FALSE,Haarlem
+56,Willem Mourcock,dfl12_071,Willem Mourcock,Willem Mourcock,Written off,FALSE,NA
+57,Jan de Wale,dfl12_073,Jan de Wale_1,Jan de Wale,Factor,TRUE,Venice
+58,Catharina Aertssen,dfl12_074,Catharina Aertssen,Catharina Aertssen,Bequest,TRUE,NA
+59,Jeronimo Cassina,dfl12_075,Jeronimo Cassina,Jeronimo Cassina,Trade,FALSE,NA
+60,Robert van Eeckeren,dfl12_076,Robert van Eeckeren_1,Robert van Eeckeren,Trade,TRUE,Antwerp
+61,Floret silk,dfl12_077,Witte florette syde,White floret silk,Goods,FALSE,NA
+62,Antonio van Neste,dfl12_078,Antonio van Neste_1,Antonio van Neste,Trade,TRUE,Venice
+63,Anthoni Peetersz,dfl12_079,Anthoni Peeterss van Brussel,Anthoni Peetersz,Trade,FALSE,NA
+64,Jacques de Wale,dfl12_082,Jacques de Wale_1,Jacques de Wale,Factor,TRUE,Kortrijk
+65,Catharina de Hane,dfl12_083,Catharina de Hane,Catharina de Hane,Kin,TRUE,NA
+66,Jan Verbeke,dfl12_084,Jan Verbeke,Jan Verbeke,Trade,TRUE,Vlissingen
+67,Crystal mirrors,dfl12_085,Christalyne spiegels,Crystal mirrors,Goods,FALSE,NA
+68,Ardasse silk and mace,dfl12_086,Ardasse syde ende cleyn foullie,Ardasse silk and mace,Goods,FALSE,NA
+69,Engelsten,dfl12_087,Engelsten,Engelsten,Goods,FALSE,NA
+70,Luis Cutsini,dfl12_088,Foullie for the rekening of Luis Cutsini,Mace for the account of Luis Cutsini,Goods,FALSE,NA
+71,Ardasse and Canary silk,dfl12_089,Ardasse and Canarine syde van Marten della Faille and Jan de Wale,Ardasse and Canary silk of Marten della Faille and Jan de Wale,Company,TRUE,NA
+72,Erardo Beham,dfl12_090,Erardo Beham nieuw rekening,Erardo Beham new account,Trade,FALSE,Nuremberg
+73,Jan Widhols,dfl12_091,Jan Widhols nieuw rekening,Jan Widhols new account,Factor,FALSE,Cologne
+74,"Lynken Pluym, widow of Lenaert Pluym",dfl12_092,Lynken Pluym weduwe van Lenaert Pluym,"Lynken Pluym, widow of Lenaert Pluym",Miscellaneous,FALSE,NA
+75,Bourat,dfl12_097,Bouratten overhoop,Assorted bourat,Goods,FALSE,NA
+76,Trade expenses,dfl12_098,Oncosten van coopmansschappen,Trade expenses,Trade,FALSE,Antwerp
+77,Jacques,dfl12_102,Jacques della Faille_1,Jacques della Faille,Heir,TRUE,NA
+78,Assorted canvas,dfl12_103,Canifassen overhoop,Assorted canvas,Goods,FALSE,NA
+79,Jan de Reyer,dfl12_106,Jan de Reyer,Jan de Reyer,Trade,FALSE,NA
+80,Heirs of Simon Longin in Brussels,dfl12_107,D'erffgenaemen van Simon Longin in Brussels,Heirs of Simon Longin in Brussels,Erffgoed,FALSE,NA
+81,Prince van Simay,dfl12_108,Prince van Simay,Prince van Simay,Written off,FALSE,NA
+82,Verona branch,dfl12_110,Voyagie van Verona,Branch of Verona,Branch,FALSE,Verona
+83,Venice branch,dfl12_111,Voyagie van Venice,Branch of Venice,Branch,FALSE,Venice
+84,London branch,dfl12_112,Voyagie van London,Branch of London,Branch,FALSE,London
+85,Louis Malapert,dfl12_114,Louis Malapert_1,Louis Malapert,Trade,TRUE,NA
+86,Jan Reynaerts,dfl12_134,Jan Reynaerts,Jan Reynaerts,Miscellaneous,TRUE,NA
+87,Eduart van Ghistele,dfl12_148,Eduart van Ghistele,Eduart van Ghistele,Miscellaneous,FALSE,NA
+88,Jan de Oude,dfl12_151,Jan de Oude_1,Jan de Oude,Estate,TRUE,Antwerp
+89,Jan,dfl12_152,Jan della Faille_sororal_1,Jan della Faille,Inheritance,TRUE,NA
+90,Marten,dfl12_153,Marten della Faille_sororal_1,Marten della Faille,Inheritance,TRUE,Antwerp
+91,Anna,dfl12_154,Anna della Faille_sororal_1,Anna della Faille,Inheritance,TRUE,NA
+92,Carlo,dfl12_155,Carlo della Faille_sororal_1,Carlo della Faille,Inheritance,TRUE,NA
+93,Steven,dfl12_157,Steven della Faille_sororal_1,Steven della Faille,Inheritance,TRUE,NA
+94,Maria,dfl12_158,D'erffgenaemen van Maria della Faille_sororal_1,Heirs of Maria della Faille,Inheritance,TRUE,NA
+95,Hester,dfl12_159,Hester della Faille_sororal_1,Hester della Faille,Inheritance,TRUE,NA
+96,Jan Walter,dfl12_163,Jan Walter,Jan Walter,Trade,FALSE,Nuremberg
+97,Lenaert van Driel de Oude,dfl12_167,Lenaert van Driel de Oude,Lenaert van Driel de Oude,Law,TRUE,NA
+98,Jacques della Faille de Oude,dfl12_176,Jacques della Faille de Oude_1,Jacques della Faille de Oude,Kin,TRUE,NA
+99,Piat della Faille,dfl12_179,Piat della Faille,Piat della Faille,Giovane,TRUE,Venice
+100,Peeter della Faille Peterssen,dfl12_199,Peeter della Faille Peterssen,Peeter della Faille Peterssen,Written off,TRUE,NA
+101,Gall nuts,dfl12_202,Gallen de Soria,Gall nuts,Goods,FALSE,NA
+102,Wool,dfl12_203,Wolle Francisca overhoop,Assorted Franciscan wool,Goods,FALSE,NA
+103,Jan van Borne,dfl12_204,Jan van Borne_1,Jan van Borne,Factor,TRUE,Kortrijk
+104,Masters of the goldsmiths chamber,dfl12_224,De dekens van de Goutsmits camer,Masters of the goldsmiths chamber,Erffgoed,FALSE,Antwerp
+105,Philips Hockaert,dfl12_225,Philips Hockaert,Philips Hockaert,Erffgoed,FALSE,NA
+106,Rents,dfl12_227,Rente van 44 gulden erffelyck op de huysen van Jan de Clerck,Interest of 44 gulden for the houses of Jan de Clerck,Erffgoed,FALSE,Antwerp
+107,Dierick de Jaghere,dfl12_232,Dierick de Jaghere rekening van erffgoeden,Dierick de Jaghere,Erffgoed,TRUE,NA
+108,Bapta Tornello,dfl12_234,Bapta Tornello,Bapta Tornello,Written off,FALSE,NA
+109,Peeter and Antonio Donati,dfl12_235,Peeter and Antonio Donati in Venice,Peeter and Antonio Donati,Written off,FALSE,NA
+110,Lanckpeper van Loys Bragadin,dfl12_236,Lanckpeper van Loys Bragadin,Lanckpeper van Loys Bragadin,Written off,FALSE,NA
+111,Creditors of Huybrecht Houtappel,dfl12_237,Crediteuren of Huybrecht Houtappel,Creditors of Huybrecht Houtappel,Written off,FALSE,NA
+112,Old rebarbe found in the house,dfl12_238,Oude rebarbe in huys bevonden,Old rebarbe found in the house,Written off,FALSE,NA
+113,Beneditto Venier and brothers,dfl12_239,Monna and Lacha van Beneditto Venier and brothers,Monna and Lacha van Beneditto Venier and brothers,Written off,FALSE,NA
+114,Blomcoolsaet Jan van Chrisostomo de Mazi,dfl12_242,Blomcoolsaet Jan van Chrisostomo de Mazi,Blomcoolsaet Jan van Chrisostomo de Mazi,Written off,FALSE,NA
+115,Jan Ambriosio,dfl12_243,Jan Ambriosio dorco,Jan Ambriosio,Written off,FALSE,NA
+116,Joris Naus,dfl12_244,Joris Naus,Joris Naus,Written off,FALSE,NA
+117,Martynken van Capellen,dfl12_245,Martynken van Capellen_1,Martynken van Capellen,Loan,TRUE,NA
+118,Carel Helman,dfl12_246,Carel Helman,Carel Helman,Written off,FALSE,NA
+119,Aert Cornelis Lootgietere,dfl12_247,Aert Cornelis Lootgietere,Aert Cornelis Lootgietere,Written off,FALSE,NA
+120,Guilliam Ghyselinck,dfl12_248,Guilliam Ghyselinck,Guilliam Ghyselinck,Written off,FALSE,NA
+121,Christoffel Pruynen,dfl12_249,Christoffel Pruynen,Christoffel Pruynen,Written off,FALSE,NA
+122,Rugge Vellekens,dfl12_250,Rugge Vellekens,Rugge Vellekens,Written off,FALSE,NA
+123,Cornelia,dfl12_253,Cornelia della Faille,Cornelia della Faille,Inheritance,TRUE,NA
+124,Maria Volders,dfl12_255,Maria Volders,Maria Volders,Loan,FALSE,NA
+125,Elephant teeth and red sandalwood from Angelo Lion in Lisbon,dfl12_256,Olifants tanden ende root sandelhout from Angelo Lion in Lisbon,Elephant teeth and red sandalwood from Angelo Lion in Lisbon,Goods,FALSE,NA
+126,Salzaparilla van Adriaen de Groote,dfl12_257,Salzaparilla van Adriaen de Groote,Salzaparilla van Adriaen de Groote,Written off,FALSE,NA
+127,Ferdinando de Frias Canelhos,dfl12_258,Ferdinando de Frias Canelhos,Ferdinando de Frias Canelhos,Miscellaneous,FALSE,NA
+128,Maria van der Capellen,dfl12_259,Maria van der Capellen,Maria van der Capellen,Bequest,TRUE,NA
+129,Rogier de Vendevillo,dfl12_260,Rogier de Vendevillo,Rogier de Vendevillo,Miscellaneous,FALSE,NA
+130,Maria van Driel,dfl12_261,Maria van Driel,Maria van Driel,Loan,TRUE,NA
+131,Catharina van Driel,dfl12_262,Catharina van Driel,Catharina van Driel,Loan,TRUE,NA
+132,Daniel Hoochstetter,dfl12_263,Daniel Hoochstetter,Daniel Hoochstetter,Trade,FALSE,NA
+133,Passchier van Eele van Brugge,dfl12_264,Passchier van eele van Brugge,Passchier van Eele van Brugge,Trade,FALSE,NA
+134,Van Driel sisters,dfl12_266,Urssula van Driel,Urssula van Driel,Loan,TRUE,NA
+135,Gaspar Losschaert,dfl12_267,Gaspar Losschaert_1,Gaspar Losschaert,Giovane,TRUE,Haarlem
+136,Gillis del Ponte and Hilaria della Faille,dfl12_269,Gillis del Ponte and Hilaria della Faille,Gillis del Ponte and Hilaria della Faille,Loan,TRUE,NA
+137,Hendrick della Faille,dfl12_270,Hendrick della Faille_1,Hendrick della Faille,Loan,TRUE,NA
+138,Poor,dfl12_273,Rekeninghe van armen,Rekeninghe van armen,Political,FALSE,Antwerp
+139,Gillis Bontenaken,dfl12_274,Gillis Bontenaken,Gillis Bontenaken,Giovane,FALSE,London
+140,Jan de Lannoy,dfl12_275,Jan de Lannoy_2,Jan de Lannoy,Written off,FALSE,NA
+141,Tanneken and Lynken Noirot,dfl12_276,Tanneken and Lynken Noirot_1,Tanneken and Lynken Noirot,Bequest,TRUE,NA
+142,Joos van Damme,dfl12_277,Joos van Damme,Joos van Damme,Loan,FALSE,NA
+143,Lenaert van Driel de Jonge,dfl12_278,Lenaert van Driel de Jonge,Lenaert van Driel de Jonge,Loan,TRUE,NA
+144,Beelken van Driel,dfl12_279,Beelken van Driel,Beelken van Driel,Loan,TRUE,NA
+145,Anna de Hane,dfl12_281,D'erffgenaemen van Anna de Hane_1,Heirs of Anna de Hane,Law,TRUE,NA
+146,Heirs of Gilles Hasebaert and Magdalena du Boys,dfl12_282,D'erffgenaemen van Gilles Hasebaert ende Magdalena du Boys,Heirs of Gilles Hasebaert and Magdalena du Boys,Law,FALSE,NA
+147,Hester van Eeckeren,dfl12_283,Hester van Eeckeren_1,Hester van Eeckeren,Loan,TRUE,NA
+148,Marcus Stecher,dfl12_290,Marcus Stecher,Marcus Stecher,Giovane,TRUE,London
+149,Peeter Mesureur,dfl12_291,Peeter Mesureur,Peeter Mesureur,Trade,FALSE,Valenciennes
+150,Jacques Noirot,dfl12_292,Jacques Noirot_1,Jacques Noirot,Giovane,TRUE,NA
+151,Gheeraert Corhase,dfl12_293,Gheeraert Corhase,Gheeraert Corhase,Giovane,FALSE,Venice
+152,Daniel de Hane,dfl12_296,Oncosten van't process tegens Daniel de Hane,Expenses of the lawsuit against Daniel de Hane,Law,TRUE,NA
+153,Commission trade,dfl12_297,Onse Provise,Commission trade,Trade,FALSE,Antwerp
+154,Jacques Rugge,dfl12_298,Jacques Rugge,Jacques Rugge,Trade,FALSE,NA
+155,Jan Wallaert,dfl12_299,Jan Wallaert,Jan Wallaert,Trade,FALSE,NA
+156,Christiaen van Wiele,dfl12_300,Christiaen van Wiele_1,Christiaen van Wiele,Law,FALSE,NA
+157,Jan Bernaert,dfl12_303,Jan Bernaert_1,Jan Bernaert,Miscellaneous,TRUE,NA
+158,Jan Nollet,dfl12_304,Jan Nollet,Jan Nollet,Loan,FALSE,NA
+159,Jan de Backere,dfl12_307,Jan de Backere,Jan de Backere,Written off,FALSE,NA
+160,Joos Grendel,dfl12_308,Joos Grendel,Joos Grendel,Trade,FALSE,NA
+161,Robert and Maria Frumault,dfl12_311,Robert and Maria Frumault_1,Robert and Maria Frumault,Loan,TRUE,NA
+162,Philippma van Heyden,dfl12_314,Philippma van Heyden,Philippma van Heyden,Loan,FALSE,NA
+163,Heirs of Herman Pottey,dfl12_315,D'erffegaemen of Herman Pottey,Heirs of Herman Pottey,Loan,TRUE,NA
+164,Marten Ensberger,dfl12_316,Marten Ensberger nieuw rekening,Marten Ensberger new account,Factor,FALSE,Hamburg
+165,Oswaldus Cleynhans and company,dfl12_317,Oswaldus Cleynhans ende company,Oswaldus Cleynhans and company,Trade,FALSE,NA
+166,Henrick Hulsscher,dfl12_318,Henrick Hulsscher,Henrick Hulsscher,Written off,FALSE,NA
+167,Adriaen van Afferden de Jonge,dfl12_322,Adriaen van Afferden de Jonge,Adriaen van Afferden de Jonge,Written off,FALSE,NA
+168,Jan Pellicoren,dfl12_323,Jan Pellicoren_2,Jan Pellicoren,Erffgoed,FALSE,NA
+169,Hester and Cornelia,dfl12_324,Hester and Cornelia della Faille,Hester and Cornelia della Faille,Heir,TRUE,NA
+170,Paintings on canvass,dfl12_326,Schilderye op doeck,Paintings on canvass,Written off,FALSE,NA
+171,Jems Tipman,dfl12_327,Jems Tipman,Jems Tipman,Trade,FALSE,NA
+172,Jacob de Rinck,dfl12_328,Jacob de Rinck,Jacob de Rinck,Miscellaneous,FALSE,NA
+173,Walran Helbau,dfl12_329,Walran Helbau,Walran Helbau,Written off,FALSE,Lille
+174,Jan de Backere and Sevaes Wouters,dfl12_331,Jan de Backere and Sevaes Wouters,Jan de Backere and Sevaes Wouters,Trade,FALSE,Venice
+175,Melchior Noirot,dfl12_332,Melchior Noirot,Melchior Noirot,Giovane,TRUE,NA
+176,Jan van Woonsel,dfl12_335,Jan van Woonsel_1,Jan van Woonsel,Bequest,FALSE,NA
+177,Jan Struyck,dfl12_337,Jan Struyck,Jan Struyck,Erffgoed,FALSE,NA
+178,"Synken della Faille, widow of Peeter della Faille",dfl12_339,Synken della Faille weduwe of Peeter della Faille,"Synken della Faille, widow of Peeter della Faille",Kin,TRUE,NA
+179,Gold and silver thread,dfl12_357,Gout ende Silverdraet,Gold and silver thread,Goods,FALSE,NA
+180,Geleyen Lytgat,dfl12_358,Geleyen Lytgat,Geleyen Lytgat,Miscellaneous,FALSE,NA
+181,Aalmoezeniers of Antwerpen,dfl12_360,Aalmoezeniers of Antwerpen,Aalmoezeniers of Antwerpen,Bequest,FALSE,Antwerp
+182,Losynken van Brugge,dfl12_363,Losynken van Brugge,Losynken van Brugge,Bequest,TRUE,NA
+183,"Synken della Faille, daughter of Peeter della Faille",dfl12_364,Synken della Faille daughter of Peeter della Faille,"Synken della Faille, daughter of Peeter della Faille",Bequest,TRUE,NA
+184,Catharina de Wale,dfl12_369,Catharina de Wale,Catharina de Wale,Bequest,TRUE,NA
+185,Maria de Wale,dfl12_372,Maria de Wale,Maria de Wale,Bequest,TRUE,NA
+186,Jan Noirot de Jonge,dfl12_377,Jan Noirot de Jonge,Jan Noirot de Jonge,Bequest,FALSE,NA
+187,Maria Segers,dfl12_381,Maria Segers,Maria Segers,Bequest,TRUE,NA
+188,Maria Hoyes,dfl12_383,Maria Hoyes,Maria Hoyes,Bequest,FALSE,NA
+189,Jan de Hilte,dfl12_384,Jan de Hilte,Jan de Hilte,Bequest,FALSE,NA
+190,Jeronimo and Andrea della Faille,dfl12_385,Jeronimo and Andrea della Faille,Jeronimo and Andrea della Faille,Bequest,TRUE,NA
+191,Cornelis della Faille,dfl12_386,Cornelis della Faille,Cornelis della Faille,Bequest,TRUE,NA
+192,Vincentia della Faille,dfl12_389,Vincentia della Faille,Vincentia della Faille,Bequest,TRUE,NA
+193,Lucretia de Hane,dfl12_391,Lucretia de Hane,Lucretia de Hane,Bequest,TRUE,NA
+194,Henrick or Rigo Minauw,dfl12_394,Henrick or Rigo Minauw in Cologne,Henrick or Rigo Minauw,Bequest,FALSE,NA
+195,Maria Calvaert,dfl12_399,Maria Calvaert,Maria Calvaert,Bequest,TRUE,NA
+196,Cornelia Dittermans,dfl12_400,Cornelia Dittermans,Cornelia Dittermans,Bequest,FALSE,NA
+197,Janneken van Eeckeren,dfl12_402,Janneken van Eeckeren,Janneken van Eeckeren,Bequest,TRUE,NA
+198,"Henrick van Liesvelt, Lord of Hamme and Chancellor of Brabant",dfl12_403,Henrick van Liesvelt Heer van Hamme and Cancellier of Brabant,"Henrick van Liesvelt, Lord of Hamme and Chancellor of Brabant",Bequest,FALSE,NA
+199,Henrick Kinschot,dfl12_406,Henrick Kinschot,Henrick Kinschot,Bequest,FALSE,NA
+200,Otto Hartius,dfl12_407,Otto Hartius,Otto Hartius,Bequest,FALSE,NA
+201,Antonio Schoormans,dfl12_409,Antonio Schoormans_1,Antonio Schoormans,Bequest,FALSE,NA
+202,Roelant Paulet,dfl12_410,Roelant Paulet_2,Roelant Paulet,Bequest,FALSE,NA
+203,Children of Peeter della Faille,dfl12_411,Children of Peeter della Faille,Children of Peeter della Faille,Bequest,TRUE,NA
+204,Catharina della Faille,dfl12_412,Catharina della Faille,Catharina della Faille,Bequest,TRUE,NA
+205,Joos and Peeter della Faille,dfl12_413,Joos and Peeter della Faille,Joos and Peeter della Faille,Bequest,TRUE,NA
+206,Hans and Anna della Faille,dfl12_414,Hans and Anna della Faille,Hans and Anna della Faille,Bequest,TRUE,NA
+207,Luis Samyn and siblings,dfl12_415,Luis Samyn and siblings,Luis Samyn and siblings,Bequest,TRUE,NA
+208,Regina Care,dfl12_417,Regina Care,Regina Care,Bequest,FALSE,NA
+209,Heirs of Willem Boutens and Hilaria della Faille,dfl12_419,D'erffgenaemen of Willem Boutens and Hilaria della Faille,Heirs of Willem Boutens and Hilaria della Faille,Bequest,TRUE,NA
+210,Thomas Hese,dfl12_448,Thomas Hese,Thomas Hese,Trade,FALSE,NA
+211,Grossgrains,dfl12_453,Grossgrains,Grossgrains,Goods,FALSE,NA
+212,House in the Merckgraveley,dfl12_455,Huys in the Merckgraveley,House in the Merckgraveley,Erffgoed,FALSE,NA
+213,Jan van Gels,dfl12_467,Jan van Gels,Jan van Gels,Trade,FALSE,NA
+214,Satin,dfl12_475,Rasse van Venice,Satin from Venice,Goods,FALSE,NA
+215,Peeter Wannemaker,dfl12_476,Peeter Wannemaker,Peeter Wannemaker,Trade,FALSE,NA
+216,London Inheritance,dfl12_478,Jacques_Jan_Carlo_Hester,"Jacques, Jan, Carlo, and Hester",London Inheritance,TRUE,London
+217,Cloth sellers of Haarlem,dfl12_480,Laecken vercoopers van Haarlem,Cloth sellers of Haarlem,Trade,FALSE,Haarlem
+218,Olivier Coeck,dfl12_481,Olivier Coeck,Olivier Coeck,Trade,FALSE,Antwerp
+219,Lieven van Rockeghem,dfl12_484,Lieven van Rockeghem,Lieven van Rockeghem,Law,FALSE,NA
+220,The Grooten Beer on the Groote Merkt,dfl12_485,Huis de Grooten Beer op de Groote Merct,The Grooten Beer on the Groote Merkt,Erffgoed,FALSE,Antwerp
+221,Gerard de Schepper,dfl12_486,Gerard de Schepper,Gerard de Schepper,Trade,FALSE,NA
