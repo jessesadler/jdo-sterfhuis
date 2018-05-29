@@ -2,7 +2,6 @@
 
 # Can use this to aggregate either all accounts for each heir or only the inheritance accounts
 # The difference is whether to filter accounts to only inheritance accounts at the beginning or not
-# First part fge
 
 library(stringr)
 
@@ -65,27 +64,27 @@ anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>%
 anna_de_hane_replace <- set_names(replicate(length(anna_de_hane_accounts), "dfl12_310"), anna_de_hane_accounts)
 
 # Replace ids in transactions
-transactions$from <- str_replace_all(transactions$from, anna_replace)
-transactions$from <- str_replace_all(transactions$from, jan_replace)
-transactions$from <- str_replace_all(transactions$from, marten_replace)
-transactions$from <- str_replace_all(transactions$from, maria_replace)
-transactions$from <- str_replace_all(transactions$from, carlo_replace)
-transactions$from <- str_replace_all(transactions$from, jacques_replace)
-transactions$from <- str_replace_all(transactions$from, steven_replace)
-transactions$from <- str_replace_all(transactions$from, hester_replace)
-transactions$from <- str_replace_all(transactions$from, cornelia_replace)
-transactions$from <- str_replace_all(transactions$from, anna_de_hane_replace)
+transactions$credit <- str_replace_all(transactions$credit, anna_replace)
+transactions$credit <- str_replace_all(transactions$credit, jan_replace)
+transactions$credit <- str_replace_all(transactions$credit, marten_replace)
+transactions$credit <- str_replace_all(transactions$credit, maria_replace)
+transactions$credit <- str_replace_all(transactions$credit, carlo_replace)
+transactions$credit <- str_replace_all(transactions$credit, jacques_replace)
+transactions$credit <- str_replace_all(transactions$credit, steven_replace)
+transactions$credit <- str_replace_all(transactions$credit, hester_replace)
+transactions$credit <- str_replace_all(transactions$credit, cornelia_replace)
+transactions$credit <- str_replace_all(transactions$credit, anna_de_hane_replace)
   
-transactions$to <- str_replace_all(transactions$to, anna_replace)
-transactions$to <- str_replace_all(transactions$to, jan_replace)
-transactions$to <- str_replace_all(transactions$to, marten_replace)
-transactions$to <- str_replace_all(transactions$to, maria_replace)
-transactions$to <- str_replace_all(transactions$to, carlo_replace)
-transactions$to <- str_replace_all(transactions$to, jacques_replace)
-transactions$to <- str_replace_all(transactions$to, steven_replace)
-transactions$to <- str_replace_all(transactions$to, hester_replace)
-transactions$to <- str_replace_all(transactions$to, cornelia_replace)
-transactions$to <- str_replace_all(transactions$to, anna_de_hane_replace)
+transactions$debit <- str_replace_all(transactions$debit, anna_replace)
+transactions$debit <- str_replace_all(transactions$debit, jan_replace)
+transactions$debit <- str_replace_all(transactions$debit, marten_replace)
+transactions$debit <- str_replace_all(transactions$debit, maria_replace)
+transactions$debit <- str_replace_all(transactions$debit, carlo_replace)
+transactions$debit <- str_replace_all(transactions$debit, jacques_replace)
+transactions$debit <- str_replace_all(transactions$debit, steven_replace)
+transactions$debit <- str_replace_all(transactions$debit, hester_replace)
+transactions$debit <- str_replace_all(transactions$debit, cornelia_replace)
+transactions$debit <- str_replace_all(transactions$debit, anna_de_hane_replace)
 
 ## Explanation with one account ##
 
@@ -102,9 +101,9 @@ hester_replace <- set_names(replicate(length(hester_accounts), hester_accounts[1
 
 # Create list of transactions
 hester_transactions <- transactions %>%
-  filter(to %in% hester_accounts | from %in% hester_accounts) %>% 
+  filter(to %in% hester_accounts | credit %in% hester_accounts) %>% 
   ungroup()
 
-hester_transactions$to <- str_replace_all(hester_transactions$to, hester_replace)
-hester_transactions$from <- str_replace_all(hester_transactions$from, hester_replace)
+hester_transactions$debit <- str_replace_all(hester_transactions$debit, hester_replace)
+hester_transactions$credit <- str_replace_all(hester_transactions$credit, hester_replace)
 hester_transactions <- deb_group_sum(hester_transactions)

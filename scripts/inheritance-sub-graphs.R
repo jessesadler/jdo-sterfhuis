@@ -1,73 +1,86 @@
 ### Graph of accounts dealing with Heirs ###
+# Use account and transactions groups
 
 library(tidyverse)
 library(stringr)
 library(igraph)
 library(ggraph)
-source("scripts/functions.R")
+library(debkeepr)
 
 # Load data
-transactions <- read_csv("data/transactions.csv")
-accounts <- read_csv("data/accounts.csv")
+transactions_group <- read_csv("data/transactions_group.csv")
+accounts_group <- read_csv("data/accounts_group.csv")
 
 ## Create subset of transactions that deal directly with heirs
-heirs_accounts <- filter(accounts, type == "Inheritance" | type == "Heir")
-transactions <- transactions %>%
-  filter(to %in% heirs_accounts$id | from %in% heirs_accounts$id)
+heirs_accounts <- filter(accounts_group, type == "Inheritance" | type == "Heir") %>% 
+  select(id) %>% flatten() %>% as_vector()
+transactions_inheritance <- transactions_group %>%
+  filter(debit %in% heirs_accounts | credit %in% heirs_accounts)
 
 ## Aggregate accounts dealing with heirs
 ## Aggregate accounts: Estate, branches, winninge ende verlies
 
 ## Sum of transactions
-transactions <- deb_group_sum(transactions) %>% ungroup
+transactions_sum <- transactions_inheritance %>% 
+  group_by(credit, debit) %>% 
+  deb_sum(l, s, d) %>% 
+  mutate(pounds = round(deb_lsd_l(l, s, d), 3))
 
-# Recreate accounts that are in transactions data frames
-from <- transactions %>% 
-  distinct(from) %>%
-  rename(id = from)
+## Total debit of accounts
+accounts_sum <- deb_debit(transactions_group) %>% 
+  mutate(pounds = round(deb_lsd_l(l, s, d), 3)) %>% 
+  full_join(accounts_group, by = c("account_id" = "id")) %>% 
+  replace_na(list(pounds = 0)) %>% 
+  arrange(pounds)
 
-to <- transactions %>% 
-  distinct(to) %>%
-  rename(id = to)
+# Recreate accounts that are in transactions_inheritance data frames
+credit <- transactions_inheritance %>% 
+  distinct(credit) %>%
+  rename(id = credit)
 
-nodes <- full_join(from, to, by = "id")
+debit <- transactions_inheritance %>% 
+  distinct(debit) %>%
+  rename(id = debit)
 
-nodes <- filter(accounts, id %in% nodes$id)
+accounts_inheritance <- full_join(credit, debit, by = "id") %>% 
+  flatten() %>% as_vector()
+
+nodes <- filter(accounts_sum, account_id %in% accounts_inheritance) %>% 
+  mutate(label = if_else(account_id %in% heirs_accounts, paste(group), NA_character_))
 
 
 # Create igraph object
 # Creates vertices from inheritances_transactions data
-inheritance <- graph_from_data_frame(d = transactions, vertices = nodes, directed = TRUE)
-
-ggraph(inheritance, layout = "dh") + 
-  geom_edge_fan(aes(alpha = l)) + 
-  geom_node_point(size = 2) + 
-  theme_graph()
+inheritance <- graph_from_data_frame(d = transactions_sum,
+                                     vertices = nodes, directed = TRUE)
+set_graph_style()
 
 ggraph(inheritance, layout = "fr") + 
-  geom_edge_fan(aes(alpha = l)) + 
-  geom_node_point(aes(size = pounds)) + 
-  scale_size_continuous(range = c(0.5, 5)) +
-  theme_graph()
-
-# Arc graph
-ggraph(inheritance, layout = "linear") + 
-  geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(size = 2) +
-  theme_graph()
-
-# Circle graph
-ggraph(inheritance, layout = "linear", circular = TRUE) + 
-  geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(size = 2) +
-  theme_graph()
+  geom_edge_fan(aes(edge_alpha = l)) + 
+  scale_edge_alpha(labels = scales::dollar_format("£")) + 
+  geom_node_point(aes(size = pounds, color = label), alpha = 0.7) + 
+  geom_node_text(aes(label = label), repel = TRUE) + 
+  scale_size_continuous(range = c(0.5, 10), labels = scales::dollar_format("£")) + 
+  labs(size = "Accumulated Value",
+       edge_alpha = "Transactions",
+       color = "Account groups",
+       title = "Estate of Jan della Faille de Oude, 1582–1594") + 
+  guides(color = guide_legend(ncol = 2, override.aes = list(size = 4))) + 
+  theme(legend.title = element_text(face = "bold"))
 
 # Circle graph with alpha for direction
 ggraph(inheritance, layout = "linear", circular = TRUE) + 
-  geom_edge_arc(aes(color = l, alpha = ..index..)) + 
-  scale_edge_alpha('Edge direction', guide = 'edge_direction') +
-  geom_node_point(size = 2) +
-  theme_graph()
+  geom_edge_arc(aes(edge_alpha = l)) + 
+  scale_edge_alpha(labels = scales::dollar_format("£")) + 
+  geom_node_point(aes(size = pounds, color = label), alpha = 0.7) + 
+  geom_node_text(aes(label = group), repel = TRUE) + 
+  scale_size_continuous(range = c(0.5, 10), labels = scales::dollar_format("£")) + 
+  labs(size = "Accumulated Value",
+       edge_alpha = "Transactions",
+       color = "Account groups",
+       title = "Estate of Jan della Faille de Oude, 1582–1594") + 
+  guides(color = guide_legend(ncol = 2, override.aes = list(size = 4))) + 
+  theme(legend.title = element_text(face = "bold"))
 
 ## visNetwork
 library(visNetwork)

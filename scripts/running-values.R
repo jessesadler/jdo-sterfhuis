@@ -1,7 +1,7 @@
 ### Running value of accounts ###
 
 library(tidyverse)
-source("scripts/functions.R")
+library(debkeepr)
 
 # Load data
 transactions <- read_csv("data/transactions.csv")
@@ -10,18 +10,18 @@ accounts <- read_csv("data/accounts.csv")
 # Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
   mutate(denarii = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denarii)
+  select(credit, debit, date, denarii)
 
 # Get total credit and debit for each accout by date
 # Make denarii negative for debit transactions
 credit <- transactions_d %>% 
-  group_by(from, date) %>% 
+  group_by(credit, date) %>% 
   summarise(denarii = sum(denarii)) %>% 
-  rename(id = from)
+  rename(id = credit)
 debit <- transactions_d %>% 
-  group_by(to, date) %>% 
+  group_by(debit, date) %>% 
   summarise(denarii = -sum(denarii)) %>% 
-  rename(id = to)
+  rename(id = debit)
 
 # Create accounts running
 # Row bind the two data frame together
@@ -29,9 +29,9 @@ debit <- transactions_d %>%
 # and cumulative sum as printed vlaams
 accounts_running <- bind_rows(credit, debit) %>% 
   group_by(id, date) %>% 
-  summarise(denarii = sum(denarii)) %>% 
-  mutate(current = cumsum(denarii)) %>% 
-  mutate(vlaams = deb_d_lsd_print(current))
+  summarise(day = sum(denarii)) %>% 
+  mutate(current = cumsum(day)) %>% 
+  deb_d_mutate(current)
 
 ### Create line graph from branches ###
 library(ggplot2)
@@ -41,7 +41,8 @@ library(ggrepel)
 inheritance_accounts_tbl <- filter(accounts, type == "Inheritance") %>% 
   select(id, group)
 
-inheritance_running <- accounts_running %>% filter(id %in% inheritance_accounts_tbl$id)
+inheritance_running <- accounts_running %>% 
+  filter(id %in% inheritance_accounts_tbl$id)
 inheritance_running <- left_join(inheritance_running, inheritance_accounts_tbl, by = "id")
 
 # Split the branches between before and after the break in accounting

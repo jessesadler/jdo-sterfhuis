@@ -175,44 +175,6 @@ deb_account <- function(df, account, credit = credit, debit = debit) {
   bind_rows(credit, debit, current)
 }
 
-### Create tibble of credit and debit transactions from one account or vector of accounts ###
-# This function needs accounts tibble to exist. If it does not, function gives a warning
-# Can be run on transactions tibble or transactions_sum tibble
-# Single accounts must have quotations around account id
-# These functions make percentage from denarii
-
-deb_account_credit <- function(df, id){
-  if (exists("accounts")) {
-    
-    account_names <- select(accounts, id, account)
-    
-    df %>% filter(credit %in% id) %>%
-      left_join(account_names, by = c("debit" = "id")) %>% 
-      select(credit:debit, account, l:d, date) %>% 
-      mutate(denarii = deb_lsd_d(l, s, d),
-             pct = round(denarii*100/sum(denarii), 2)) %>% 
-      arrange(desc(denarii))
-  } else {
-    warning("accounts tibble needs to exist")
-  } 
-}
-
-deb_account_debit <- function(df, id){
-  if (exists("accounts")) {
-    
-    account_names <- select(accounts, id, account)
-    
-    df %>% filter(debit %in% id) %>%
-      left_join(account_names, by = c("credit" = "id")) %>% 
-      select(credit:debit, account, l:d, date) %>% 
-      mutate(denarii = deb_lsd_d(l, s, d),
-             pct = round(denarii*100/sum(denarii), 2)) %>% 
-      arrange(desc(denarii))
-  } else {
-    warning("accounts tibble needs to exist")
-  } 
-}
-
 ### Create current and open data frames ###
 
 # Take a data frame with l, s, and d columns and

@@ -4,7 +4,7 @@ library(tidyverse)
 library(stringr)
 library(igraph)
 library(ggraph)
-source("scripts/functions.R")
+library(debkeepr)
 
 # Load data
 transactions <- read_csv("data/transactions.csv")
@@ -54,103 +54,115 @@ anna_de_hane_accounts <- filter(accounts, group == "Anna de Hane") %>%
 anna_de_hane_replace <- set_names(replicate(length(anna_de_hane_accounts), "dfl12_310"), anna_de_hane_accounts)
 
 # Replace ids in transactions
-transactions$from <- str_replace_all(transactions$from, anna_replace)
-transactions$from <- str_replace_all(transactions$from, jan_replace)
-transactions$from <- str_replace_all(transactions$from, marten_replace)
-transactions$from <- str_replace_all(transactions$from, maria_replace)
-transactions$from <- str_replace_all(transactions$from, carlo_replace)
-transactions$from <- str_replace_all(transactions$from, jacques_replace)
-transactions$from <- str_replace_all(transactions$from, steven_replace)
-transactions$from <- str_replace_all(transactions$from, hester_replace)
-transactions$from <- str_replace_all(transactions$from, cornelia_replace)
-transactions$from <- str_replace_all(transactions$from, anna_de_hane_replace)
+transactions$credit <- str_replace_all(transactions$credit, anna_replace)
+transactions$credit <- str_replace_all(transactions$credit, jan_replace)
+transactions$credit <- str_replace_all(transactions$credit, marten_replace)
+transactions$credit <- str_replace_all(transactions$credit, maria_replace)
+transactions$credit <- str_replace_all(transactions$credit, carlo_replace)
+transactions$credit <- str_replace_all(transactions$credit, jacques_replace)
+transactions$credit <- str_replace_all(transactions$credit, steven_replace)
+transactions$credit <- str_replace_all(transactions$credit, hester_replace)
+transactions$credit <- str_replace_all(transactions$credit, cornelia_replace)
+transactions$credit <- str_replace_all(transactions$credit, anna_de_hane_replace)
 
-transactions$to <- str_replace_all(transactions$to, anna_replace)
-transactions$to <- str_replace_all(transactions$to, jan_replace)
-transactions$to <- str_replace_all(transactions$to, marten_replace)
-transactions$to <- str_replace_all(transactions$to, maria_replace)
-transactions$to <- str_replace_all(transactions$to, carlo_replace)
-transactions$to <- str_replace_all(transactions$to, jacques_replace)
-transactions$to <- str_replace_all(transactions$to, steven_replace)
-transactions$to <- str_replace_all(transactions$to, hester_replace)
-transactions$to <- str_replace_all(transactions$to, cornelia_replace)
-transactions$to <- str_replace_all(transactions$to, anna_de_hane_replace)
+transactions$debit <- str_replace_all(transactions$debit, anna_replace)
+transactions$debit <- str_replace_all(transactions$debit, jan_replace)
+transactions$debit <- str_replace_all(transactions$debit, marten_replace)
+transactions$debit <- str_replace_all(transactions$debit, maria_replace)
+transactions$debit <- str_replace_all(transactions$debit, carlo_replace)
+transactions$debit <- str_replace_all(transactions$debit, jacques_replace)
+transactions$debit <- str_replace_all(transactions$debit, steven_replace)
+transactions$debit <- str_replace_all(transactions$debit, hester_replace)
+transactions$debit <- str_replace_all(transactions$debit, cornelia_replace)
+transactions$debit <- str_replace_all(transactions$debit, anna_de_hane_replace)
 
 ## Estate
 estate_accounts <- filter(accounts, type == "Estate") %>% 
   select(id) %>% flatten() %>% as_vector()
 estate_replace <- set_names(replicate(length(estate_accounts), "dfl12_151"), estate_accounts)
 
-transactions$from <- str_replace_all(transactions$from, estate_replace)
-transactions$to <- str_replace_all(transactions$to, estate_replace)
+transactions$credit <- str_replace_all(transactions$credit, estate_replace)
+transactions$debit <- str_replace_all(transactions$debit, estate_replace)
 
 ## Profits and losses
-transactions$from <- str_replace_all(transactions$from, "dfl12_445", "dfl12_038")
-transactions$to <- str_replace_all(transactions$to, "dfl12_445", "dfl12_038")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_445", "dfl12_038")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_445", "dfl12_038")
 
 ## Wissels
 wissel_accounts <- filter(accounts, type == "Wissel") %>% 
   select(id) %>% flatten() %>% as_vector()
 wissel_replace <- set_names(replicate(length(wissel_accounts), "dfl12_117"), wissel_accounts)
 
-transactions$from <- str_replace_all(transactions$from, wissel_replace)
-transactions$to <- str_replace_all(transactions$to, wissel_replace)
+transactions$credit <- str_replace_all(transactions$credit, wissel_replace)
+transactions$debit <- str_replace_all(transactions$debit, wissel_replace)
 
 ## Branches
 
 # Verona
-transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")
-transactions$to <- str_replace_all(transactions$to, "dfl12_446", "dfl12_110")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_446", "dfl12_110")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_446", "dfl12_110")
 
 # Venice
-transactions$from <- str_replace_all(transactions$from, "dfl12_181", "dfl12_111")
-transactions$to <- str_replace_all(transactions$to, "dfl12_181", "dfl12_111")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_181", "dfl12_111")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_181", "dfl12_111")
 
 # London
-transactions$from <- str_replace_all(transactions$from, "dfl12_477", "dfl12_112")
-transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_477", "dfl12_112")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_477", "dfl12_112")
 
 ## Get dataframe of current value of accounts
 # Select only pounds debit to be used for node size
-current <- deb_current(transactions) %>% select(id, pounds = l_d)
+total_debit <- deb_debit(transactions) %>% 
+  mutate(total_debit = round(deb_lsd_l(l, s, d), 3))
 
 ## Sum of transactions
-transactions <- deb_group_sum(transactions) %>% ungroup
+transactions_sum <- transactions %>% 
+  group_by(credit, debit) %>% 
+  deb_sum(l, s, d) %>% 
+  mutate(pounds = deb_lsd_l(l, s, d))
+
+# If not aggregating accounts
+nodes <- left_join(accounts, total_debit, by = c("id" = "account_id")) %>% 
+  replace_na(list(total_debit = 0)) %>% # Make total_debit 0 for accounts that had no debit
+  select(-id_int)
 
 # Recreate accounts that are in transactions data frames
-from <- transactions %>% 
-  distinct(from) %>%
-  rename(id = from)
+credit <- transactions %>% 
+  distinct(credit) %>%
+  rename(id = credit)
 
-to <- transactions %>% 
-  distinct(to) %>%
-  rename(id = to)
+debit <- transactions %>% 
+  distinct(debit) %>%
+  rename(id = debit)
 
-nodes <- full_join(from, to, by = "id") # create nodes data frame
-nodes <- filter(accounts, id %in% nodes$id) # Use nodes to get subset of accounts data
-nodes <- left_join(nodes, current, by = "id") # add total pounds debit from current
+nodes <- full_join(credit, debit, by = "id") # create nodes data frame
+nodes <- filter(accounts, id %in% nodes$id) %>% # Use nodes to get subset of accounts data
+  select(-id_int)
+nodes <- left_join(nodes, total_debit, by = c("id" = "account_id")) %>% 
+  replace_na(list(total_debit = 0))
 
 # Create igraph object
-# Creates vertices from inheritances_transactions data
-sterfhuis <- graph_from_data_frame(d = transactions, vertices = nodes, directed = TRUE)
+# Creates vertices credit inheritances_transactions data
+sterfhuis <- graph_from_data_frame(d = transactions_sum,
+                                   vertices = nodes,
+                                   directed = TRUE)
 
 ggraph(sterfhuis, layout = "kk") + 
   geom_edge_link(aes(alpha = l)) + 
-  geom_node_point(aes(size = pounds)) + 
+  geom_node_point(aes(size = total_debit)) + 
   scale_size_continuous(range = c(0.3, 6)) +
   theme_graph()
 
 # Arc graph
 ggraph(sterfhuis, layout = "linear") + 
   geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(aes(size = pounds)) +
+  geom_node_point(aes(size = total_debit)) +
   scale_size_continuous(range = c(0.5, 6)) +
   theme_graph()
 
 # Circle graph
 ggraph(sterfhuis, layout = "linear", circular = TRUE) + 
   geom_edge_arc(aes(alpha = l)) + 
-  geom_node_point(aes(size = pounds)) +
+  geom_node_point(aes(size = total_debit)) +
   scale_size_continuous(range = c(0.5, 6)) +
   theme_graph()
-

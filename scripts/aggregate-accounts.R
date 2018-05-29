@@ -4,149 +4,149 @@ library(stringr)
 
 ## Estate
 estate_accounts <- filter(accounts, type == "Estate") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 estate_replace <- set_names(replicate(length(estate_accounts), "dfl12_151"), estate_accounts)
 
-transactions$from <- str_replace_all(transactions$from, estate_replace)
-transactions$to <- str_replace_all(transactions$to, estate_replace)
+transactions$credit <- str_replace_all(transactions$credit, estate_replace)
+transactions$debit <- str_replace_all(transactions$debit, estate_replace)
 
 ## Profits and losses
-transactions$from <- str_replace_all(transactions$from, "dfl12_445", "dfl12_038")
-transactions$to <- str_replace_all(transactions$to, "dfl12_445", "dfl12_038")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_445", "dfl12_038")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_445", "dfl12_038")
 
 ## Branches
 branch_accounts <- filter(accounts, type == "Branch") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 
 # Verona
-transactions$from <- str_replace_all(transactions$from, "dfl12_446", "dfl12_110")
-transactions$to <- str_replace_all(transactions$to, "dfl12_446", "dfl12_110")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_446", "dfl12_110")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_446", "dfl12_110")
 
 # Venice
-transactions$from <- str_replace_all(transactions$from, "dfl12_181", "dfl12_111")
-transactions$to <- str_replace_all(transactions$to, "dfl12_181", "dfl12_111")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_181", "dfl12_111")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_181", "dfl12_111")
 
 # London
-transactions$from <- str_replace_all(transactions$from, "dfl12_477", "dfl12_112")
-transactions$to <- str_replace_all(transactions$to, "dfl12_477", "dfl12_112")
+transactions$credit <- str_replace_all(transactions$credit, "dfl12_477", "dfl12_112")
+transactions$debit <- str_replace_all(transactions$debit, "dfl12_477", "dfl12_112")
 
 
 ## Wissels
 wissel_accounts <- filter(accounts, type == "Wissel") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 wissel_replace <- set_names(replicate(length(wissel_accounts), "dfl12_117"), wissel_accounts)
 
-transactions$from <- str_replace_all(transactions$from, wissel_replace)
-transactions$to <- str_replace_all(transactions$to, wissel_replace)
+transactions$credit <- str_replace_all(transactions$credit, wissel_replace)
+transactions$debit <- str_replace_all(transactions$debit, wissel_replace)
 
 ## Erffgoed
 erffgoed_accounts <- filter(accounts, type == "Erffgoed") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 erffgoed_replace <- set_names(replicate(length(erffgoed_accounts), erffgoed_accounts[1]), erffgoed_accounts)
 
-transactions$from <- str_replace_all(transactions$from, erffgoed_replace)
-transactions$to <- str_replace_all(transactions$to, erffgoed_replace)
+transactions$credit <- str_replace_all(transactions$credit, erffgoed_replace)
+transactions$debit <- str_replace_all(transactions$debit, erffgoed_replace)
 
 ## Written_off
 written_off_accounts <- filter(accounts, type == "Written_off") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 written_off_replace <- set_names(replicate(length(written_off_accounts), written_off_accounts[1]), written_off_accounts)
 
-transactions$from <- str_replace_all(transactions$from, written_off_replace)
-transactions$to <- str_replace_all(transactions$to, written_off_replace)
+transactions$credit <- str_replace_all(transactions$credit, written_off_replace)
+transactions$debit <- str_replace_all(transactions$debit, written_off_replace)
 
 ## Bequest
 bequest_accounts <- filter(accounts, type == "Bequest") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 bequest_replace <- set_names(replicate(length(bequest_accounts), "dfl12_074"), bequest_accounts)
 
-transactions$from <- str_replace_all(transactions$from, bequest_replace)
-transactions$to <- str_replace_all(transactions$to, bequest_replace)
+transactions$credit <- str_replace_all(transactions$credit, bequest_replace)
+transactions$debit <- str_replace_all(transactions$debit, bequest_replace)
 
 ## Goods
 goods_accounts <- filter(accounts, type == "Goods") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 goods_replace <- set_names(replicate(length(goods_accounts), goods_accounts[1]), goods_accounts)
 
-transactions$from <- str_replace_all(transactions$from, goods_replace)
-transactions$to <- str_replace_all(transactions$to, goods_replace)
+transactions$credit <- str_replace_all(transactions$credit, goods_replace)
+transactions$debit <- str_replace_all(transactions$debit, goods_replace)
 
 ## Goods with Companies
 goods_accounts <- filter(accounts, type == "Goods" | type == "Company") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 goods_replace <- set_names(replicate(length(goods_accounts), goods_accounts[1]), goods_accounts)
 
-transactions$from <- str_replace_all(transactions$from, goods_replace)
-transactions$to <- str_replace_all(transactions$to, goods_replace)
+transactions$credit <- str_replace_all(transactions$credit, goods_replace)
+transactions$debit <- str_replace_all(transactions$debit, goods_replace)
 
 ## Companies
 companies_accounts <- filter(accounts, type == "Companies") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 goods_replace <- set_names(replicate(length(companies_accounts), companies_accounts[1]), companies_accounts)
 
-transactions$from <- str_replace_all(transactions$from, companies_replace)
-transactions$to <- str_replace_all(transactions$to, companies_replace)
+transactions$credit <- str_replace_all(transactions$credit, companies_replace)
+transactions$debit <- str_replace_all(transactions$debit, companies_replace)
 
 ## Trade
 trade_accounts <- filter(accounts, type == "Trade") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 trade_replace <- set_names(replicate(length(trade_accounts), trade_accounts[1]), trade_accounts)
 
-transactions$from <- str_replace_all(transactions$from, trade_replace)
-transactions$to <- str_replace_all(transactions$to, trade_replace)
+transactions$credit <- str_replace_all(transactions$credit, trade_replace)
+transactions$debit <- str_replace_all(transactions$debit, trade_replace)
 
-## Factors
-factor_accounts <- filter(accounts, type == "Factor") %>% 
-  select(id) %>% flatten() %>% as_vector()
-factor_replace <- set_names(replicate(length(factor_accounts), factor_accounts[1]), factor_accounts)
+## Facdebitrs
+facdebitr_accounts <- filter(accounts, type == "Facdebitr") %>% 
+  select(id) %>% flatten() %>% as_vecdebitr()
+facdebitr_replace <- set_names(replicate(length(facdebitr_accounts), facdebitr_accounts[1]), facdebitr_accounts)
 
-transactions$from <- str_replace_all(transactions$from, factor_replace)
-transactions$to <- str_replace_all(transactions$to, factor_replace)
+transactions$credit <- str_replace_all(transactions$credit, facdebitr_replace)
+transactions$debit <- str_replace_all(transactions$debit, facdebitr_replace)
 
 ## Giovane
 giovane_accounts <- filter(accounts, type == "Giovane") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 giovane_replace <- set_names(replicate(length(giovane_accounts), giovane_accounts[1]), giovane_accounts)
 
-transactions$from <- str_replace_all(transactions$from, giovane_replace)
-transactions$to <- str_replace_all(transactions$to, giovane_replace)
+transactions$credit <- str_replace_all(transactions$credit, giovane_replace)
+transactions$debit <- str_replace_all(transactions$debit, giovane_replace)
 
-## Factors and Giovanes
-factors_accounts <- filter(accounts, type == "Factor" | type == "Giovane") %>% 
-  select(id) %>% flatten() %>% as_vector()
-factors_replace <- set_names(replicate(length(factors_accounts), factors_accounts[1]), factors_accounts)
+## Facdebitrs and Giovanes
+facdebitrs_accounts <- filter(accounts, type == "Facdebitr" | type == "Giovane") %>% 
+  select(id) %>% flatten() %>% as_vecdebitr()
+facdebitrs_replace <- set_names(replicate(length(facdebitrs_accounts), facdebitrs_accounts[1]), facdebitrs_accounts)
 
-transactions$from <- str_replace_all(transactions$from, factors_replace)
-transactions$to <- str_replace_all(transactions$to, factors_replace)
+transactions$credit <- str_replace_all(transactions$credit, facdebitrs_replace)
+transactions$debit <- str_replace_all(transactions$debit, facdebitrs_replace)
 
 ## Political
 political_accounts <- filter(accounts, type == "Political") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 political_replace <- set_names(replicate(length(political_accounts), political_accounts[1]), political_accounts)
 
-transactions$from <- str_replace_all(transactions$from, political_replace)
-transactions$to <- str_replace_all(transactions$to, political_replace)
+transactions$credit <- str_replace_all(transactions$credit, political_replace)
+transactions$debit <- str_replace_all(transactions$debit, political_replace)
 
 ## Miscellaneous and kin
 misc_accounts <- filter(accounts, type == "Miscellaneous" | type == "Kin") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 misc_replace <- set_names(replicate(length(misc_accounts), misc_accounts[1]), misc_accounts)
 
-transactions$from <- str_replace_all(transactions$from, misc_replace)
-transactions$to <- str_replace_all(transactions$to, misc_replace)
+transactions$credit <- str_replace_all(transactions$credit, misc_replace)
+transactions$debit <- str_replace_all(transactions$debit, misc_replace)
 
 ## Law
 law_accounts <- filter(accounts, type == "Law") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 law_replace <- set_names(replicate(length(law_accounts), law_accounts[1]), law_accounts)
 
-transactions$from <- str_replace_all(transactions$from, law_replace)
-transactions$to <- str_replace_all(transactions$to, law_replace)
+transactions$credit <- str_replace_all(transactions$credit, law_replace)
+transactions$debit <- str_replace_all(transactions$debit, law_replace)
 
 ## Loan
 loan_accounts <- filter(accounts, type == "Loan") %>% 
-  select(id) %>% flatten() %>% as_vector()
+  select(id) %>% flatten() %>% as_vecdebitr()
 loan_replace <- set_names(replicate(length(loan_accounts), loan_accounts[1]), loan_accounts)
 
-transactions$from <- str_replace_all(transactions$from, loan_replace)
-transactions$to <- str_replace_all(transactions$to, loan_replace)
+transactions$credit <- str_replace_all(transactions$credit, loan_replace)
+transactions$debit <- str_replace_all(transactions$debit, loan_replace)
