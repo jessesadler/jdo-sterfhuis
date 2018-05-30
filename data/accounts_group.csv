@@ -75,7 +75,7 @@ id,group,account_id,account,label,type,kinship,location
 74,"Lynken Pluym, widow of Lenaert Pluym",dfl12_092,Lynken Pluym weduwe van Lenaert Pluym,"Lynken Pluym, widow of Lenaert Pluym",Miscellaneous,FALSE,NA
 75,Bourat,dfl12_097,Bouratten overhoop,Assorted bourat,Goods,FALSE,NA
 76,Trade expenses,dfl12_098,Oncosten van coopmansschappen,Trade expenses,Trade,FALSE,Antwerp
-77,Jacques,dfl12_102,Jacques della Faille_1,Jacques della Faille,Heir,TRUE,NA
+77,Jacques,dfl12_102,Jacques della Faille_1,Jacques della Faille,Inheritance,TRUE,NA
 78,Assorted canvas,dfl12_103,Canifassen overhoop,Assorted canvas,Goods,FALSE,NA
 79,Jan de Reyer,dfl12_106,Jan de Reyer,Jan de Reyer,Trade,FALSE,NA
 80,Heirs of Simon Longin in Brussels,dfl12_107,D'erffgenaemen van Simon Longin in Brussels,Heirs of Simon Longin in Brussels,Erffgoed,FALSE,NA
@@ -167,7 +167,7 @@ id,group,account_id,account,label,type,kinship,location
 166,Henrick Hulsscher,dfl12_318,Henrick Hulsscher,Henrick Hulsscher,Written off,FALSE,NA
 167,Adriaen van Afferden de Jonge,dfl12_322,Adriaen van Afferden de Jonge,Adriaen van Afferden de Jonge,Written off,FALSE,NA
 168,Jan Pellicoren,dfl12_323,Jan Pellicoren_2,Jan Pellicoren,Erffgoed,FALSE,NA
-169,Hester and Cornelia,dfl12_324,Hester and Cornelia della Faille,Hester and Cornelia della Faille,Heir,TRUE,NA
+169,Hester and Cornelia,dfl12_324,Hester and Cornelia della Faille,Hester and Cornelia della Faille,Inheritance,TRUE,NA
 170,Paintings on canvass,dfl12_326,Schilderye op doeck,Paintings on canvass,Written off,FALSE,NA
 171,Jems Tipman,dfl12_327,Jems Tipman,Jems Tipman,Trade,FALSE,NA
 172,Jacob de Rinck,dfl12_328,Jacob de Rinck,Jacob de Rinck,Miscellaneous,FALSE,NA

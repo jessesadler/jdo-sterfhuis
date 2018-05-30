@@ -32,9 +32,13 @@ write_csv(transactions_int, "data/transactions_int.csv")
 ## Transactions and accounts by group ##
 
 # Accounts
+# Convert Heir type to Inheritance so Jacques' accounts are under inheritance
+# This also makes Hester and Cornelia account under inheritance, but this should be fine
 accounts <- read_csv("data-raw/accounts.csv") %>% 
-  select(account_id = id, account:location)
+  select(account_id = id, account:location) %>% 
+  mutate(type = str_replace_all(type, "Heir", "Inheritance"))
 
+# Get tibble of distinct groups and create ids
 groups <- distinct(accounts, group) %>% 
   rowid_to_column("id")
 

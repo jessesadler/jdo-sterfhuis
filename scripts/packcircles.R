@@ -45,8 +45,12 @@ ggplot() +
                color = "black", alpha = 0.6) +
   geom_text(data = debit_circles, aes(x, y, size = debit,
                                        label = str_replace_all(label, "-", "\n"))) +
-  scale_size_continuous(range = c(2, 5)) +
+  scale_size_continuous(range = c(1, 5)) +
   guides(size = FALSE) + 
-  labs(fill = "Account groups") + 
+  labs(fill = "Account types") +
+  ggtitle("Total value received by groups of accounts",
+          subtitle = "Estate of Jan della Faille de Oude, 1582–1594") + 
   theme_void() + 
   coord_equal()
+
+ggsave("plots-aans/debit-circles.png", width = 10, height = 8)

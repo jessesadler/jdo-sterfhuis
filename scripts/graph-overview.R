@@ -2,6 +2,7 @@
 
 library(tidyverse)
 library(igraph)
+library(tidygraph)
 library(ggraph)
 library(debkeepr)
 
@@ -10,8 +11,7 @@ transactions <- read_csv("data/transactions.csv")
 accounts_id <- read_csv("data/accounts.csv") %>% 
   select(id, type)
 
-# Get dataframe of current value of accounts
-# Select only pounds debit to be used for node size
+# Get total debit of accounts
 nodes <- deb_debit(transactions) %>% 
   mutate(pounds = round(deb_lsd_l(l, s, d), 3)) %>% 
   full_join(accounts_id, by = c("account_id" = "id")) %>% 
@@ -53,28 +53,32 @@ ggraph(sterfhuis_alt, layout = "fr") +
   geom_edge_fan(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
   geom_node_point(aes(size = pounds), alpha = 0.7) + 
-  scale_size_continuous(range = c(0.5, 8), labels = scales::dollar_format("£")) + 
+  scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
   labs(size = "Accumulated Value",
        edge_alpha = "Transactions",
        title = "Estate of Jan della Faille de Oude, 1582–1594") + 
   guides(color = guide_legend(ncol = 2, override.aes = list(size = 4))) + 
-  theme(legend.title = element_text(face = "bold"))
+  theme(legend.title = element_text(face = "bold", size = 12),
+        legend.text = element_text(size = 12))
+
+ggsave("plots-aans/sterfhuis-network-bw.png", width = 10, height = 8)
 
 # Color for type
 set.seed(240)
 ggraph(sterfhuis_alt, layout = "fr") + 
   geom_edge_fan(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
-  geom_node_point(aes(size = pounds, color = type), alpha = 0.7) + 
-  scale_size_continuous(range = c(0.5, 10), labels = scales::dollar_format("£")) + 
-  labs(size = "Accumulated Value",
+  geom_node_point(aes(size = pounds, color = type), alpha = 0.9) + 
+  scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
+  labs(color = "Account types",
+       size = "Accumulated Value",
        edge_alpha = "Transactions",
-       color = "Account groups",
        title = "Estate of Jan della Faille de Oude, 1582–1594") + 
-  guides(color = guide_legend(ncol = 2, override.aes = list(size = 4))) + 
-  theme(legend.title = element_text(face = "bold"))
+  guides(color = guide_legend(ncol = 2, override.aes = list(size = 4), order = 1)) + 
+  theme(legend.title = element_text(face = "bold", size = 12),
+        legend.text = element_text(size = 12))
 
-ggsave("sterfhuis-network.png", width = 10, height = 8)
+ggsave("plots-aans/sterfhuis-network-color.png", width = 10, height = 8)
 
 # Remove isolated nodes and subgraph
 sterfhuis_tbl <- as_tbl_graph(sterfhuis_alt)
@@ -90,15 +94,18 @@ sterfhuis_tbl <- sterfhuis_tbl %>%
   mutate(group = group_components()) %>% 
   filter(group == 1)
 
-set.seed(240)
+set.seed(120)
 ggraph(sterfhuis_tbl, layout = "fr") + 
   geom_edge_fan(aes(edge_alpha = l), show.legend = c(edge_alpha = FALSE)) + 
-  geom_node_point(aes(size = pounds, color = type), alpha = 0.7,
+  geom_node_point(aes(size = pounds, color = type), alpha = 0.9,
                   show.legend = c(size = FALSE)) + 
-  scale_size_continuous(range = c(0.5, 8)) + 
-  guides(color = guide_legend(nrow = 2, byrow = TRUE, override.aes = list(size = 4))) + 
-  labs(color = "Account groups",
+  scale_size_continuous(range = c(0.8, 10)) + 
+  guides(color = guide_legend(nrow = 2, byrow = TRUE, override.aes = list(size = 4),
+                              title.position = "top")) + 
+  labs(color = "Account types",
        title = "Estate of Jan della Faille de Oude, 1582–1594") + 
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        legend.title = element_text(face = "bold", size = 12),
+         legend.text = element_text(size = 12))
 
-ggsave("sterfhuis-network.png", width = 10, height = 8)
+ggsave("plots-aans/sterfhuis-network.png", width = 10, height = 8)

@@ -95,7 +95,7 @@ trade_replace <- set_names(replicate(length(trade_accounts), trade_accounts[1]),
 transactions$credit <- str_replace_all(transactions$credit, trade_replace)
 transactions$debit <- str_replace_all(transactions$debit, trade_replace)
 
-## Facdebitrs
+## Factors
 facdebitr_accounts <- filter(accounts, type == "Facdebitr") %>% 
   select(id) %>% flatten() %>% as_vecdebitr()
 facdebitr_replace <- set_names(replicate(length(facdebitr_accounts), facdebitr_accounts[1]), facdebitr_accounts)
