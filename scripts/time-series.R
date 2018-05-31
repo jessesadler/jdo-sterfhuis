@@ -14,7 +14,7 @@ library(xts)
 library(tibbletime)
 library(timetk)
 library(dygraphs)
-source("scripts/functions.R")
+library(debkeepr)
 
 # Get running accoungts from running accounts script
 # Load data
@@ -24,18 +24,18 @@ accounts <- read_csv("data/accounts.csv")
 # Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
   mutate(denarii = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denarii)
+  select(credit, debit, date, denarii)
 
 # Get total credit and debit for each accout by date
 # Make denarii negative for debit transactions
 credit <- transactions_d %>% 
-  group_by(from, date) %>% 
+  group_by(credit, date) %>% 
   summarise(denarii = sum(denarii)) %>% 
-  rename(id = from)
+  rename(id = credit)
 debit <- transactions_d %>% 
-  group_by(to, date) %>% 
+  group_by(debit, date) %>% 
   summarise(denarii = -sum(denarii)) %>% 
-  rename(id = to)
+  rename(id = debit)
 
 # Accounts running with date, id, and running sum of denari
 # Get rid of denarii variable, which is daily total, because
@@ -45,6 +45,7 @@ accounts_running <- bind_rows(credit, debit) %>%
   group_by(id, date) %>% 
   summarise(denarii = sum(denarii)) %>% 
   mutate(current = cumsum(denarii)) %>% 
+  deb_d_mutate(current) %>% 
   select(-denarii) %>% 
   ungroup()
 

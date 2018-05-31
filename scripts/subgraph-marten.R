@@ -80,4 +80,4 @@ ggraph(marten, layout = "kk") +
   ggtitle("Subgraph of the inheritance of Marten della Faille",
           subtitle = "Estate of Jan della Faille de Oude, 1582–1594")
 
-ggsave("plots-aans/inheritance-marten.png", width = 10, height = 8)
+ggsave("plots-aans/marten-inheritance.png", width = 10, height = 8)
