@@ -85,8 +85,15 @@ ggraph(inheritance, layout = "kk") +
 
 ggsave("plots-aans/inheritance-network.png", width = 10, height = 8)
 
-# Arc graph with alpha for direction
-ggraph(inheritance, layout = "linear") + 
+# Arc graph
+
+# Change arrangement of nodes to put heirs at the front
+nodes2 <- arrange(nodes, color)
+
+inheritance2 <- graph_from_data_frame(d = transactions_sum,
+                                      vertices = nodes2, directed = TRUE)
+
+ggraph(inheritance2, layout = "linear") + 
   geom_edge_arc(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
   geom_node_point(aes(size = debit_l, color = color), alpha = 0.9) + 

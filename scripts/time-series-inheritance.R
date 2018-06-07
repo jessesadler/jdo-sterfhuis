@@ -8,6 +8,7 @@ library(timetk)
 library(lubridate)
 library(dygraphs)
 library(debkeepr)
+library(ggrepel)
 library(hrbrthemes)
 source("scripts/times-series-functions.R")
 
@@ -43,7 +44,7 @@ inheritance_tbl <- from_fill_xts(inheritance_xts) %>%
 # Plot
 ggplot(inheritance_tbl) + 
   geom_line(aes(x = date, y = l, group = id, color = id), size = 1) + 
-  geom_text(aes(x = date, y = l, label = label),
+  geom_text_repel(aes(x = date, y = l, label = label),
             nudge_y = 250,
             nudge_x = 50) + 
   geom_hline(yintercept = 0, size = 1) + 
