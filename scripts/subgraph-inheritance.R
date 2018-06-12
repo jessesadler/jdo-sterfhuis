@@ -55,8 +55,10 @@ nodes <- accounts_inheritance %>%
   # labels
   mutate(label = if_else(debit_l > 1000 & type != "Inheritance" | credit_l > 1000 & type != "Inheritance",
                          paste(group), NA_character_),
-         label_arc = if_else(debit_l > 9000 & type != "Inheritance",
-                             paste(group), NA_character_),
+         label_debit = if_else(debit_l > 9000 & type != "Inheritance",
+                               paste(group), NA_character_),
+         label_credit = if_else(credit_l > 5000 & type != "Inheritance",
+                                paste(group), NA_character_),
          color = if_else(type == "Inheritance", paste(group), NA_character_))
 
 # Create igraph object
@@ -90,14 +92,16 @@ ggsave("plots-aans/inheritance-network.png", width = 10, height = 8)
 # Change arrangement of nodes to put heirs at the front
 nodes2 <- arrange(nodes, color)
 
-inheritance2 <- graph_from_data_frame(d = transactions_sum,
+inheritance_arc <- graph_from_data_frame(d = transactions_sum,
                                       vertices = nodes2, directed = TRUE)
 
-ggraph(inheritance2, layout = "linear") + 
+## Node size and labels as debit ##
+ggraph(inheritance_arc, layout = "linear") + 
   geom_edge_arc(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
   geom_node_point(aes(size = debit_l, color = color), alpha = 0.9) + 
-  geom_node_text(aes(label = label_arc)) + 
+  geom_node_text(aes(label = label_debit),
+                 nudge_y = 1.75, nudge_x = 1.75, angle = 45) + 
   scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
   labs(size = "Total debit",
        edge_alpha = "Transactions",
@@ -107,11 +111,35 @@ ggraph(inheritance2, layout = "linear") +
   theme(legend.title = element_text(face = "bold", size = 12),
         legend.text = element_text(size = 12)) +
   ggtitle("Subgraph of the inheritance of the heirs of Jan de Oude",
-          subtitle = paste("Lines above the nodes move left (creditor) to right (debtor)",
+          subtitle = paste("Labels show accounts that held debts to the heirs of over £9,000",
+                           "Lines above the nodes move left (creditor) to right (debtor)",
                            "Lines below the nodes move right (creditor) to left (debtor)",
                            sep = "\n"))
 
-ggsave("plots-aans/inheritance-arc-network.png", width = 12, height = 8)
+ggsave("plots-aans/inheritance-arc-network-debit.png", width = 12, height = 8)
+
+## Node size and labels as credit ##
+ggraph(inheritance_arc, layout = "linear") + 
+  geom_edge_arc(aes(edge_alpha = l)) + 
+  scale_edge_alpha(labels = scales::dollar_format("£")) + 
+  geom_node_point(aes(size = credit_l, color = color), alpha = 0.9) + 
+  geom_node_text(aes(label = label_credit),
+                 nudge_y = 2, nudge_x = 2, angle = 45) + 
+  scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
+  labs(size = "Total credit",
+       edge_alpha = "Transactions",
+       color = "Heirs",
+       title = "Estate of Jan della Faille de Oude, 1582–1594") + 
+  guides(color = guide_legend(ncol = 2, override.aes = list(size = 4), order = 1)) + 
+  theme(legend.title = element_text(face = "bold", size = 12),
+        legend.text = element_text(size = 12)) +
+  ggtitle("Subgraph of the inheritance of the heirs of Jan de Oude",
+          subtitle = paste("Labels show accounts from which the heirs received over £5,000",
+                           "Lines above the nodes move left (creditor) to right (debtor)",
+                           "Lines below the nodes move right (creditor) to left (debtor)",
+                           sep = "\n"))
+
+ggsave("plots-aans/inheritance-arc-network-credit.png", width = 12, height = 8)
 
 ## visNetwork
 library(visNetwork)
