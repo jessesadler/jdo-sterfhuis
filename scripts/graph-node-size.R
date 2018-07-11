@@ -113,13 +113,13 @@ transactions$debit <- str_replace_all(transactions$debit, "dfl12_477", "dfl12_11
 ## Get dataframe of current value of accounts
 # Select only pounds debit to be used for node size
 total_debit <- deb_debit(transactions) %>% 
-  mutate(total_debit = round(deb_lsd_l(l, s, d), 3))
+  deb_lsd_l_mutate(column_name = total_debit)
 
 ## Sum of transactions
 transactions_sum <- transactions %>% 
   group_by(credit, debit) %>% 
   deb_sum(l, s, d) %>% 
-  mutate(pounds = deb_lsd_l(l, s, d))
+  deb_lsd_l_mutate(column_name = pounds)
 
 # If not aggregating accounts
 nodes <- left_join(accounts, total_debit, by = c("id" = "account_id")) %>% 

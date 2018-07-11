@@ -14,7 +14,7 @@ accounts <- read_csv("data/accounts.csv")
 
 # Change transactions to denarii and simplify
 transactions_d <- transactions %>% 
-  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+  deb_lsd_d_mutate(column_name = denarii) %>% 
   select(credit, debit, date, denarii)
 
 # Get total credit and debit for each accout by date

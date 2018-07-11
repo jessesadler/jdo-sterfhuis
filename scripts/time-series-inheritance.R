@@ -10,7 +10,7 @@ library(dygraphs)
 library(debkeepr)
 library(ggrepel)
 library(hrbrthemes)
-source("scripts/times-series-functions.R")
+source("scripts/functions/times-series-functions.R")
 
 # This script uses tbl-xts functions
 

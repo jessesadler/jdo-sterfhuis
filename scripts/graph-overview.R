@@ -13,7 +13,7 @@ accounts_id <- read_csv("data/accounts.csv") %>%
 
 # Get total debit of accounts
 nodes <- deb_debit(transactions) %>% 
-  mutate(pounds = round(deb_lsd_l(l, s, d), 3)) %>% 
+  deb_lsd_l_mutate(column_name = pounds) %>% 
   full_join(accounts_id, by = c("account_id" = "id")) %>% 
   replace_na(list(pounds = 0)) %>% 
   arrange(pounds)
@@ -21,7 +21,7 @@ nodes <- deb_debit(transactions) %>%
 # Take out balance on 8 November
 # This leads to more accurate picture of relationships between accounts
 nodes_alt <- deb_debit(transactions) %>% 
-  mutate(pounds = round(deb_lsd_l(l, s, d), 3)) %>% 
+  deb_lsd_l_mutate(column_name = pounds) %>% 
   full_join(accounts_id, by = c("account_id" = "id")) %>% 
   filter(account_id != "dfl12_001") %>% 
   replace_na(list(pounds = 0)) %>% 
@@ -30,16 +30,16 @@ nodes_alt <- deb_debit(transactions) %>%
 # Sum of transactions between accounts
 transactions_sum <- transactions %>% 
   group_by(credit, debit) %>% 
-  deb_sum(l, s, d) %>% 
-  mutate(pounds = round(deb_lsd_l(l, s, d), 3))
+  deb_sum_df(l, s, d) %>% 
+  deb_lsd_l_mutate(column_name = pounds)
 
 # Take out transactions with balance
 transactions_sum_alt <- transactions %>% 
   filter(credit != "dfl12_001") %>% 
   filter(debit != "dfl12_001") %>% 
   group_by(credit, debit) %>% 
-  deb_sum(l, s, d) %>% 
-  mutate(pounds = round(deb_lsd_l(l, s, d), 3))
+  deb_sum_df(l, s, d) %>% 
+  deb_lsd_l_mutate(column_name = pounds)
 
 # igraph object
 sterfhuis <- graph_from_data_frame(d = transactions_sum, vertices = nodes, directed = TRUE)

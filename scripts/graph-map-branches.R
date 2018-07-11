@@ -5,42 +5,42 @@ library(stringr)
 library(ggmap)
 library(tidygraph)
 library(ggraph)
-source("scripts/functions.R")
+library(debkeepr)
 
 # Load data
 transactions <- read_csv("data/transactions.csv")
 accounts <- read_csv("data/accounts.csv")
 
 transactions_d <- transactions %>% 
-  mutate(denarii = deb_lsd_d(l, s, d)) %>% 
-  select(from, to, date, denarii)
+  deb_lsd_d_mutate(column_name = denarii) %>% 
+  select(credit, debit, date, denarii)
 
 ### Filter transactions to only those between branches ###
 branch_accounts <- filter(accounts, type == "Branch") %>% 
   select(id) %>% flatten() %>% as_vector()
 
 branch_transactions <- transactions_d %>% 
-  filter(from %in% branch_accounts & to %in% branch_accounts)
+  filter(credit %in% branch_accounts & debit %in% branch_accounts)
 
 # Aggregate accounts by branch
 # Verona
-branch_transactions$from <- str_replace_all(branch_transactions$from, "dfl12_446", "dfl12_110")
-branch_transactions$to <- str_replace_all(branch_transactions$to, "dfl12_446", "dfl12_110")
+branch_transactions$credit <- str_replace_all(branch_transactions$credit, "dfl12_446", "dfl12_110")
+branch_transactions$debit <- str_replace_all(branch_transactions$debit, "dfl12_446", "dfl12_110")
 
 # Venice
-branch_transactions$from <- str_replace_all(branch_transactions$from, "dfl12_181", "dfl12_111")
-branch_transactions$to <- str_replace_all(branch_transactions$to, "dfl12_181", "dfl12_111")
+branch_transactions$credit <- str_replace_all(branch_transactions$credit, "dfl12_181", "dfl12_111")
+branch_transactions$debit <- str_replace_all(branch_transactions$debit, "dfl12_181", "dfl12_111")
 
 # London
-branch_transactions$from <- str_replace_all(branch_transactions$from, "dfl12_477", "dfl12_112")
-branch_transactions$to <- str_replace_all(branch_transactions$to, "dfl12_477", "dfl12_112")
+branch_transactions$credit <- str_replace_all(branch_transactions$credit, "dfl12_477", "dfl12_112")
+branch_transactions$debit <- str_replace_all(branch_transactions$debit, "dfl12_477", "dfl12_112")
 
 ### Summarise transactions between accounts and take out transactions within a branch ###
 branch_edges <- branch_transactions %>% 
-  group_by(from, to) %>% 
+  group_by(credit, debit) %>% 
   summarise(denarii = sum(denarii)) %>% 
-  mutate(pounds = floor(denari/240)) %>% 
-  filter(from != to)
+  mutate(pounds = floor(denarii/240)) %>% 
+  filter(credit != debit)
 
 ### Create branch nodes ###
 branch_accounts_tbl <- accounts %>% 

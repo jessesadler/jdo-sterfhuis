@@ -1,7 +1,7 @@
 # Create and manipulate list column of lsd
 
 library(tidyverse)
-source("scripts/functions.R")
+source("scripts/functions/functions.R")
 
 transactions <- read_csv("data/transactions.csv")
 
@@ -11,7 +11,7 @@ trans_nest <- transactions %>% nest(l, s, d)
 
 # Group_by and summarise list column
 trans_sum <- trans_list %>% 
-  group_by(from, to) %>% 
+  group_by(credit, debit) %>% 
   summarise(sum = list(reduce(data, `+`)))
 
 # Take vector of length three with l, s, and d values and refactors to correct limit of 20s and 12d

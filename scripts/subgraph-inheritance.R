@@ -24,8 +24,8 @@ transactions_inheritance <- transactions_group %>%
 ## Sum of transactions
 transactions_sum <- transactions_inheritance %>% 
   group_by(credit, debit) %>% 
-  deb_sum(l, s, d) %>% 
-  mutate(pounds = round(deb_lsd_l(l, s, d), 3))
+  deb_sum_df(l, s, d) %>% 
+  deb_lsd_l_mutate(column_name = pounds)
 
 # Recreate accounts that are in transactions_inheritance
 inheritance_credit <- transactions_inheritance %>% 
@@ -40,24 +40,24 @@ accounts_inheritance <- full_join(inheritance_credit, inheritance_debit, by = "i
 
 ## Total debit of accounts within inheritance transactions
 inheritance_debit_l <- deb_debit(transactions_inheritance) %>% 
-  mutate(debit_l = round(deb_lsd_l(l, s, d), 3)) %>% 
-  select(account_id, debit_l)
+  deb_lsd_l_mutate(column_name = debit.l) %>% 
+  select(account_id, debit.l)
 
 inheritance_credit_l <- deb_credit(transactions_inheritance) %>% 
-  mutate(credit_l = round(deb_lsd_l(l, s, d), 3)) %>% 
-  select(account_id, credit_l)
+  deb_lsd_l_mutate(column_name = credit.l) %>% 
+  select(account_id, credit.l)
 
 nodes <- accounts_inheritance %>% 
   left_join(accounts_group, by = "id") %>% 
   left_join(inheritance_credit_l, by = c("id" = "account_id")) %>% 
   left_join(inheritance_debit_l, by = c("id" = "account_id")) %>% 
-  replace_na(list(credit_l = 0, debit_l = 0)) %>% 
+  replace_na(list(credit.l = 0, debit.l = 0)) %>% 
   # labels
-  mutate(label = if_else(debit_l > 1000 & type != "Inheritance" | credit_l > 1000 & type != "Inheritance",
+  mutate(label = if_else(debit.l > 1000 & type != "Inheritance" | credit.l > 1000 & type != "Inheritance",
                          paste(group), NA_character_),
-         label_debit = if_else(debit_l > 9000 & type != "Inheritance",
+         label_debit = if_else(debit.l > 9000 & type != "Inheritance",
                                paste(group), NA_character_),
-         label_credit = if_else(credit_l > 5000 & type != "Inheritance",
+         label_credit = if_else(credit.l > 5000 & type != "Inheritance",
                                 paste(group), NA_character_),
          color = if_else(type == "Inheritance", paste(group), NA_character_))
 
@@ -73,7 +73,7 @@ ggraph(inheritance, layout = "kk") +
                 arrow = arrow(length = unit(3, 'mm')), 
                 end_cap = circle(2, 'mm')) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
-  geom_node_point(aes(size = debit_l, color = color), alpha = 0.9) + 
+  geom_node_point(aes(size = debit.l, color = color), alpha = 0.9) + 
   geom_node_text(aes(label = label), repel = TRUE) + 
   scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
   labs(size = "Total debit",
@@ -93,13 +93,13 @@ ggsave("plots-aans/inheritance-network.png", width = 10, height = 8)
 nodes2 <- arrange(nodes, color)
 
 inheritance_arc <- graph_from_data_frame(d = transactions_sum,
-                                      vertices = nodes2, directed = TRUE)
+                                         vertices = nodes2, directed = TRUE)
 
 ## Node size and labels as debit ##
 ggraph(inheritance_arc, layout = "linear") + 
   geom_edge_arc(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
-  geom_node_point(aes(size = debit_l, color = color), alpha = 0.9) + 
+  geom_node_point(aes(size = debit.l, color = color), alpha = 0.9) + 
   geom_node_text(aes(label = label_debit),
                  nudge_y = 1.75, nudge_x = 1.75, angle = 45) + 
   scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
@@ -122,7 +122,7 @@ ggsave("plots-aans/inheritance-arc-network-debit.png", width = 12, height = 8)
 ggraph(inheritance_arc, layout = "linear") + 
   geom_edge_arc(aes(edge_alpha = l)) + 
   scale_edge_alpha(labels = scales::dollar_format("£")) + 
-  geom_node_point(aes(size = credit_l, color = color), alpha = 0.9) + 
+  geom_node_point(aes(size = credit.l, color = color), alpha = 0.9) + 
   geom_node_text(aes(label = label_credit),
                  nudge_y = 2, nudge_x = 2, angle = 45) + 
   scale_size_continuous(range = c(0.8, 10), labels = scales::dollar_format("£")) + 
@@ -143,18 +143,18 @@ ggsave("plots-aans/inheritance-arc-network-credit.png", width = 12, height = 8)
 
 ## visNetwork
 library(visNetwork)
-
+transactions_vis <- rename(transactions_sum, from = credit, to = debit)
 nodes$group <- nodes$group
 nodes$label <- nodes$label
 nodes$title <- nodes$label
 
-visNetwork(nodes, transactions) %>% 
+visNetwork(nodes, transactions_vis) %>% 
   visIgraphLayout(layout = "layout_with_dh") %>% 
   visEdges(color = list(color = "grey", highlight = "purple")) %>% 
   visNodes(color = list(background = "grey", border = "grey", highlight = TRUE)) %>% 
   visOptions(highlightNearest = list(enabled = TRUE, degree = 1, hover = TRUE), nodesIdSelection = TRUE)
 
-visNetwork(nodes, transactions) %>% 
+visNetwork(nodes, transactions_vis) %>% 
   visIgraphLayout(layout = "layout_in_circle") %>% 
   visEdges(arrows = "to", color = list(color = "grey", highlight = "purple")) %>% 
   visNodes(color = list(background = "grey", border = "grey", highlight = TRUE)) %>% 

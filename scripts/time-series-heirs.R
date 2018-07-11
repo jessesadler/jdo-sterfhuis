@@ -7,7 +7,7 @@ library(lubridate)
 library(debkeepr)
 library(ggrepel)
 library(hrbrthemes)
-source("scripts/times-series-functions.R")
+source("scripts/functions/times-series-functions.R")
 
 transactions <- read_csv("data/transactions.csv")
 accounts <- read_csv("data/accounts.csv")

@@ -13,7 +13,7 @@ deb_running <- function(transactions, accounts, label, ids) {
   label <- enquo(label)
   
   transactions_d <- transactions %>% 
-    mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+    deb_lsd_d_mutate(column_name = denarii) %>% 
     select(credit, debit, date, denarii)
   
   credit <- transactions_d %>% 
@@ -47,7 +47,7 @@ deb_running_cumulative <- function(transactions, accounts, ids, account_column) 
   account_column <- quo_name(account_column)
   
   transactions_d <- transactions %>% 
-    mutate(denarii = deb_lsd_d(l, s, d)) %>% 
+    deb_lsd_d_mutate(column_name = denarii) %>% 
     select(credit, debit, date, denarii)
   
   credit <- transactions_d %>% 
