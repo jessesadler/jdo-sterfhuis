@@ -17,7 +17,8 @@ This script creates an overview of the profits and losses accounts from DFL 12 a
 library(tidyverse)
 library(lubridate)
 # load double-entry bookkeeping functions
-source("scripts/functions.R")
+source("scripts/functions/functions.R")
+source("scripts/functions/credit-debit-functions.R")
 
 # Load data
 transactions <- read_csv("data/transactions.csv")
@@ -36,11 +37,11 @@ maternal_accounts <- c("dfl12_251", "dfl12_252", "dfl12_253", "dfl12_321", "dfl1
 Create a function to get a one line tibble with label, date, l, s, d, and denarii from a denari. This is to be used to take a tibble with multiple rows and return a total. It is essentially a more customized version of the `deb_d_lsd()` function by including additional information. It is meant to be used by imputing the sum of denarii from a tibble into the denarii argument.
 
 ```{r total tibble function}
-deb_total_tbl <- function(type, denari, date) {
+deb_total_tbl <- function(type, denarii, date) {
   tibble(type = type,
          l = deb_d_librae(denarii),
          s = deb_d_solidi(denarii),
-         d = deb_d_denari(denarii),
+         d = deb_d_denarii(denarii),
          date = ymd(date),
          denarii = denarii)
 }
@@ -64,7 +65,7 @@ maternal_capital <- tibble(id = maternal_accounts,
                            d = c(8, 8, 7, 6, 0, 0),
                            date = ymd("1578-12-31")) %>% 
   mutate(denarii = deb_lsd_d(l, s, d),
-         pct = round(denari*100/sum(denarii), 4))
+         pct = round(denarii*100/sum(denarii), 4))
 ```
 
 To get the total maternal capital in 1578 I use the sum of the denarii from `maternal_capital`. This uses the `deb_total_tbl()` function from above.
@@ -79,11 +80,11 @@ Get the total movable capital for 1578. This acts as a basis for the profits in 
 
 ```{r movable capital 1578}
 movable_capital_1578 <- bind_rows(paternal_capital, maternal_capital) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 paternal_maternal_capital <- bind_rows(paternal_capital, maternal_capital_total) %>% 
   select(-id, -account) %>% # Get rid of id and account columns from paternal_capital
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 movable_capital_1578_total <- deb_total_tbl("Capital 1578", sum(movable_capital_1578$denarii), "1578-12-31")
 ```
@@ -106,8 +107,8 @@ winninge_verlies_deb1 <- deb_account_debit(transactions, "dfl12_038")
 Paternal profits are contained in the account of the Creditors of the Book. However, the paternal profits as calculated here contain a credit of £3644.0.0 from the household costs. This ammount was part of the £5644.0.0 1/4 charged to the Creditors of the Book. See DFL 13-2 and DvdM 55-10 for explanations. Therefore, to get the correct amount of the paternal profits and thus the correct percentage £3644.0.0 needs to be subtracted from the amount of the paternal profits listed here.
 
 ```{r paternal profits 1583}
-paternal_profits1 <- filter(winninge_verlies_deb1, from == "dfl12_289") %>% 
-  select(id = from, account:pct) %>% 
+paternal_profits1 <- filter(winninge_verlies_deb1, credit == "dfl12_289") %>% 
+  rename(id = credit) %>% 
   add_column(type = "paternal")
 
 # Paternal profits without household costs of £3644.0.0
@@ -117,9 +118,9 @@ paternal_profits1_housecost <- paternal_profits1 %>%
 
 Maternal profits is more straightforward to calculate. The percentages for the different heirs can be compared to the base percentages for the maternal capital in 1578.
 ```{r maternal profits 1583}
-maternal_profits1 <- filter(winninge_verlies_deb1, from %in% maternal_accounts) %>% 
-  select(id = from, account:denarii) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4)) %>% 
+maternal_profits1 <- filter(winninge_verlies_deb1, credit %in% maternal_accounts) %>% 
+  rename(id = credit) %>% 
+  mutate(pct = round(denarii*100/sum(denarii), 4)) %>% 
   add_column(type = "maternal")
 
 maternal_profits1_total <- deb_total_tbl("maternal", sum(maternal_profits1$denarii), "1583-12-26")
@@ -129,11 +130,11 @@ Bring together the paternal and maternal profits in 1583. This is first done wit
 
 ```{r profits 1583 with household costs subtracted}
 profits_1583 <- bind_rows(paternal_profits1_housecost, maternal_profits1) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 profits_1583_paternal_maternal <- bind_rows(paternal_profits1_housecost, maternal_profits1_total) %>% 
-  select(-id, -account) %>%
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  select(-id) %>%
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 profits_1583_total <- deb_total_tbl("Profits 1583", sum(profits_1583$denarii), "1583-12-26")
 ```
@@ -149,11 +150,11 @@ Bringing together the paternal and maternal without the household costs being su
 
 ```{r profits 1583 without household costs subtracted}
 profits_1583_unaltered <- bind_rows(paternal_profits1, maternal_profits1) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 profits_1583_paternal_maternal_unaltered <- bind_rows(maternal_profits1_total, paternal_profits1) %>% 
-  select(-id, -account) %>%
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  select(-id) %>%
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 profits_1583_total_unaltered <- deb_total_tbl("Profits 1583",
                                               sum(profits_1583_unaltered$denarii),
@@ -195,9 +196,9 @@ inheritance_accounts_1594 <- c("dfl12_251", "dfl12_295", "dfl12_340", "dfl12_343
 Get the profits in 1594. This has maternal profits for those who still had maternal inheritance and paternal profits. Within the amount for the paternal profits is also the profits from Cornelia split between the other eight errors.
 
 ```{r profits 1594}
-profits_1594 <- filter(winninge_verlies_deb2, from %in% inheritance_accounts_1594) %>% 
-  select(id = from, account:pct) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+profits_1594 <- filter(winninge_verlies_deb2, credit %in% inheritance_accounts_1594) %>% 
+  rename(id = credit) %>% 
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 profits_1594_total <- deb_total_tbl("Profits 1594", sum(profits_1594$denarii), "1594-10-01")
 ```
@@ -207,7 +208,7 @@ Divide the profits between maternal profits and paternal profits. Maternal profi
 ```{r unaltered paternal and maternal profits 1594}
 paternal_profits2_unaltered <- filter(profits_1594, l == 128) %>% 
   add_column(type = "paternal") %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 paternal_profits2_unaltered_total <- deb_total_tbl("paternal",
                                                    sum(paternal_profits2_unaltered$denarii),
@@ -215,7 +216,7 @@ paternal_profits2_unaltered_total <- deb_total_tbl("paternal",
 
 maternal_profits2_unaltered <- filter(profits_1594, l != 128) %>% 
   add_column(type = "maternal") %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 
 maternal_profits2_unaltered_total <- deb_total_tbl("maternal",
                                                    sum(maternal_profits2_unaltered$denarii),
@@ -226,7 +227,7 @@ profits_1594_unaltered <- bind_rows(maternal_profits2_unaltered, paternal_profit
 
 In order to move Cornelia's part in the profits in 1594 from paternal to maternal this gets the denarii for sororal profits, paternal profits, and maternal profits. The sororal profits are figured out by getting the denarii from Hester's account, since their profits were based on the same basis.
 
-```{r sororal, paternal, and maternal denari, 1594}
+```{r sororal, paternal, and maternal denarii, 1594}
 sororal_1594d <- maternal_profits2_unaltered %>% 
   filter(id == "dfl12_347") %>% 
   select(denarii) %>% 
@@ -238,7 +239,7 @@ maternal_1594d <- sum(maternal_profits2_unaltered$denarii)
 
 Subtract sororal denarii from paternal denarii and add it to maternal to get the correct totals.
 
-```{r paternal and maternal denari, 1594}
+```{r paternal and maternal denarii, 1594}
 paternal_profits2d <- paternal_1594d - sororal_1594d
 maternal_profits2d <- maternal_1594d + sororal_1594d
 ```
@@ -250,7 +251,7 @@ paternal_profits2 <- deb_total_tbl("paternal", paternal_profits2d, "1594-10-01")
 maternal_profits2 <- deb_total_tbl("maternal", maternal_profits2d, "1594-10-01")
 
 profits_1594_paternal_maternal <- bind_rows(paternal_profits2, maternal_profits2) %>% 
-  mutate(pct = round(denari*100/sum(denarii), 4))
+  mutate(pct = round(denarii*100/sum(denarii), 4))
 ```
 
 ```{r tables 1594, echo = FALSE}
