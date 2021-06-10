@@ -57,7 +57,8 @@ before <- ggplot(branches_running) +
 # Could use to_fill_xts and from_fill xts with group
 
 # Widen tbl then convert
-branches_wide <- branches_running %>% spread(group, current)
+branches_wide <- branches_running %>% 
+  spread(group, current)
 
 # Convert to xts
 branches_xts <- tk_xts(branches_wide, silent = TRUE)
