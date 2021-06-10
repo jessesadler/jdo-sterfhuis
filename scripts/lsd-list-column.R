@@ -21,7 +21,7 @@ deb_refactor_vector <- function(x) {
       (x[2] + x[3] %/% 12) %% 20,
       x[3] %% 12)
    names(temp) <- c("l", "s", "d")
-   return(temp)
+   temp
 }
 
 # Group_by and summarise list column with refactor
